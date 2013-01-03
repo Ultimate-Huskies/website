@@ -1,0 +1,6 @@
+[submodule "wp-content/themes/huskies-theme/bootstrap"]
+	path = wp-content/themes/huskies-theme/bootstrap
+	url = https://github.com/twitter/bootstrap.git
+[submodule "wp-content/themes/huskies-theme/fontAwesome"]
+	path = wp-content/themes/huskies-theme/fontAwesome
+	url = https://github.com/FortAwesome/Font-Awesome.git
