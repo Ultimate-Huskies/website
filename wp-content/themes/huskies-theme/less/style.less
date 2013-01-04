@@ -3,7 +3,7 @@ Theme Name: Huskies-Theme
 Theme URI: http://ultimate-huskies.de/
 Description: The theme for the ultimate huskies website
 Author: Mupat
-Author URI: http://wordpress.org/
+Author URI: 
 Version: 1.0
 
 License: GNU General Public License version 3.0
@@ -17,6 +17,18 @@ Tags:
 
 @FontAwesomePath:   "fontAwesome/font";
 
+html {
+  font-size: 62.5%; /* Sets up the base 10 stuff */
+}
+
 body {
   background-image: url("images/whitey.png");
+}
+
+@import "variables.less";
+@import "header.less";
+
+#content {
+  min-height: 150rem;
+  padding: 1rem;
 }

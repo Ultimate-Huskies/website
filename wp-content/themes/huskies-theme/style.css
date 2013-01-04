@@ -3,7 +3,7 @@ Theme Name: Huskies-Theme
 Theme URI: http://ultimate-huskies.de/
 Description: The theme for the ultimate huskies website
 Author: Mupat
-Author URI: http://wordpress.org/
+Author URI: 
 Version: 1.0
 
 License: GNU General Public License version 3.0
@@ -218,7 +218,7 @@ textarea {
 }
 body {
   margin: 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 20px;
   color: #333333;
@@ -1237,7 +1237,7 @@ input,
 button,
 select,
 textarea {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 label {
   display: block;
@@ -4448,7 +4448,7 @@ input[type="submit"].btn.btn-mini {
 .navbar-search .search-query {
   margin-bottom: 0;
   padding: 4px 14px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   font-weight: normal;
   line-height: 1;
@@ -8589,6 +8589,95 @@ ul.icons li [class*=" icon-"] {
 .icon-folder-open-alt:before {
   content: "\f115";
 }
+html {
+  font-size: 62.5%;
+  /* Sets up the base 10 stuff */
+
+}
 body {
   background-image: url("images/whitey.png");
+}
+#content-wrapper {
+  background-color: #ffffff;
+  margin-top: 12rem;
+  position: relative;
+  -webkit-box-shadow: 0rem 0rem 0.75rem 0.05rem #222222;
+  -moz-box-shadow: 0rem 0rem 0.75rem 0.05rem #222222;
+  box-shadow: 0rem 0rem 0.75rem 0.05rem #222222;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  border-radius: 0.5rem;
+}
+#content-wrapper #disc {
+  position: absolute;
+  right: 7rem;
+  top: -8rem;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+#content-wrapper #disc:hover {
+  -webkit-transform: translate(3rem, 0rem);
+  -moz-transform: translate(3rem, 0rem);
+  -ms-transform: translate(3rem, 0rem);
+  -o-transform: translate(3rem, 0rem);
+  transform: translate(3rem, 0rem);
+}
+#content-wrapper #head {
+  position: absolute;
+  top: -12rem;
+  right: -11rem;
+}
+#content-wrapper #body {
+  position: absolute;
+  right: -10.55rem;
+  top: 2rem;
+  z-index: -1;
+}
+#content-wrapper #siteName {
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  position: absolute;
+  left: -24rem;
+  top: 21rem;
+}
+#content-wrapper #siteName:hover {
+  text-decoration: none;
+}
+#content-wrapper #siteName h1 {
+  font-family: Lobster, cursive;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  font-size: 6rem;
+  color: #000000;
+  font-weight: normal;
+}
+#content-wrapper #siteName h1:hover {
+  color: #0088cc;
+}
+#topHeader {
+  position: absolute;
+  top: -5rem;
+  font-size: 2rem;
+}
+#topHeader .nav > li:not(.active):not(.open) > a {
+  color: #000000;
+}
+#topHeader .nav > li:not(.active):not(.open) > a:hover {
+  background-color: #ffffff;
+}
+#topHeader .nav > li.active > a {
+  background-color: #46a546;
+}
+#content {
+  min-height: 150rem;
+  padding: 1rem;
 }
