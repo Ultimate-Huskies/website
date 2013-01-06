@@ -4,16 +4,15 @@
   position: relative;
   .box-shadow(0rem 0rem 0.75rem 0.05rem @grayDarker);
   .border-radius(0.5rem);
+  margin-bottom: 2.5rem;
 
   #disc {
     position: absolute;
-    right: 7rem;
-    top: -8rem;
+    right: 5rem;
+    top: -5.7rem;
     .transition(all 1s ease);
 
-    &:hover {
-      .translate(3rem, 0rem);
-    }
+    &.expand { .translate(3rem, 0rem); }
   }
 
   #head {
@@ -24,9 +23,8 @@
 
   #body {
     position: absolute;
-    right: -10.55rem;
-    top: 2rem;
-    z-index: -1;
+    right: -10.75rem;
+    top: -0.15rem;
   }
 
   #siteName {
@@ -42,7 +40,7 @@
     &:hover { text-decoration: none; }
 
     h1 {
-      font-family: Lobster, cursive;
+      font-family: @serifFontFamily;
       line-height: 1;
       margin: 0;
       padding: 0;
@@ -55,17 +53,79 @@
   }
 }
 
+#searchform {
+  position: absolute;
+  right: 12.5rem;
+  top: 0.25rem;
+  .transition(all 1s ease);
+
+  @media (max-width: 767px) { right: 0rem; }
+
+  &.expand { 
+    right: 10rem; 
+
+    @media (max-width: 767px) { right: 0rem; }
+  }
+
+  button {
+    padding: 0.7rem;
+    margin-top: -0.05rem;
+    margin-right: -0.25rem;
+    line-height: 1;
+  }
+
+  input {
+    width: 8rem;
+    .transition(all 1s ease);
+
+    &:focus {
+      z-index: inherit;
+      width: 13rem;
+      @media (max-width: 767px) { width: 10rem; }
+      padding-right: 4.5rem;
+    }
+  }
+}
+
 #topHeader {
   position: absolute;
   top: -5rem;
   font-size: 2rem;
+  width: 100%;
 
-  .nav > li:not(.active):not(.open) > a {
-    color: @black;
-    &:hover { background-color: @white; }
-  }
+  .navbar {
+    width: 66%;
+    // @media (max-width: 979px) { width: 50%; }
 
-  .nav > li.active > a {
-    background-color: @green;
+    .btn-navbar { 
+      float: left; 
+      color: @black;
+    }
+
+    .navbar-inner {
+      padding: 0;
+      @media (min-width: 979px) {
+        background: none;
+        border: none;
+        box-shadow: none;
+      }
+    }
+
+    .caret { 
+      bottom: 0.4rem;
+      position: relative; 
+    }
+
+    .nav > li:not(.active):not(.open):not(.current_page_parent) > a {
+      color: @black;
+      &:hover { background-color: @white; }
+    }
+
+    .nav > li.active > a,
+    .nav > li.current_page_parent > a {
+      background-color: @green;
+      color: @white;
+      text-shadow: 0 0.1rem 0 @black;
+    }
   }
 }

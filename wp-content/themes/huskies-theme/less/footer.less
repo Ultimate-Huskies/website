@@ -1,0 +1,49 @@
+#firstFooter {
+  position: absolute;
+  bottom: -3.25rem;
+  @media (max-width: 767px) { bottom: -5.25rem; }
+  color: @black;
+  text-align: center;
+
+  a:firstChild {
+    margin-left: 0.5rem;
+  }
+
+  p {
+    display: inline-block;
+    width: 80%;
+  }
+
+  a[href="#footer"] {
+    margin-right: 0.5rem;
+
+    &:hover { 
+      color: @linkColorHover;
+      text-decoration: none;
+    }
+
+    i { margin-left: 0.25rem; }
+  }
+}
+
+#secondFooter {
+  background-image: url("images/debut_dark.png");
+  min-height: 10rem;
+  .box-shadow(inset 0 0 1rem 0.5rem @grayDarker);
+  color: @white;
+  padding-top: 0.5rem;
+  position: relative;
+
+  fieldset {
+    // border-top: 1px solid white;
+
+    legend {
+      text-align: center;
+      color: @white;
+      font-family: @serifFontFamily;
+      border: none;
+      .border-radius(1rem);
+      .box-shadow(0rem 0.6rem 0.8rem -0.8rem @black);
+    }
+  }
+}
