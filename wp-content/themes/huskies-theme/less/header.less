@@ -36,6 +36,13 @@
     left: -24rem;
     top: 21rem;
     
+    @media (max-width: 767px) { 
+      .rotate(0deg);
+      top: -12rem;
+      left: 0rem;
+      width: 100%;
+      text-align: center;
+    }
 
     &:hover { text-decoration: none; }
 
@@ -45,6 +52,7 @@
       margin: 0;
       padding: 0;
       font-size: 6rem;
+      @media (max-width: 767px) { font-size: 5rem; }
       color: @black;
       font-weight: normal;
 
@@ -95,7 +103,6 @@
 
   .navbar {
     width: 66%;
-    // @media (max-width: 979px) { width: 50%; }
 
     .btn-navbar { 
       float: left; 

@@ -47,9 +47,9 @@
         <?php get_search_form(); ?>
       </header>
       <img id="disc" class="hidden-phone" src="<?php print IMAGES_PATH ?>/disc.png" alt="<?php _e('disc', 'huskies-theme'); ?>" />
-      <img id="head" class="visible-desktop" src="<?php print IMAGES_PATH ?>/head.png" alt="<?php _e('head', 'huskies-theme'); ?>" />
-      <img id="body" class="visible-desktop" src="<?php print IMAGES_PATH ?>/body.png" alt="<?php _e('body', 'huskies-theme'); ?>" />
-      <a id="siteName" href="<?php echo home_url(); ?>" class="visible-desktop">
+      <img id="head" class="hidden-phone" src="<?php print IMAGES_PATH ?>/head.png" alt="<?php _e('head', 'huskies-theme'); ?>" />
+      <img id="body" class="hidden-phone" src="<?php print IMAGES_PATH ?>/body.png" alt="<?php _e('body', 'huskies-theme'); ?>" />
+      <a id="siteName" href="<?php echo home_url(); ?>">
         <h1><?php bloginfo('name'); ?></h1>
       </a>
 

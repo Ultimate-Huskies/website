@@ -8600,6 +8600,13 @@ body {
 .tooltip {
   font-size: 1.5rem;
 }
+a,
+a > * {
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
 #content-wrapper {
   background-color: #ffffff;
   margin-top: 12rem;
@@ -8651,6 +8658,19 @@ body {
   left: -24rem;
   top: 21rem;
 }
+@media (max-width: 767px) {
+  #content-wrapper #siteName {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    top: -12rem;
+    left: 0rem;
+    width: 100%;
+    text-align: center;
+  }
+}
 #content-wrapper #siteName:hover {
   text-decoration: none;
 }
@@ -8662,6 +8682,11 @@ body {
   font-size: 6rem;
   color: #000000;
   font-weight: normal;
+}
+@media (max-width: 767px) {
+  #content-wrapper #siteName h1 {
+    font-size: 5rem;
+  }
 }
 #content-wrapper #siteName h1:hover {
   color: #46a546;
@@ -8778,6 +8803,46 @@ body {
 #firstFooter a[href="#footer"] i {
   margin-left: 0.25rem;
 }
+#top_navigator {
+  background-color: #46a546;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  bottom: 5rem;
+  color: #555555;
+  display: none;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  padding: 0.75rem 1rem;
+  position: fixed;
+  right: 6rem;
+  text-decoration: none;
+  z-index: 100;
+  font-size: 2rem;
+  text-shadow: #000000 0 0.1rem 0;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+#top_navigator:after {
+  content: "";
+  width: 120%;
+  height: 120%;
+  border: 0.5rem solid #000000;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background-color: transparent;
+  position: absolute;
+  left: -25%;
+  top: -25%;
+}
+#top_navigator:hover {
+  opacity: 0.75;
+  filter: alpha(opacity=75);
+  color: #ffffff;
+}
 #secondFooter {
   background-image: url("images/debut_dark.png");
   min-height: 10rem;
@@ -8790,7 +8855,8 @@ body {
 }
 #secondFooter fieldset legend {
   text-align: center;
-  color: #ffffff;
+  color: #999999;
+  text-shadow: #000000 0 0.1rem 0;
   font-family: "Lobster", Georgia, "Times New Roman", Times, serif;
   border: none;
   -webkit-border-radius: 1rem;

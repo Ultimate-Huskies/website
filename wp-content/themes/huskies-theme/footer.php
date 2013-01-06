@@ -9,6 +9,7 @@
         <a href="#footer" class="pull-right hidden-phone"><?php _e('toggle footer', 'huskies-theme'); ?><i class="icon-hand-down"></i></a>
       </div>
     </div>
+    <a id="top_navigator" href="#" class="hidden-phone icon-hand-up" title="<?php _e('scroll to top', 'huskies-theme'); ?>" data-placement="bottom"></a>
     <?php get_sidebar('footer'); ?>
     <?php wp_footer(); ?>
   </body>

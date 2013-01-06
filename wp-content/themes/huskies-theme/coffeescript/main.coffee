@@ -1,4 +1,5 @@
 jQuery(document).ready ($) ->
+  setTopLink()
   $('*[title]').tooltip()
 
   $('#searchform').on 'focus', 'input', ->
@@ -12,3 +13,5 @@ jQuery(document).ready ($) ->
 
     $('#secondFooter').slideToggle 800
     $('html, body').animate {scrollTop: $('body').height()}, 800
+
+  $('.affix').affix()
