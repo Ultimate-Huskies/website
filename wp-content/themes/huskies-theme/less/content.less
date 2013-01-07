@@ -1,11 +1,12 @@
 #content {
   min-height: 40rem;
   padding: 2.5rem;
-}
 
-.articles {
   article {
     &:nth-child(n+2) { margin-top: 5rem; }
+    &:nth-child(n-2) { margin-bottom: 2.5rem; }
+
+    .featured-post { text-align: center; }
 
     header {
       margin-bottom: 2rem;
@@ -62,6 +63,13 @@
       .article_meta_tags dd { 
         margin-left: 5rem;
       }
+    }
+
+    .form-search { text-align: center; }
+
+    .more-link {
+      width: 25rem;
+      margin: 0 auto;
     }
 
     figure {

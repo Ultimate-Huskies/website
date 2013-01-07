@@ -52,3 +52,5 @@
       <a id="siteName" href="<?php echo home_url(); ?>">
         <h1><?php bloginfo('name'); ?></h1>
       </a> 
+
+      <section id="content" class="clearfix">

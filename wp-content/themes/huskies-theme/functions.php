@@ -99,10 +99,125 @@ function register_widgets() {
 }
 add_action('widgets_init', 'register_widgets');
 
-function new_excerpt_more($more) {
-       global $post;
-       // return ' <a href="'. get_permalink($post->ID) . '">Read the Rest...</a>';
-  return ' [<a href="'.get_permalink($post->ID).'" title="'.__("Read the rest of", "huskies-theme").' '.get_the_title($post->ID).'" class="more-link">'.__("read the complete post", "huskies-theme").'</a>]';
+function boostrap_wp_link_pages($args = array()) {
+  $defaults = array(
+    'before'          => '<p class="post-navigation">',
+    'after'           => '</p>',
+    'link_before'     => '',
+    'link_after'      => '',
+    'current_before'  => '<span class="current_page">',
+    'current_after'   => '</span>',
+    'next_or_number'  => 'number',
+    'nextpagelink'    => __('Next page', 'huskies-theme'),
+    'previouspagelink'=> __('Previous page', 'huskies-theme'),
+    'pagelink'        => '%',
+    'echo'            => true
+  );
+
+  $r = wp_parse_args($args, $defaults);
+  $r = apply_filters('boostrap_wp_link_pages_args', $r);
+  extract($r, EXTR_SKIP);
+
+  global $page, $numpages, $multipage, $more, $pagenow;
+
+  $output = '';
+  if ($multipage) {
+    if ('number' === $next_or_number) {
+      $output .= $before;
+      for ($i = 1; $i < ($numpages + 1); $i++) {
+        $j = str_replace('%', $i, $pagelink);
+        if (($i != $page) || ((!$more) && ($page!=1))) {
+          $output .= $link_before._wp_link_page($i).$j.$link_after;
+        } else {
+          $output .= $current_before.$j.$current_after;
+        }
+      }
+      $output .= $after;
+    } else {
+      if ($more) {
+        $output .= $before;
+        $i = $page - 1;
+        if ($i && $more) {
+          $output .= $link_before._wp_link_page($i).$previouspagelink.$link_after;
+        }
+        $i = $page + 1;
+        if ($i <= $numpages && $more) {
+          $output .= $link_before._wp_link_page($i).$nextpagelink.$link_after;
+        }
+        $output .= $after;
+      }
+    }
+  }
+
+  if ($echo) echo $output;
+
+  return $output;
 }
-add_filter('excerpt_more', 'new_excerpt_more');
+
+function bootstrap_wp_comment($comment, $args, $depth) {
+  $GLOBALS['comment'] = $comment;
+
+  switch ($comment->comment_type) :
+    case 'pingback' :
+    case 'trackback' :
+    // Display trackbacks differently than normal comments.
+  ?>
+  <li <?php comment_class('media'); ?> id="comment-<?php comment_ID(); ?>">
+    <div class="media-body">
+      <h4 class="media-heading"><?php _e('Pingback: ', 'huskies-theme' ); ?></h4>
+      <p><?php comment_author_link(); ?> <?php edit_comment_link( __( '(Edit)', 'twentytwelve' ), '<span class="edit-link">', '</span>' ); ?></p>
+  <?php
+      break;
+
+    default :
+    // Proceed with normal comments.
+    global $post;
+  ?>
+  <?php 
+    $comment_classes = 'media';
+    if ($comment->user_id === $post->post_author) $comment_classes .= 'comment_by_author'; 
+  ?>
+  <li <?php comment_class($comment_classes); ?> id="li-comment-<?php comment_ID(); ?>">
+    <a class="pull-left" href="<?php comment_author_url(); ?>"><?php echo get_avatar($comment, 64); ?></a>
+
+    <div class="media-body">
+      <div class="page-header">
+         <h4>
+          <a href="<?php comment_author_url(); ?>">
+            <?php comment_author(); ?>
+          </a>
+          <small>
+            <?php
+              printf( '<time datetime="%1$s">%2$s</time>',
+                get_comment_time('c'),
+                /* translators: 1: date, 2: time */
+                sprintf(__('%1$s at %2$s', 'huskies-theme'), get_comment_date(), get_comment_time())
+              );
+
+              edit_comment_link(__('Edit comment', 'huskies-theme'), '<small class="edit-comment"> | ', '</small>');
+            ?>
+          </small>
+        </h4>
+        <?php comment_reply_link(array_merge($args, array('reply_text' => __('Reply &darr;', 'huskies-theme'), 'before' => '<span class="pull-right">', 'after' => '</span>', 'depth' => $depth, 'max_depth' => $args['max_depth']))); ?>
+      </div>
+     
+      <?php if ('0' == $comment->comment_approved) : ?>
+        <p class="comment_awaiting_moderation"><?php _e('Your comment is awaiting moderation.', 'huskies-theme'); ?></p>
+      <?php endif; ?>
+
+      <section class="comment_content comment">
+        <?php comment_text(); ?>
+      </section>
+    </div>
+  <?php
+    break;
+  endswitch;
+}
+
+function change_avatar_css($class) {
+  $class = str_replace("class='avatar", "class='comments-avatar media-object img-rounded img-polaroid", $class);
+  return $class;
+}
+add_filter('get_avatar','change_avatar_css');
+
 ?>

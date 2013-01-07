@@ -1,8 +1,19 @@
 <article <?php post_class('clearfix'); ?> id="post-<?php the_ID(); ?>">
+  
+
   <header>
     <div class="page-header">
-      <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+      <?php if (is_single()) : ?>
+        <h1><?php the_title(); ?></h1>
+      <?php else : ?>
+        <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+      <?php endif;?>
+
+      <?php if (is_sticky() && !is_single() && !is_paged()) : ?>
+        <div class="featured-post label label-info"> <?php _e('Featured post', 'huskies-theme'); ?> </div>
+      <?php endif; ?>
       <small class="article_meta_extra"><?php echo get_the_date(); ?>, by <?php the_author_posts_link(); ?></small>
+      <?php edit_post_link(__('Edit this post', 'huskies-theme'), ' | <span class="article_meta_edit_link">', '</span>' ); ?>
       <?php 
         if (comments_open() && !post_password_required()) {
           comments_popup_link('0', '1', '%', 'article_meta_comments icon-comments-alt');
@@ -21,7 +32,32 @@
     </figure>
   <?php endif; ?>
 
-  <?php the_excerpt(); ?>
+  <div class="article_content clearfix">
+    <?php 
+      if(is_single()) {
+        the_content(); 
+      } else {
+        the_excerpt();
+      }
+    ?>
+  </div>
+
+  <?php 
+    if(is_single()) : 
+      boostrap_wp_link_pages(array(
+        'before' => '<nav class="pagination pagination-centered"><ul>',
+        'after' => '</ul></nav>',
+        'link_before' => '<li>',
+        'link_after' => '</li>',
+        'current_before' => '<li class="active"><a>',
+        'current_after' => '</a></li>',
+      ));
+    else:
+  ?>
+    <div>
+      <a href="<?php the_permalink(); ?>" title="<?php _e("Read the rest of", "huskies-theme") ?> <strong><?php the_title(); ?></strong>" class="more-link btn btn-block"><?php _e("read the complete post", "huskies-theme"); ?></a>
+    </div>
+  <?php endif; ?>
 </article>
 
 <hr class="fancy" />
