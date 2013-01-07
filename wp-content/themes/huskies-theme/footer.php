@@ -1,4 +1,3 @@
-      </section>
       <div class="container" id="firstFooter">
         <a class="pull-left" href="<?php print IMPRINT_URL; ?>"><?php _e('imprint', 'huskies-theme') ?></a>
         <p>

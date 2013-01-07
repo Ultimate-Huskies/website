@@ -4,7 +4,13 @@
 
   jQuery(document).ready(function($) {
     setTopLink();
-    $('*[title]').tooltip();
+    $('*[title]').tooltip({
+      html: true,
+      placement: 'bottom'
+    });
+    $('.article_meta_comments').tooltip('destroy').tooltip({
+      placement: 'left'
+    });
     $('#searchform').on('focus', 'input', function() {
       return $('#disc, #searchform').addClass('expand');
     });

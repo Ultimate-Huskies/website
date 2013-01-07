@@ -20,3 +20,23 @@ a,
 a > * {
   .transition(all 1s ease);
 }
+
+hr.fancy { 
+  margin: 5rem auto; 
+  width: 80%;
+  border-top-color: darken(@grayLighter, 10%);
+  position: relative;
+
+  &:before,
+  &:after {
+    position: absolute;
+    left: 25%;
+    content: "";
+    width: 50%;
+    margin: 0 auto; 
+    border-top: 0.1rem solid darken(@grayLighter, 10%);
+  }
+
+  &:before { top: -0.65rem; }
+  &:after { bottom: -0.5rem; }
+}

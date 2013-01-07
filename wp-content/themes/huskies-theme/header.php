@@ -51,6 +51,4 @@
       <img id="body" class="hidden-phone" src="<?php print IMAGES_PATH ?>/body.png" alt="<?php _e('body', 'huskies-theme'); ?>" />
       <a id="siteName" href="<?php echo home_url(); ?>">
         <h1><?php bloginfo('name'); ?></h1>
-      </a>
-
-      <section id="content">
+      </a> 

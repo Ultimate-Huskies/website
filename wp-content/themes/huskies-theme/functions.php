@@ -17,6 +17,18 @@ foreach (get_pages(array('parent' => 0)) as $page) {
   }
 }
 
+# add theme supports 
+function add_theme_supports() {
+  load_theme_textdomain('huskies-theme', THEMEROOT.'/languages');
+
+  add_theme_support('automatic-feed-links');
+  add_theme_support('post-formats', array('gallery', 'image', 'status', 'video'));
+  add_theme_support('post-thumbnails');
+
+  set_post_thumbnail_size(250, 250); // Unlimited height, soft crop
+}
+add_action('after_setup_theme', 'add_theme_supports');
+
 # add styles to theme
 function enqueue_styles() {
   wp_register_style('font_lobster', 'http://fonts.googleapis.com/css?family=Lobster', false, '1.0.0', 'all');
@@ -87,4 +99,10 @@ function register_widgets() {
 }
 add_action('widgets_init', 'register_widgets');
 
+function new_excerpt_more($more) {
+       global $post;
+       // return ' <a href="'. get_permalink($post->ID) . '">Read the Rest...</a>';
+  return ' [<a href="'.get_permalink($post->ID).'" title="'.__("Read the rest of", "huskies-theme").' '.get_the_title($post->ID).'" class="more-link">'.__("read the complete post", "huskies-theme").'</a>]';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
 ?>

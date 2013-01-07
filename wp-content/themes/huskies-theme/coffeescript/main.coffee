@@ -1,6 +1,11 @@
 jQuery(document).ready ($) ->
   setTopLink()
-  $('*[title]').tooltip()
+  $('*[title]').tooltip
+    html: true
+    placement: 'bottom'
+
+  $('.article_meta_comments').tooltip('destroy').tooltip
+    placement: 'left'
 
   $('#searchform').on 'focus', 'input', ->
     $('#disc, #searchform').addClass('expand')
