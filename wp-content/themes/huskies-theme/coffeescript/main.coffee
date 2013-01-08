@@ -7,10 +7,10 @@ jQuery(document).ready ($) ->
   $('.article_meta_comments').tooltip('destroy').tooltip
     placement: 'left'
 
-  $('#searchform').on 'focus', 'input', ->
+  $('#topHeader .form-search').on 'focus', 'input', ->
     $('#disc, #searchform').addClass('expand')
 
-  $('#searchform').on 'blur', 'input', ->
+  $('#topHeader .form-search').on 'blur', 'input', ->
     $('#disc, #searchform').removeClass('expand')
 
   $('a[href="#footer"]').on 'click', (event) ->
@@ -18,5 +18,3 @@ jQuery(document).ready ($) ->
 
     $('#secondFooter').slideToggle 800
     $('html, body').animate {scrollTop: $('body').height()}, 800
-
-  $('.affix').affix()

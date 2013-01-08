@@ -11,20 +11,19 @@
     $('.article_meta_comments').tooltip('destroy').tooltip({
       placement: 'left'
     });
-    $('#searchform').on('focus', 'input', function() {
+    $('#topHeader .form-search').on('focus', 'input', function() {
       return $('#disc, #searchform').addClass('expand');
     });
-    $('#searchform').on('blur', 'input', function() {
+    $('#topHeader .form-search').on('blur', 'input', function() {
       return $('#disc, #searchform').removeClass('expand');
     });
-    $('a[href="#footer"]').on('click', function(event) {
+    return $('a[href="#footer"]').on('click', function(event) {
       event.preventDefault();
       $('#secondFooter').slideToggle(800);
       return $('html, body').animate({
         scrollTop: $('body').height()
       }, 800);
     });
-    return $('.affix').affix();
   });
 
   $topLink = "";

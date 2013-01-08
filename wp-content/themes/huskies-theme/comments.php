@@ -2,15 +2,6 @@
 
 <div id="comments" class="comments_area">
   <?php if(have_comments()) : ?>
-    <h3 class="comments_title">
-      <?php
-        printf(
-          _n('One comment', '%1$s comments', get_comments_number(), 'huskies-theme'),
-          number_format_i18n(get_comments_number())
-        );
-      ?>
-    </h3>
-
     <?php if (get_comment_pages_count() > 1 && get_option('page_comments')) : ?>
       <ul id="comment-nav-below" class="pager">
         <li class="previous"><?php previous_comments_link(__('&larr; Older Comments', 'huskies-theme')); ?></li>
@@ -18,27 +9,53 @@
       </ul>
     <?php endif; ?>
 
-    <ul class="commentlist media-list">
-      <?php wp_list_comments(array(
-              'callback' => 'bootstrap_wp_comment', 
-              'style' => 'ul'
-      )); ?>
-    </ul>
+    <div class="tabbable">
+      <ul class="nav nav-tabs">
+        <li class="active">
+          <a href="#tab1" data-toggle="tab"><h3><?php echo count($wp_query->comments_by_type['comment']); ?> <?php _e('Comments', 'huskies-theme'); ?></h3></a>
+        </li>
+        <li>
+          <a href="#tab2" data-toggle="tab"><h3><?php echo count($wp_query->comments_by_type['pings']); ?> <?php _e('Ping- & Trackbacks', 'huskies-theme'); ?></h3></a>
+        </li>
+      </ul>
+      <div class="tab-content">
+        <div class="tab-pane active" id="tab1">
+          <ul class="commentlist media-list">
+            <?php wp_list_comments(array(
+                    'callback' => 'bootstrap_wp_comments', 
+                    'type'     => 'comment',
+                    'style'    => 'ul'
+            )); ?>
+          </ul>
+        </div>
+        <div class="tab-pane" id="tab2">
+          <ul class="commentlist media-list">
+            <?php wp_list_comments(array(
+                    'callback' => 'bootstrap_wp_pings', 
+                    'type'     => 'pings',
+                    'style'    => 'ul'
+            )); ?>
+          </ul>
+        </div>
+      </div>
+    </div>
 
     <?php if (get_comment_pages_count() > 1 && get_option('page_comments')) : ?>
       <ul id="comment-nav-below" class="pager">
         <li class="previous"><?php previous_comments_link(__('&larr; Older Comments', 'huskies-theme')); ?></li>
         <li class="next"><?php next_comments_link(__('Newer Comments &rarr;', 'twentytwelve')); ?></li>
       </ul>
-    <?php endif; ?>
-
-    <?php if (!comments_open() && get_comments_number()) : ?>
-      <h3 class="comments_title nocomments"><?php _e('Comments are closed' , 'huskies-theme'); ?></h3>
     <?php endif; ?>
 
   <?php else : ?>
-    <h3 class="comments_title"><?php _e('No comments so far', 'huskies-theme'); ?></h3>
+    <?php if (!comments_open()) : ?>
+      <h3 class="comments_title nocomments"><?php _e('Comments are closed' , 'huskies-theme'); ?></h3>
+    <?php else : ?>
+      <h3 class="comments_title"><?php _e('No comments so far', 'huskies-theme'); ?></h3>
+    <?php endif; ?>
   <?php endif; ?>
 
-  <?php comment_form(); ?>
+  <hr class="fancy" />
+
+  <?php bootstrap_custom_comments_form(); ?>
 </div>
