@@ -13,24 +13,13 @@
 
       .article_meta_comments {
         float: right;
-        position: relative;
-        padding: 0.5rem;
+        z-index: 10;
         margin-right: 5rem;
-        margin-top: -1rem;
-
+        
         &:hover { 
           text-decoration: none; 
 
           &:before { color: @linkColorHover; }
-        }
-
-        &:before {
-          .transition(all 1s ease);
-          color: @grayLight;
-          position: absolute;
-          left: -0.35rem;
-          top: -0.35rem;
-          font-size: 4rem;
         }
       }
 

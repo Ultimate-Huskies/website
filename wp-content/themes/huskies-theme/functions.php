@@ -4,7 +4,10 @@ require_once('utility/bootstrap_nav_walker.php');
 # remove meta tag generation and do not show he current wp version
 remove_action('wp_head', 'wp_generator');
 
-# define some constants
+########################################################################################################
+#               constant definition                                                                           
+########################################################################################################
+  
 define('THEMEROOT', get_stylesheet_directory_uri());
 define('IMAGES_PATH',    THEMEROOT.'/images');
 
@@ -16,6 +19,11 @@ foreach (get_pages(array('parent' => 0)) as $page) {
     break;
   }
 }
+
+########################################################################################################
+#               setup theme                                                                           
+########################################################################################################
+  
 
 # add theme supports 
 function add_theme_supports() {
@@ -98,6 +106,11 @@ function register_widgets() {
 }
 add_action('widgets_init', 'register_widgets');
 
+########################################################################################################
+#               template functions                                                                           
+########################################################################################################
+  
+# function to build custom pagination bases on wp_link_pages function from wordpress
 function boostrap_wp_link_pages($args = array()) {
   $defaults = array(
     'before'          => '<p class="post-navigation">',
@@ -153,6 +166,7 @@ function boostrap_wp_link_pages($args = array()) {
   return $output;
 }
 
+# custom function to build ping- & trackback comments separately
 function bootstrap_wp_pings($comment) {
   ?>
   <li <?php comment_class('media'); ?> id="comment-<?php comment_ID(); ?>">
@@ -169,6 +183,7 @@ function bootstrap_wp_pings($comment) {
   <?php
 }
 
+# custom function to build normal comments 
 function bootstrap_wp_comments($comment, $args, $depth) {
   $GLOBALS['comment'] = $comment;
   global $post;
@@ -177,7 +192,7 @@ function bootstrap_wp_comments($comment, $args, $depth) {
   if ($comment->user_id === $post->post_author) $comment_classes .= 'comment_by_author'; 
   ?>
   <li <?php comment_class($comment_classes); ?> id="comment-<?php comment_ID(); ?>">
-    <a class="pull-left" href="<?php comment_author_url(); ?>"><?php echo get_avatar($comment, 64); ?></a>
+    <a class="pull-left" href="<?php comment_author_url(); ?>"><?php echo get_avatar($comment, 80); ?></a>
 
     <div class="media-body">
       <div class="page-header">
@@ -201,22 +216,24 @@ function bootstrap_wp_comments($comment, $args, $depth) {
       </div>
      
       <?php if ('0' == $comment->comment_approved) : ?>
-        <p class="comment_awaiting_moderation"><?php _e('Your comment is awaiting moderation.', 'huskies-theme'); ?></p>
+        <p class="comment_awaiting_moderation label label-info"><?php _e('Your comment is awaiting moderation.', 'huskies-theme'); ?></p>
       <?php endif; ?>
 
-      <section class="comment_content comment">
+      <section class="comment_content">
         <?php comment_text(); ?>
       </section>
     </div>
   <?php
 }
 
+# filter function to add custom classes to avatar image
 function change_avatar_css($class) {
   $class = str_replace("class='avatar", "class='comments-avatar media-object img-rounded img-polaroid", $class);
   return $class;
 }
 add_filter('get_avatar', 'change_avatar_css');
 
+# custom function to build own comment form
 function bootstrap_custom_comments_form($post_id = null) {
   global $id;
 
@@ -236,88 +253,95 @@ function bootstrap_custom_comments_form($post_id = null) {
   <?php if (comments_open($post_id)) : ?>
     <?php do_action( 'comment_form_before' ); ?>
     <div id="respond">
-      <h3 id="comment_reply_title">
-        <?php comment_form_title(__('Leave a Reply', 'huskies-theme'), __('Leave a Reply to %s', 'huskies-theme')); ?> 
-        <small><?php cancel_comment_reply_link(__('Cancel reply', 'huskies-theme')); ?></small>
-      </h3>
+      <div class="page-header">
+        <h3 id="comment_reply_title">
+          <?php comment_form_title(__('Leave a Reply', 'huskies-theme'), __('Leave a Reply to %s', 'huskies-theme')); ?> 
+          <small><?php cancel_comment_reply_link(__('Cancel reply', 'huskies-theme')); ?></small>
+        </h3>
 
-      <?php if (get_option('comment_registration') && !is_user_logged_in()) : ?>
-        <p class="comment_must_log_in">
-          <?php _e('You must be logged on to post a comment', 'huskies-theme'); ?> -> 
-          <a href="<?php wp_login_url(apply_filters('the_permalink', get_permalink($post_id))); ?>">Log in here</a>
-        <?php do_action( 'comment_form_must_log_in_after' ); ?>
+    <?php if (get_option('comment_registration') && !is_user_logged_in()) : ?>
+      </div>
+      <p class="comment_must_log_in">
+        <span class="label label-warning"><?php _e('You must be logged in to post a comment', 'huskies-theme'); ?></span> -> 
+        <a href="<?php wp_login_url(apply_filters('the_permalink', get_permalink($post_id))); ?>"><?php _e('Log in', 'huskies-theme'); ?></a>
+      <?php do_action( 'comment_form_must_log_in_after' ); ?>
+      </p>
 
-      <?php else : ?>
+    <?php else : ?>
+        <?php if (is_user_logged_in()) : ?>
+          <p class="comment_logged_in_as">
+            <?php _e('Logged in as', 'huskies-theme'); ?> <a href="<?php echo get_edit_user_link(); ?>"><?php echo $user_identity; ?></a>
+             | 
+            <a href="<?php echo wp_logout_url(apply_filters('the_permalink', get_permalink($post_id))); ?>" title="<?php _e('Log out of this account', 'huskies-theme'); ?>"><?php _e('Log out?', 'huskies-theme'); ?></a>
+          </p>
+          <?php do_action('comment_form_logged_in_after', $commenter, $user_identity ); ?>
 
-        <form action="<?php echo site_url('/wp-comments-post.php'); ?>" method="post" id="commentform">
-          <?php do_action('comment_form_top'); ?>
+        <?php else : ?>
+          <p class="comment_notes">
+            <?php _e('Your email address will not be published.', 'huskies-theme'); ?>
+            <?php if($req) : ?>
+              <span class="comment_mark_required_fields"><?php _e('Required fields are marked with', 'huskies-theme'); ?> <code><i class="icon-asterisk"></i></code></span>
+            <?php endif; ?>
+          </p>
+        <?php endif; ?>
+      </div>
 
-          <?php if (is_user_logged_in()) : ?>
-            <p class="comment_logged_in_as">
-              <?php _e('Logged in as', 'huskies-theme'); ?> <a href="<?php echo get_edit_user_link(); ?>"><?php echo $user_identity; ?></a>
-               | 
-              <a href="<?php echo wp_logout_url(apply_filters('the_permalink', get_permalink($post_id))); ?>" title="<?php _e('Log out of this account', 'huskies-theme'); ?>"><?php _e('Log out?', 'huskies-theme'); ?></a>
-            </p>
-            <?php do_action('comment_form_logged_in_after', $commenter, $user_identity ); ?>
+      <form action="<?php echo site_url('/wp-comments-post.php'); ?>" method="post" id="commentform">
+        <?php do_action('comment_form_top'); ?>
 
-          <?php else : ?>
-            <p class="comment_notes">
-              <?php _e('Your email address will not be published.', 'huskies-theme'); ?>
+        <?php if (!is_user_logged_in()) : ?>
+          <?php do_action('comment_form_before_fields'); ?>
+          <div class="row-fluid">
+            <div class="input-prepend span4 <?php if($req) echo 'input-append'; ?>">
+              <span class="add-on" title="<?php _e('Your Name', 'huskies-theme'); ?>"><i class="icon-user"></i></span>
+              <input id="author" name="author" type="text" value="<?php esc_attr($commenter['comment_author']); ?>" placeholder="<?php _e('name', 'huskies-theme'); ?>" <?php echo $aria_req; ?>/>
               <?php if($req) : ?>
-                <span class="comment_mark_required_fields"><?php _e('Required fields are marked with', 'huskies-theme'); ?> <span class="icon-asterisk"></span></span>
+                <span class="add-on" title="<?php _e('required field', 'huskies-theme'); ?>"><i class="icon-asterisk"></i></span>
               <?php endif; ?>
-            </p>
-            <?php do_action('comment_form_before_fields'); ?>
-            <div class="row-fluid">
-              <div class="input-prepend span4 <?php if($req) echo 'input-append'; ?>">
-                <span class="add-on icon-user" title="<?php _e('Your Name', 'huskies-theme'); ?>"></span>
-                <input id="author" name="author" type="text" value="<?php esc_attr($commenter['comment_author']); ?>" placeholder="<?php _e('name', 'huskies-theme'); ?>" <?php echo $aria_req; ?>/>
-                <?php if($req) : ?>
-                  <span class="add-on icon-asterisk" title="<?php _e('required field', 'huskies-theme'); ?>"></span>
-                <?php endif; ?>
-              </div>
-
-              <div class="input-prepend span4 <?php if($req) echo 'input-append'; ?>">
-                <span class="add-on icon-envelope-alt" title="<?php _e('Your email address<br />(will not be published)', 'huskies-theme'); ?>"></span>
-                <input id="email" name="email" type="text" value="<?php esc_attr($commenter['comment_author_email']); ?>" placeholder="<?php _e('email', 'huskies-theme'); ?>" <?php echo $aria_req; ?>/>
-                <?php if($req) : ?>
-                  <span class="add-on icon-asterisk" title="<?php _e('required field', 'huskies-theme'); ?>"></span>
-                <?php endif; ?>
-              </div>
-
-              <div class="input-prepend span4">
-                <span class="add-on icon-globe" title="<?php _e('Your website', 'huskies-theme'); ?>"></span>
-                <input id="url" name="url" type="text" value="<?php esc_attr($commenter['comment_author_url']); ?>" placeholder="<?php _e('url', 'huskies-theme'); ?>" />
-              </div>
             </div>
-            <?php do_action('comment_form_after_fields'); ?>
-          <?php endif; ?>
 
-          <div class="comment_form_comment input-block-level">
-            <textarea id="comment" name="comment" aria-required="true" placeholder="<?php _e('your great comment', 'huskies-theme'); ?>"></textarea>
+            <div class="input-prepend span4 <?php if($req) echo 'input-append'; ?>">
+              <span class="add-on" title="<?php _e('Your email address<br />(will not be published)', 'huskies-theme'); ?>"><i class="icon-envelope-alt"></i></span>
+              <input id="email" name="email" type="text" value="<?php esc_attr($commenter['comment_author_email']); ?>" placeholder="<?php _e('email', 'huskies-theme'); ?>" <?php echo $aria_req; ?>/>
+              <?php if($req) : ?>
+                <span class="add-on" title="<?php _e('required field', 'huskies-theme'); ?>"><i class="icon-asterisk"></i></span>
+              <?php endif; ?>
+            </div>
+
+            <div class="input-prepend span4">
+              <span class="add-on" title="<?php _e('Your website', 'huskies-theme'); ?>"><i class="icon-globe"></i></span>
+              <input id="url" name="url" type="text" value="<?php esc_attr($commenter['comment_author_url']); ?>" placeholder="<?php _e('website', 'huskies-theme'); ?>" />
+            </div>
           </div>
+          <?php do_action('comment_form_after_fields'); ?>
+        <?php endif; ?>
 
-          <p class="comment_form_allowed_tags">
+        <div class="comment_form_comment input-block-level row-fluid">
+          <textarea id="comment" name="comment" class="span12" aria-required="true" placeholder="<?php _e('your great comment', 'huskies-theme'); ?>"></textarea>
+        </div>
+
+        <dl class="comment_form_allowed_tags dl-horizontal hidden-phone">
+          <dt>
             <?php _e('You may use these', 'huskies-theme'); ?>
             <abbr title="HyperText Markup Language">HTML</abbr>
-            <?php _e('tags and attributes', 'huskies-theme'); ?>: 
-            <code><?php echo allowed_tags(); ?></code>
-          </p>
-         
-          <div class="comment_form_submit form-actions">
-            <input name="submit" type="submit" id="submit" class="btn btn-success" value="<?php _e('Post Comment', 'huskies-theme'); ?>" />
-            <input type="reset" class="btn" value="<?php _e('Clear comment', 'huskies-theme'); ?>">
-            <?php comment_id_fields($post_id); ?>
-          </div>
-          <?php do_action('comment_form', $post_id); ?>
-        </form>
-      <?php endif; ?>
-    </div>
-    <?php do_action('comment_form_after'); ?>
+            <?php _e('tags and attributes', 'huskies-theme'); ?>:
+          </dt>
+          <dd><code><?php echo allowed_tags(); ?></code></dd>
+        </dl>
+       
+        <div class="comment_form_submit form-actions">
+          <input name="submit" type="submit" id="submit" class="btn btn-success" value="<?php _e('Post', 'huskies-theme'); ?>" />
+          <input type="reset" class="btn" value="<?php _e('Clear', 'huskies-theme'); ?>">
+          <?php comment_id_fields($post_id); ?>
+        </div>
+        <?php do_action('comment_form', $post_id); ?>
+      </form>
+    <?php endif; ?>
+  </div>
+  <?php do_action('comment_form_after'); ?>
 
   <?php else :
     do_action('comment_form_comments_closed');
   endif; 
 }
-
 ?>

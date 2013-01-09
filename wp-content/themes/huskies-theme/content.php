@@ -15,8 +15,8 @@
       <small class="article_meta_extra"><?php echo get_the_date(); ?>, by <?php the_author_posts_link(); ?></small>
       <?php edit_post_link(__('Edit this post', 'huskies-theme'), ' | <span class="article_meta_edit_link">', '</span>' ); ?>
       <?php 
-        if (comments_open() && !post_password_required()) {
-          comments_popup_link('0', '1', '%', 'article_meta_comments icon-comments-alt');
+        if ((comments_open() || wp_count_comments(get_the_ID())->approved > 0) && !post_password_required()) {
+          comments_popup_link(__('No comments', 'huskies-theme'),  __('1 comment', 'huskies-theme'), __('% comments', 'huskies-theme'), 'label label-success article_meta_comments');
         }
       ?>
     </div>
@@ -28,14 +28,18 @@
 
   <?php if(has_post_thumbnail()) : ?>
     <figure class="article_preview_image">
-      <a href="<?php the_permalink(); ?>" title="<?php _e('Go to full post', 'huskies-theme'); ?> <?php the_title_attribute(); ?>"><?php the_post_thumbnail('thumbnail', array('class' => 'img-rounded img-polaroid')); ?></a>
+      <?php if (is_single()) : ?>
+        <?php the_post_thumbnail('thumbnail', array('class' => 'img-rounded img-polaroid')); ?>
+      <?php else : ?>
+        <a href="<?php the_permalink(); ?>" title="<?php _e('Go to full post', 'huskies-theme'); ?> <?php the_title_attribute(); ?>"><?php the_post_thumbnail('thumbnail', array('class' => 'img-rounded img-polaroid')); ?></a>
+      <?php endif;?>
     </figure>
   <?php endif; ?>
 
   <div class="article_content clearfix">
     <?php 
       if(is_single()) {
-        the_content(); 
+        strip_tags(the_content()); 
       } else {
         the_excerpt();
       }

@@ -14,6 +14,7 @@
         <li class="active">
           <a href="#tab1" data-toggle="tab"><h3><?php echo count($wp_query->comments_by_type['comment']); ?> <?php _e('Comments', 'huskies-theme'); ?></h3></a>
         </li>
+        <li><h3>&</h3></li>
         <li>
           <a href="#tab2" data-toggle="tab"><h3><?php echo count($wp_query->comments_by_type['pings']); ?> <?php _e('Ping- & Trackbacks', 'huskies-theme'); ?></h3></a>
         </li>
@@ -48,14 +49,20 @@
     <?php endif; ?>
 
   <?php else : ?>
-    <?php if (!comments_open()) : ?>
-      <h3 class="comments_title nocomments"><?php _e('Comments are closed' , 'huskies-theme'); ?></h3>
-    <?php else : ?>
-      <h3 class="comments_title"><?php _e('No comments so far', 'huskies-theme'); ?></h3>
+    <?php if (comments_open()) : ?>
+      <h3 class="comments_title label label-info"><?php _e('No comments so far', 'huskies-theme'); ?></h3>
     <?php endif; ?>
   <?php endif; ?>
 
-  <hr class="fancy" />
+  <?php if (comments_open()) : ?>
+    <hr class="fancy" />
 
-  <?php bootstrap_custom_comments_form(); ?>
+    <?php bootstrap_custom_comments_form(); ?>
+
+    <hr class="fancy" />
+
+  <?php else :?>
+    <h3 class="comments_title nocomments label label-info"><?php _e('Comments are closed' , 'huskies-theme'); ?></h3>
+    <hr class="fancy" />
+  <?php endif; ?>
 </div>
