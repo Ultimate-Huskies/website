@@ -1,6 +1,4 @@
 <article <?php post_class('clearfix'); ?> id="post-<?php the_ID(); ?>">
-  
-
   <header>
     <div class="page-header">
       <?php if (is_single()) : ?>
@@ -38,8 +36,8 @@
 
   <div class="article_content clearfix">
     <?php 
-      if(is_single()) {
-        strip_tags(the_content()); 
+      if(is_single() || post_password_required()) {
+        the_content(); 
       } else {
         the_excerpt();
       }
@@ -56,7 +54,7 @@
         'current_before' => '<li class="active"><a>',
         'current_after' => '</a></li>',
       ));
-    else:
+    elseif(!post_password_required()):
   ?>
     <div>
       <a href="<?php the_permalink(); ?>" title="<?php _e("Read the rest of", "huskies-theme") ?> <strong><?php the_title(); ?></strong>" class="more-link btn btn-block"><?php _e("read the complete post", "huskies-theme"); ?></a>

@@ -52,8 +52,10 @@ function enqueue_scripts() {
   $bootstrap_path = THEMEROOT.'/bootstrap/js/';
   wp_register_script('bootstrap_dropdown', $bootstrap_path.'bootstrap-dropdown.js', array( 'jquery' ), '1', false);
   wp_register_script('bootstrap_tooltip', $bootstrap_path.'bootstrap-tooltip.js', array( 'jquery' ), '1', false);
+  wp_register_script('bootstrap_popover', $bootstrap_path.'bootstrap-popover.js', array( 'jquery' ), '1', false);
   wp_register_script('bootstrap_tab', $bootstrap_path.'bootstrap-tab.js', array( 'jquery' ), '1', false);
-  wp_register_script('main_script', THEMEROOT.'/javascript/main.js', array('bootstrap_dropdown', 'bootstrap_tooltip', 'bootstrap_tab'), '1.0.0', false);
+  wp_register_script('gallery', THEMEROOT.'/javascript/photobox.min.js', array( 'jquery' ), '1', false);
+  wp_register_script('main_script', THEMEROOT.'/javascript/main.js', array('bootstrap_dropdown', 'bootstrap_tooltip', 'bootstrap_popover', 'bootstrap_tab', 'gallery'), '1.0.0', false);
 
   wp_enqueue_script('main_script'); 
 }
@@ -107,8 +109,195 @@ function register_widgets() {
 add_action('widgets_init', 'register_widgets');
 
 ########################################################################################################
+#               filter functions                                                                           
+########################################################################################################
+  
+ # filter function to display a custom gallery with boostrap markup
+function bootstrap_post_gallery($fist, $attr) {
+  $post = get_post();
+
+  static $instance = 0;
+  $instance++;
+
+  extract(shortcode_atts(array(
+    'order'      => 'ASC',
+    'orderby'    => 'menu_order ID',
+    'id'         => $post->ID,
+    'wrappertag' => 'ul',
+    'itemtag'    => 'li',
+    'icontag'    => 'a',
+    'captiontag' => 'h5',
+    'columns'    => 3,
+    'size'       => 'thumbnail',
+    'include'    => '',
+    'exclude'    => ''
+  ), $attr));
+
+  $id = intval($id);
+  if ('RAND' == $order) $orderby = 'none';
+
+  if (!empty($include)) {
+    $_attachments = get_posts(array(
+      'include'         => $include, 
+      'post_status'     => 'inherit', 
+      'post_type'       => 'attachment', 
+      'post_mime_type'  => 'image', 
+      'order'           => $order, 
+      'orderby'         => $orderby
+    ));
+
+    $attachments = array();
+    foreach ($_attachments as $key => $val) $attachments[$val->ID] = $_attachments[$key];
+  } elseif (!empty($exclude)) {
+    $attachments = get_children(array(
+      'post_parent' => $id, 
+      'exclude'         => $exclude, 
+      'post_status'     => 'inherit', 
+      'post_type'       => 'attachment', 
+      'post_mime_type'  => 'image', 
+      'order'           => $order, 
+      'orderby'         => $orderby
+    ));
+  } else {
+    $attachments = get_children(array(
+      'post_parent'     => $id, 
+      'post_status'     => 'inherit', 
+      'post_type'       => 'attachment', 
+      'post_mime_type'  => 'image', 
+      'order'           => $order, 
+      'orderby'         => $orderby
+    ));
+  }
+
+  # return here, if no images in the gallery
+  if (empty($attachments)) return '';
+
+  # return with custom markup, if gallery should display on not single view
+  if (!is_single()) {
+    $amount = count($attachments);
+    $keys = array_keys($attachments);
+    $key = $keys[rand(0, $amount-1)];
+    $image = $attachments[$key];
+    $displayImage = wp_get_attachment_image($image->ID, 'full');
+
+    # add bootstrap img classes, if not existing
+    if (strpos($displayImage, 'img-rounded img-polaroid') === false) $displayImage = str_replace('class="', 'class="img-rounded img-polaroid ', $displayImage);
+  
+    return  '<div>'.
+              '<a href="'.get_permalink().'">'.$displayImage.'</a>'.
+            '</div>'.
+            '<div>'.
+              '<a href="'.get_permalink().'" title="'.__("Look at the complete gallery", "huskies-theme").' <strong>'.get_the_title().'</strong>" class="more-link btn btn-block">'.sprintf(_n("This gallery contains %s photo", "This gallery contains %s photos", $amount ,"huskies-theme"), $amount).'</a>'.
+            '</div>';
+  }
+
+  # return here for custom feed output
+  if (is_feed()) {
+    $output = "\n";
+    foreach ($attachments as $att_id => $attachment) $output .= wp_get_attachment_link($att_id, $size, true)."\n";
+    return $output;
+  }
+
+  $wrappertag = tag_escape($wrappertag);
+  $itemtag = tag_escape($itemtag);
+  $captiontag = tag_escape($captiontag);
+  $columns = intval($columns);
+  $itemwidth = $columns > 0 ? floor(100/$columns) : 100;
+  $float = is_rtl() ? 'right' : 'left';
+
+  $selector = "gallery-{$instance}";
+
+  $size_class = sanitize_html_class($size);
+  $output = "<{$wrappertag} id='$selector' class='gallery galleryid-{$id} gallery-columns-{$columns} gallery-size-{$size_class} thumbnails row-fluid'>";;
+
+  $i = 0;
+  foreach ($attachments as $id => $attachment) {
+    $image = isset($attr['link']) && 'file' == $attr['link'] ? wp_get_attachment_image($id, $size, false, false) : wp_get_attachment_image($id, $size, true, false);
+    $link  = $icontag === 'a' ? 'href="'.wp_get_attachment_url($id).'"' : '';
+    $title = ($captiontag && trim($attachment->post_excerpt)) ? 'rel="popover" data-title="'.$attachment->post_title.'" data-content="'.wptexturize($attachment->post_excerpt).'"' : '';
+
+    $output .= "<{$itemtag} class='gallery-item'>";
+    $output .= "<{$icontag} {$link} {$title} class='gallery-icon thumbnail'>";
+    $output .= str_replace('alt="', 'alt="'.wptexturize($attachment->post_excerpt).' - ', $image);
+    $output .= "</{$icontag}>";
+    $output .= "</{$itemtag}>";
+  }
+
+  $output .= "</{$wrappertag}>";
+
+  return $output;
+}
+add_filter('post_gallery', 'bootstrap_post_gallery', 20, 2);
+
+# filter function to add custom markup to caption shortcode
+function bootstrap_img_caption($first, $attr, $content) {
+  extract(shortcode_atts(array(
+    'id'  => '',
+    'align'  => 'alignnone',
+    'width'  => '',
+    'caption' => ''
+  ), $attr));
+
+  if (1 > (int) $width || empty($caption)) return $content;
+  if ($id) $id = 'id="'.esc_attr($id).'"';
+
+  $content = str_replace(' img-rounded img-polaroid', '', $content);
+  return  '<div '.$id.' class="caption '.esc_attr($align).'" >'.
+            '<ul class="thumbnails">'.
+              '<li>'.
+                '<div class="thumbnail">'.
+                  do_shortcode($content).
+                  '<h5>'.$caption.'</h5>'.
+                '</div>'.
+              '</li>'.
+            '</ul>'.
+          '</div>';
+}
+add_filter('img_caption_shortcode', 'bootstrap_img_caption', 20, 3);
+
+# filter function to add classes to every image import in the editor
+function bootstrap_get_image_class($class) {
+  return $class .= ' img-rounded img-polaroid';
+}
+add_filter('get_image_tag_class', 'bootstrap_get_image_class');
+
+# filter template to show own form for password protection
+function custom_password_form($output) {
+  $post = get_post();
+
+  $label = 'pwbox-'.(empty($post->ID) ? rand() : $post->ID);
+  $output = '<form action="'.esc_url(site_url('wp-login.php?action=postpass', 'login_post')).'" method="post" class="form-inline">'.
+              '<span class="help-block">'.__("This post is password protected. Please enter the correct password:", "huskies-theme").'</span>'.
+              '<input name="post_password" id="'.$label.'" type="password" placeholder="'.__("password", "huskies-theme").'"/>'.
+              '<input type="submit" name="Submit" class="btn btn-success" value="'.esc_attr__("Enter password", "huskies-theme").'"/>'.
+            '</form>';
+
+  return $output;
+}
+add_filter('the_password_form', 'custom_password_form');
+
+# filter function to add custom classes to avatar image
+function change_avatar_css($class) {
+  $class = str_replace("class='avatar", "class='comments-avatar media-object img-rounded img-polaroid", $class);
+  return $class;
+}
+add_filter('get_avatar', 'change_avatar_css');
+
+########################################################################################################
 #               template functions                                                                           
 ########################################################################################################
+
+# custom navigation to display on each post page (i.e. index.php)
+function boostrap_content_nav() {
+  global $wp_query;
+
+  if ( $wp_query->max_num_pages > 1 ) : ?>
+  <ul class="pager">
+    <li class="previous"><?php next_posts_link(__('&larr; Older posts ', 'huskies-theme')); ?></li>
+    <li class="next"><?php previous_posts_link(__('Newer posts &rarr;', 'huskies-theme')); ?></li>
+  </ul>
+  <?php endif;
+}
   
 # function to build custom pagination bases on wp_link_pages function from wordpress
 function boostrap_wp_link_pages($args = array()) {
@@ -226,13 +415,6 @@ function bootstrap_wp_comments($comment, $args, $depth) {
   <?php
 }
 
-# filter function to add custom classes to avatar image
-function change_avatar_css($class) {
-  $class = str_replace("class='avatar", "class='comments-avatar media-object img-rounded img-polaroid", $class);
-  return $class;
-}
-add_filter('get_avatar', 'change_avatar_css');
-
 # custom function to build own comment form
 function bootstrap_custom_comments_form($post_id = null) {
   global $id;
@@ -252,7 +434,7 @@ function bootstrap_custom_comments_form($post_id = null) {
 
   <?php if (comments_open($post_id)) : ?>
     <?php do_action( 'comment_form_before' ); ?>
-    <div id="respond">
+    <div id="respond" class="well well-small">
       <div class="page-header">
         <h3 id="comment_reply_title">
           <?php comment_form_title(__('Leave a Reply', 'huskies-theme'), __('Leave a Reply to %s', 'huskies-theme')); ?> 

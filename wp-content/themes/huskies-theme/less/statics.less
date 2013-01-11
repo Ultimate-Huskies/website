@@ -1,7 +1,7 @@
 @sansFontFamily:  "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
 @serifFontFamily: "Lobster", Georgia, "Times New Roman", Times, serif;
 
-@linkColor: @green;
+@linkColor: @successText;
 
 @gridColumnWidth:         55px;
 @gridGutterWidth:         10px;
@@ -23,6 +23,63 @@ h1, h2, h3, h4, h5 {
 a,
 a > * {
   .transition(all 1s ease);
+
+  > img:hover { border-color: @successText; }
+}
+
+.label,
+.badge {
+  // Important (red)
+  &-important[href]   { background-color: @errorText; }
+  // Warnings (orange)
+  &-warning[href]     { background-color: @orange; }
+  // Success (green)
+  &-success[href]     { background-color: @successText; }
+  // Info (turquoise)
+  &-info[href]        { background-color: @infoText; }
+  // Inverse (black)
+  &-inverse[href]     { background-color: @grayDark; }
+}
+
+iframe {
+  width: 100%;
+  @media (max-width: 767px) { height: 25rem; }
+  height: 50rem;
+}
+
+.caption {
+  .thumbnails {
+    display: inline-block;
+
+    .thumbnail {
+      a { display: block; }
+      h5 { text-align: center; }
+      img { width: 100%; }
+
+      &:hover { border-color: @successText; }
+    }
+  }
+
+  &.alignleft { text-align: left; }
+  &.alignright { text-align: right; }
+  &.aligncenter { text-align: center; }
+}
+
+img {
+  &.alignleft,
+  &.alignright,
+  &.aligncenter,
+  &.alignnone { 
+    display: block; 
+    margin: 1rem;
+  }
+
+  &.alignleft { margin-right: auto; }
+  &.alignright { margin-left: auto; }
+  &.aligncenter { 
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 hr.fancy { 

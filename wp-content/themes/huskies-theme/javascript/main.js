@@ -8,6 +8,11 @@
       html: true,
       placement: 'bottom'
     });
+    $('*[rel="popover"]').popover({
+      html: true,
+      trigger: 'hover',
+      placement: 'bottom'
+    });
     $('.article_meta_comments').tooltip('destroy').tooltip({
       placement: 'left'
     });
@@ -17,13 +22,14 @@
     $('#topHeader .form-search').on('blur', 'input', function() {
       return $('#disc, #searchform').removeClass('expand');
     });
-    return $('a[href="#footer"]').on('click', function(event) {
+    $('a[href="#footer"]').on('click', function(event) {
       event.preventDefault();
       $('#secondFooter').slideToggle(800);
       return $('html, body').animate({
         scrollTop: $('body').height()
       }, 800);
     });
+    return $('.gallery a').photobox();
   });
 
   $topLink = "";

@@ -4,6 +4,11 @@ jQuery(document).ready ($) ->
     html: true
     placement: 'bottom'
 
+   $('*[rel="popover"]').popover
+    html: true
+    trigger: 'hover'
+    placement: 'bottom'
+
   $('.article_meta_comments').tooltip('destroy').tooltip
     placement: 'left'
 
@@ -18,3 +23,5 @@ jQuery(document).ready ($) ->
 
     $('#secondFooter').slideToggle 800
     $('html, body').animate {scrollTop: $('body').height()}, 800
+
+  $('.gallery a').photobox()

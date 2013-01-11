@@ -30,3 +30,15 @@ body {
 @import "content.less";
 @import "comments.less";
 @import "footer.less";
+
+@import "./less/photobox.css";
+#pbOverlay .prevNext { .opacity(50); }
+#pbOverlay.on #pbNextBtn b {
+  right: 5%;
+  .scale(1);
+}
+#pbOverlay.on #pbPrevBtn b {
+  left: 5%;
+  .scale(1);
+  .rotate(180deg);
+}
