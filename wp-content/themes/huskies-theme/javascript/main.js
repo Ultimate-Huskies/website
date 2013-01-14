@@ -13,10 +13,12 @@
       return $('.mapp-dir-get').addClass('btn btn-success');
     });
     $('*[title]').tooltip({
+      animation: true,
       html: true,
       placement: 'bottom'
     });
     $('*[rel="popover"]').popover({
+      animation: true,
       html: true,
       trigger: 'hover',
       placement: 'bottom'

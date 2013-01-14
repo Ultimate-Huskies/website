@@ -8611,6 +8611,9 @@ h5 {
 *.sans {
   font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+.img-polaroid {
+  padding: 0.5%;
+}
 .tooltip {
   font-size: 1.5rem;
 }
@@ -8740,7 +8743,7 @@ hr.fancy:after {
   border-radius: 0.5rem;
   margin-bottom: 1.5rem;
 }
-#content-wrapper #disc {
+#content-wrapper #logo-disc {
   position: absolute;
   right: 5rem;
   top: -5.7rem;
@@ -8749,19 +8752,19 @@ hr.fancy:after {
   -o-transition: all 1s ease;
   transition: all 1s ease;
 }
-#content-wrapper #disc.expand {
+#content-wrapper #logo-disc.expand {
   -webkit-transform: translate(3rem, 0rem);
   -moz-transform: translate(3rem, 0rem);
   -ms-transform: translate(3rem, 0rem);
   -o-transform: translate(3rem, 0rem);
   transform: translate(3rem, 0rem);
 }
-#content-wrapper #head {
+#content-wrapper #logo-head {
   position: absolute;
   top: -12rem;
   right: -11rem;
 }
-#content-wrapper #body {
+#content-wrapper #logo-body {
   position: absolute;
   right: -10.75rem;
   top: -0.15rem;
@@ -8906,6 +8909,9 @@ hr.fancy:after {
 #content .archive_header h1 small {
   font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+#content article {
+  position: relative;
+}
 #content article:nth-child(n+2) {
   margin-top: 5rem;
 }
@@ -8928,6 +8934,9 @@ hr.fancy:after {
 }
 #content article.attachment .full_width_attachment a img {
   width: 100%;
+}
+#content article #startPhoto img {
+  margin: 0;
 }
 #content article header {
   margin-bottom: 2rem;
@@ -9456,6 +9465,155 @@ hr.fancy:after {
 }
 #startPhoto a img {
   margin: 0;
+}
+.one_cal_event dl {
+  margin-top: 0;
+}
+.one_cal_event dl dt {
+  width: 3rem;
+  height: 3rem;
+}
+.one_cal_event dl dt i {
+  width: 100%;
+  height: 100%;
+  font-size: 2rem;
+}
+.one_cal_event dl dd {
+  margin-left: 3rem;
+  min-height: 2.5rem;
+  display: table-cell;
+  vertical-align: middle;
+  height: 2.5rem;
+}
+.gce-page-grid .gce-calendar {
+  border: none;
+}
+.gce-page-grid .gce-calendar .gce-caption {
+  margin-bottom: 1rem;
+}
+.gce-page-grid .gce-calendar .gce-caption .gce-change-month {
+  font-size: 3rem;
+}
+.gce-page-grid .gce-calendar .gce-caption .gce-change-month:hover {
+  text-decoration: none;
+}
+.gce-page-grid .gce-calendar .gce-caption .gce-month-title {
+  font-size: 2rem;
+}
+.gce-page-grid .gce-calendar th,
+.gce-page-grid .gce-calendar td {
+  border: none;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  border-radius: 0.5rem;
+}
+.gce-page-grid .gce-calendar th {
+  border-bottom: 0.1rem solid #999999;
+  color: #000000;
+}
+.gce-page-grid .gce-calendar td.gce-today {
+  color: #333333;
+}
+.gce-page-grid .gce-calendar td.gce-has-events {
+  color: #468847;
+}
+.gce-page-grid .gce-calendar td.gce-has-events:hover {
+  background-color: #999999;
+}
+.gce-page-grid .gce-calendar td.gce-has-events > .contentWrapper {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+.gce-page-grid .gce-calendar td.gce-has-events > .contentWrapper > span {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.gce-page-grid .gce-calendar td.gce-has-events > .popover {
+  color: #333333;
+  cursor: default;
+}
+@media (max-width: 767px) {
+  .gce-page-grid .gce-calendar td.gce-has-events > .popover {
+    width: 12.5rem;
+  }
+}
+.gce-page-grid .gce-calendar td.gce-has-events > .popover .popover-title {
+  text-align: center;
+}
+.gce-page-grid .gce-calendar td.gce-has-events > .popover .popover-content {
+  max-height: 35rem;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: 0;
+}
+@media (max-width: 767px) {
+  .gce-page-grid .gce-calendar td.gce-has-events > .popover .popover-content {
+    max-height: 15rem;
+  }
+}
+.gce-page-grid .gce-calendar td.gce-has-events > .popover .popover-content ul {
+  margin: 0;
+}
+.gce-page-grid .gce-calendar td.gce-has-events > .popover .popover-content ul li {
+  list-style-type: none;
+}
+.gce-page-grid .gce-calendar td.gce-has-events > .popover .popover-content ul li .one_cal_event_tooltip {
+  border-top: 0.1rem solid #999999;
+  padding: 0 1rem;
+}
+.gce-page-grid .gce-calendar td.gce-has-events > .popover .popover-content ul li .one_cal_event_tooltip .page-header {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.gce-page-grid .gce-calendar td.gce-has-events > .popover .popover-content ul li .one_cal_event_tooltip .page-header h5 {
+  font-size: 2rem;
+}
+.gce-page-grid .gce-calendar td.gce-has-events > .popover .popover-content ul li .one_cal_event_tooltip dt,
+.gce-page-grid .gce-calendar td.gce-has-events > .popover .popover-content ul li .one_cal_event_tooltip dd {
+  display: block;
+  height: auto;
+  margin-bottom: 1rem;
+}
+.gce-list {
+  margin-left: 0.5rem;
+}
+.gce-list > li {
+  list-style-type: none;
+}
+.gce-list ul {
+  margin-left: 1rem !important;
+}
+.gce-list .one_cal_event_list {
+  padding: 0.5rem;
+  box-shadow: inset 0 0 15rem 0.25rem #222222;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+}
+.gce-list .one_cal_event_list *[class^="icon"] {
+  color: #999999;
+  text-shadow: #000000 0 0.1rem 0;
+}
+.gce-list .one_cal_event_list .page-header {
+  padding-bottom: 0;
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+.gce-list .one_cal_event_list .cal_more_link {
+  float: right;
+  font-size: 2rem;
+}
+.gce-list .one_cal_event_list .cal_more_link:hover {
+  text-decoration: none;
+  color: #468847;
+}
+.gce-list .one_cal_event_list .cal_more_link + dl {
+  width: 90%;
 }
 #pbOverlay .prevNext {
   opacity: 0.5;

@@ -6,17 +6,19 @@ jQuery(document).ready ($) ->
     $self = $(this)
     $self.attr('placeholder', $self.attr('title')).removeAttr('title')
 
-  $('#interactiveMap').on 'DOMSubtreeModified', () ->
+  $('#interactiveMap').on 'DOMSubtreeModified', ->
     $('.mapp-dir-get').addClass 'btn btn-success'
 
   $('*[title]').tooltip
-    html: true
-    placement: 'bottom'
+    animation:  true
+    html:       true
+    placement:  'bottom'
 
-   $('*[rel="popover"]').popover
-    html: true
-    trigger: 'hover'
-    placement: 'bottom'
+  $('*[rel="popover"]').popover
+    animation:  true
+    html:       true
+    trigger:    'hover'
+    placement:  'bottom'
 
   $('.article_meta_comments').tooltip('destroy').tooltip
     placement: 'left'
