@@ -16,6 +16,9 @@ h1, h2, h3, h4, h5 {
   font-weight: normal;
 }
 
+*.serif { font-family: @serifFontFamily; }
+*.sans { font-family: @sansFontFamily; }
+
 .tooltip {
   font-size: 1.5rem;
 }
@@ -66,6 +69,8 @@ iframe {
 }
 
 img {
+  max-width: 99%;
+  
   &.alignleft,
   &.alignright,
   &.aligncenter,
@@ -81,6 +86,10 @@ img {
     margin-right: auto;
   }
 }
+
+*.margin-top-small { margin-top: 5rem; }
+*.margin-top       { margin-top: 10rem; }
+*.margin-top-big   { margin-top: 15rem; }
 
 hr.fancy { 
   margin: 0 auto; 

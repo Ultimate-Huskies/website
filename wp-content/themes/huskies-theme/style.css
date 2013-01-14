@@ -8605,6 +8605,12 @@ h4,
 h5 {
   font-weight: normal;
 }
+*.serif {
+  font-family: "Lobster", Georgia, "Times New Roman", Times, serif;
+}
+*.sans {
+  font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 .tooltip {
   font-size: 1.5rem;
 }
@@ -8672,6 +8678,9 @@ iframe {
 .caption.aligncenter {
   text-align: center;
 }
+img {
+  max-width: 99%;
+}
 img.alignleft,
 img.alignright,
 img.aligncenter,
@@ -8688,6 +8697,15 @@ img.alignright {
 img.aligncenter {
   margin-left: auto;
   margin-right: auto;
+}
+*.margin-top-small {
+  margin-top: 5rem;
+}
+*.margin-top {
+  margin-top: 10rem;
+}
+*.margin-top-big {
+  margin-top: 15rem;
 }
 hr.fancy {
   margin: 0 auto;
@@ -8800,6 +8818,11 @@ hr.fancy:after {
   font-size: 2rem;
   width: 100%;
 }
+@media (max-width: 767px) {
+  #topHeader {
+    z-index: 100;
+  }
+}
 #topHeader .navbar {
   width: 66%;
 }
@@ -8891,6 +8914,20 @@ hr.fancy:after {
 }
 #content article .featured-post {
   text-align: center;
+}
+#content article.page > header,
+#content article.attachment > header {
+  margin-top: 3rem;
+}
+#content article.page > header h1 small,
+#content article.attachment > header h1 small {
+  font-size: 1.5rem;
+}
+#content article.attachment .full_width_attachment a {
+  display: block;
+}
+#content article.attachment .full_width_attachment a img {
+  width: 100%;
 }
 #content article header {
   margin-bottom: 2rem;
@@ -9351,6 +9388,74 @@ hr.fancy:after {
   -webkit-box-shadow: 0rem 0.6rem 0.8rem -0.8rem #000000;
   -moz-box-shadow: 0rem 0.6rem 0.8rem -0.8rem #000000;
   box-shadow: 0rem 0.6rem 0.8rem -0.8rem #000000;
+}
+#contactform > div:first-child input {
+  width: 76%;
+}
+@media (min-width: 768px) {
+  #contactform > div:first-child input {
+    width: 80%;
+  }
+}
+@media (min-width: 1200px) {
+  #contactform > div:first-child input {
+    width: 85%;
+  }
+}
+#contactform > div:first-child > div:last-child {
+  text-align: right;
+}
+#contactform > div:nth-child(2) input {
+  width: 76%;
+}
+@media (min-width: 768px) {
+  #contactform > div:nth-child(2) input {
+    width: 90.5%;
+  }
+}
+@media (min-width: 1200px) {
+  #contactform > div:nth-child(2) input {
+    width: 93%;
+  }
+}
+#contactform .form-actions {
+  text-align: center;
+}
+#contactform .form-actions input[type="text"] {
+  width: 10%;
+  margin: 0;
+}
+.wpcf7-not-valid-tip,
+.wpcf7-validation-errors,
+.wpcf7-mail-sent-ng {
+  border: none !important;
+  background-color: transparent !important;
+  width: auto !important;
+  min-width: 280px;
+}
+#interactiveMap {
+  margin-bottom: 10rem;
+}
+#interactiveMap .adp-text {
+  padding-left: 3rem;
+}
+#staticMap > a:first-child {
+  display: block;
+}
+#staticMap > a:first-child img {
+  width: 100% !important;
+}
+#startPhoto {
+  margin-bottom: 3rem;
+}
+#startPhoto + hr.fancy {
+  margin-bottom: 3rem;
+}
+#startPhoto a {
+  display: block;
+}
+#startPhoto a img {
+  margin: 0;
 }
 #pbOverlay .prevNext {
   opacity: 0.5;

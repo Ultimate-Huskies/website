@@ -4,6 +4,14 @@
 
   jQuery(document).ready(function($) {
     setTopLink();
+    $('#contactform input, #contactform textarea').each(function() {
+      var $self;
+      $self = $(this);
+      return $self.attr('placeholder', $self.attr('title')).removeAttr('title');
+    });
+    $('#interactiveMap').on('DOMSubtreeModified', function() {
+      return $('.mapp-dir-get').addClass('btn btn-success');
+    });
     $('*[title]').tooltip({
       html: true,
       placement: 'bottom'

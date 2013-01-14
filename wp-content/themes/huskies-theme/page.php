@@ -2,22 +2,28 @@
 
   <?php while(have_posts()) : the_post(); ?>
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-      <header>
-        <div class="page-header">
-          <h1><?php the_title(); ?></h1>
-          <small class="article_meta_extra"><?php echo get_the_date(); ?>, by <?php the_author_posts_link(); ?></small>
-          <?php edit_post_link(__('Edit this post', 'huskies-theme'), ' | <span class="article_meta_edit_link">', '</span>' ); ?>
-        </div>
-      </header>
+      <?php if(strtolower(get_the_title()) !== 'kontakt' && strtolower(get_the_title()) !== 'contact' && strtolower(get_the_title()) !== 'start') : ?>
+        <header>
+          <div class="page-header">
+            <h1><?php the_title(); ?><?php edit_post_link(__('Edit this post', 'huskies-theme'), ' <small class="article_meta_edit_link">', '</small>' ); ?></h1>
+          </div>
+        </header>
 
-      <?php if(has_post_thumbnail()) : ?>
-        <figure class="article_preview_image">
-          <?php the_post_thumbnail('thumbnail', array('class' => 'img-rounded img-polaroid')); ?>
-        </figure>
+        <?php if(has_post_thumbnail()) : ?>
+          <figure class="article_preview_image">
+            <?php the_post_thumbnail('thumbnail', array('class' => 'img-rounded img-polaroid')); ?>
+          </figure>
+        <?php endif; ?>
       <?php endif; ?>
 
       <div class="article_content clearfix">
+        <?php if(is_attachment()) : ?>
+          <div class="full_width_attachment img-rounded img-polaroid">
+        <?php endif; ?>
         <?php the_content(); ?>
+        <?php if(is_attachment()) : ?>
+          </div>
+        <?php endif; ?>
       </div>
 
       <?php 

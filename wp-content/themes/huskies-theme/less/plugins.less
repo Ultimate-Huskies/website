@@ -1,0 +1,64 @@
+//########################################################################################################
+//#               Contact plugin                                                                           
+//########################################################################################################
+#contactform {
+  > div:first-child {
+    input {
+      width: 76%;
+      @media (min-width: 768px) { width: 80%; }
+      @media (min-width: 1200px) { width: 85%; }
+    }
+
+    > div:last-child {text-align: right; }
+  }
+
+  > div:nth-child(2) {
+    input {
+      width: 76%;
+      @media (min-width: 768px) { width: 90.5%; }
+      @media (min-width: 1200px) { width: 93%; }
+    }
+  }
+
+  .form-actions {
+    text-align: center;
+
+    input[type="text"] {
+      width: 10%;
+      margin: 0;
+    }
+  }
+}
+
+.wpcf7-not-valid-tip,
+.wpcf7-validation-errors,
+.wpcf7-mail-sent-ng {
+  border: none !important;
+  background-color: transparent !important;
+  width: auto !important;
+  min-width: 280px;
+}
+
+#interactiveMap {
+  margin-bottom: 10rem;
+
+  .adp-text { padding-left: 3rem; }
+}
+
+#staticMap {
+  > a:first-child {
+    display: block;
+
+    img { width: 100% !important; } 
+  }
+}
+
+#startPhoto {
+  margin-bottom: 3rem; 
+
+  & + hr.fancy { margin-bottom: 3rem; }
+  a {
+    display: block;
+    img { margin: 0; }
+  }
+}

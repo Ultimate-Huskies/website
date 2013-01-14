@@ -1,5 +1,14 @@
 jQuery(document).ready ($) ->
   setTopLink()
+
+  # needed for the contact plugin to set valid html5 placeholder instead of a title
+  $('#contactform input, #contactform textarea').each ->
+    $self = $(this)
+    $self.attr('placeholder', $self.attr('title')).removeAttr('title')
+
+  $('#interactiveMap').on 'DOMSubtreeModified', () ->
+    $('.mapp-dir-get').addClass 'btn btn-success'
+
   $('*[title]').tooltip
     html: true
     placement: 'bottom'

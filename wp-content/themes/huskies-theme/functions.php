@@ -51,11 +51,13 @@ add_action('wp_enqueue_scripts', 'enqueue_styles');
 function enqueue_scripts() {
   $bootstrap_path = THEMEROOT.'/bootstrap/js/';
   wp_register_script('bootstrap_dropdown', $bootstrap_path.'bootstrap-dropdown.js', array( 'jquery' ), '1', false);
+  wp_register_script('bootstrap_collapse', $bootstrap_path.'bootstrap-collapse.js', array( 'jquery' ), '1', false);
   wp_register_script('bootstrap_tooltip', $bootstrap_path.'bootstrap-tooltip.js', array( 'jquery' ), '1', false);
   wp_register_script('bootstrap_popover', $bootstrap_path.'bootstrap-popover.js', array( 'jquery' ), '1', false);
   wp_register_script('bootstrap_tab', $bootstrap_path.'bootstrap-tab.js', array( 'jquery' ), '1', false);
+  wp_register_script('bootstrap_alert', $bootstrap_path.'bootstrap-alert.js', array( 'jquery' ), '1', false);
   wp_register_script('gallery', THEMEROOT.'/javascript/photobox.min.js', array( 'jquery' ), '1', false);
-  wp_register_script('main_script', THEMEROOT.'/javascript/main.js', array('bootstrap_dropdown', 'bootstrap_tooltip', 'bootstrap_popover', 'bootstrap_tab', 'gallery'), '1.0.0', false);
+  wp_register_script('main_script', THEMEROOT.'/javascript/main.js', array('bootstrap_dropdown', 'bootstrap_collapse', 'bootstrap_tooltip', 'bootstrap_popover', 'bootstrap_tab', 'bootstrap_alert', 'gallery'), '1.0.0', false);
 
   wp_enqueue_script('main_script'); 
 }
