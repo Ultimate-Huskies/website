@@ -9103,6 +9103,10 @@ hr.fancy:after {
 #content article small {
   color: #999999;
 }
+#content article .article_content {
+  position: relative;
+  z-index: 150;
+}
 #content article .article_content p {
   *zoom: 1;
 }

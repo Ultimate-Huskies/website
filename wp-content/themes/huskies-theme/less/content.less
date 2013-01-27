@@ -79,7 +79,7 @@
             top: 0.2rem;
             position: relative;
           }
-          
+
           &:hover { background-color: @grayDarker; }
         }
       }
@@ -117,7 +117,11 @@
 
     small { color: @grayLight; }
 
-    .article_content p { .clearfix(); }
+    .article_content {
+      position: relative;
+      z-index: 150;
+      p { .clearfix(); }
+    }
 
     &.format-status .article_content { 
       padding: 1rem; 
