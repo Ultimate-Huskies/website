@@ -42,31 +42,3 @@
     endif;
   ?>
 </article>
-
-<div class="one_cal_event [if-tooltip] one_cal_event_tooltip [/if-tooltip]" id="cal_[event-id]">
-  <div class="page-header">
-    <h5>
-      [event-title]
-      <small> 
-        [if-all-day] Ganzer Tag [/if-all-day] 
-        [if-not-all-day] 
-          [length]
-          [if-list] von [start-time] bis [if-multi-day] [end-date] um [/if-multi-day]  [end-time] [/if-list]
-        [/if-not-all-day] 
-      </small>
-    </h5>
-    [if-tooltip]
-    <small>
-      [if-single-day]Am <strong>[end-date]</strong> von <strong>[start-time]</strong> bis <strong>[end-time]</strong>[/if-single-day]
-      [if-multi-day]Von <strong>[start-date] </strong> um <strong>[start-time]</strong> bis <strong>[end-date]</strong> um <strong>[end-time]</strong>[/if-multi-day]
-    </small>
-    [/if-tooltip]
-  </div>
-  [if-list] <a class="icon-link cal_more_link" href="http://localhost/kalender/" title="Mehr Details ..."></a> [/if-list]
-  <dl class="dl-horizontal">
-    <dt><i class="icon-map-marker" title="Ort dieses Events" data-placement="right"></i></dt><dd> [location] </dd>
-    [if-tooltip]
-    [if-description]<dt><i class="icon-pencil" title="Beschreibung dieses Events"></i></dt><dd> [description] </dd>[/if-description]
-    [/if-tooltip]
-  </dl>
-</div>

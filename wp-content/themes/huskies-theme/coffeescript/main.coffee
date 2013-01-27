@@ -24,10 +24,10 @@ jQuery(document).ready ($) ->
     placement: 'left'
 
   $('#topHeader .form-search').on 'focus', 'input', ->
-    $('#disc, #searchform').addClass('expand')
+    $('#logo-disc, #searchform').addClass('expand')
 
   $('#topHeader .form-search').on 'blur', 'input', ->
-    $('#disc, #searchform').removeClass('expand')
+    $('#logo-disc, #searchform').removeClass('expand')
 
   $('a[href="#footer"]').on 'click', (event) ->
     event.preventDefault()

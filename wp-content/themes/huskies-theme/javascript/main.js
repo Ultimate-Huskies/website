@@ -27,10 +27,10 @@
       placement: 'left'
     });
     $('#topHeader .form-search').on('focus', 'input', function() {
-      return $('#disc, #searchform').addClass('expand');
+      return $('#logo-disc, #searchform').addClass('expand');
     });
     $('#topHeader .form-search').on('blur', 'input', function() {
-      return $('#disc, #searchform').removeClass('expand');
+      return $('#logo-disc, #searchform').removeClass('expand');
     });
     $('a[href="#footer"]').on('click', function(event) {
       event.preventDefault();

@@ -8611,9 +8611,6 @@ h5 {
 *.sans {
   font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-.img-polaroid {
-  padding: 0.5%;
-}
 .tooltip {
   font-size: 1.5rem;
 }
@@ -8743,6 +8740,11 @@ hr.fancy:after {
   border-radius: 0.5rem;
   margin-bottom: 1.5rem;
 }
+@media (max-width: 767px) {
+  #content-wrapper {
+    margin-top: 16rem;
+  }
+}
 #content-wrapper #logo-disc {
   position: absolute;
   right: 5rem;
@@ -8768,6 +8770,63 @@ hr.fancy:after {
   position: absolute;
   right: -10.75rem;
   top: -0.15rem;
+  z-index: 100;
+}
+#content-wrapper #user_info {
+  position: absolute;
+  z-index: 500;
+}
+@media (max-width: 767px) {
+  #content-wrapper #user_info {
+    top: -10rem;
+    width: 100%;
+  }
+}
+@media (min-width: 786px) {
+  #content-wrapper #user_info {
+    right: -9rem;
+    top: 21rem;
+    width: 8rem;
+  }
+}
+#content-wrapper #user_info > img {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  display: inline;
+}
+@media (max-width: 767px) {
+  #content-wrapper #user_info > img {
+    display: none;
+  }
+}
+#content-wrapper #user_info > .avatar_anonym {
+  width: 7.8rem;
+  color: #999999;
+  cursor: default;
+  text-align: center;
+  font-size: 7rem;
+  height: 7.8rem;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #ddd;
+  border: 0.4rem solid #ffffff;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 767px) {
+  #content-wrapper #user_info > .avatar_anonym {
+    display: none;
+  }
+}
+#content-wrapper #user_info > hr {
+  margin: 0.25rem 0;
+}
+#content-wrapper #user_info > p {
+  text-align: center;
+  margin: 0;
 }
 #content-wrapper #siteName {
   line-height: 1;
@@ -8789,7 +8848,7 @@ hr.fancy:after {
     -ms-transform: rotate(0deg);
     -o-transform: rotate(0deg);
     transform: rotate(0deg);
-    top: -12rem;
+    top: -16rem;
     left: 0rem;
     width: 100%;
     text-align: center;
@@ -8846,6 +8905,23 @@ hr.fancy:after {
 #topHeader .navbar .caret {
   bottom: 0.4rem;
   position: relative;
+}
+@media (min-width: 979px) {
+  #topHeader .navbar .home_link {
+    bottom: 0.35rem;
+    position: relative;
+  }
+}
+#topHeader .navbar .home_link a {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  font-size: 3rem;
+}
+#topHeader .navbar .home_link a:hover {
+  background-color: transparent !important;
+  color: #468847 !important;
 }
 #topHeader .navbar .nav > li:not(.active):not(.open):not(.current_page_parent) > a {
   color: #000000;
@@ -8934,9 +9010,6 @@ hr.fancy:after {
 }
 #content article.attachment .full_width_attachment a img {
   width: 100%;
-}
-#content article #startPhoto img {
-  margin: 0;
 }
 #content article header {
   margin-bottom: 2rem;
@@ -9127,6 +9200,100 @@ hr.fancy:after {
 }
 #content article.post-password-required .article_content input[type="password"] {
   margin-right: 0.5rem;
+}
+.frontpage-article .article_content img {
+  margin: 0;
+}
+.frontpage-addition {
+  margin-top: 3rem;
+}
+.frontpage-addition .frontpage_header {
+  margin-bottom: -2.5rem;
+  padding-bottom: 0;
+}
+.frontpage-addition .frontpage_header h2 {
+  font-family: "Lobster", Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+  margin-bottom: 0;
+}
+.frontpage-addition > div:first-child .well {
+  position: relative;
+  margin-bottom: -0.5rem !important;
+  min-height: 10rem;
+}
+.frontpage-addition > div:first-child .well h3 {
+  width: 93%;
+}
+.frontpage-addition > div:first-child .well h3 a:hover {
+  text-decoration: none;
+}
+.frontpage-addition > div:first-child .well h3 .tooltip {
+  line-height: 20px;
+}
+.frontpage-addition > div:first-child .well h3 .post_format {
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+  background-color: #555555;
+  padding: 0.75rem;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  color: white;
+  font-size: 2rem;
+}
+.frontpage-addition > div:first-child .well h3 .post_format.icon-th:before {
+  left: 0.1rem;
+  position: relative;
+  top: 0.15rem;
+}
+.frontpage-addition > div:first-child .well h3 .post_format.icon-columns {
+  padding: 0.75rem 0.85rem;
+}
+.frontpage-addition > div:first-child .well h3 .post_format:hover {
+  background-color: #222222;
+}
+.frontpage-addition > div:first-child .well:hover .more-start-link {
+  color: #468847;
+}
+.frontpage-addition > div:first-child .well .more-start-link {
+  color: #eeeeee;
+  font-size: 3rem;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.frontpage-addition > div:first-child .well .more-start-link:hover {
+  text-decoration: none;
+  color: #468847;
+}
+.frontpage-addition > div:last-child > .frontpage_header {
+  margin-bottom: 0.5rem;
+}
+.frontpage-addition > div:last-child > div:not(.frontpage_header) > ul > li > ul > li:nth-child(n + 2) > div {
+  margin-top: 4.5rem;
+}
+.frontpage-addition > div:last-child > div:not(.frontpage_header) > ul > li > ul > li > div {
+  min-height: 10rem;
+  margin-bottom: 2.5rem;
+  margin-top: 0;
+  background-color: #f5f5f5;
+  border: 1px solid #e3e3e3;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  padding: 9px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.frontpage-addition > div:last-child > div:not(.frontpage_header) > ul > li > ul > li > div dl {
+  margin-bottom: 0;
 }
 #comments {
   margin-top: 2rem;
@@ -9603,6 +9770,9 @@ hr.fancy:after {
   padding-bottom: 0;
   margin: 0;
   margin-bottom: 0.5rem;
+}
+.gce-list .one_cal_event_list .dl-horizontal {
+  float: left;
 }
 .gce-list .one_cal_event_list .cal_more_link {
   float: right;

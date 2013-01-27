@@ -1,6 +1,8 @@
 #content-wrapper {
   background-color: @white;
   margin-top: 12rem;
+  @media (max-width: 767px) { margin-top: 16rem; }
+
   position: relative;
   .box-shadow(0rem 0rem 0.75rem 0.05rem @grayDarker);
   .border-radius(0.5rem);
@@ -25,6 +27,52 @@
     position: absolute;
     right: -10.75rem;
     top: -0.15rem;
+    z-index: 100;
+  }
+
+  #user_info {
+    position: absolute;
+    z-index: 500;
+
+    @media (max-width: 767px) { 
+      top: -10rem;
+      width: 100%; 
+    }
+
+    @media (min-width: 786px) {
+      right: -9rem;
+      top: 21rem;
+      width: 8rem;
+    }
+
+    > img { 
+      @media (max-width: 767px) { display: none; }
+      .border-radius(50%);
+      display: inline;
+    }
+
+    > .avatar_anonym {
+      @media (max-width: 767px) { display: none; }
+      width: 7.8rem;
+      color: @grayLight;
+      cursor: default;
+      text-align: center;
+      font-size: 7rem;
+      height: 7.8rem;
+      .border-radius(50%);
+      background-color: #ddd;
+      border: 0.4rem solid @white;
+      .box-shadow(0 1px 3px rgba(0,0,0,.1));
+    }
+
+    > hr {
+      margin: 0.25rem 0;
+    }
+
+    > p {
+      text-align: center;
+      margin: 0;
+    } 
   }
 
   #siteName {
@@ -38,7 +86,7 @@
     
     @media (max-width: 767px) { 
       .rotate(0deg);
-      top: -12rem;
+      top: -16rem;
       left: 0rem;
       width: 100%;
       text-align: center;
@@ -88,6 +136,23 @@
     .caret { 
       bottom: 0.4rem;
       position: relative; 
+    }
+
+    .home_link {
+      @media (min-width: 979px) {
+        bottom: 0.35rem;
+        position: relative;
+      }
+
+      a {
+        .transition(all 0.5s ease);
+        font-size: 3rem;
+
+        &:hover {
+          background-color: transparent !important;
+          color: @successText !important;
+        }
+      }
     }
 
     .nav > li:not(.active):not(.open):not(.current_page_parent) > a {
