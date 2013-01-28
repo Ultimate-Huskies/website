@@ -60,7 +60,7 @@
               <?php bbp_current_user_name(); ?>
             </a>
           </p>
-          
+          <hr>
           <p>
             <a href="<?php echo wp_logout_url(); ?>"><?php _e('Logout', 'huskies-theme'); ?> <i class="icon-signout"></i></a>
           </p>
