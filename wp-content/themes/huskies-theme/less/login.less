@@ -1,0 +1,93 @@
+body.login {
+  background-image: url("@{baseBackground}");
+  // height: auto;
+
+  #login {
+    h1 {
+      text-align: center;
+      margin-bottom: 1rem;
+
+      a {
+        background: none;
+        font-family: @serifFontFamily;
+        display: inline;
+        color: black;
+
+        &:hover {
+          color: @successText;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .hint {
+      padding: 1.2rem;
+      padding-bottom: 0;
+
+      > div { margin: 0; }
+    }
+
+    #login_error {
+      background-color: transparent;
+      border: none;
+      margin: 0;
+      padding-bottom: 0;
+      font-family: @sansFontFamily;
+    }
+
+    form {
+      &:before {
+        content: "";
+        background-image: url("images/disc.png");
+        background-repeat: no-repeat;
+        position: absolute;
+        width: 127px;
+        height: 72px;
+        right: -3.25rem;
+        top: -2rem;
+      }
+
+      margin-top: 1.5rem;
+      position: relative;
+      .box-shadow(0rem 0rem 0.75rem 0.05rem @grayDarker);
+      .border-radius(0.5rem);
+      .form-horizontal;
+
+      input { 
+        margin-bottom: 2rem; 
+        height: auto;
+      }
+
+      input, label, p {
+        font-family: @sansFontFamily;
+      }
+
+      input[type="checkbox"] { 
+        margin: 0; 
+        vertical-align: text-top;
+      }
+
+      #wp-submit {
+        .btn;
+        .btn-success;
+      }
+    }
+
+    #nav { 
+      text-align: center; 
+
+      a {
+        color: @linkColor !important;
+
+        &:hover {
+          color: @linkColorHover !important;
+          text-decoration: none;
+        }
+      }
+    }
+    #backtoblog { display: none; }
+  }
+}
+
+body.login-action-register #wp-submit { .btn-block; }
+body.login-action-lostpassword #wp-submit { .btn-block; }

@@ -15,14 +15,15 @@ Tags:
 @import "../bootstrap/less/responsive.less";
 @import "../fontAwesome/less/font-awesome.less";
 
-@FontAwesomePath:   "fontAwesome/font";
+@FontAwesomePath:  "fontAwesome/font";
+@baseBackground:   "images/whitey.png";
 
 html {
   font-size: 62.5%; /* Sets up the base 10 stuff */
 }
 
 body {
-  background-image: url("images/whitey.png");
+  background-image: url("@{baseBackground}");
 }
 
 @import "statics.less";
@@ -32,6 +33,7 @@ body {
 @import "comments.less";
 @import "footer.less";
 @import "plugins.less";
+@import "login.less";
 
 @import "./less/photobox.css";
 #pbOverlay .prevNext { .opacity(50); }

@@ -10,6 +10,9 @@ remove_action('wp_head', 'wp_generator');
   
 define('THEMEROOT', get_stylesheet_directory_uri());
 define('IMAGES_PATH',    THEMEROOT.'/images');
+define('BOOTSTRAP_PATH', THEMEROOT.'/bootstrap/js/');
+define('TEXT_FONT', 'http://fonts.googleapis.com/css?family=Muli:300,400,400italic,300italic');
+define('HIGHLIGHT_FONT', 'http://fonts.googleapis.com/css?family=Lobster');
 
 #extract page url for imprint site
 foreach (get_pages(array('parent' => 0)) as $page) {
@@ -23,7 +26,6 @@ foreach (get_pages(array('parent' => 0)) as $page) {
 ########################################################################################################
 #               setup theme                                                                           
 ########################################################################################################
-  
 
 # add theme supports 
 function add_theme_supports() {
@@ -39,8 +41,8 @@ add_action('after_setup_theme', 'add_theme_supports');
 
 # add styles to theme
 function enqueue_styles() {
-  wp_register_style('font_lobster', 'http://fonts.googleapis.com/css?family=Lobster', false, '1.0.0', 'all');
-  wp_register_style('font_muli', 'http://fonts.googleapis.com/css?family=Muli:300,400,400italic,300italic', false, '1.0.0', 'all');
+  wp_register_style('font_lobster', HIGHLIGHT_FONT, false, '1.0.0', 'all');
+  wp_register_style('font_muli', TEXT_FONT, false, '1.0.0', 'all');
   wp_register_style('main_style', THEMEROOT.'/style.css', array('font_lobster', 'font_muli'), '1.0.0', 'screen');
 
   wp_enqueue_style('main_style');
@@ -49,14 +51,13 @@ add_action('wp_enqueue_scripts', 'enqueue_styles');
 
 # add js scripts to theme
 function enqueue_scripts() {
-  $bootstrap_path = THEMEROOT.'/bootstrap/js/';
-  wp_register_script('bootstrap_transition', $bootstrap_path.'bootstrap-transition.js', array('jquery'), '1', false);
-  wp_register_script('bootstrap_dropdown', $bootstrap_path.'bootstrap-dropdown.js', array('jquery'), '1', false);
-  wp_register_script('bootstrap_collapse', $bootstrap_path.'bootstrap-collapse.js', array('jquery'), '1', false);
-  wp_register_script('bootstrap_tooltip', $bootstrap_path.'bootstrap-tooltip.js', array('jquery'), '1', false);
-  wp_register_script('bootstrap_popover', $bootstrap_path.'bootstrap-popover.js', array('jquery', 'bootstrap_tooltip'), '1', false);
-  wp_register_script('bootstrap_tab', $bootstrap_path.'bootstrap-tab.js', array('jquery'), '1', false);
-  wp_register_script('bootstrap_alert', $bootstrap_path.'bootstrap-alert.js', array('jquery'), '1', false);
+  wp_register_script('bootstrap_transition', BOOTSTRAP_PATH.'bootstrap-transition.js', array('jquery'), '1', false);
+  wp_register_script('bootstrap_dropdown', BOOTSTRAP_PATH.'bootstrap-dropdown.js', array('jquery'), '1', false);
+  wp_register_script('bootstrap_collapse', BOOTSTRAP_PATH.'bootstrap-collapse.js', array('jquery'), '1', false);
+  wp_register_script('bootstrap_tooltip', BOOTSTRAP_PATH.'bootstrap-tooltip.js', array('jquery'), '1', false);
+  wp_register_script('bootstrap_popover', BOOTSTRAP_PATH.'bootstrap-popover.js', array('jquery', 'bootstrap_tooltip'), '1', false);
+  wp_register_script('bootstrap_tab', BOOTSTRAP_PATH.'bootstrap-tab.js', array('jquery'), '1', false);
+  wp_register_script('bootstrap_alert', BOOTSTRAP_PATH.'bootstrap-alert.js', array('jquery'), '1', false);
   wp_register_script('gallery', THEMEROOT.'/javascript/photobox.min.js', array('jquery'), '1', false);
   wp_register_script('gce_replacement', THEMEROOT.'/javascript/gce-script.js', array('jquery', 'bootstrap_popover'), '1', false);
   wp_register_script('main_script', THEMEROOT.'/javascript/main.js', array('bootstrap_transition', 'bootstrap_dropdown', 'bootstrap_collapse', 'bootstrap_tooltip', 'bootstrap_popover', 'bootstrap_tab', 'bootstrap_alert', 'gallery', 'gce_replacement'), '1.0.0', false);
@@ -81,9 +82,9 @@ function register_widgets() {
   $after_title   = '</legend>';
 
   register_sidebar(array(
-    'name'          => __('first footer widget', 'huskies-theme'),
-    'id'            => 'first_footer_widget',
-    'description'   => __('The first footer widget', 'huskies-theme'),
+    'name'          => __('left footer widget', 'huskies-theme'),
+    'id'            => 'left_footer_widget',
+    'description'   => __('The left footer widget', 'huskies-theme'),
     'before_widget' => $before_widget,
     'after_widget'  => $after_widget,
     'before_title'  => $before_title,
@@ -91,19 +92,9 @@ function register_widgets() {
   ));
 
   register_sidebar(array(
-    'name'          => __('second footer widget', 'huskies-theme'),
-    'id'            => 'second_footer_widget',
-    'description'   => __('The second footer widget', 'huskies-theme'),
-    'before_widget' => $before_widget,
-    'after_widget'  => $after_widget,
-    'before_title'  => $before_title,
-    'after_title'   => $after_title,
-  ));
-
-  register_sidebar(array(
-    'name'          => __('third footer widget', 'huskies-theme'),
-    'id'            => 'third_footer_widget',
-    'description'   => __('The third footer widget', 'huskies-theme'),
+    'name'          => __('right footer widget', 'huskies-theme'),
+    'id'            => 'right_footer_widget',
+    'description'   => __('The right footer widget', 'huskies-theme'),
     'before_widget' => $before_widget,
     'after_widget'  => $after_widget,
     'before_title'  => $before_title,
@@ -111,6 +102,52 @@ function register_widgets() {
   ));
 }
 add_action('widgets_init', 'register_widgets');
+
+########################################################################################################
+#               login functions                                                                           
+########################################################################################################
+function custom_login_stylesheet() { ?>
+    <link rel="stylesheet" id="custom_wp_admin_css"  href="<?php echo THEMEROOT.'/style.css'; ?>" type="text/css" media="all" />
+    <link rel="stylesheet" href="<?php echo HIGHLIGHT_FONT; ?>" type="text/css" media="all" />
+    <link rel="stylesheet" href="<?php echo TEXT_FONT; ?>" type="text/css" media="all" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script type="text/javascript" src="<?php echo BOOTSTRAP_PATH.'bootstrap-transition.js'; ?>"></script>
+    <script type="text/javascript" src="<?php echo BOOTSTRAP_PATH.'bootstrap-tooltip.js'; ?>"></script>
+    <script type="text/javascript" src="<?php echo BOOTSTRAP_PATH.'bootstrap-alert.js'; ?>"></script>
+    <script type="text/javascript" src="<?php echo THEMEROOT.'/javascript/main.js'; ?>"></script>
+<?php }
+add_action('login_enqueue_scripts', 'custom_login_stylesheet');
+
+function custom_login_url($url) {
+  return home_url();
+}
+add_filter('login_headerurl', 'custom_login_url');
+
+function custom_login_title($title) {
+  return "Zurück zur Startseite";
+}
+add_filter('login_headertitle', 'custom_login_title');
+
+function custom_login_error($error) {
+  return '<div class="alert alert-error">'.
+            '<button type="button" class="close" data-dismiss="alert">&times;</button>'.
+            $error.
+          '</div>';
+}
+add_filter('login_errors', 'custom_login_error');
+
+function custom_login_message($message) {
+  if (empty($message)) return $message; 
+
+  return  '<div class="hint">'.
+            '<div class="alert alert-info">'.
+              '<button type="button" class="close" data-dismiss="alert">&times;</button>'.
+              str_replace('class="message', 'class="', $message).
+            '</div>'.
+          '</div>';
+}
+add_filter('login_message', 'custom_login_message');
+
 
 ########################################################################################################
 #               filter functions                                                                           

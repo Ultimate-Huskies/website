@@ -33,37 +33,8 @@
   #user_info {
     position: absolute;
     z-index: 500;
-
-    @media (max-width: 767px) { 
-      top: -10rem;
-      width: 100%; 
-    }
-
-    @media (min-width: 786px) {
-      right: -9rem;
-      top: 21rem;
-      width: 8rem;
-    }
-
-    > img { 
-      @media (max-width: 767px) { display: none; }
-      .border-radius(50%);
-      display: inline;
-    }
-
-    > .avatar_anonym {
-      @media (max-width: 767px) { display: none; }
-      width: 7.8rem;
-      color: @grayLight;
-      cursor: default;
-      text-align: center;
-      font-size: 7rem;
-      height: 7.8rem;
-      .border-radius(50%);
-      background-color: #ddd;
-      border: 0.4rem solid @white;
-      .box-shadow(0 1px 3px rgba(0,0,0,.1));
-    }
+    top: -10rem;
+    width: 100%; 
 
     > hr {
       margin: 0.25rem 0;

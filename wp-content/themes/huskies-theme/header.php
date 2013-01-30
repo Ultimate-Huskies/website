@@ -51,9 +51,8 @@
       <img id="logo-disc" class="hidden-phone" src="<?php print IMAGES_PATH ?>/disc.png" alt="<?php _e('disc', 'huskies-theme'); ?>" />
       <img id="logo-head" class="hidden-phone" src="<?php print IMAGES_PATH ?>/head.png" alt="<?php _e('head', 'huskies-theme'); ?>" />
       <img id="logo-body" class="hidden-phone" src="<?php print IMAGES_PATH ?>/body.png" alt="<?php _e('body', 'huskies-theme'); ?>" />
-      <div id="user_info">
+      <div id="user_info" class="visible-phone">
         <?php if (is_user_logged_in()) : ?>
-          <?php bbp_current_user_avatar(72); ?>
           <p>
             <?php _e('Logged in as', 'huskies-theme'); ?> 
             <a href="<?php echo bbp_get_user_profile_url(bbp_get_current_user_id()); ?>" title="<?php _e('See your profile', 'huskies-theme'); ?>">
@@ -61,12 +60,8 @@
             </a>
           </p>
           <hr>
-          <p>
-            <a href="<?php echo wp_logout_url(); ?>"><?php _e('Logout', 'huskies-theme'); ?> <i class="icon-signout"></i></a>
-          </p>
+          <p><a href="<?php echo wp_logout_url(); ?>"><?php _e('Logout', 'huskies-theme'); ?> <i class="icon-signout"></i></a></p>
         <?php else : ?>
-          <?php //82x82 ?>
-          <div class="avatar_anonym"><i class="icon-user"></i></div>
           <p><a href="<?php echo wp_login_url(); ?>"><?php _e('Login', 'huskies-theme'); ?> <i class="icon-signin"></i></a></p>
           <hr>
           <p><a href="<?php echo home_url(); ?>/wp-login.php?action=register"><?php _e('Register','huskies-theme'); ?> <i class="icon-share"></i></a></p>

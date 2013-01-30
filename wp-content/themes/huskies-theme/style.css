@@ -8775,51 +8775,8 @@ hr.fancy:after {
 #content-wrapper #user_info {
   position: absolute;
   z-index: 500;
-}
-@media (max-width: 767px) {
-  #content-wrapper #user_info {
-    top: -10rem;
-    width: 100%;
-  }
-}
-@media (min-width: 786px) {
-  #content-wrapper #user_info {
-    right: -9rem;
-    top: 21rem;
-    width: 8rem;
-  }
-}
-#content-wrapper #user_info > img {
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  display: inline;
-}
-@media (max-width: 767px) {
-  #content-wrapper #user_info > img {
-    display: none;
-  }
-}
-#content-wrapper #user_info > .avatar_anonym {
-  width: 7.8rem;
-  color: #999999;
-  cursor: default;
-  text-align: center;
-  font-size: 7rem;
-  height: 7.8rem;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  background-color: #ddd;
-  border: 0.4rem solid #ffffff;
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-@media (max-width: 767px) {
-  #content-wrapper #user_info > .avatar_anonym {
-    display: none;
-  }
+  top: -10rem;
+  width: 100%;
 }
 #content-wrapper #user_info > hr {
   margin: 0.25rem 0;
@@ -8984,6 +8941,9 @@ hr.fancy:after {
 }
 #content .archive_header h1 small {
   font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#content .frontpage-article .article_content {
+  z-index: 50;
 }
 #content article {
   position: relative;
@@ -9506,6 +9466,60 @@ hr.fancy:after {
 #firstFooter a[href="#footer"] i {
   margin-left: 0.25rem;
 }
+#secondFooter #user_info {
+  z-index: 500;
+  text-align: center;
+  margin-top: 2.5rem;
+}
+#secondFooter #user_info > img {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  display: inline;
+}
+@media (max-width: 767px) {
+  #secondFooter #user_info > img {
+    display: none;
+  }
+}
+#secondFooter #user_info > .avatar_anonym {
+  width: 10rem;
+  color: #999999;
+  cursor: default;
+  text-align: center;
+  font-size: 8rem;
+  height: 10rem;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #ddd;
+  border: 0.4rem solid #ffffff;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+@media (max-width: 767px) {
+  #secondFooter #user_info > .avatar_anonym {
+    display: none;
+  }
+}
+#secondFooter #user_info > .avatar_anonym i {
+  position: relative;
+  top: 5%;
+}
+#secondFooter #user_info > hr {
+  margin: 0.25rem 0;
+  width: 50%;
+  margin-left: 25%;
+}
+#secondFooter #user_info > p {
+  text-align: center;
+  margin: 0;
+}
+#secondFooter #user_info > p:first-of-type {
+  margin-top: 1rem;
+}
 #top_navigator {
   background-color: #46a546;
   -webkit-border-radius: 50%;
@@ -9788,6 +9802,343 @@ hr.fancy:after {
 }
 .gce-list .one_cal_event_list .cal_more_link + dl {
   width: 90%;
+}
+body.login {
+  background-image: url("images/whitey.png");
+}
+body.login #login h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+body.login #login h1 a {
+  background: none;
+  font-family: "Lobster", Georgia, "Times New Roman", Times, serif;
+  display: inline;
+  color: black;
+}
+body.login #login h1 a:hover {
+  color: #468847;
+  text-decoration: none;
+}
+body.login #login .hint {
+  padding: 1.2rem;
+  padding-bottom: 0;
+}
+body.login #login .hint > div {
+  margin: 0;
+}
+body.login #login #login_error {
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding-bottom: 0;
+  font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+body.login #login form {
+  margin-top: 1.5rem;
+  position: relative;
+  -webkit-box-shadow: 0rem 0rem 0.75rem 0.05rem #222222;
+  -moz-box-shadow: 0rem 0rem 0.75rem 0.05rem #222222;
+  box-shadow: 0rem 0rem 0.75rem 0.05rem #222222;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  border-radius: 0.5rem;
+}
+body.login #login form:before {
+  content: "";
+  background-image: url("images/disc.png");
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 127px;
+  height: 72px;
+  right: -3.25rem;
+  top: -2rem;
+}
+body.login #login form input,
+body.login #login form textarea,
+body.login #login form select,
+body.login #login form .help-inline,
+body.login #login form .uneditable-input,
+body.login #login form .input-prepend,
+body.login #login form .input-append {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+
+  *zoom: 1;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+body.login #login form .hide {
+  display: none;
+}
+body.login #login form .control-group {
+  margin-bottom: 20px;
+  *zoom: 1;
+}
+body.login #login form .control-group:before,
+body.login #login form .control-group:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+body.login #login form .control-group:after {
+  clear: both;
+}
+body.login #login form .control-group:before,
+body.login #login form .control-group:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+body.login #login form .control-group:after {
+  clear: both;
+}
+body.login #login form .control-label {
+  float: left;
+  width: 160px;
+  padding-top: 5px;
+  text-align: right;
+}
+body.login #login form .controls {
+  *display: inline-block;
+  *padding-left: 20px;
+  margin-left: 180px;
+  *margin-left: 0;
+}
+body.login #login form .controls:first-child {
+  *padding-left: 180px;
+}
+body.login #login form .help-block {
+  margin-bottom: 0;
+}
+body.login #login form input + .help-block,
+body.login #login form select + .help-block,
+body.login #login form textarea + .help-block,
+body.login #login form .uneditable-input + .help-block,
+body.login #login form .input-prepend + .help-block,
+body.login #login form .input-append + .help-block {
+  margin-top: 10px;
+}
+body.login #login form .form-actions {
+  padding-left: 180px;
+}
+body.login #login form input {
+  margin-bottom: 2rem;
+  height: auto;
+}
+body.login #login form input,
+body.login #login form label,
+body.login #login form p {
+  font-family: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+body.login #login form input[type="checkbox"] {
+  margin: 0;
+  vertical-align: text-top;
+}
+body.login #login form #wp-submit {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+
+  *zoom: 1;
+  padding: 4px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  color: #333333;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  background-color: #f5f5f5;
+  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
+  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+  *background-color: #e6e6e6;
+  border: 1px solid #bbbbbb;
+  *border: 0;
+  border-bottom-color: #a2a2a2;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  *margin-left: .3em;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+  border-color: #c5c5c5;
+  border-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.25);
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #5bb75b;
+  background-image: -moz-linear-gradient(top, #62c462, #51a351);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#62c462), to(#51a351));
+  background-image: -webkit-linear-gradient(top, #62c462, #51a351);
+  background-image: -o-linear-gradient(top, #62c462, #51a351);
+  background-image: linear-gradient(to bottom, #62c462, #51a351);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff62c462', endColorstr='#ff51a351', GradientType=0);
+  border-color: #51a351 #51a351 #387038;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #51a351;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+body.login #login form #wp-submit:hover,
+body.login #login form #wp-submit:active,
+body.login #login form #wp-submit.active,
+body.login #login form #wp-submit.disabled,
+body.login #login form #wp-submit[disabled] {
+  color: #333333;
+  background-color: #e6e6e6;
+  *background-color: #d9d9d9;
+}
+body.login #login form #wp-submit:active,
+body.login #login form #wp-submit.active {
+  background-color: #cccccc \9;
+}
+body.login #login form #wp-submit:hover,
+body.login #login form #wp-submit:active,
+body.login #login form #wp-submit.active,
+body.login #login form #wp-submit.disabled,
+body.login #login form #wp-submit[disabled] {
+  color: #333333;
+  background-color: #e6e6e6;
+  *background-color: #d9d9d9;
+}
+body.login #login form #wp-submit:active,
+body.login #login form #wp-submit.active {
+  background-color: #cccccc \9;
+}
+body.login #login form #wp-submit:first-child {
+  *margin-left: 0;
+}
+body.login #login form #wp-submit:first-child {
+  *margin-left: 0;
+}
+body.login #login form #wp-submit:hover {
+  color: #333333;
+  text-decoration: none;
+  background-position: 0 -15px;
+  -webkit-transition: background-position 0.1s linear;
+  -moz-transition: background-position 0.1s linear;
+  -o-transition: background-position 0.1s linear;
+  transition: background-position 0.1s linear;
+}
+body.login #login form #wp-submit:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+body.login #login form #wp-submit.active,
+body.login #login form #wp-submit:active {
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
+  -moz-box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
+  box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
+}
+body.login #login form #wp-submit.disabled,
+body.login #login form #wp-submit[disabled] {
+  cursor: default;
+  background-image: none;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+body.login #login form #wp-submit .label,
+body.login #login form #wp-submit .badge {
+  position: relative;
+  top: -1px;
+}
+body.login #login form #wp-submit [class^="icon-"],
+body.login #login form #wp-submit [class*=" icon-"] {
+  display: inline;
+  /* keeps button heights with and without icons the same */
+
+  line-height: .6em;
+}
+body.login #login form #wp-submit [class^="icon-"].icon-spin,
+body.login #login form #wp-submit [class*=" icon-"].icon-spin {
+  display: inline-block;
+}
+body.login #login form #wp-submit [class^="icon-"].pull-left.icon-2x,
+body.login #login form #wp-submit [class*=" icon-"].pull-left.icon-2x,
+body.login #login form #wp-submit [class^="icon-"].pull-right.icon-2x,
+body.login #login form #wp-submit [class*=" icon-"].pull-right.icon-2x {
+  margin-top: .35em;
+}
+body.login #login form #wp-submit [class^="icon-"].icon-spin.icon-large,
+body.login #login form #wp-submit [class*=" icon-"].icon-spin.icon-large {
+  height: .75em;
+}
+body.login #login form #wp-submit:hover,
+body.login #login form #wp-submit:active,
+body.login #login form #wp-submit.active,
+body.login #login form #wp-submit.disabled,
+body.login #login form #wp-submit[disabled] {
+  color: #ffffff;
+  background-color: #51a351;
+  *background-color: #499249;
+}
+body.login #login form #wp-submit:active,
+body.login #login form #wp-submit.active {
+  background-color: #408140 \9;
+}
+body.login #login form #wp-submit:hover,
+body.login #login form #wp-submit:active,
+body.login #login form #wp-submit.active,
+body.login #login form #wp-submit.disabled,
+body.login #login form #wp-submit[disabled] {
+  color: #ffffff;
+  background-color: #51a351;
+  *background-color: #499249;
+}
+body.login #login form #wp-submit:active,
+body.login #login form #wp-submit.active {
+  background-color: #408140 \9;
+}
+body.login #login form #wp-submit .caret {
+  border-top-color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+body.login #login #nav {
+  text-align: center;
+}
+body.login #login #nav a {
+  color: #468847 !important;
+}
+body.login #login #nav a:hover {
+  color: #2c552d !important;
+  text-decoration: none;
+}
+body.login #login #backtoblog {
+  display: none;
+}
+body.login-action-register #wp-submit {
+  display: block;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body.login-action-lostpassword #wp-submit {
+  display: block;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 #pbOverlay .prevNext {
   opacity: 0.5;
