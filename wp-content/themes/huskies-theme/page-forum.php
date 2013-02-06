@@ -1,3 +1,9 @@
+<?php
+/*
+Template Name: forum
+*/
+?>
+
 <?php get_header(); ?>
 
   <?php while(have_posts()) : the_post(); ?>
@@ -5,7 +11,7 @@
       <?php if(strtolower(get_the_title()) !== 'kontakt' && strtolower(get_the_title()) !== 'contact' && strtolower(get_the_title()) !== 'start') : ?>
         <header>
           <div class="page-header">
-            <h1><?php echo str_replace('Privat:', '', get_the_title()); ?><?php edit_post_link(__('Edit this post', 'huskies-theme'), ' <small class="article_meta_edit_link">', '</small>' ); ?></h1>
+            <h1><?php the_title(); ?><?php edit_post_link(__('Edit this post', 'huskies-theme'), ' <small class="article_meta_edit_link">', '</small>' ); ?></h1>
           </div>
         </header>
 

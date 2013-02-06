@@ -9,19 +9,21 @@ jQuery(document).ready ($) ->
   $('#interactiveMap').on 'DOMSubtreeModified', ->
     $('.mapp-dir-get').addClass 'btn btn-success'
 
-  $('*[title]').tooltip
-    animation:  true
-    html:       true
-    placement:  'bottom'
+  if $().tooltip?
+    $('*[title]').tooltip
+      animation:  true
+      html:       true
+      placement:  'bottom'
 
-  $('*[rel="popover"]').popover
-    animation:  true
-    html:       true
-    trigger:    'hover'
-    placement:  'bottom'
+    $('.article_meta_comments').tooltip('destroy').tooltip
+      placement: 'left'
 
-  $('.article_meta_comments').tooltip('destroy').tooltip
-    placement: 'left'
+  if $().popover?
+    $('*[rel="popover"]').popover
+      animation:  true
+      html:       true
+      trigger:    'hover'
+      placement:  'bottom'
 
   $('#topHeader .form-search').on 'focus', 'input', ->
     $('#logo-disc, #searchform').addClass('expand')
@@ -35,4 +37,10 @@ jQuery(document).ready ($) ->
     $('#secondFooter').slideToggle 800
     $('html, body').animate {scrollTop: $('body').height()}, 800
 
-  $('.gallery a').photobox()
+  if $().photobox?
+    $('.gallery a').photobox()
+
+  if $().select2?
+    $selector = $('#bbp_forum_id')
+    if $selector? and $selector[0]? and $selector[0].outerHTML[0...7] is "<select" then $('#bbp_forum_id').select2()
+    $('#bbp_stick_topic').select2()

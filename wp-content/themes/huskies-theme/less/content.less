@@ -20,7 +20,9 @@
     .featured-post { text-align: center; }
 
     &.page > header,
-    &.attachment > header {
+    &.attachment > header,
+    &.forum > header,
+    &.topic > header {
       margin-top: 3rem; 
       h1 small { font-size: 1.5rem; }
     }
@@ -53,6 +55,7 @@
 
         h1 { 
           width: 90%;
+          word-wrap: break-word;
 
           > a {
             word-wrap: break-word;

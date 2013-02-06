@@ -3,6 +3,7 @@
   var $topLink, addTopLink, scrolling, setTopLink;
 
   jQuery(document).ready(function($) {
+    var $selector;
     setTopLink();
     $('#contactform input, #contactform textarea').each(function() {
       var $self;
@@ -12,20 +13,24 @@
     $('#interactiveMap').on('DOMSubtreeModified', function() {
       return $('.mapp-dir-get').addClass('btn btn-success');
     });
-    $('*[title]').tooltip({
-      animation: true,
-      html: true,
-      placement: 'bottom'
-    });
-    $('*[rel="popover"]').popover({
-      animation: true,
-      html: true,
-      trigger: 'hover',
-      placement: 'bottom'
-    });
-    $('.article_meta_comments').tooltip('destroy').tooltip({
-      placement: 'left'
-    });
+    if ($().tooltip != null) {
+      $('*[title]').tooltip({
+        animation: true,
+        html: true,
+        placement: 'bottom'
+      });
+      $('.article_meta_comments').tooltip('destroy').tooltip({
+        placement: 'left'
+      });
+    }
+    if ($().popover != null) {
+      $('*[rel="popover"]').popover({
+        animation: true,
+        html: true,
+        trigger: 'hover',
+        placement: 'bottom'
+      });
+    }
     $('#topHeader .form-search').on('focus', 'input', function() {
       return $('#logo-disc, #searchform').addClass('expand');
     });
@@ -39,7 +44,16 @@
         scrollTop: $('body').height()
       }, 800);
     });
-    return $('.gallery a').photobox();
+    if ($().photobox != null) {
+      $('.gallery a').photobox();
+    }
+    if ($().select2 != null) {
+      $selector = $('#bbp_forum_id');
+      if (($selector != null) && ($selector[0] != null) && $selector[0].outerHTML.slice(0, 7) === "<select") {
+        $('#bbp_forum_id').select2();
+      }
+      return $('#bbp_stick_topic').select2();
+    }
   });
 
   $topLink = "";

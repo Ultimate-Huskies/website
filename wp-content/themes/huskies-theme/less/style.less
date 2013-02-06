@@ -34,6 +34,7 @@ body {
 @import "footer.less";
 @import "plugins.less";
 @import "login.less";
+@import "bbpress.less";
 
 @import "./less/photobox.css";
 #pbOverlay .prevNext { .opacity(50); }
@@ -45,4 +46,16 @@ body {
   left: 5%;
   .scale(1);
   .rotate(180deg);
+}
+
+@import "./less/select2.css";
+.select2-container .select2-choice abbr { background-image: url("images/select2.png"); }
+.select2-container .select2-choice div b { background-image: url("images/select2.png"); }
+.select2-search input { background-image: url("images/select2.png"); }
+.select2-search input.select2-active { background-image: url("images/spinner.gif"); }
+.select2-more-results.select2-active { background-image: url("images/spinner.gif"); }
+.select2-container-multi .select2-choices .select2-search-field input.select2-active { background-image: url("images/spinner.gif"); }
+.select2-search-choice-close { background-image: url("images/select2.png"); }
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5) { 
+  .select2-search input, .select2-search-choice-close, .select2-container .select2-choice abbr, .select2-container .select2-choice div b { background-image: url("images/select2x2.png"); }
 }

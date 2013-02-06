@@ -59,8 +59,9 @@ function enqueue_scripts() {
   wp_register_script('bootstrap_tab', BOOTSTRAP_PATH.'bootstrap-tab.js', array('jquery'), '1', false);
   wp_register_script('bootstrap_alert', BOOTSTRAP_PATH.'bootstrap-alert.js', array('jquery'), '1', false);
   wp_register_script('gallery', THEMEROOT.'/javascript/photobox.min.js', array('jquery'), '1', false);
+  wp_register_script('select2', THEMEROOT.'/javascript/select2.min.js', array('jquery'), '1', false);
   wp_register_script('gce_replacement', THEMEROOT.'/javascript/gce-script.js', array('jquery', 'bootstrap_popover'), '1', false);
-  wp_register_script('main_script', THEMEROOT.'/javascript/main.js', array('bootstrap_transition', 'bootstrap_dropdown', 'bootstrap_collapse', 'bootstrap_tooltip', 'bootstrap_popover', 'bootstrap_tab', 'bootstrap_alert', 'gallery', 'gce_replacement'), '1.0.0', false);
+  wp_register_script('main_script', THEMEROOT.'/javascript/main.js', array('bootstrap_transition', 'bootstrap_dropdown', 'bootstrap_collapse', 'bootstrap_tooltip', 'bootstrap_popover', 'bootstrap_tab', 'bootstrap_alert', 'gallery', 'select2', 'gce_replacement'), '1.0.0', false);
 
   wp_enqueue_script('main_script'); 
 }
@@ -567,4 +568,90 @@ function bootstrap_custom_comments_form($post_id = null) {
     do_action('comment_form_comments_closed');
   endif; 
 }
+
+###########################################################################
+#                   bbPress
+###########################################################################
+// add_filter('bbp_show_lead_topic', '__return_true');
+
+function bootstrap_breadcrumb() {
+  bbp_breadcrumb(array(
+    'before'          => '<ul class="breadcrumb">',
+    'after'           => '</ul>',
+    'sep'             => '/',
+    'pad_sep'         => 0,
+    'sep_before'      => '<span class="divider">',
+    'crumb_before'    => '<li>',
+    'crumb_after'     => '</li>',
+    'current_before'  => '<li class="active">',
+    'current_after'   => '</li>',
+  ));
+}
+
+function custom_forum_title($title) {
+  // return str_replace('Privat:', '<i class="icon-key" title="'.__('private forum', 'huskies-theme').'" data-placement="left"></i>', $title);
+  return str_replace('Privat: ', '', $title);
+}
+add_filter('bbp_get_forum_title', 'custom_forum_title');
+
+function custom_pagination($args) {
+  $args['type'] = 'array';
+  $args['prev_text'] = '&laquo;';
+  $args['next_text'] = '&raquo;';
+  return $args;
+}
+add_filter('bbp_topic_pagination', 'custom_pagination');
+add_filter('bbp_replies_pagination', 'custom_pagination');
+
+function bootstrap_pagination($links) {
+  $link_list = '<ul>';
+  foreach ($links as $link => $value) {
+    if (strpos($value, 'current') !== false) {
+      $link_list .= '<li class="active">'.$value.'</li>';
+    } else {
+      $link_list .= '<li>'.$value.'</li>';
+    }
+  }
+  $link_list .= '</ul>';
+  return $link_list;
+}
+add_filter('bbp_get_forum_pagination_links', 'bootstrap_pagination');
+add_filter('bbp_get_topic_pagination_links', 'bootstrap_pagination');
+
+function bootstrap_topic_pagination() {
+  bbp_topic_pagination(array(
+    'before'   => '',
+    'after'    => '',
+  ));
+}
+
+function bootstrap_topic_link_pagination($links) {
+  if (strlen($links) > 0) {
+    $links = explode('</a>', $links);
+    $link_list = '<span class="pagination"><ul>';
+
+    foreach ($links as $link => $value) {
+      if (strlen(trim($value)) > 0) $link_list .= '<li>'.$value.'</a></li>';
+    }
+
+    $link_list .= '</ul></span>';
+    return $link_list;
+  } else {
+    return $links;
+  }
+}
+add_filter('bbp_get_topic_pagination', 'bootstrap_topic_link_pagination');
+
+function custom_single_description($description) {
+  if (strpos($description, 'This forum is empty') !== false) $description = '';
+  return str_replace('&nbsp;', '', $description);
+}
+add_filter('bbp_get_single_forum_description', 'custom_single_description');
+add_filter('bbp_get_single_topic_description', 'custom_single_description');
+
+function custom_reply_class($classes) {
+  $classes[] = 'media';
+  return $classes;
+}
+add_filter('bbp_get_reply_class', 'custom_reply_class');
 ?>
