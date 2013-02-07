@@ -15,8 +15,10 @@
 		<div class="page-header">
 			<h3>
 				<?php
+					do_action('bbp_theme_before_topic_form_title');
 					if (bbp_is_topic_edit()) printf(__('Now Editing &ldquo;%s&rdquo;', 'huskies-theme'), bbp_get_topic_title());
 					else bbp_is_single_forum() ? printf(__('Create New Topic in &ldquo;%s&rdquo;', 'huskies-theme'), bbp_get_forum_title()) : _e('Create New Topic', 'huskies-theme');
+					do_action('bbp_theme_after_topic_form_title');
 				?>
 			</h3>
 		</div>
@@ -29,15 +31,13 @@
 			</div>
 		<?php endif; ?>
 
-		<?php do_action( 'bbp_template_notices' ); ?>
+		<?php do_action('bbp_template_notices'); ?>
 
 		<form id="new-post" name="new-post" method="post" action="<?php the_permalink(); ?>">
 			<?php 
 				do_action('bbp_theme_before_topic_form');
 				//TODO: styling template if needed
 				bbp_get_template_part('form', 'anonymous');
-
-				do_action('bbp_theme_before_topic_form_title'); 
 			?>
 
 			<div class="topic-name row-fluid">
@@ -49,7 +49,6 @@
 			</div>
 
 			<?php 
-				do_action('bbp_theme_after_topic_form_title');
 				do_action('bbp_theme_before_topic_form_content'); 
 				
 				if (!function_exists('wp_editor')) : 

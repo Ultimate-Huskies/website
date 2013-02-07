@@ -1,7 +1,11 @@
       </section>
     </div>
     <div class="container" id="firstFooter">
-      <a class="pull-left" href="<?php print IMPRINT_URL; ?>"><?php _e('imprint', 'huskies-theme') ?></a>
+      <span class="pull-left">
+        <a  href="<?php print IMPRINT_URL; ?>"><?php _e('imprint', 'huskies-theme') ?></a> | 
+        <a href="<?php echo home_url(); ?>/kontakt/#contactform"><?php _e('contact', 'huskies-theme'); ?></a>
+      </span>
+  
       <p>
         &copy; <?php echo date('Y'); ?> 
         <a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>

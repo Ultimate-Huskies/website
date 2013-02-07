@@ -1,95 +1,80 @@
-<?php
-
-/**
- * New/Edit Reply
- *
- * @package bbPress
- * @subpackage Theme
- */
-
-?>
-
-<?php if ( bbp_is_reply_edit() ) : ?>
-
-<div id="bbpress-forums">
-
-	<?php bbp_breadcrumb(); ?>
-
+<?php if (bbp_is_reply_edit()) : ?>
+	<div id="forums">
+	<?php bootstrap_breadcrumb(); ?>
 <?php endif; ?>
 
-<?php if ( bbp_current_user_can_access_create_reply_form() ) : ?>
+<?php if (bbp_current_user_can_access_create_reply_form()) : ?>
+	<div id="new-reply-<?php bbp_topic_id(); ?>" class="reply-form well well-small">
+		<div class="page-header">
+			<h3>
+				<?php printf(__('Reply To: %s', 'huskies-theme'), bbp_get_topic_title()); ?>
+			</h3>
+		</div>
 
-	<div id="new-reply-<?php bbp_topic_id(); ?>" class="bbp-reply-form">
+		<?php 
+			do_action('bbp_theme_before_reply_form_notices');
+			if (!bbp_is_topic_open() && !bbp_is_reply_edit()) :
+		?>
+			<div class="alert">
+				<h4><?php _e('Closed'); ?></h4>
+				<?php _e('This topic is marked as closed to new replies, however your posting capabilities still allow you to do so.', 'huskies-theme'); ?>
+			</div>
+		<?php endif; ?>
 
 		<form id="new-post" name="new-post" method="post" action="<?php the_permalink(); ?>">
+			<?php 
+				do_action('bbp_theme_before_reply_form');
+				do_action('bbp_template_notices');
+				bbp_get_template_part('form', 'anonymous');
+				do_action('bbp_theme_before_reply_form_content');
 
-			<?php do_action( 'bbp_theme_before_reply_form' ); ?>
-
-			<fieldset class="bbp-form">
-				<legend><?php printf( __( 'Reply To: %s', 'bbpress' ), bbp_get_topic_title() ); ?></legend>
-
-				<?php do_action( 'bbp_theme_before_reply_form_notices' ); ?>
-
-				<?php if ( !bbp_is_topic_open() && !bbp_is_reply_edit() ) : ?>
-
-					<div class="bbp-template-notice">
-						<p><?php _e( 'This topic is marked as closed to new replies, however your posting capabilities still allow you to do so.', 'bbpress' ); ?></p>
+				if (!function_exists('wp_editor')) :
+			?>
+				<div class="input-block-level row-fluid">
+          <textarea id="bbp_reply_content" tabindex="<?php bbp_tab_index(); ?>" name="bbp_reply_content" class="span12" placeholder="<?php _e('Reply content', 'huskies-theme'); ?>"><?php bbp_form_reply_content(); ?></textarea>
+        </div>
+      <?php 
+      	else :
+					bbp_the_content(array(
+						'context' 			=> 'reply',
+						'before'        => '<div class="the-content-wrapper row-fluid">',
+						'editor_class'  => 'the-content',
+					));
+				endif; 
+				
+				do_action('bbp_theme_after_reply_form_content'); 
+				
+				if (!current_user_can('unfiltered_html')) : 
+			?>
+					<dl class="bbpress_form_allowed_tags dl-horizontal hidden-phone">
+	          <dt>
+	            <?php _e('You may use these', 'huskies-theme'); ?>
+	            <abbr title="HyperText Markup Language">HTML</abbr>
+	            <?php _e('tags and attributes', 'huskies-theme'); ?>:
+	          </dt>
+	          <dd><code><?php bbp_allowed_tags(); ?></code></dd>
+	        </dl>
+	    <?php else: ?>
+	    		<div class="alert alert-info">
+						<?php _e('Your account has the ability to post unrestricted HTML content.', 'huskies-theme'); ?>
 					</div>
+			<?php endif; ?>
 
-				<?php endif; ?>
-
-				<?php if ( current_user_can( 'unfiltered_html' ) ) : ?>
-
-					<div class="bbp-template-notice">
-						<p><?php _e( 'Your account has the ability to post unrestricted HTML content.', 'bbpress' ); ?></p>
-					</div>
-
-				<?php endif; ?>
-
-				<?php do_action( 'bbp_template_notices' ); ?>
-
-				<div>
-
-					<?php bbp_get_template_part( 'form', 'anonymous' ); ?>
-
-					<?php do_action( 'bbp_theme_before_reply_form_content' ); ?>
-
-					<?php if ( !function_exists( 'wp_editor' ) ) : ?>
-
-						<p>
-							<label for="bbp_reply_content"><?php _e( 'Reply:', 'bbpress' ); ?></label><br />
-							<textarea id="bbp_reply_content" tabindex="<?php bbp_tab_index(); ?>" name="bbp_reply_content" rows="6"><?php bbp_form_reply_content(); ?></textarea>
-						</p>
-
-					<?php else : ?>
-
-						<?php bbp_the_content( array( 'context' => 'reply' ) ); ?>
-
-					<?php endif; ?>
-
-					<?php do_action( 'bbp_theme_after_reply_form_content' ); ?>
-
-					<?php if ( !current_user_can( 'unfiltered_html' ) ) : ?>
-
-						<p class="form-allowed-tags">
-							<label><?php _e( 'You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:','bbpress' ); ?></label><br />
-							<code><?php bbp_allowed_tags(); ?></code>
-						</p>
-
-					<?php endif; ?>
+			<div class="topic-meta-input row-fluid">
+				<?php 
+					if (bbp_allow_topic_tags() && current_user_can('assign_topic_tags')) : 
+						do_action('bbp_theme_before_reply_form_tags');
+				?>
+					<div class="input-prepend span4 topic-tags">
+	          <span class="add-on" title="<?php _e('Tags', 'huskies-theme'); ?>"><i class="icon-tags"></i></span>
+	          <input type="text" id="bbp_topic_tags" value="<?php bbp_form_topic_tags(); ?>" tabindex="<?php bbp_tab_index(); ?>" name="bbp_topic_tags" placeholder="<?php _e('Tags for this topic', 'huskies-theme'); ?>" <?php disabled(bbp_is_topic_spam()); ?>/>
+	        </div>
+	      <?php 
+	      		do_action('bbp_theme_after_reply_form_tags');
+	      	endif;
+	      ?>
+			</div>
 					
-					<?php if ( bbp_allow_topic_tags() && current_user_can( 'assign_topic_tags' ) ) : ?>
-
-						<?php do_action( 'bbp_theme_before_reply_form_tags' ); ?>
-
-						<p>
-							<label for="bbp_topic_tags"><?php _e( 'Tags:', 'bbpress' ); ?></label><br />
-							<input type="text" value="<?php bbp_form_topic_tags(); ?>" tabindex="<?php bbp_tab_index(); ?>" size="40" name="bbp_topic_tags" id="bbp_topic_tags" <?php disabled( bbp_is_topic_spam() ); ?> />
-						</p>
-
-						<?php do_action( 'bbp_theme_after_reply_form_tags' ); ?>
-
-					<?php endif; ?>
 
 					<?php if ( bbp_is_subscriptions_active() && !bbp_is_anonymous() && ( !bbp_is_reply_edit() || ( bbp_is_reply_edit() && !bbp_is_reply_anonymous() ) ) ) : ?>
 

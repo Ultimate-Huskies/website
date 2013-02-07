@@ -2,13 +2,17 @@
   color: @black;
   text-align: center;
 
-  a:firstChild {
+  > span {
     margin-left: 0.5rem;
+
+    @media (max-width: 767px) { float: none; }  
   }
 
   p {
     display: inline-block;
-    width: 80%;
+    width: 60%;
+
+    @media (max-width: 767px) { margin-top: 1rem; }
   }
 
   a[href="#footer"] {

@@ -8912,7 +8912,7 @@ hr.fancy:after {
 }
 @media (max-width: 767px) {
   #topHeader {
-    z-index: 100;
+    z-index: 1000;
   }
 }
 #topHeader .navbar {
@@ -9033,13 +9033,15 @@ hr.fancy:after {
 #content article.page > header,
 #content article.attachment > header,
 #content article.forum > header,
-#content article.topic > header {
+#content article.topic > header,
+#content article.reply > header {
   margin-top: 3rem;
 }
 #content article.page > header h1 small,
 #content article.attachment > header h1 small,
 #content article.forum > header h1 small,
-#content article.topic > header h1 small {
+#content article.topic > header h1 small,
+#content article.reply > header h1 small {
   font-size: 1.5rem;
 }
 #content article.attachment .full_width_attachment a {
@@ -9527,12 +9529,22 @@ hr.fancy:after {
   color: #000000;
   text-align: center;
 }
-#firstFooter a:firstChild {
+#firstFooter > span {
   margin-left: 0.5rem;
+}
+@media (max-width: 767px) {
+  #firstFooter > span {
+    float: none;
+  }
 }
 #firstFooter p {
   display: inline-block;
-  width: 80%;
+  width: 60%;
+}
+@media (max-width: 767px) {
+  #firstFooter p {
+    margin-top: 1rem;
+  }
 }
 #firstFooter a[href="#footer"] {
   margin-right: 0.5rem;
