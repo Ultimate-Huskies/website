@@ -8953,14 +8953,23 @@ hr.fancy:after {
   background-color: transparent !important;
   color: #468847 !important;
 }
-#topHeader .navbar .nav > li:not(.active):not(.open):not(.current_page_parent) > a {
+#topHeader .navbar .nav > li:not(.active):not(.open):not(.current_page_parent):not(.forum):not(.topic):not(.reply) > a,
+#topHeader .navbar .nav > li.reply > a:not([href$="forum/"]),
+#topHeader .navbar .nav > li.forum > a:not([href$="forum/"]),
+#topHeader .navbar .nav > li.topic > a:not([href$="forum/"]) {
   color: #000000;
 }
-#topHeader .navbar .nav > li:not(.active):not(.open):not(.current_page_parent) > a:hover {
+#topHeader .navbar .nav > li:not(.active):not(.open):not(.current_page_parent):not(.forum):not(.topic):not(.reply) > a:hover,
+#topHeader .navbar .nav > li.reply > a:not([href$="forum/"]):hover,
+#topHeader .navbar .nav > li.forum > a:not([href$="forum/"]):hover,
+#topHeader .navbar .nav > li.topic > a:not([href$="forum/"]):hover {
   background-color: #ffffff;
 }
-#topHeader .navbar .nav > li.active > a,
-#topHeader .navbar .nav > li.current_page_parent > a {
+#topHeader .navbar .nav > li.active:not(.forum):not(.topic):not(.reply) > a,
+#topHeader .navbar .nav > li.current_page_parent:not(.forum):not(.topic):not(.reply) > a,
+#topHeader .navbar .nav > li.reply > a[href$="forum/"],
+#topHeader .navbar .nav > li.forum > a[href$="forum/"],
+#topHeader .navbar .nav > li.topic > a[href$="forum/"] {
   background-color: #468847;
   color: #ffffff;
   text-shadow: 0 0.1rem 0 #000000;
@@ -10331,37 +10340,56 @@ body.login-action-lostpassword #wp-submit {
     width: 105%;
   }
 }
-#forums .topic-replies-wrapper header {
+#forums .topic-replies-wrapper header,
+#forums .topic-replies-wrapper footer {
   *zoom: 1;
   margin: 0;
+  position: relative;
   -webkit-box-shadow: 0rem 0.6rem 0.8rem -0.8rem #000000;
   -moz-box-shadow: 0rem 0.6rem 0.8rem -0.8rem #000000;
   box-shadow: 0rem 0.6rem 0.8rem -0.8rem #000000;
   margin-bottom: 2rem;
 }
 #forums .topic-replies-wrapper header:before,
-#forums .topic-replies-wrapper header:after {
+#forums .topic-replies-wrapper footer:before,
+#forums .topic-replies-wrapper header:after,
+#forums .topic-replies-wrapper footer:after {
   display: table;
   content: "";
   line-height: 0;
 }
-#forums .topic-replies-wrapper header:after {
+#forums .topic-replies-wrapper header:after,
+#forums .topic-replies-wrapper footer:after {
   clear: both;
 }
 #forums .topic-replies-wrapper header:before,
-#forums .topic-replies-wrapper header:after {
+#forums .topic-replies-wrapper footer:before,
+#forums .topic-replies-wrapper header:after,
+#forums .topic-replies-wrapper footer:after {
   display: table;
   content: "";
   line-height: 0;
 }
-#forums .topic-replies-wrapper header:after {
+#forums .topic-replies-wrapper header:after,
+#forums .topic-replies-wrapper footer:after {
   clear: both;
 }
-#forums .topic-replies-wrapper header > span:first-child {
+#forums .topic-replies-wrapper header > .bbp-admin-links,
+#forums .topic-replies-wrapper footer > .bbp-admin-links {
+  position: absolute;
+  top: 2rem;
+  text-align: center;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+#forums .topic-replies-wrapper header > span:nth-child(2),
+#forums .topic-replies-wrapper footer > span:nth-child(2) {
   float: left;
   margin-left: 1rem;
 }
-#forums .topic-replies-wrapper header > span:last-child {
+#forums .topic-replies-wrapper header > span:last-child,
+#forums .topic-replies-wrapper footer > span:last-child {
   float: right;
   margin-right: 1rem;
 }
@@ -10392,7 +10420,7 @@ body.login-action-lostpassword #wp-submit {
     content: "";
     position: absolute;
     top: 0;
-    right: -2.15rem;
+    right: -2.1rem;
     height: 100%;
     border-right: 0.1rem solid #ccc;
   }
@@ -10518,38 +10546,13 @@ body.login-action-lostpassword #wp-submit {
   color: #468847;
 }
 #forums .topic-replies-wrapper footer {
-  *zoom: 1;
-  margin: 0;
   -webkit-box-shadow: 0rem -0.6rem 0.8rem -0.8rem #000000;
   -moz-box-shadow: 0rem -0.6rem 0.8rem -0.8rem #000000;
   box-shadow: 0rem -0.6rem 0.8rem -0.8rem #000000;
   margin-top: 2rem;
 }
-#forums .topic-replies-wrapper footer:before,
-#forums .topic-replies-wrapper footer:after {
-  display: table;
-  content: "";
-  line-height: 0;
-}
-#forums .topic-replies-wrapper footer:after {
-  clear: both;
-}
-#forums .topic-replies-wrapper footer:before,
-#forums .topic-replies-wrapper footer:after {
-  display: table;
-  content: "";
-  line-height: 0;
-}
-#forums .topic-replies-wrapper footer:after {
-  clear: both;
-}
-#forums .topic-replies-wrapper footer > span:first-child {
-  float: left;
-  margin-left: 1rem;
-}
-#forums .topic-replies-wrapper footer > span:last-child {
-  float: right;
-  margin-right: 1rem;
+#forums .topic-replies-wrapper footer > .bbp-admin-links {
+  top: -2rem;
 }
 .forum-description,
 .bbp-topic-description {
@@ -10676,6 +10679,86 @@ body.login-action-lostpassword #wp-submit {
   text-align: center;
   padding-bottom: 0;
   padding-top: 0.5rem;
+}
+.topic-replies-wrapper .status-trash,
+.topic-replies-wrapper .status-spam,
+table .status-trash td:first-child h4,
+table .status-spam td:first-child h4 {
+  opacity: 0.25;
+  filter: alpha(opacity=25);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  position: relative;
+  z-index: 50;
+}
+.topic-replies-wrapper .status-trash:before,
+.topic-replies-wrapper .status-spam:before,
+table .status-trash td:first-child h4:before,
+table .status-spam td:first-child h4:before {
+  content: "Trash";
+  position: absolute;
+  width: 100%;
+  top: 25%;
+  text-align: center;
+  color: #000000;
+  font-family: "Lobster", Georgia, "Times New Roman", Times, serif;
+  font-size: 5rem;
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  z-index: 100;
+}
+.topic-replies-wrapper .status-trash:hover,
+.topic-replies-wrapper .status-spam:hover,
+table .status-trash td:first-child h4:hover,
+table .status-spam td:first-child h4:hover {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.topic-replies-wrapper .status-trash:hover:before,
+.topic-replies-wrapper .status-spam:hover:before,
+table .status-trash td:first-child h4:hover:before,
+table .status-spam td:first-child h4:hover:before {
+  color: #555555;
+  opacity: 0.1;
+  filter: alpha(opacity=10);
+  z-index: 25;
+}
+table .status-trash,
+table .status-spam {
+  opacity: 0.25;
+  filter: alpha(opacity=25);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  z-index: 50;
+}
+table .status-trash:hover,
+table .status-spam:hover {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+table .status-trash:hover td:first-child h4,
+table .status-spam:hover td:first-child h4 {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+table .status-trash:hover td:first-child h4:before,
+table .status-spam:hover td:first-child h4:before {
+  color: #555555;
+  opacity: 0.1;
+  filter: alpha(opacity=10);
+  z-index: 25;
+}
+.topic-replies-wrapper .status-spam:before,
+table .status-spam td:first-child h4:before {
+  content: "Spam";
 }
 #pbOverlay .prevNext {
   opacity: 0.5;

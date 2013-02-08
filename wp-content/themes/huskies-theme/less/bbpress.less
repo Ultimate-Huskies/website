@@ -92,13 +92,24 @@
   }
 
   .topic-replies-wrapper {
-    header {
+    header, 
+    footer {
       .clearfix;
       margin: 0;
+      position: relative;
       .box-shadow(0rem 0.6rem 0.8rem -0.8rem @black);
       margin-bottom: 2rem;
 
-      > span:first-child { 
+      > .bbp-admin-links {
+        position: absolute;
+        top: 2rem;
+        text-align: center;
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      > span:nth-child(2) { 
         float: left; 
         margin-left: 1rem;
       }
@@ -131,7 +142,7 @@
               content: "";
               position: absolute;
               top: 0;
-              right: -2.15rem;
+              right: -2.10rem;
               height: 100%;
               border-right: 0.1rem solid #ccc;
             }
@@ -239,19 +250,9 @@
     }
 
     footer {
-      .clearfix;
-      margin: 0;
       .box-shadow(0rem -0.6rem 0.8rem -0.8rem @black);
       margin-top: 2rem;
-
-      > span:first-child { 
-        float: left; 
-        margin-left: 1rem;
-      }
-      > span:last-child { 
-        float: right; 
-        margin-right: 1rem;
-      }
+      > .bbp-admin-links { top: -2rem; }
     }
   }
 }
@@ -366,4 +367,64 @@
     padding-bottom: 0;
     padding-top: 0.5rem;
   }
+}
+
+.topic-replies-wrapper .status-trash,
+.topic-replies-wrapper .status-spam,
+table .status-trash td:first-child h4,
+table .status-spam td:first-child h4 {
+  .opacity(25);
+  .transition(all 0.5s ease);
+  position: relative;
+  z-index: 50;
+
+  &:before {
+    content: "Trash";
+    position: absolute;
+    width: 100%;
+    top: 25%;
+    text-align: center;
+    color: @black;
+    font-family: @serifFontFamily;
+    font-size: 5rem;
+    .opacity(100);
+    .transition(all 0.25s ease);
+    z-index: 100;
+  }
+
+  &:hover { 
+    .opacity(100); 
+
+    &:before {
+      color: @gray;
+      .opacity(10);
+      z-index: 25;
+    }
+  }
+}
+
+table .status-trash,
+table .status-spam {
+  .opacity(25);
+  .transition(all 0.5s ease);
+  z-index: 50;
+
+   &:hover { 
+     .opacity(100); 
+
+     td:first-child h4 { 
+       .opacity(100); 
+
+       &:before {
+        color: @gray;
+        .opacity(10);
+        z-index: 25;
+      }
+     }
+   }
+}
+
+.topic-replies-wrapper .status-spam:before,
+table .status-spam td:first-child h4:before {
+  content: "Spam";
 }

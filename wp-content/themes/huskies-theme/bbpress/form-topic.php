@@ -1,3 +1,8 @@
+<?php if (!bbp_is_single_forum()) : ?>
+<div id="forums">
+	<?php bootstrap_breadcrumb(); ?>
+<?php endif; ?>
+
 <?php 
 	if (bbp_is_topic_edit()) :
 		bbp_topic_tag_list(bbp_get_topic_id());
@@ -180,10 +185,14 @@
 	</div>
 <?php elseif (bbp_is_forum_closed()) : ?>
 	<div id="no-topic-<?php bbp_topic_id(); ?>" class="alert alert-info">
-		<?php printf( __('The forum &#8216;%s&#8217; is closed to new topics and replies.', 'huskies-theme'), bbp_get_forum_title() ); ?>
+		<?php printf(__('The forum &#8216;%s&#8217; is closed to new topics and replies.', 'huskies-theme'), bbp_get_forum_title()); ?>
 	</div>
 <?php else : ?>
 	<div id="no-topic-<?php bbp_topic_id(); ?>" class="alert">
-		<?php is_user_logged_in() ? _e('You cannot create new topics.', 'huskies-theme') : _e( 'You must be logged in to create new topics.', 'huskies-theme'); ?></p>
+		<?php is_user_logged_in() ? _e('You cannot create new topics.', 'huskies-theme') : _e('You must be logged in to create new topics.', 'huskies-theme'); ?></p>
+	</div>
+<?php endif; ?>
+
+<?php if (!bbp_is_single_forum()) : ?>
 	</div>
 <?php endif; ?>

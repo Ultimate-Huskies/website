@@ -126,13 +126,19 @@
       }
     }
 
-    .nav > li:not(.active):not(.open):not(.current_page_parent) > a {
+    .nav > li:not(.active):not(.open):not(.current_page_parent):not(.forum):not(.topic):not(.reply) > a,
+    .nav > li.reply > a:not([href$="forum/"]),
+    .nav > li.forum > a:not([href$="forum/"]),
+    .nav > li.topic > a:not([href$="forum/"]) {
       color: @black;
       &:hover { background-color: @white; }
     }
 
-    .nav > li.active > a,
-    .nav > li.current_page_parent > a {
+    .nav > li.active:not(.forum):not(.topic):not(.reply) > a,
+    .nav > li.current_page_parent:not(.forum):not(.topic):not(.reply) > a,
+    .nav > li.reply > a[href$="forum/"],
+    .nav > li.forum > a[href$="forum/"],
+    .nav > li.topic > a[href$="forum/"] {
       background-color: @successText;
       color: @white;
       text-shadow: 0 0.1rem 0 @black;

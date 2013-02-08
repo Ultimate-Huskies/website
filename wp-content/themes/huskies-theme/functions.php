@@ -153,7 +153,12 @@ add_filter('login_message', 'custom_login_message');
 ########################################################################################################
 #               filter functions                                                                           
 ########################################################################################################
-  
+function custom_menu_classes($class) {
+  $class[] = get_post_type();
+  return $class;
+}
+add_filter('nav_menu_css_class', 'custom_menu_classes');
+
  # filter function to display a custom gallery with boostrap markup
 function bootstrap_post_gallery($fist, $attr) {
   $post = get_post();
