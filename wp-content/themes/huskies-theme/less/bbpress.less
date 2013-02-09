@@ -255,6 +255,54 @@
       > .bbp-admin-links { top: -2rem; }
     }
   }
+
+  #merge_topic,
+  #split_topic {
+    .destination {
+      text-align: center;
+      font-size: 2rem;
+      margin: 3rem 0 2rem 0;
+
+      label { 
+        @media (min-width: 768px) { display: inline-block; }
+        font-weight: bold;
+      }
+
+      .span6 {
+        label { 
+          display: block;
+
+          input {
+            float: none;
+            position: relative;
+            top: -0.5rem;
+          }
+        }
+
+        input[type="text"] {
+          width: 95%;
+          @media (min-width: 768px) { 
+            width: 45%; 
+            margin-left: 3rem;
+          }
+        }
+
+        .select2-container { 
+          width: 100%; 
+          @media (min-width: 768px) { 
+            width: 50%; 
+            margin-left: 3rem;
+          }
+        }
+      }
+
+      .select2-container { 
+        width: 25%; 
+        @media (max-width: 767px) { width: 100%; }
+      }
+    }
+    .form-actions { text-align: center; }
+  }
 }
 
 .forum-description,

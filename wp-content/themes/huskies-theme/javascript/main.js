@@ -52,7 +52,8 @@
       if (($selector != null) && ($selector[0] != null) && $selector[0].outerHTML.slice(0, 7) === "<select") {
         $('#bbp_forum_id').select2();
       }
-      return $('#bbp_stick_topic').select2();
+      $('#bbp_stick_topic').select2();
+      return $('#bbp_destination_topic').select2();
     }
   });
 

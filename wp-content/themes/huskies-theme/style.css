@@ -10554,6 +10554,68 @@ body.login-action-lostpassword #wp-submit {
 #forums .topic-replies-wrapper footer > .bbp-admin-links {
   top: -2rem;
 }
+#forums #merge_topic .destination,
+#forums #split_topic .destination {
+  text-align: center;
+  font-size: 2rem;
+  margin: 3rem 0 2rem 0;
+}
+#forums #merge_topic .destination label,
+#forums #split_topic .destination label {
+  font-weight: bold;
+}
+@media (min-width: 768px) {
+  #forums #merge_topic .destination label,
+  #forums #split_topic .destination label {
+    display: inline-block;
+  }
+}
+#forums #merge_topic .destination .span6 label,
+#forums #split_topic .destination .span6 label {
+  display: block;
+}
+#forums #merge_topic .destination .span6 label input,
+#forums #split_topic .destination .span6 label input {
+  float: none;
+  position: relative;
+  top: -0.5rem;
+}
+#forums #merge_topic .destination .span6 input[type="text"],
+#forums #split_topic .destination .span6 input[type="text"] {
+  width: 95%;
+}
+@media (min-width: 768px) {
+  #forums #merge_topic .destination .span6 input[type="text"],
+  #forums #split_topic .destination .span6 input[type="text"] {
+    width: 45%;
+    margin-left: 3rem;
+  }
+}
+#forums #merge_topic .destination .span6 .select2-container,
+#forums #split_topic .destination .span6 .select2-container {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  #forums #merge_topic .destination .span6 .select2-container,
+  #forums #split_topic .destination .span6 .select2-container {
+    width: 50%;
+    margin-left: 3rem;
+  }
+}
+#forums #merge_topic .destination .select2-container,
+#forums #split_topic .destination .select2-container {
+  width: 25%;
+}
+@media (max-width: 767px) {
+  #forums #merge_topic .destination .select2-container,
+  #forums #split_topic .destination .select2-container {
+    width: 100%;
+  }
+}
+#forums #merge_topic .form-actions,
+#forums #split_topic .form-actions {
+  text-align: center;
+}
 .forum-description,
 .bbp-topic-description {
   text-align: center;

@@ -44,3 +44,5 @@ jQuery(document).ready ($) ->
     $selector = $('#bbp_forum_id')
     if $selector? and $selector[0]? and $selector[0].outerHTML[0...7] is "<select" then $('#bbp_forum_id').select2()
     $('#bbp_stick_topic').select2()
+
+    $('#bbp_destination_topic').select2()

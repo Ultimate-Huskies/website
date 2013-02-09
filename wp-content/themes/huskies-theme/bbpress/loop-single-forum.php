@@ -4,7 +4,6 @@
 		<h4><a class="bbp-forum-title" href="<?php bbp_forum_permalink(); ?>" ><?php bbp_forum_title(); ?></a></h4>
 		<?php do_action('bbp_theme_after_forum_title'); ?>
 		
-
 		<?php 
 			do_action('bbp_theme_before_forum_sub_forums');
 			bbp_list_forums();
