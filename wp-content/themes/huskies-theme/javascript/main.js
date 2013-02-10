@@ -63,7 +63,10 @@
       }
       $('#bbp_stick_topic').select2();
       $('#bbp_destination_topic').select2();
-      return $('#display_name, #role, #bbp-forums-role').select2();
+      $('#display_name, #role, #bbp-forums-role').select2();
+    }
+    if ($().carousel != null) {
+      return $('.carousel').carousel();
     }
   });
 

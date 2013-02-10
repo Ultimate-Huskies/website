@@ -179,7 +179,8 @@ function bootstrap_post_gallery($fist, $attr) {
     'columns'    => 3,
     'size'       => 'thumbnail',
     'include'    => '',
-    'exclude'    => ''
+    'exclude'    => '',
+    'type'       => 'grid'
   ), $attr));
 
   $id = intval($id);
@@ -222,7 +223,7 @@ function bootstrap_post_gallery($fist, $attr) {
   if (empty($attachments)) return '';
 
   # return with custom markup, if gallery should display on not single view
-  if (!is_single()) {
+  if (!is_single() && !is_page_template("page-front.php")) {
     $amount = count($attachments);
     $keys = array_keys($attachments);
     $key = $keys[rand(0, $amount-1)];
@@ -244,6 +245,50 @@ function bootstrap_post_gallery($fist, $attr) {
   if (is_feed()) {
     $output = "\n";
     foreach ($attachments as $att_id => $attachment) $output .= wp_get_attachment_link($att_id, $size, true)."\n";
+    return $output;
+  }
+
+  #return here if front page or type is carousel
+  if (is_page_template("page-front.php") || $attr['type'] == 'carousel') {
+    $output = "<div id='galleryid-{$id}' class='carousel slide img-polaroid img-rounded'>";
+
+    //adding indicator
+    $output .= "<ol class='carousel-indicators'>"; 
+    $i = 0;
+    foreach ($attachments as $idAttachment => $attachment) {
+      $indicator = "<li data-target='galleryid-{$id}' data-slide-to='{$i}'";
+      if ($i == 0) $indicator .= 'class="active"';
+      $indicator .= ' ></li>';
+
+      $output .= $indicator;
+      $i++;
+    }
+    $output .=  "</ol>";
+
+    //adding images
+    $output .=  '<div class="carousel-inner">';
+    $i = 0;
+    foreach ($attachments as $idAttachment => $attachment) {
+      $image = '<div class="item';
+      if ($i == 0) $image .= ' active';
+      $image .= '">';
+      $image .= isset($attr['link']) && 'file' == $attr['link'] ? wp_get_attachment_image($idAttachment, 'full', false, false) : wp_get_attachment_image($idAttachment, 'full', true, false);
+      $image .= '<div class="carousel-caption">';
+      $image .= '<h4>'.$attachment->post_title.'</h4>';
+      $image .= '<p>'.$attachment->post_excerpt.'</p>';
+      $image .= '</div>';
+      $image .= '</div>';
+
+      $output .= $image;
+      $i++;
+    }
+    $output .=  '</div>';
+
+    //Carousel nav 
+    $output .=  "<a class='carousel-control left' href='#galleryid-{$id}' data-slide='prev'>&lsaquo;</a>".
+                "<a class='carousel-control right' href='#galleryid-{$id}' data-slide='next'>&rsaquo;</a>".
+              '</div>';
+
     return $output;
   }
 

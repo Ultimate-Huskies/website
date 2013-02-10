@@ -19,7 +19,10 @@
 				bbp_get_template_part('loop', 'replies');
 				bbp_get_template_part('pagination', 'replies');
 			endif;
-			bbp_single_topic_description();
+			bbp_single_topic_description(array(
+				'before'    => '<div class="alert alert-info alert-block hidden-phone forum-description">',
+				'after'     => '</div>',
+			));
 			echo '<hr class="fancy" />';
 
 			bbp_get_template_part('form', 'reply');

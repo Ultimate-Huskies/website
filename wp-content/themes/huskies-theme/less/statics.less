@@ -108,3 +108,22 @@ hr.fancy {
   &:before { top: -0.65rem; }
   &:after { bottom: -0.5rem; }
 }
+
+.carousel {
+  @media (min-width: 768px) {
+    .carousel-control { left: 5rem; }
+    .carousel-control.right { 
+      left: auto; 
+      right: 5rem; 
+    }
+  }
+
+  .carousel-caption { position: absolute; }
+
+  img {
+    width: 100%;
+    max-width: 100%;
+    height: 50rem;
+    @media (max-width: 767px) { height: 25rem; }
+  }
+}

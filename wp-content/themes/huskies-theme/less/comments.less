@@ -21,7 +21,6 @@
   hr.fancy:first-of-type { margin-top: @gap; }
 
   .commentlist {
-
     .children { 
       overflow: hidden; 
       list-style: none outside none;
@@ -32,8 +31,8 @@
       .border-radius(0.5rem);
       padding: 1rem;
       position: relative;
-
-      &.bypostauthor { background-color: @grayLighter; }
+      &.odd { background-color: @grayLighter; }
+      &.bypostauthor { background-color: @grayLight; }
 
       > a { 
         margin-right: 2rem; 

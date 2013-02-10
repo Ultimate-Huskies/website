@@ -54,6 +54,9 @@ jQuery(document).ready ($) ->
     $('#bbp_destination_topic').select2()
     $('#display_name, #role, #bbp-forums-role').select2()
 
+  if $().carousel?
+    $('.carousel').carousel()
+
   # if $().affix?
   #   $('#single-user-details').affix
   #     offset: 
