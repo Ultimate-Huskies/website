@@ -48,10 +48,9 @@
 
 			<?php 
 				do_action('bbp_theme_before_reply_admin_links');
-				bbp_reply_admin_links();
+				if (!bbp_is_single_user_replies()) bbp_reply_admin_links();
 				do_action('bbp_theme_after_reply_admin_links');
 			?>
-			<a href="<?php bbp_reply_url(); ?>" title="<?php bbp_reply_title(); ?>" data-placement="left" class="bbp-reply-permalink hidden-phone">#<?php bbp_reply_id(); ?></a>
 		</div>
 
 		<?php 

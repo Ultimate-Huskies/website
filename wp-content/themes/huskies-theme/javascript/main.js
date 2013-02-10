@@ -20,8 +20,17 @@
         placement: 'bottom'
       });
       $('.article_meta_comments').tooltip('destroy').tooltip({
+        animation: true,
         placement: 'left'
       });
+      if ($(window).width() > 767) {
+        $('.user-navigation li[data-original-title]').each(function() {
+          return $(this).tooltip('destroy').tooltip({
+            animation: true,
+            placement: 'right'
+          });
+        });
+      }
     }
     if ($().popover != null) {
       $('*[rel="popover"]').popover({
@@ -53,7 +62,8 @@
         $('#bbp_forum_id').select2();
       }
       $('#bbp_stick_topic').select2();
-      return $('#bbp_destination_topic').select2();
+      $('#bbp_destination_topic').select2();
+      return $('#display_name, #role, #bbp-forums-role').select2();
     }
   });
 

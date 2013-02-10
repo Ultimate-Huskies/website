@@ -2,22 +2,31 @@
 	<td>
 		<?php if (bbp_is_user_home()) : ?>
 			<?php if (bbp_is_favorites()) : ?>
-
-				<span class="bbp-topic-action">
-					<?php do_action('bbp_theme_before_topic_favorites_action'); ?>
-
-					<?php bbp_user_favorites_link( array( 'mid' => '+', 'post' => '' ), array( 'pre' => '', 'mid' => '&times;', 'post' => '' ) ); ?>
-
-					<?php do_action('bbp_theme_after_topic_favorites_action'); ?>
+				<span class="topic-action pull-right">
+					<?php 
+						do_action('bbp_theme_before_topic_favorites_action');
+						bbp_user_favorites_link(
+							array(),
+							array(
+								'pre'  => '[ ',
+								'mid'  => '<i class="icon-remove" title="'.__('Remove from your favorites', 'huskies-theme').'"></i>',
+								'post' => ' ]'
+							)
+						);
+						do_action('bbp_theme_after_topic_favorites_action');
+					?>
 				</span>
-
 			<?php elseif (bbp_is_subscriptions()) : ?>
-				<span class="bbp-topic-action">
-					<?php do_action('bbp_theme_before_topic_subscription_action'); ?>
-
-					<?php bbp_user_subscribe_link( array( 'before' => '', 'subscribe' => '+', 'unsubscribe' => '&times;' ) ); ?>
-
-					<?php do_action('bbp_theme_after_topic_subscription_action'); ?>
+				<span class="topic-action pull-right">
+					<?php 
+						do_action('bbp_theme_before_topic_subscription_action');
+						bbp_user_subscribe_link(array(
+							'before' => '[ ', 
+							'after' => ' ]',
+							'unsubscribe' => '<i class="icon-remove" title="'.__('Remove from your subscriptions', 'huskies-theme').'"></i>'
+						));
+						do_action('bbp_theme_after_topic_subscription_action');
+					?>
 				</span>
 			<?php endif; ?>
 		<?php endif; ?>
@@ -31,18 +40,16 @@
 			<?php do_action('bbp_theme_before_topic_started_by'); ?>
 			<span class="topic-started-by"><?php printf(__('Started by %1$s', 'huskies-theme'), bbp_get_topic_author_link(array('type' => 'name'))); ?></span>
 			<?php do_action('bbp_theme_after_topic_started_by'); ?>
-			<?php bootstrap_topic_pagination(); ?>
-
 			<?php 
-				//TODO: Find case and add styling
 				if (!bbp_is_single_forum() || (bbp_get_topic_forum_id() != bbp_get_forum_id())) :
 					do_action('bbp_theme_before_topic_started_in'); 
 			?>
-				<span class="bbp-topic-started-in"><?php printf( __( 'in: <a href="%1$s">%2$s</a>', 'bbpress' ), bbp_get_forum_permalink( bbp_get_topic_forum_id() ), bbp_get_forum_title( bbp_get_topic_forum_id() ) ); ?></span>
+				<span class="topic-started-in"><?php printf(__('in <a href="%1$s">%2$s</a>', 'huskies-theme'), bbp_get_forum_permalink(bbp_get_topic_forum_id()), bbp_get_forum_title(bbp_get_topic_forum_id())); ?></span>
 			<?php 
 					do_action('bbp_theme_after_topic_started_in');
 				endif; 
 			?>
+			<?php bootstrap_topic_pagination(); ?>
 		</div>
 		<?php 
 			do_action('bbp_theme_after_topic_meta');

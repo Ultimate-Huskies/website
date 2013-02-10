@@ -8953,6 +8953,11 @@ hr.fancy:after {
   background-color: transparent !important;
   color: #468847 !important;
 }
+#topHeader .navbar .home_link .icon-doghouse {
+  background-image: url("images/doghouse.svg");
+  height: 2.5rem;
+  background-size: 100% 100%;
+}
 #topHeader .navbar .nav > li:not(.active):not(.open):not(.current_page_parent):not(.forum):not(.topic):not(.reply) > a,
 #topHeader .navbar .nav > li.reply > a:not([href$="forum/"]),
 #topHeader .navbar .nav > li.forum > a:not([href$="forum/"]),
@@ -10253,6 +10258,27 @@ body.login-action-lostpassword #wp-submit {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+#forums .bbp-template-notice {
+  padding: 8px 35px 8px 14px;
+  margin-bottom: 20px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  background-color: #fcf8e3;
+  border: 1px solid #fbeed5;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  color: #c09853;
+}
+@media (min-width: 768px) {
+  #forums .bbp-template-notice {
+    width: 88%;
+  }
+}
+#forums .bbp-template-notice.error {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48;
+}
 #forums .breadcrumb {
   margin-top: -2rem;
   -webkit-border-radius: 0 0 0.4rem 0.4rem;
@@ -10320,11 +10346,15 @@ body.login-action-lostpassword #wp-submit {
 #forums table tr td:last-child {
   width: 15%;
 }
-#forums table tr td .topic-meta .topic-started-by {
+#forums table tr td .topic-meta .topic-started-by,
+#forums table tr td .topic-meta .topic-started-in {
   bottom: 0.5rem;
   position: relative;
   color: #999999;
   margin-right: 1.5rem;
+}
+#forums table tr td .topic-meta .topic-started-in {
+  margin-left: -1.5rem;
 }
 #forums table tr td .topic-meta .pagination a {
   padding: 0rem 0.8rem;
@@ -10530,9 +10560,8 @@ body.login-action-lostpassword #wp-submit {
 }
 #forums .topic-replies-wrapper section .media .media-body .page-header .bbp-admin-links {
   position: absolute;
-  top: -0.75rem;
-  right: 5rem;
-  width: 20rem;
+  top: 0rem;
+  right: -0.5rem;
   text-align: center;
   line-height: 1;
 }
@@ -10615,6 +10644,101 @@ body.login-action-lostpassword #wp-submit {
 #forums #merge_topic .form-actions,
 #forums #split_topic .form-actions {
   text-align: center;
+}
+#forums #user-wrapper > .span2 #single-user-details legend {
+  text-align: center;
+}
+#forums #user-wrapper > .span2 #single-user-details legend img {
+  display: inline;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+@media (max-width: 767px) {
+  #forums #user-wrapper > .span2 #single-user-details legend img {
+    margin-bottom: 1rem;
+  }
+}
+#forums #user-wrapper > .span2 #single-user-details .user-navigation {
+  text-align: center;
+}
+#forums #user-wrapper > .span2 #single-user-details .user-navigation li {
+  margin-top: 0.5rem;
+}
+#forums #user-wrapper > .span2 #single-user-details .user-navigation li a {
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  border-radius: 0.5rem;
+}
+#forums #user-wrapper > .span2 #single-user-details .user-navigation .nav-header {
+  padding: 0;
+}
+#forums #user-wrapper > .span10 dl hr {
+  width: 85%;
+  margin: 1rem auto;
+}
+#forums #user-wrapper > .span10 #your-profile input,
+#forums #user-wrapper > .span10 #your-profile textarea {
+  width: 75%;
+}
+@media (max-width: 767px) {
+  #forums #user-wrapper > .span10 #your-profile input,
+  #forums #user-wrapper > .span10 #your-profile textarea {
+    width: 96%;
+  }
+}
+#forums #user-wrapper > .span10 #your-profile textarea {
+  resize: vertical;
+  min-height: 10rem;
+}
+#forums #user-wrapper > .span10 #your-profile select,
+#forums #user-wrapper > .span10 #your-profile .select2-container {
+  width: 77.5%;
+}
+@media (max-width: 767px) {
+  #forums #user-wrapper > .span10 #your-profile select,
+  #forums #user-wrapper > .span10 #your-profile .select2-container {
+    width: 100%;
+  }
+}
+#forums #user-wrapper > .span10 #your-profile .help-block {
+  white-space: normal;
+  margin-top: 1rem;
+}
+#forums #user-wrapper > .span10 #your-profile #password #pass-strength-result {
+  width: 76%;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  height: 1.5rem;
+  background-color: #ffffff;
+  margin-top: 1rem;
+}
+@media (max-width: 767px) {
+  #forums #user-wrapper > .span10 #your-profile #password #pass-strength-result {
+    width: 98%;
+  }
+}
+#forums #user-wrapper > .span10 #your-profile #password #pass-strength-result.short {
+  background-color: #9d261d;
+}
+#forums #user-wrapper > .span10 #your-profile #password #pass-strength-result.bad {
+  background-color: #f89406;
+}
+#forums #user-wrapper > .span10 #your-profile #password #pass-strength-result.good {
+  background-color: #ffc40d;
+}
+#forums #user-wrapper > .span10 #your-profile #password #pass-strength-result.strong {
+  background-color: #46a546;
+}
+#forums #user-wrapper > .span10 #your-profile #password input:last-of-type {
+  margin-top: 1rem;
+}
+#forums #user-wrapper > .span10 #your-profile .form-actions {
+  text-align: center;
+  background: none;
+  padding-left: 0;
 }
 .forum-description,
 .bbp-topic-description {

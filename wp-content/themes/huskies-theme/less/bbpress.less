@@ -1,4 +1,10 @@
 #forums {
+  .bbp-template-notice {
+    .alert;
+    @media (min-width: 768px) { width: 88%; }
+
+     &.error { .alert-error; }
+  }
   .breadcrumb {
     margin-top: -2rem;
     .border-radius(0 0 0.4rem 0.4rem);
@@ -66,12 +72,16 @@
         &:last-child { width: 15%; }
 
         .topic-meta {
-          .topic-started-by {
+          .topic-started-by,
+          .topic-started-in {
             bottom: 0.5rem;
             position: relative;
             color: @grayLight;
             margin-right: 1.5rem;
           }
+
+           .topic-started-in { margin-left: -1.5rem; }
+
           .pagination a { padding: 0rem 0.8rem; }
         }
       }
@@ -231,9 +241,8 @@
 
             .bbp-admin-links {
               position: absolute;
-              top: -0.75rem;
-              right: 5rem;
-              width: 20rem;
+              top: 0rem;
+              right: -0.5rem;
               text-align: center;
               line-height: 1;
 
@@ -302,6 +311,100 @@
       }
     }
     .form-actions { text-align: center; }
+  }
+
+  #user-wrapper {
+    > .span2 {
+      // position: relative;
+
+      #single-user-details {
+        legend {
+          text-align: center;
+
+          img {
+            display: inline;
+            .border-radius(50%);
+
+            @media (max-width: 767px) { margin-bottom: 1rem; }
+          }
+        }
+
+        .user-navigation {
+          text-align: center;
+
+          li {
+            margin-top: 0.5rem;
+            a { .border-radius(0.5rem); }
+          }
+
+          .nav-header { padding: 0; }
+        }
+      }
+
+      // .affix-bottom {
+      //   position: fixed;
+      //   bottom: 57.5rem;
+      // }
+
+      //  .affix-top {
+      //   position: absolute;
+      //   top: 1rem;
+      // }
+    }
+
+    > .span10 {
+      dl hr { 
+        width: 85%; 
+        margin: 1rem auto;
+      }
+
+      #your-profile {
+        input,textarea { 
+          width: 75%;
+          @media (max-width: 767px) { width: 96%; }
+        }
+
+        textarea { 
+          resize: vertical; 
+          min-height: 10rem;
+        }
+
+        select,
+        .select2-container { 
+          width: 77.5%;
+          @media (max-width: 767px) { width: 100%; }
+        }
+
+        .help-block {
+          white-space: normal;
+          margin-top: 1rem;
+        }
+
+        #password {
+          #pass-strength-result {
+            width: 76%;
+            @media (max-width: 767px) { width: 98%; }
+            .transition(all 0.5s ease);
+            height: 1.5rem;
+            background-color: @white;
+            margin-top: 1rem;
+
+            &.short { background-color: @red; }
+            &.bad { background-color: @orange; }
+            &.good { background-color: @yellow; }
+            &.strong { background-color: @green; }
+          }
+
+          input:last-of-type { margin-top: 1rem; }
+        }
+
+        .form-actions { 
+          text-align: center; 
+          background: none;
+          padding-left: 0;
+        }
+      }
+    }
   }
 }
 

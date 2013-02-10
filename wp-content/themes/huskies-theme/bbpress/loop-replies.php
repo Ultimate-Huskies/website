@@ -14,7 +14,7 @@
 					),
 					array(
 						'pre'  => '',
-						'mid'  => __( 'Remove from your favorites', 'huskies-theme' ),
+						'mid'  => __('Remove from your favorites', 'huskies-theme'),
 						'post' => ''
 					)
 				);

@@ -68,7 +68,7 @@
         <?php endif; ?>
       </div>
 
-      <a id="siteName" href="<?php echo home_url(); ?>">
+      <a id="siteName" href="<?php echo home_url(); ?>" data-spy="affix" data-offset-top="200">
         <h1><?php bloginfo('name'); ?></h1>
       </a> 
 

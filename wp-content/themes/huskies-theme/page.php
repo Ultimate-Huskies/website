@@ -2,7 +2,7 @@
 
   <?php while(have_posts()) : the_post(); ?>
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-      <?php if(strtolower(get_the_title()) !== 'kontakt' && strtolower(get_the_title()) !== 'contact' && strtolower(get_the_title()) !== 'start') : ?>
+      <?php if(strtolower(get_the_title()) !== 'kontakt' && strtolower(get_the_title()) !== 'contact' && strtolower(get_the_title()) !== 'start' && !bbp_is_single_user()) : ?>
         <header>
           <div class="page-header">
             <h1><?php echo str_replace('Privat:', '', get_the_title()); ?><?php edit_post_link(__('Edit this post', 'huskies-theme'), ' <small class="article_meta_edit_link">', '</small>' ); ?></h1>

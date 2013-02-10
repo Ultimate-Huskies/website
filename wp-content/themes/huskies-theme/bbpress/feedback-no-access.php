@@ -1,19 +1,4 @@
-<?php
-
-/**
- * No access
- *
- * @package bbPress
- * @subpackage Theme
- */
-
-?>
-
-<div id="forum-private" class="bbp-forum-content">
-	<h1 class="entry-title"><?php _e( 'Private', 'bbpress' ); ?></h1>
-	<div class="entry-content">
-		<div class="bbp-template-notice info">
-			<p><?php _e( 'You do not have permission to view this forum.', 'bbpress' ); ?></p>
-		</div>
-	</div>
-</div><!-- #forum-private -->
+<div id="forum-private" class="alert alert-block">
+	<h1 class="entry-title"><?php _e('Private', 'huskies-theme'); ?></h1>
+	<p><?php _e('You do not have permission to view this forum.', 'huskies-theme'); ?></p>
+</div>

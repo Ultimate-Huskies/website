@@ -1,35 +1,21 @@
-<?php
-
-/**
- * User Replies Created
- *
- * @package bbPress
- * @subpackage Theme
- */
-
-?>
-
-	<?php do_action( 'bbp_template_before_user_replies' ); ?>
-
-	<div id="bbp-user-replies-created" class="bbp-user-replies-created">
-		<h2 class="entry-title"><?php _e( 'Forum Replies Created', 'bbpress' ); ?></h2>
-		<div class="bbp-user-section">
-
-			<?php if ( bbp_get_user_replies_created() ) : ?>
-
-				<?php bbp_get_template_part( 'pagination', 'replies' ); ?>
-
-				<?php bbp_get_template_part( 'loop',       'replies' ); ?>
-
-				<?php bbp_get_template_part( 'pagination', 'replies' ); ?>
-
-			<?php else : ?>
-
-				<p><?php bbp_is_user_home() ? _e( 'You have not replied to any topics.', 'bbpress' ) : _e( 'This user has not replied to any topics.', 'bbpress' ); ?></p>
-
-			<?php endif; ?>
-
-		</div>
-	</div><!-- #bbp-user-replies-created -->
-
-	<?php do_action( 'bbp_template_after_user_replies' ); ?>
+<?php do_action('bbp_template_before_user_replies'); ?>
+<div id="bbp-user-replies-created" class="span10">
+	<div class="page-header">
+		<h2 class="entry-title"><?php _e('Forum replies created', 'huskies-theme'); ?></h2>
+	</div>
+	
+	<div class="user-section">
+		<?php 
+			if (bbp_get_user_replies_created()) :
+				bbp_get_template_part('pagination', 'replies');
+				bbp_get_template_part('loop', 'replies');
+				bbp_get_template_part('pagination', 'replies');
+			else : 
+		?>
+			<div class="alert alert-info">
+				<?php bbp_is_user_home() ? _e('You have not replied to any topics.', 'huskies-theme') : _e('This user has not replied to any topics.', 'huskies-theme'); ?>
+			</div>
+		<?php endif; ?>
+	</div>
+</div>
+<?php do_action('bbp_template_after_user_replies'); ?>

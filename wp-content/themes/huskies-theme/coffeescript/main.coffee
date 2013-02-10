@@ -16,7 +16,14 @@ jQuery(document).ready ($) ->
       placement:  'bottom'
 
     $('.article_meta_comments').tooltip('destroy').tooltip
+      animation:  true
       placement: 'left'
+
+    if $(window).width() > 767
+      $('.user-navigation li[data-original-title]').each ->
+        $(this).tooltip('destroy').tooltip
+          animation:  true
+          placement: 'right'
 
   if $().popover?
     $('*[rel="popover"]').popover
@@ -44,5 +51,11 @@ jQuery(document).ready ($) ->
     $selector = $('#bbp_forum_id')
     if $selector? and $selector[0]? and $selector[0].outerHTML[0...7] is "<select" then $('#bbp_forum_id').select2()
     $('#bbp_stick_topic').select2()
-
     $('#bbp_destination_topic').select2()
+    $('#display_name, #role, #bbp-forums-role').select2()
+
+  # if $().affix?
+  #   $('#single-user-details').affix
+  #     offset: 
+  #       top: -> return $(window).width() <= 980 ? 290 : 210
+  #       bottom: 575
