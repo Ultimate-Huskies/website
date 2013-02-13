@@ -273,10 +273,14 @@ function bootstrap_post_gallery($fist, $attr) {
       if ($i == 0) $image .= ' active';
       $image .= '">';
       $image .= isset($attr['link']) && 'file' == $attr['link'] ? wp_get_attachment_image($idAttachment, 'full', false, false) : wp_get_attachment_image($idAttachment, 'full', true, false);
-      $image .= '<div class="carousel-caption">';
-      $image .= '<h4>'.$attachment->post_title.'</h4>';
-      $image .= '<p>'.$attachment->post_excerpt.'</p>';
-      $image .= '</div>';
+      
+      if (trim($attachment->post_excerpt)) {
+        $image .= '<div class="carousel-caption">';
+          $image .= '<h4>'.$attachment->post_title.'</h4>';
+          $image .= '<p>'.$attachment->post_excerpt.'</p>';
+        $image .= '</div>';
+      }
+      
       $image .= '</div>';
 
       $output .= $image;
