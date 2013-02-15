@@ -74,6 +74,43 @@
       margin-top: 1rem;
     }
   }
+
+  .follow {
+    text-align: center;
+    margin-top: 5rem;
+
+    h3 {
+      color: @grayLight;
+      font-family: @serifFontFamily;
+      text-shadow: @black 0 0.1rem 0;
+    }
+
+    .social {
+      font-size: 4rem;
+      margin-bottom: 2rem;
+      
+      a {
+        color: @grayDarker;
+        text-shadow: @black 0 0.1rem 0;
+        &:hover { text-decoration: none; }
+        
+        &.facebook:hover { color: #3B5998; }
+        &.github:hover { color: #4183c4; }
+      }
+    }
+
+    .ffindr a {
+      display: block;
+
+      img{
+        .opacity(50);
+        .transition(all 1s ease);
+        width: 15rem;
+
+        &:hover { .opacity(100); }
+      }
+    }
+  }
 }
 
 #top_navigator { 

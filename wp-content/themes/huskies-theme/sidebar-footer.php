@@ -32,6 +32,16 @@
               <p><a href="<?php echo home_url(); ?>/wp-login.php?action=register"><?php _e('Register','huskies-theme'); ?> <i class="icon-share"></i></a></p>
             <?php endif; ?>
           </div>
+          <div class="follow">
+            <h3><?php _e('Follow us...', 'huskies-theme'); ?></h3>
+            <div class="social">
+              <a href="http://de-de.facebook.com/pages/Ultimate-Huskies-Berlin/119812154765363" title="Facebook" class="facebook"><i class="icon-facebook-sign"></i></a>
+              <a href="https://github.com/Ultimate-Huskies" title="Github" class="github"><i class="icon-github-sign"></i></a>
+            </div>
+            <div class="ffindr">
+              <a href="http://ffindr.com/de/team/germany/huskies" title="FFindr! find Frisbee anywhere."><img alt="FFindr" src="<?php echo THEMEROOT; ?>/images/ffindr.png"></a>
+            </div>
+          </div>
         </fieldset>
 
         <?php
