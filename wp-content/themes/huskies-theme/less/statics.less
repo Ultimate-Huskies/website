@@ -134,3 +134,12 @@ blockquote {
   margin-left: 1.5rem;
   background-color: @grayLighter;
 }
+
+#pass-strength-result {
+  .transition(all 0.5s ease);
+  &.short { background-color: lighten(@red, 10%); }
+  &.bad { background-color: @orange; }
+  &.good { background-color: lighten(@green, 30%); }
+  &.strong { background-color: @green; }
+  &.mismatch { background-color: lighten(@red, 10%); }
+}

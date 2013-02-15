@@ -46,6 +46,34 @@ body.login {
         top: -2rem;
       }
 
+      small { color: @grayLight; }
+
+      &#registerform {
+        #pass-strength-result {
+          border: none;
+          .border-radius(0.4rem);
+        }
+
+        div:last-of-type { 
+          margin-top: 1rem; 
+
+          label {
+            font-size: 1.5rem;
+            font-weight: normal;
+
+            p {
+              text-align: center;
+              input { margin-bottom: 0; }
+
+              img {
+                .border-radius(0.4rem);
+                margin-left: 1rem;
+              }
+            }
+          }
+        }
+      }
+
       margin-top: 1.5rem;
       position: relative !important;
       .box-shadow(0rem 0rem 0.75rem 0.05rem @grayDarker);
@@ -55,6 +83,8 @@ body.login {
       input { 
         margin-bottom: 2rem; 
         height: auto;
+        background-color: @inputBackground;
+        border: 1px solid @inputBorder;
       }
 
       input, label, p {
