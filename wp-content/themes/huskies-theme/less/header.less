@@ -1,0 +1,180 @@
+#content-wrapper {
+  background-color: @white;
+  margin-top: 12rem;
+  @media (max-width: 767px) { margin-top: 16rem; }
+
+  position: relative;
+  .box-shadow(0rem 0rem 0.75rem 0.05rem @grayDarker);
+  .border-radius(0.5rem);
+  margin-bottom: 1.5rem;
+
+  #logo-disc {
+    position: absolute;
+    right: 5rem;
+    top: -5.7rem;
+    .transition(all 1s ease);
+
+    &.expand { .translate(3rem, 0rem); }
+  }
+
+  #logo-head {
+    position: absolute;
+    top: -12rem;
+    right: -11rem;
+  }
+
+  #logo-body {
+    position: absolute;
+    right: -10.75rem;
+    top: -0.15rem;
+    z-index: 100;
+  }
+
+  #user_info {
+    position: absolute;
+    z-index: 500;
+    top: -10rem;
+    width: 100%; 
+
+    > hr {
+      margin: 0.25rem 0;
+    }
+
+    > p {
+      text-align: center;
+      margin: 0;
+    } 
+  }
+
+  #siteName {
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    .rotate(-90deg);
+    position: absolute;
+    left: -24rem;
+    top: 21rem;
+    
+    @media (max-width: 767px) { 
+      .rotate(0deg);
+      top: -16rem;
+      left: 0rem;
+      width: 100%;
+      text-align: center;
+    }
+
+    &:hover { text-decoration: none; }
+
+    h1 {
+      font-family: @serifFontFamily;
+      line-height: 1;
+      margin: 0;
+      padding: 0;
+      font-size: 6rem;
+      @media (max-width: 767px) { font-size: 5rem; }
+      color: @black;
+      font-weight: normal;
+
+      &:hover { color: @linkColor; }
+    }
+  }
+}
+
+#topHeader {
+  position: absolute;
+  top: -5rem;
+  font-size: 2rem;
+  width: 100%;
+  @media (max-width: 767px) { z-index: 1000; }
+  
+  .navbar {
+    width: 66%;
+
+    .btn-navbar { 
+      float: left; 
+      color: @black;
+    }
+
+    .navbar-inner {
+      padding: 0;
+      @media (min-width: 979px) {
+        background: none;
+        border: none;
+        box-shadow: none;
+      }
+    }
+
+    .caret { 
+      bottom: 0.4rem;
+      position: relative; 
+    }
+
+    .home_link {
+      @media (min-width: 979px) {
+        bottom: 0.35rem;
+        position: relative;
+      }
+
+      a {
+        .transition(all 0.5s ease);
+        font-size: 3rem;
+
+        &:hover {
+          background-color: transparent !important;
+          color: @successText !important;
+        }
+      }
+
+      .icon-doghouse {
+        background-image: url("@{basePath}doghouse.svg");
+        height: 2.5rem;
+        background-size: 100% 100%;
+      }
+    }
+
+    .nav > li:not(.active):not(.open):not(.current_page_parent):not(.forum):not(.topic):not(.reply) > a,
+    .nav > li.reply > a:not([href$="forum/"]),
+    .nav > li.forum > a:not([href$="forum/"]),
+    .nav > li.topic > a:not([href$="forum/"]) {
+      color: @black;
+      &:hover { background-color: @white; }
+    }
+
+    .nav > li.active:not(.forum):not(.topic):not(.reply) > a,
+    .nav > li.current_page_parent:not(.forum):not(.topic):not(.reply) > a,
+    .nav > li.reply > a[href$="forum/"],
+    .nav > li.forum > a[href$="forum/"],
+    .nav > li.topic > a[href$="forum/"] {
+      background-color: @successText;
+      color: @white;
+      text-shadow: 0 0.1rem 0 @black;
+    }
+  }
+
+  .form-search {
+    position: absolute;
+    right: 12.5rem;
+    bottom: 1.5rem;
+    .transition(all 1s ease);
+
+    @media (max-width: 767px) { right: 0rem; }
+
+    &.expand { 
+      right: 10rem; 
+
+      @media (max-width: 767px) { right: 0rem; }
+    }
+
+    input {
+      width: 8rem;
+      .transition(all 1s ease);
+
+      &:focus {
+        z-index: inherit;
+        width: 13rem;
+        @media (max-width: 767px) { width: 10rem; }
+        padding-right: 4.5rem;
+      }
+    }
+  }
+}
