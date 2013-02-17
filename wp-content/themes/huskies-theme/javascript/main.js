@@ -54,7 +54,7 @@
       }, 800);
     });
     if ($().photobox != null) {
-      $('.gallery a').photobox();
+      $('.gallery').photobox();
     }
     if ($().select2 != null) {
       $selector = $('#bbp_forum_id');

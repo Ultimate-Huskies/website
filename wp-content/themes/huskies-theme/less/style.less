@@ -27,15 +27,10 @@ body {
 
 //"./less/photobox.css";
 #pbOverlay .prevNext { .opacity(50); }
-#pbOverlay.on #pbNextBtn b {
-  right: 5%;
-  .scale(1);
-}
-#pbOverlay.on #pbPrevBtn b {
-  left: 5%;
-  .scale(1);
-  .rotate(180deg);
-}
+#pbOverlay.on #pbNextBtn b,
+#pbOverlay.on #pbPrevBtn b { .scale(1); }
+#pbOverlay.on #pbNextBtn b { right: 5%; }
+#pbOverlay.on #pbPrevBtn b { left: 5%; }
 
 //"./less/select2.css";
 .select2-container .select2-choice abbr { background-image: url("./../images/select2.png"); }

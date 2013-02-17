@@ -12,6 +12,7 @@ License URI: http://www.gnu.org/licenses/gpl-3.0
 Tags:
 */
 
-@import './css/photobox.css';
+@import './photobox/photobox/photobox.css';
+/*@import './photobox/photobox/photobox.ie.css';*/
 @import './css/select2.css';
 @import './css/style.css';

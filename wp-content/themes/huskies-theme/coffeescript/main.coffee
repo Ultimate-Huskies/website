@@ -45,7 +45,7 @@ jQuery(document).ready ($) ->
     $('html, body').animate {scrollTop: $('body').height()}, 800
 
   if $().photobox?
-    $('.gallery a').photobox()
+    $('.gallery').photobox()
 
   if $().select2?
     $selector = $('#bbp_forum_id')
