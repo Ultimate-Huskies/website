@@ -5,7 +5,7 @@
     <?php if (get_comment_pages_count() > 1 && get_option('page_comments')) : ?>
       <ul id="comment-nav-below" class="pager">
         <li class="previous"><?php previous_comments_link(__('&larr; Older Comments', 'huskies-theme')); ?></li>
-        <li class="next"><?php next_comments_link(__('Newer Comments &rarr;', 'twentytwelve')); ?></li>
+        <li class="next"><?php next_comments_link(__('Newer Comments &rarr;', 'huskies-theme')); ?></li>
       </ul>
     <?php endif; ?>
 
@@ -44,7 +44,7 @@
     <?php if (get_comment_pages_count() > 1 && get_option('page_comments')) : ?>
       <ul id="comment-nav-below" class="pager">
         <li class="previous"><?php previous_comments_link(__('&larr; Older Comments', 'huskies-theme')); ?></li>
-        <li class="next"><?php next_comments_link(__('Newer Comments &rarr;', 'twentytwelve')); ?></li>
+        <li class="next"><?php next_comments_link(__('Newer Comments &rarr;', 'huskies-theme')); ?></li>
       </ul>
     <?php endif; ?>
 

@@ -44,9 +44,9 @@
 						</li>
 					<?php endif; ?>
 
-					<li class="<?php if (bbp_is_single_user_edit()) :?>active<?php endif; ?>" title="<?php printf(__('Edit Profile of User %s', 'bbpress'), esc_attr(bbp_get_displayed_user_field('display_name'))); ?>">
+					<li class="<?php if (bbp_is_single_user_edit()) :?>active<?php endif; ?>" title="<?php printf(__('Edit Profile of User %s', 'huskies-theme'), esc_attr(bbp_get_displayed_user_field('display_name'))); ?>">
 						<a href="<?php bbp_user_profile_edit_url(); ?>">
-							<?php _e('Edit', 'bbpress'); ?>
+							<?php _e('Edit', 'huskies-theme'); ?>
 						</a>
 					</li>
 				<?php endif; ?>

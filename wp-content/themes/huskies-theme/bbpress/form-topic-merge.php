@@ -41,7 +41,7 @@
 				</div>
 
 				<fieldset class="extras">
-					<legend><?php _e('Topic Extras', 'bbpress'); ?></legend>
+					<legend><?php _e('Topic Extras', 'huskies-theme'); ?></legend>
 					<div class="row-fluid">
 						<div class="span4 favorites">
 							<label for="bbp_topic_favoriters" class="checkbox">

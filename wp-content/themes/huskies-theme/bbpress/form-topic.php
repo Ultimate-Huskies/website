@@ -31,7 +31,7 @@
 
 		<?php if (!bbp_is_topic_edit() && bbp_is_forum_closed()) : ?>
 			<div class="alert">
-				<h4><?php _e('Closed'); ?></h4>
+				<h4><?php _e('Closed', 'huskies-theme'); ?></h4>
 				<?php _e('This forum is marked as closed to new topics, however your posting capabilities still allow you to do so.', 'huskies-theme'); ?>
 			</div>
 		<?php endif; ?>

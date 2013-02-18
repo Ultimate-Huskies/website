@@ -16,7 +16,7 @@
 			if (!bbp_is_topic_open() && !bbp_is_reply_edit()) :
 		?>
 			<div class="alert">
-				<h4><?php _e('Closed'); ?></h4>
+				<h4><?php _e('Closed', 'huskies-theme'); ?></h4>
 				<?php _e('This topic is marked as closed to new replies, however your posting capabilities still allow you to do so.', 'huskies-theme'); ?>
 			</div>
 		<?php endif; ?>

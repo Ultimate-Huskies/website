@@ -29,7 +29,7 @@ foreach (get_pages(array('parent' => 0)) as $page) {
 
 # add theme supports 
 function add_theme_supports() {
-  load_theme_textdomain('huskies-theme', THEMEROOT.'/languages');
+  load_theme_textdomain('huskies-theme', get_stylesheet_directory().'/languages');
 
   add_theme_support('automatic-feed-links');
   add_theme_support('post-formats', array('gallery', 'image', 'status', 'video'));
