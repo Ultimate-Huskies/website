@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Huskies-Theme v1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2013-02-18 20:01:59+0000\n"
+"PO-Revision-Date: 2013-02-19 00:07:34+0000\n"
 "Last-Translator: clemens-brummer <clemens.brummer@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -471,12 +471,12 @@ msgstr "Typ des Themas"
 #: bbpress/form-topic.php:175
 #@ huskies-theme
 msgid "Edit Topic"
-msgstr "Editiere Thema"
+msgstr "Thema bearbeiten"
 
 #: bbpress/form-topic.php:175
 #@ huskies-theme
 msgid "Create Topic"
-msgstr "Erstelle Thema"
+msgstr "Thema erstellen"
 
 #: bbpress/form-topic.php:192
 #@ huskies-theme
@@ -638,7 +638,7 @@ msgstr "Beitr&auml;ge"
 #: bbpress/loop-topics.php:9
 #@ huskies-theme
 msgid "Freshness"
-msgstr ""
+msgstr "Aktualit&auml;t"
 
 #: bbpress/loop-replies.php:12
 #: bbpress/loop-replies.php:42
@@ -722,18 +722,18 @@ msgstr "Themen, die %s gestartet hat"
 #: bbpress/user-details.php:20
 #@ huskies-theme
 msgid "Topics created"
-msgstr "Erstellte Themen"
+msgstr "Themen"
 
 #: bbpress/user-details.php:24
 #, php-format
 #@ huskies-theme
 msgid "%s's Replies Created"
-msgstr "%s's Antworten"
+msgstr "Antworten, die %s geschrieben hat"
 
 #: bbpress/user-details.php:26
 #@ huskies-theme
 msgid "Replies created"
-msgstr "Erstellte Antworten"
+msgstr "Antworten"
 
 #: bbpress/user-details.php:31
 #, php-format
@@ -836,7 +836,7 @@ msgstr "Erstellte Antworten"
 #: bbpress/user-replies-created.php:4
 #@ huskies-theme
 msgid "Forum replies created"
-msgstr "Erstellte Forumantworten"
+msgstr "Erstellte Antworten"
 
 #: bbpress/user-replies-created.php:16
 #@ huskies-theme
@@ -866,7 +866,7 @@ msgstr "Dieser Benutzer hat zur Zeit keine Themen abonniert."
 #: bbpress/user-topics-created.php:4
 #@ huskies-theme
 msgid "Forum topics started"
-msgstr "Gestartete Forumthemen"
+msgstr "Gestartete Themen"
 
 #: bbpress/user-topics-created.php:16
 #@ huskies-theme
