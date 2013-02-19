@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Huskies-Theme v1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2013-02-19 00:07:34+0000\n"
+"PO-Revision-Date: 2013-02-19 00:36:25+0000\n"
 "Last-Translator: clemens-brummer <clemens.brummer@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -640,14 +640,14 @@ msgstr "Beitr&auml;ge"
 msgid "Freshness"
 msgstr "Aktualit&auml;t"
 
-#: bbpress/loop-replies.php:12
-#: bbpress/loop-replies.php:42
+#: bbpress/loop-replies.php:14
+#: bbpress/loop-replies.php:44
 #@ huskies-theme
 msgid "Add to your favorites"
 msgstr "Zu deinen Favoriten hinzuf&uuml;gen"
 
-#: bbpress/loop-replies.php:17
-#: bbpress/loop-replies.php:47
+#: bbpress/loop-replies.php:19
+#: bbpress/loop-replies.php:49
 #: bbpress/loop-single-topic.php:12
 #@ huskies-theme
 msgid "Remove from your favorites"
@@ -755,7 +755,7 @@ msgstr "Private Links"
 #, php-format
 #@ huskies-theme
 msgid "%s's Subscriptions"
-msgstr "%s's Abos"
+msgstr "Themen, die %s abonniert hat"
 
 #: bbpress/user-details.php:42
 #@ huskies-theme
@@ -1329,4 +1329,14 @@ msgstr "Suche"
 #@ huskies-theme
 msgid "Follow us..."
 msgstr "Finde uns bei..."
+
+#: bbpress/loop-replies.php:8
+#@ huskies-theme
+msgid "Subscribe"
+msgstr "Abonnieren"
+
+#: bbpress/loop-replies.php:9
+#@ huskies-theme
+msgid "Unsubscribe"
+msgstr "Abbestellen"
 

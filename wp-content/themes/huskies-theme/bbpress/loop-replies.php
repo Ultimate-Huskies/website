@@ -5,6 +5,8 @@
 		<?php 
 			if (!bbp_show_lead_topic()) :
 				bbp_user_subscribe_link(array(
+                    'subscribe'   => __( 'Subscribe',   'huskies-theme' ),
+                    'unsubscribe' => __( 'Unsubscribe', 'huskies-theme' ),
 					'before' => ''
 				));
 				bbp_user_favorites_link(
@@ -35,6 +37,8 @@
 			bbp_topic_admin_links();
 			if (!bbp_show_lead_topic()) :
 				bbp_user_subscribe_link(array(
+                    'subscribe'   => __( 'Subscribe',   'huskies-theme' ),
+                    'unsubscribe' => __( 'Unsubscribe', 'huskies-theme' ),
 					'before' => ''
 				));
 				bbp_user_favorites_link(
