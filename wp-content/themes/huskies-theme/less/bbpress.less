@@ -165,9 +165,12 @@
         display: block;
         width: 100%;
         margin: 0 auto;
+        width: 20rem;
+
+
       }
 
-      > span:nth-child(2) { 
+      > span:first-child { 
         float: left; 
         margin-left: 1rem;
       }
@@ -250,7 +253,7 @@
               margin-left: 1rem;
             }
             dd { 
-              margin-left: 7rem; 
+              margin-left: 8.5rem; 
               font-weight: bold;
             }
           }
@@ -290,9 +293,14 @@
             .bbp-admin-links {
               position: absolute;
               top: 0rem;
-              right: -0.5rem;
+              right: 0rem;
               text-align: center;
               line-height: 1;
+
+              .d4p-bbt-quote-link { 
+                .label; 
+                background-color: @gray;
+              }
 
               @media (max-width: 767px) { 
                 top: -6rem;

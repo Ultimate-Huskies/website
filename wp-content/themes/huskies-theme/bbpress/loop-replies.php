@@ -34,7 +34,6 @@
 
 	<footer>
 		<?php 
-			bbp_topic_admin_links();
 			if (!bbp_show_lead_topic()) :
 				bbp_user_subscribe_link(array(
                     'subscribe'   => __( 'Subscribe',   'huskies-theme' ),
