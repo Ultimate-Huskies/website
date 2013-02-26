@@ -40,7 +40,7 @@
                     'menu_class'     => 'nav nav-pills',
                     'items_wrap'     => '<ul id="%1$s" class="%2$s">'.
                                           '<li class="home_link">'.
-                                            '<a href="'.home_url().'" title="'.__('home', 'huskies-theme').'"><i class="icon-home"></i></a>'.
+                                            '<a href="'.home_url().'" title="'.__('home', 'huskies-theme').'" class="icon-home"></a>'.
                                           '</li>%3$s</ul>',
                     'walker'         => new bootstrap_nav_walker()
             )); ?>
@@ -68,7 +68,7 @@
         <?php endif; ?>
       </div>
 
-      <a id="siteName" href="<?php echo home_url(); ?>" data-spy="affix" data-offset-top="200">
+      <a id="siteName" href="<?php echo home_url(); ?>">
         <h1><?php bloginfo('name'); ?></h1>
       </a> 
 
