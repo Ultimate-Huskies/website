@@ -44,7 +44,7 @@ jQuery(document).ready ($) ->
     $('#secondFooter').slideToggle 800
     $('html, body').animate {scrollTop: $('body').height()}, 800
 
-  if $().photobox?
+  if $().photobox? and $('.gallery').length > 0
     $('.gallery').photobox()
 
   if $().select2?
