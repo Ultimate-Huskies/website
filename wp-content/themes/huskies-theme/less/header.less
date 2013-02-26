@@ -33,7 +33,7 @@
   #user_info {
     position: absolute;
     z-index: 500;
-    top: -10rem;
+    top: -5rem;
     width: 100%; 
 
     > hr {
@@ -85,13 +85,17 @@
   top: -5rem;
   font-size: 2rem;
   width: 100%;
-  @media (max-width: 767px) { z-index: 1000; }
+  @media (max-width: 767px) { 
+    z-index: 1000; 
+    position: static;
+  }
   
   .navbar {
-    width: 66%;
+    text-align: center;
 
     .btn-navbar { 
-      float: left; 
+      @media (max-width: 767px) { display: inline-block; }
+      float: none;
       color: @black;
     }
 
@@ -119,8 +123,18 @@
         .transition(all 0.5s ease);
         font-size: 3rem;
 
+        @media (min-width: 979px) {
+          padding-left: 0.5rem;
+          padding-right: 0.5rem;
+          position: relative;
+          bottom: -2rem;
+          margin-right: 1rem;
+          background: white !important;
+          box-shadow: -1.1rem 0rem .75rem -1rem #222, 1.1rem 0rem .75rem -1rem #222;
+        }
+
         &:hover {
-          background-color: transparent !important;
+          background-color: white !important;
           color: @successText !important;
         }
       }
@@ -157,7 +171,11 @@
     bottom: 1.5rem;
     .transition(all 1s ease);
 
-    @media (max-width: 767px) { right: 0rem; }
+    @media (max-width: 767px) { 
+      right: 0rem; 
+      position: static;
+      text-align: center;
+    }
 
     &.expand { 
       right: 10rem; 
