@@ -715,4 +715,11 @@ function custom_replies_created($count) {
   return is_user_logged_in() ? $count : false;
 }
 add_filter('bbp_get_user_replies_created', 'custom_replies_created');
+
+function signature_editor_file($template_file) {
+  if (is_admin()) return $template_file;
+  
+  return get_stylesheet_directory()."/bbpress/signature_bbpress.php";
+}
+add_filter('d4p_bbpresstools_signature_editor_file', 'signature_editor_file');
 ?>
