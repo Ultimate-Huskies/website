@@ -143,3 +143,25 @@ blockquote {
   &.strong { background-color: @green; }
   &.mismatch { background-color: lighten(@red, 10%); }
 }
+
+.file-template { display: none; }
+.file-wrapper {
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 1rem;
+
+  input[type="file"] {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+  }
+
+  .file_chosen {
+    width: 20rem;
+    margin: 0;
+  }
+}

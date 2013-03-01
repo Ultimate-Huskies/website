@@ -8,38 +8,51 @@
 		<dl class="dl-horizontal user-details">
 		  <dt><?php is_user_logged_in() ? _e('Display name', 'huskies-theme') : _e('Name', 'huskies-theme'); ?></dt>
 		  <dd><?php bbp_displayed_user_field('display_name'); ?></dd>
-		  <?php if (is_user_logged_in()) : ?>
-		  	<?php if (bbp_get_displayed_user_field('first_name')) : ?>
-		  		<dt><?php _e('First name', 'huskies-theme'); ?></dt>
-					<dd><?php bbp_displayed_user_field('first_name'); ?></dd>
-				<?php endif; ?>
-				<?php if (bbp_get_displayed_user_field('last_name')) : ?>
-					<dt><?php _e('Last name', 'huskies-theme'); ?></dt>
-					<dd><?php bbp_displayed_user_field('last_name'); ?></dd>
-				<?php endif; ?>
-				<?php if (bbp_get_displayed_user_field('nickname')) : ?>
-					<dt><?php _e('Nickname', 'huskies-theme'); ?></dt>
-					<dd><?php bbp_displayed_user_field('nickname'); ?></dd>
-				<?php endif; ?>
+		  <?php 
+        if (is_user_logged_in()) : 
+          $first_name = bbp_get_displayed_user_field('first_name');
+          $last_name = bbp_get_displayed_user_field('last_name');
+          $nickname = bbp_get_displayed_user_field('nickname');
+      ?>
+	  		<dt><?php _e('First name', 'huskies-theme'); ?></dt>
+				<dd><?php echo strlen($first_name) > 0 ? $first_name : '&nbsp;' ?></dd>
+
+				<dt><?php _e('Last name', 'huskies-theme'); ?></dt>
+				<dd><?php echo strlen($last_name) > 0 ? $last_name : '&nbsp;' ?></dd>
+				
+				<dt><?php _e('Nickname', 'huskies-theme'); ?></dt>
+				<dd><?php echo strlen($nickname) > 0 ? $nickname : '&nbsp;' ?></dd>
 			<?php endif; ?>
 
-			<hr />
 			<?php if (bbp_get_displayed_user_field('description')) : ?>
+				<hr />
 				<dt><?php _e('Description', 'huskies-theme'); ?></dt>
 				<dd><?php bbp_displayed_user_field('description'); ?></dd>
 			<?php endif; ?>
+
+			<hr />
+			<dt><?php _e('Signature', 'huskies-theme'); ?><dt>
+			<dd><?php bbp_displayed_user_field('signature'); ?></dd>
 		</dl>
 
-		<?php if (is_user_logged_in()) : ?>
+		<?php 
+      if (is_user_logged_in()) : 
+        $website = bbp_displayed_user_field('user_url');
+    ?>
 			<div class="page-header clearfix">
 				<h4><?php _e('Contact informations', 'huskies-theme'); ?></h4>
 			</div>
 			<dl class="dl-horizontal user-contacts">
 				<dt><?php _e('Website', 'huskies-theme') ?></dt>
-				<dd><a href="<?php echo esc_attr(bbp_get_displayed_user_field('user_url')); ?>"> <?php bbp_displayed_user_field('user_url'); ?></a></dt>
+				<dd><a href="<?php echo esc_attr($website); ?>"> <?php echo strlen($website) > 0 ? $website : '&nbsp;' ?></a></dt>
 				<?php foreach (bbp_edit_user_contact_methods() as $name => $desc) : ?>
 					<dt><?php echo $desc ?></dt>
-					<dd><?php bbp_get_displayed_user_field($name); ?></dd>
+					<dd>
+            <?php 
+              $text = bbp_get_displayed_user_field($name); 
+              echo strlen($text) > 0 ? $text : '&nbsp;';
+            ?>
+          </dd>
 				<?php endforeach; ?>
 			</dl>
 

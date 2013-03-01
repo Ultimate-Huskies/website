@@ -76,10 +76,16 @@ jQuery(document).ready ($) ->
 
     if gdbbPressAttachments.storage.files_counter == gdbbPressAttachmentsInit.max_files then $(this).remove();
 
-  $('.bbp-attachments-form').on 'click', '.file-wrapper span', (e) ->
+  if $('#plugin_additions').length > 0
+    $file = $('#plugin_additions .form-table input[type="file"]')
+    $file.next().remove()
+    template = $('#plugin_additions .file-template').html()
+    $file[0].outerHTML = template
+
+  $('.bbp-attachments-form, #plugin_additions').on 'click', '.file-wrapper span', (e) ->
     $(this).prev().trigger 'click' 
 
-  $('.bbp-attachments-form').on 'change', '.file-wrapper input[type="file"]', (e) ->
+  $('.bbp-attachments-form, #plugin_additions').on 'change', '.file-wrapper input[type="file"]', (e) ->
     file = $(this).val()
     index = file.lastIndexOf('\\')
     if index != -1 then file = file.substring(index + 1, file.length)

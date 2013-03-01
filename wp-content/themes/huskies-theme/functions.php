@@ -27,6 +27,13 @@ foreach (get_pages(array('parent' => 0)) as $page) {
 #               setup theme                                                                           
 ########################################################################################################
 
+#add contact infos
+function custom_user_contactmethods($methods) {
+  $methods['phone'] = __('Phone', 'huskies-theme');
+  return $methods;
+}
+add_filter('user_contactmethods', 'custom_user_contactmethods');
+
 # add theme supports 
 function add_theme_supports() {
   load_theme_textdomain('huskies-theme', get_stylesheet_directory().'/languages');

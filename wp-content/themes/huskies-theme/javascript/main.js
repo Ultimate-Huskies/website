@@ -3,7 +3,7 @@
   var $topLink, addTopLink, scrolling, setTopLink;
 
   jQuery(document).ready(function($) {
-    var $selector;
+    var $file, $selector, template;
     setTopLink();
     $('#contactform input, #contactform textarea').each(function() {
       var $self;
@@ -88,10 +88,16 @@
         return $(this).remove();
       }
     });
-    $('.bbp-attachments-form').on('click', '.file-wrapper span', function(e) {
+    if ($('#plugin_additions').length > 0) {
+      $file = $('#plugin_additions .form-table input[type="file"]');
+      $file.next().remove();
+      template = $('#plugin_additions .file-template').html();
+      $file[0].outerHTML = template;
+    }
+    $('.bbp-attachments-form, #plugin_additions').on('click', '.file-wrapper span', function(e) {
       return $(this).prev().trigger('click');
     });
-    return $('.bbp-attachments-form').on('change', '.file-wrapper input[type="file"]', function(e) {
+    return $('.bbp-attachments-form, #plugin_additions').on('change', '.file-wrapper input[type="file"]', function(e) {
       var file, index;
       file = $(this).val();
       index = file.lastIndexOf('\\');
