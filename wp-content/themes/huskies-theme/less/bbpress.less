@@ -17,6 +17,23 @@
 
   table {
     tr {
+      .bbp-attachments-count {
+        &:before {
+          text-decoration: inherit;
+          display: inline-block;
+          speak: none;
+          font-family: FontAwesome;
+          content: "\f0c6";
+          font-size: 2.5rem;
+          .transition(all 1s ease);
+          color: @grayLight;
+        }
+
+        &:hover:before { color: @black; }
+        background: none;
+        margin-right: 0.75rem;
+        margin-top: 1rem;
+      }
       &.status-closed {
         .opacity(50);
 
@@ -310,6 +327,24 @@
               a:hover { color: @successText; }
             }
           }
+
+          .bbp-attachments {
+            .d4p-bbp-attachment {
+              display: inline-block;
+              .wp-caption { 
+                text-align: center; 
+                > a { display: inline-block; }
+                > .wp-caption-text { color: @grayLight; }
+              }
+            }
+          }
+
+          .bbp-attachments-errors {
+            li {
+              .alert;
+              .alert-error;
+            }
+          }
         }
       }
     }
@@ -504,6 +539,55 @@
    .topic-type .select2-container {
       width: 74%;
       @media (min-width: 768px) and (max-width: 1200px) { width: 66%; }
+    }
+
+    .bbp-attachments-upload-form {
+      .page-header {
+        margin-bottom: 1rem;
+        margin-top: 0;
+        h4 {
+          margin: 0;
+          small {
+            font-size: 2rem;
+            .transition(color 0.5s linear);
+
+            &:hover { color: black; }
+          }
+
+          .icon-file-alt { 
+            cursor: pointer; 
+
+            & + div {
+              .popover-content {
+                height: 25rem;
+                overflow: auto;
+                ul li { color: @grayLight; }
+              }
+            }
+          }
+        }
+      }
+      .file-template { display: none; }
+      .file-wrapper {
+        position: relative;
+        cursor: pointer;
+        margin-bottom: 1rem;
+
+        input[type="file"] {
+          display: none;
+          position: absolute;
+          top: 0;
+          left: 0;
+          cursor: pointer;
+          height: 100%;
+          width: 100%;
+        }
+
+        .file_chosen {
+          width: 20rem;
+          margin: 0;
+        }
+      }
     }
 
     @media (max-width: 767px) {

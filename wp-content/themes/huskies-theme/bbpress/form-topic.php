@@ -89,6 +89,9 @@
 			<?php endif; ?>
 
 			<div class="topic-meta-input row-fluid">
+				<div class="span4">
+					<?php bbp_get_template_part('form', 'upload'); ?>	  
+				</div>
 	    	<?php 
 	    		if (bbp_allow_topic_tags() && current_user_can('assign_topic_tags')) :
 						do_action('bbp_theme_before_topic_form_tags'); 

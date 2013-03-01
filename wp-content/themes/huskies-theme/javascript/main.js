@@ -19,6 +19,7 @@
         html: true,
         placement: 'bottom'
       });
+      $('#wpadminbar *[title]').tooltip('destroy');
       $('.article_meta_comments').tooltip('destroy').tooltip({
         animation: true,
         placement: 'left'
@@ -39,6 +40,11 @@
         trigger: 'hover',
         placement: 'bottom'
       });
+      $('.icon-file-alt').popover({
+        animation: true,
+        html: true,
+        placement: 'left'
+      });
     }
     $('#topHeader .form-search').on('focus', 'input', function() {
       return $('#logo-disc, #searchform').addClass('expand');
@@ -56,6 +62,9 @@
     if (($().photobox != null) && $('.gallery').length > 0) {
       $('.gallery').photobox();
     }
+    if (($().photobox != null) && $('.bbp-attachments ol').length > 0) {
+      $('.bbp-attachments ol').photobox();
+    }
     if ($().select2 != null) {
       $selector = $('#bbp_forum_id');
       if (($selector != null) && ($selector[0] != null) && $selector[0].outerHTML.slice(0, 7) === "<select") {
@@ -66,8 +75,31 @@
       $('#display_name, #role, #bbp-forums-role').select2();
     }
     if ($().carousel != null) {
-      return $('.carousel').carousel();
+      $('.carousel').carousel();
     }
+    $(".d4p-attachment-addfile").on("click", function(e) {
+      e.stopImmediatePropagation();
+      e.preventDefault();
+      if (gdbbPressAttachments.storage.files_counter < gdbbPressAttachmentsInit.max_files) {
+        $(this).prev().append($(this).next('.file-template').html());
+        gdbbPressAttachments.storage.files_counter++;
+      }
+      if (gdbbPressAttachments.storage.files_counter === gdbbPressAttachmentsInit.max_files) {
+        return $(this).remove();
+      }
+    });
+    $('.bbp-attachments-form').on('click', '.file-wrapper span', function(e) {
+      return $(this).prev().trigger('click');
+    });
+    return $('.bbp-attachments-form').on('change', '.file-wrapper input[type="file"]', function(e) {
+      var file, index;
+      file = $(this).val();
+      index = file.lastIndexOf('\\');
+      if (index !== -1) {
+        file = file.substring(index + 1, file.length);
+      }
+      return $(this).parent().find('.file_chosen').text(file);
+    });
   });
 
   $topLink = "";

@@ -722,4 +722,5 @@ function signature_editor_file($template_file) {
   return get_stylesheet_directory()."/bbpress/signature_bbpress.php";
 }
 add_filter('d4p_bbpresstools_signature_editor_file', 'signature_editor_file');
+
 ?>
