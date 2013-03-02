@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Huskies-Theme v1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2013-02-19 00:36:25+0000\n"
+"PO-Revision-Date: 2013-03-02 17:36:33+0000\n"
 "Last-Translator: clemens-brummer <clemens.brummer@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -548,7 +548,7 @@ msgstr "Hinweis:"
 #: bbpress/form-user-edit.php:73
 #@ huskies-theme
 msgid "This description about yourself is available for every site visitor"
-msgstr "Die Beschreibung &uuml;ber dich selbst ist f&uuml; alle Besucher sichtbar"
+msgstr "Die Beschreibung &uuml;ber dich selbst ist f&uuml;r alle Besucher sichtbar"
 
 #: bbpress/form-user-edit.php:80
 #@ huskies-theme
@@ -641,13 +641,13 @@ msgid "Freshness"
 msgstr "Aktualit&auml;t"
 
 #: bbpress/loop-replies.php:14
-#: bbpress/loop-replies.php:44
+#: bbpress/loop-replies.php:45
 #@ huskies-theme
 msgid "Add to your favorites"
 msgstr "Zu deinen Favoriten hinzuf&uuml;gen"
 
 #: bbpress/loop-replies.php:19
-#: bbpress/loop-replies.php:49
+#: bbpress/loop-replies.php:50
 #: bbpress/loop-single-topic.php:12
 #@ huskies-theme
 msgid "Remove from your favorites"
@@ -768,6 +768,7 @@ msgstr "Abonnements"
 msgid "Edit Profile of User %s"
 msgstr "Profil von %s bearbeiten"
 
+#: bbpress/loop-single-reply.php:54
 #: bbpress/user-details.php:49
 #@ huskies-theme
 msgid "Edit"
@@ -1331,12 +1332,128 @@ msgid "Follow us..."
 msgstr "Finde uns bei..."
 
 #: bbpress/loop-replies.php:8
+#: bbpress/loop-replies.php:39
 #@ huskies-theme
 msgid "Subscribe"
 msgstr "Abonnieren"
 
 #: bbpress/loop-replies.php:9
+#: bbpress/loop-replies.php:40
 #@ huskies-theme
 msgid "Unsubscribe"
 msgstr "Abbestellen"
+
+#: functions.php:732
+#, php-format
+#@ huskies-theme
+msgctxt "date at time"
+msgid "%1$s at %2$s"
+msgstr "%1$s um %2$s"
+
+#: functions.php:742
+#@ huskies-theme
+msgid "sometime"
+msgstr "irgendwann"
+
+#: functions.php:743
+#@ huskies-theme
+msgid "right now"
+msgstr "gerade eben"
+
+#: functions.php:744
+#, php-format
+#@ huskies-theme
+msgid "%s ago"
+msgstr "vor %s"
+
+#: functions.php:752
+#@ huskies-theme
+msgid "year"
+msgstr "Jahr"
+
+#: functions.php:752
+#@ huskies-theme
+msgid "years"
+msgstr "Jahre"
+
+#: functions.php:753
+#@ huskies-theme
+msgid "month"
+msgstr "Monat"
+
+#: functions.php:753
+#@ huskies-theme
+msgid "months"
+msgstr "Monate"
+
+#: functions.php:754
+#@ huskies-theme
+msgid "week"
+msgstr "Woche"
+
+#: functions.php:754
+#@ huskies-theme
+msgid "weeks"
+msgstr "Wochen"
+
+#: functions.php:755
+#@ huskies-theme
+msgid "day"
+msgstr "Tag"
+
+#: functions.php:755
+#@ huskies-theme
+msgid "days"
+msgstr "Tage"
+
+#: functions.php:756
+#@ huskies-theme
+msgid "hour"
+msgstr "Stunde"
+
+#: functions.php:756
+#@ huskies-theme
+msgid "hours"
+msgstr "Stunden"
+
+#: functions.php:757
+#@ huskies-theme
+msgid "minute"
+msgstr "Minute"
+
+#: functions.php:757
+#@ huskies-theme
+msgid "minutes"
+msgstr "Minuten"
+
+#: functions.php:758
+#@ huskies-theme
+msgid "second"
+msgstr "Sekunde"
+
+#: functions.php:758
+#@ huskies-theme
+msgid "seconds"
+msgstr "Sekunden"
+
+#: functions.php:804
+#@ huskies-theme
+msgctxt "Separator in time since"
+msgid ","
+msgstr " und"
+
+#: bbpress/loop-single-reply.php:55
+#@ huskies-theme
+msgid "Split"
+msgstr "Teilen"
+
+#: bbpress/loop-single-reply.php:56
+#@ huskies-theme
+msgid "Trash"
+msgstr "M&uuml;ll"
+
+#: bbpress/loop-single-reply.php:57
+#@ huskies-theme
+msgid "Spam"
+msgstr "Spam"
 
