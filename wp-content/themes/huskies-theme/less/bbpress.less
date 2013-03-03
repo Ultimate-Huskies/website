@@ -126,7 +126,7 @@
 
       td {
         position: relative; 
-        
+
         &:nth-child(2),
         &:nth-child(3),
         &:last-child {
@@ -214,6 +214,7 @@
         &.odd { background-color: #f9f9f9; }
 
         .meta {
+          width: 10rem;
           margin-right: 2rem; 
           position: relative;
           margin-bottom: 2rem;
@@ -270,7 +271,9 @@
             }
           }
           > div { text-align: center; }
-
+          > .bbp-author-role {
+            word-break: break-all;
+          }
           > div:last-of-type { .clearfix; }
 
           > .bbp-user-post-count {
@@ -325,8 +328,7 @@
               line-height: 1;
 
               .d4p-bbt-quote-link { 
-                .label; 
-                background-color: @grayLight;
+                font-weight: bold;
               }
 
               @media (max-width: 767px) { 
