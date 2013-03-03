@@ -12,10 +12,16 @@ wp-content/*
  
 # Ignore everything in the "plugins" directory, except our plugins
 wp-content/plugins/*
+# !wp-content/plugins/my-directory-plugin/
+
+# Ignore everything in the "plugins" directory, except plugins with own localization
+!wp-content/plugins/bbpress/
+wp-content/plugins/bbpress/*
+!wp-content/plugins/bbpress/languages/
+wp-content/plugins/bbpress/languages/*
 !wp-content/plugins/bbpress/languages/bbpress-de_DE.mo
 !wp-content/plugins/bbpress/languages/bbpress-de_DE.po
-# !wp-content/plugins/my-directory-plugin/
- 
+
 # Ignore everything in the "themes" directory, except our theme
 wp-content/themes/*
 !wp-content/themes/huskies-theme/

@@ -48,14 +48,7 @@
 
 			<?php 
 				do_action('bbp_theme_before_reply_admin_links');
-				if (!bbp_is_single_user_replies()) bbp_reply_admin_links(
-                array(
-                    'links'  => array(
-                        'edit_text'   => __( 'Edit',  'huskies-theme' ),
-                        'split_text'  => __( 'Split', 'huskies-theme' ),
-                        'trash_text'  => __( 'Trash', 'huskies-theme' ),
-                        'spam_text'   => __( 'Spam',  'huskies-theme' ))
-                        ));
+				bbp_reply_admin_links();
 				do_action('bbp_theme_after_reply_admin_links');
 			?>
 		</div>
