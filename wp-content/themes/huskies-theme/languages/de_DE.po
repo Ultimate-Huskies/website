@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Huskies-Theme v1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2013-03-03 21:53:51+0000\n"
+"PO-Revision-Date: 2013-03-03 22:19:22+0000\n"
 "Last-Translator: clemens-brummer <clemens.brummer@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -1131,7 +1131,7 @@ msgstr ""
 msgid "Edit comment"
 msgstr "Kommentar bearbeiten"
 
-#. translators: 1: date, 2: time 
+#. translators: 1: date, 2: time
 #: functions.php:502
 #, php-format
 #@ huskies-theme
@@ -1350,7 +1350,7 @@ msgstr "Anh&auml;nge"
 #: bbpress/form-upload.php:9
 #@ huskies-theme
 msgid "Maximum file size allowed is"
-msgstr "Maximal erlaubte Dateigr&ouml;%szlig;e betr&auml;gt"
+msgstr "Maximal erlaubte Dateigr&ouml;&szlig;e betr&auml;gt"
 
 #: bbpress/form-upload.php:9
 #@ huskies-theme
