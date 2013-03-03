@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Huskies-Theme v1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2013-03-02 17:36:33+0000\n"
+"PO-Revision-Date: 2013-03-03 21:53:51+0000\n"
 "Last-Translator: clemens-brummer <clemens.brummer@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -161,14 +161,14 @@ msgstr "Antwort"
 
 #: bbpress/form-reply.php:51
 #: bbpress/form-topic.php:79
-#: functions.php:605
+#: functions.php:612
 #@ huskies-theme
 msgid "You may use these"
 msgstr "Du kannst diese"
 
 #: bbpress/form-reply.php:53
 #: bbpress/form-topic.php:81
-#: functions.php:607
+#: functions.php:614
 #@ huskies-theme
 msgid "tags and attributes"
 msgstr "Tags und Attribute benutzen"
@@ -179,83 +179,83 @@ msgstr "Tags und Attribute benutzen"
 msgid "Your account has the ability to post unrestricted HTML content."
 msgstr "Dein Benutzerkonto hat die Berechtigung unbeschränkten HTML Inhalt zu posten."
 
-#: bbpress/form-reply.php:69
+#: bbpress/form-reply.php:73
 #@ huskies-theme
 msgid "Tags"
 msgstr "Tags"
 
-#: bbpress/form-reply.php:70
-#: bbpress/form-topic.php:98
+#: bbpress/form-reply.php:74
+#: bbpress/form-topic.php:101
 #@ huskies-theme
 msgid "Tags for this topic"
 msgstr "Tags für dieses Thema"
 
-#: bbpress/form-reply.php:84
-#: bbpress/form-topic.php:134
+#: bbpress/form-reply.php:88
+#: bbpress/form-topic.php:137
 #@ huskies-theme
 msgid "Notify the author of follow-up replies via email"
 msgstr "Benachrichtige den Autor über kommende Antworten per Email."
 
-#: bbpress/form-reply.php:86
-#: bbpress/form-topic.php:136
+#: bbpress/form-reply.php:90
+#: bbpress/form-topic.php:139
 #@ huskies-theme
 msgid "Notify me of follow-up replies via email"
 msgstr "Benachrichtige mich über kommende Antworten per Email"
 
-#: bbpress/form-reply.php:102
-#: bbpress/form-topic.php:152
+#: bbpress/form-reply.php:106
+#: bbpress/form-topic.php:155
 #@ huskies-theme
 msgid "Revision"
 msgstr "Revision"
 
-#: bbpress/form-reply.php:107
-#: bbpress/form-topic.php:157
+#: bbpress/form-reply.php:111
+#: bbpress/form-topic.php:160
 #@ huskies-theme
 msgid "Keep a log of this edit"
 msgstr "Protokolliere diese &Auml;nderung"
 
-#: bbpress/form-reply.php:112
-#: bbpress/form-topic.php:162
+#: bbpress/form-reply.php:116
+#: bbpress/form-topic.php:165
 #@ huskies-theme
 msgid "Optional reason for editing:"
 msgstr "Optionaler Grund für die &Auml;nderung"
 
-#: bbpress/form-reply.php:125
+#: bbpress/form-reply.php:129
 #@ huskies-theme
 msgid "Edit Reply"
 msgstr "Bearbeite die Antwort"
 
-#: bbpress/form-reply.php:125
+#: bbpress/form-reply.php:129
 #@ huskies-theme
 msgid "Create Reply"
 msgstr "Antworten"
 
-#: bbpress/form-reply.php:127
-#: bbpress/form-topic.php:177
-#: functions.php:614
+#: bbpress/form-reply.php:131
+#: bbpress/form-topic.php:180
+#: functions.php:621
 #@ huskies-theme
 msgid "Clear"
 msgstr "Löschen"
 
-#: bbpress/form-reply.php:138
+#: bbpress/form-reply.php:142
 #, php-format
 #@ huskies-theme
 msgid "The topic &#8216;%s&#8217; is closed to new replies."
 msgstr "Das Thema &#8216;%s&#8217; ist geschlossen für neue Antworten."
 
-#: bbpress/form-reply.php:142
-#: bbpress/form-topic.php:188
+#: bbpress/form-reply.php:146
+#: bbpress/form-topic.php:191
 #, php-format
 #@ huskies-theme
 msgid "The forum &#8216;%s&#8217; is closed to new topics and replies."
 msgstr "Das Forum &#8216;%s&#8217; ist geschlossen für neue Themen und Antworten."
 
-#: bbpress/form-reply.php:146
+#: bbpress/form-reply.php:150
 #@ huskies-theme
 msgid "You cannot reply to this topic."
 msgstr "Du kannst auf dieses Thema nicht antworten."
 
-#: bbpress/form-reply.php:146
+#: bbpress/form-reply.php:150
 #@ huskies-theme
 msgid "You must be logged in to reply to this topic."
 msgstr "Du musst angemeldet sein, um auf dieses Thema zu antworten."
@@ -264,7 +264,7 @@ msgstr "Du musst angemeldet sein, um auf dieses Thema zu antworten."
 #, php-format
 #@ huskies-theme
 msgid "Merge topic \"%s\""
-msgstr "Fusioniere Thema \"%s\""
+msgstr "Thema \"%s\" zusammenf&uuml;hren"
 
 #: bbpress/form-topic-merge.php:12
 #: bbpress/form-topic-split.php:12
@@ -275,37 +275,37 @@ msgstr "<strong>WARNUNG:</strong> Dieser Vorgang kann nicht r&uuml;ckg&auml;ngig
 #: bbpress/form-topic-merge.php:17
 #@ huskies-theme
 msgid "Merge Information"
-msgstr "Info &uuml;ber Fusionierung"
+msgstr "Info &uuml;ber Zusammenf&uuml;hrung"
 
 #: bbpress/form-topic-merge.php:18
 #@ huskies-theme
 msgid "Select the topic to merge this one into. The destination topic will remain the lead topic, and this one will change into a reply."
-msgstr "W&auml;hle ein Thema, um es mit diesem zu fusionieren. Das gew&auml;hlte Thema bleibt das Hauptthema und dieses wird in eine Antwort umgewandelt."
+msgstr "W&auml;hle ein Thema, um es mit diesem zu zusammenzuf&uuml;hren. Das gew&auml;hlte Thema bleibt das Hauptthema und dieses wird in eine Antwort umgewandelt."
 
 #: bbpress/form-topic-merge.php:19
 #@ huskies-theme
 msgid "To keep this topic as the lead, go to the other topic and use the merge tool from there instead."
-msgstr "Um dieses Thema als Hauptthema zu behalten, gehe in das andere Thema und benutze die Fusionierungsfunktion von dort."
+msgstr "Um dieses Thema als Hauptthema zu behalten, gehe in das andere Thema und benutze die Zusammenf&uuml;hrungsfunktion von dort."
 
 #: bbpress/form-topic-merge.php:20
 #@ huskies-theme
 msgid "All replies within both topics will be merged chronologically. The order of the merged replies is based on the time and date they were posted. If the destination topic was created after this one, it's post date will be updated to second earlier than this one."
-msgstr "Alle Antworten von beiden Themen werden chronologisch fusioniert. Die Reihenfolge h&auml;ngt demzufolge von dem Zeitpunkt der Antworten ab."
+msgstr "Alle Antworten von beiden Themen werden chronologisch zusammengef&uuml;hrt. Die Reihenfolge h&auml;ngt demzufolge von dem Zeitpunkt der Antworten ab."
 
 #: bbpress/form-topic-merge.php:26
 #@ huskies-theme
 msgid "Merge with this topic:"
-msgstr "Fusioniere mit diesem Thema:"
+msgstr "Zusammenf&uuml;ren mit diesem Thema:"
 
 #: bbpress/form-topic-merge.php:34
 #@ huskies-theme
 msgid "No topics were found to which the topic could be merged to!"
-msgstr "Es wurde kein Thema gefunden, mit dem das aktuelle Thema fusioniert werden k&ouml;nnte."
+msgstr "Es wurde kein Thema gefunden, mit dem das aktuelle Thema zusammengef&uuml;hrt werden k&ouml;nnte."
 
 #: bbpress/form-topic-merge.php:38
 #@ huskies-theme
 msgid "There are no other topics in this forum to merge with."
-msgstr "Es gibt keine Themen in diesem Forum, mit dem das aktuelle Thema fusioniert werden k&ouml;nnte."
+msgstr "Es gibt keine Themen in diesem Forum, mit dem das aktuelle Thema zusammengef&uuml;hrt werden k&ouml;nnte."
 
 #: bbpress/form-topic-merge.php:44
 #: bbpress/form-topic-split.php:54
@@ -316,22 +316,22 @@ msgstr "Thema Extras"
 #: bbpress/form-topic-merge.php:48
 #@ huskies-theme
 msgid "Merge topic favoriters"
-msgstr "Fusioniere Favoriten"
+msgstr "Favoriten zusammenf&uuml;hren"
 
 #: bbpress/form-topic-merge.php:56
 #@ huskies-theme
 msgid "Merge topic subscribers"
-msgstr "Fusioniere Abonnenten"
+msgstr "Abonnenten zusammenf&uuml;hren"
 
 #: bbpress/form-topic-merge.php:65
 #@ huskies-theme
 msgid "Merge topic tags"
-msgstr "Fusioniere Tags"
+msgstr "Tags zusammenf&uuml;hren"
 
 #: bbpress/form-topic-merge.php:74
 #@ huskies-theme
 msgid "Merge"
-msgstr "Fusioniere"
+msgstr "Zusammenf&uuml;hren"
 
 #: bbpress/form-topic-merge.php:82
 #: bbpress/form-topic-split.php:91
@@ -359,12 +359,12 @@ msgstr "Info &uuml;ber Aufteilung"
 #: bbpress/form-topic-split.php:18
 #@ huskies-theme
 msgid "When you split a topic, you are slicing it in half starting with the reply you just selected. Choose to use that reply as a new topic with a new title, or merge those replies into an existing topic."
-msgstr "Beim Aufteilen eines Themas wird das gew&auml;hlte Thema in zwei H&auml;lften geteilt. Das neue Thema beginnt dann mit der Antwort, die du eben gew&auml;hlt hast. Du kannst w&auml;hlen, ob die Antwort ein neues Thema mit neuen Titel wird oder du kannst es direkt mit einem bestehenden Thema fusionieren."
+msgstr "Beim Aufteilen eines Themas wird das gew&auml;hlte Thema in zwei H&auml;lften geteilt. Das neue Thema beginnt dann mit der Antwort, die du eben gew&auml;hlt hast. Du kannst w&auml;hlen, ob die Antwort ein neues Thema mit neuen Titel wird oder du kannst es direkt mit einem bestehenden Thema zusammenf&uuml;hren."
 
 #: bbpress/form-topic-split.php:19
 #@ huskies-theme
 msgid "If you use the existing topic option, replies within both topics will be merged chronologically. The order of the merged replies is based on the time and date they were posted."
-msgstr "Wenn du die existierende Thema-Option benutzt, werden die Antworten in beiden Themen chronologisch fusioniert. Die Reihenfolge der Antworten h&auml;ngt demzufolge von deren jeweiligen Zeitpunkten ab."
+msgstr "Wenn du die existierende Thema-Option benutzt, werden die Antworten in beiden Themen chronologisch zusammengef&uuml;hrt. Die Reihenfolge der Antworten h&auml;ngt demzufolge von deren jeweiligen Zeitpunkten ab."
 
 #: bbpress/form-topic-split.php:26
 #, php-format
@@ -442,8 +442,8 @@ msgid "Topic Title (Maximum Length %d):"
 msgstr "Titel des Themas (Maximale L&auml;nge: %d):"
 
 #: bbpress/form-topic.php:52
-#: functions.php:579
-#: functions.php:587
+#: functions.php:586
+#: functions.php:594
 #@ huskies-theme
 msgid "required field"
 msgstr "Pflichtfeld"
@@ -453,37 +453,37 @@ msgstr "Pflichtfeld"
 msgid "topic content"
 msgstr "Inhalt des Themas"
 
-#: bbpress/form-topic.php:97
+#: bbpress/form-topic.php:100
 #@ huskies-theme
 msgid "Topic Tags"
 msgstr "Tags des Themas"
 
-#: bbpress/form-topic.php:108
+#: bbpress/form-topic.php:111
 #@ huskies-theme
 msgid "Forum:"
 msgstr "Forum:"
 
-#: bbpress/form-topic.php:119
+#: bbpress/form-topic.php:122
 #@ huskies-theme
 msgid "Topic Type:"
 msgstr "Typ des Themas"
 
-#: bbpress/form-topic.php:175
+#: bbpress/form-topic.php:178
 #@ huskies-theme
 msgid "Edit Topic"
 msgstr "Thema bearbeiten"
 
-#: bbpress/form-topic.php:175
+#: bbpress/form-topic.php:178
 #@ huskies-theme
 msgid "Create Topic"
 msgstr "Thema erstellen"
 
-#: bbpress/form-topic.php:192
+#: bbpress/form-topic.php:195
 #@ huskies-theme
 msgid "You cannot create new topics."
 msgstr "Du kannst keine neuen Themen erstellen."
 
-#: bbpress/form-topic.php:192
+#: bbpress/form-topic.php:195
 #@ huskies-theme
 msgid "You must be logged in to create new topics."
 msgstr "Du musst angemeldet sein, um neue Themen zu erstellen."
@@ -504,7 +504,7 @@ msgid "Last Name"
 msgstr "Nachname"
 
 #: bbpress/form-user-edit.php:27
-#: bbpress/user-profile.php:21
+#: bbpress/user-profile.php:23
 #@ huskies-theme
 msgid "Nickname"
 msgstr "Spitzname"
@@ -520,7 +520,7 @@ msgid "Contact Info"
 msgstr "Kontakt Informationen"
 
 #: bbpress/form-user-edit.php:47
-#: bbpress/user-profile.php:38
+#: bbpress/user-profile.php:46
 #@ huskies-theme
 msgid "Website"
 msgstr "Webseite"
@@ -596,12 +596,12 @@ msgstr "Dein Passwort sollte mindestens 10 Zeichen lang sein. Benutze Gro&szlig;
 msgid "User Role"
 msgstr "Benutzerrolle"
 
-#: bbpress/form-user-edit.php:132
+#: bbpress/form-user-edit.php:141
 #@ huskies-theme
 msgid "Update Profile"
 msgstr "Profil aktualisieren"
 
-#: bbpress/form-user-edit.php:132
+#: bbpress/form-user-edit.php:141
 #@ huskies-theme
 msgid "Update User"
 msgstr "Benutzer aktualisieren"
@@ -612,7 +612,7 @@ msgid "Blog Role"
 msgstr "Blog Rolle"
 
 #: bbpress/form-user-roles.php:9
-#: bbpress/user-profile.php:56
+#: bbpress/user-profile.php:69
 #@ huskies-theme
 msgid "Forum Role"
 msgstr "Forum Rolle"
@@ -654,7 +654,7 @@ msgid "Remove from your favorites"
 msgstr "Von deinen Favoriten entfernen"
 
 #: bbpress/loop-single-forum.php:38
-#: bbpress/loop-single-topic.php:78
+#: bbpress/loop-single-topic.php:90
 #@ huskies-theme
 msgid "by"
 msgstr "von"
@@ -768,7 +768,6 @@ msgstr "Abonnements"
 msgid "Edit Profile of User %s"
 msgstr "Profil von %s bearbeiten"
 
-#: bbpress/loop-single-reply.php:54
 #: bbpress/user-details.php:49
 #@ huskies-theme
 msgid "Edit"
@@ -799,37 +798,37 @@ msgstr "Angezeigter Name"
 msgid "Name"
 msgstr "Name"
 
-#: bbpress/user-profile.php:13
+#: bbpress/user-profile.php:17
 #@ huskies-theme
 msgid "First name"
 msgstr "Vorname"
 
-#: bbpress/user-profile.php:17
+#: bbpress/user-profile.php:20
 #@ huskies-theme
 msgid "Last name"
 msgstr "Nachname"
 
-#: bbpress/user-profile.php:28
+#: bbpress/user-profile.php:29
 #@ huskies-theme
 msgid "Description"
 msgstr "Beschreibung"
 
-#: bbpress/user-profile.php:35
+#: bbpress/user-profile.php:43
 #@ huskies-theme
 msgid "Contact informations"
 msgstr "Kontakt Informationen"
 
-#: bbpress/user-profile.php:47
+#: bbpress/user-profile.php:60
 #@ huskies-theme
 msgid "Activity"
 msgstr "Aktivit&auml;t"
 
-#: bbpress/user-profile.php:50
+#: bbpress/user-profile.php:63
 #@ huskies-theme
 msgid "Topics Started"
 msgstr "Gestartete Themen"
 
-#: bbpress/user-profile.php:52
+#: bbpress/user-profile.php:65
 #@ huskies-theme
 msgid "Replies Created"
 msgstr "Erstellte Antworten"
@@ -1043,37 +1042,37 @@ msgstr "Fu&szlig;zeile umschalten"
 msgid "scroll to top"
 msgstr "nach oben"
 
-#: functions.php:75
+#: functions.php:82
 #@ huskies-theme
 msgid "Main Menu - Only 3 entries on first level!"
 msgstr "Hauptmen&uuml; - Nur 3 Eintr&auml;ge werden angezeigt."
 
-#: functions.php:88
+#: functions.php:95
 #@ huskies-theme
 msgid "left footer widget"
 msgstr ""
 
-#: functions.php:90
+#: functions.php:97
 #@ huskies-theme
 msgid "The left footer widget"
 msgstr ""
 
-#: functions.php:98
+#: functions.php:105
 #@ huskies-theme
 msgid "right footer widget"
 msgstr ""
 
-#: functions.php:100
+#: functions.php:107
 #@ huskies-theme
 msgid "The right footer widget"
 msgstr ""
 
-#: functions.php:240
+#: functions.php:247
 #@ huskies-theme
 msgid "Look at the complete gallery"
 msgstr "Schau dir die gesamte Galerie an"
 
-#: functions.php:240
+#: functions.php:247
 #, php-format
 #@ huskies-theme
 msgid "This gallery contains %s photo"
@@ -1081,163 +1080,163 @@ msgid_plural "This gallery contains %s photos"
 msgstr[0] "Diese Galerie enth&auml;lt %s Photo"
 msgstr[1] "Diese Galerie enth&auml;lt %s Photos"
 
-#: functions.php:368
+#: functions.php:375
 #@ huskies-theme
 msgid "This post is password protected. Please enter the correct password:"
 msgstr "Dieser Beitrag ist passwortgeschützt. Bitte gebe das korrekte Passwort ein:"
 
-#: functions.php:369
+#: functions.php:376
 #@ huskies-theme
 msgid "password"
 msgstr "Passwort"
 
-#: functions.php:370
+#: functions.php:377
 #@ huskies-theme
 msgid "Enter password"
 msgstr "Passwort eingeben"
 
-#: functions.php:394
+#: functions.php:401
 #@ huskies-theme
 msgid "&larr; Older posts "
 msgstr "&larr; &Auml;ltere Beitr&auml;ge"
 
-#: functions.php:395
+#: functions.php:402
 #@ huskies-theme
 msgid "Newer posts &rarr;"
 msgstr "Neuere Beitr&auml;ge &rarr;"
 
-#: functions.php:410
+#: functions.php:417
 #@ huskies-theme
 msgid "Next page"
 msgstr "N&auml;chste Seite"
 
-#: functions.php:411
+#: functions.php:418
 #@ huskies-theme
 msgid "Previous page"
 msgstr "Vorherige Seite"
 
-#: functions.php:464
+#: functions.php:471
 #@ huskies-theme
 msgid "Pingback: "
 msgstr ""
 
-#: functions.php:466
+#: functions.php:473
 #@ huskies-theme
 msgid "Trackback: "
 msgstr ""
 
-#: functions.php:469
-#: functions.php:498
+#: functions.php:476
+#: functions.php:505
 #@ huskies-theme
 msgid "Edit comment"
 msgstr "Kommentar bearbeiten"
 
-#. translators: 1: date, 2: time
-#: functions.php:495
+#. translators: 1: date, 2: time 
+#: functions.php:502
 #, php-format
 #@ huskies-theme
 msgid "%1$s at %2$s"
 msgstr "%1$s auf %2$s"
 
-#: functions.php:502
+#: functions.php:509
 #@ huskies-theme
 msgid "Reply &darr;"
 msgstr "Antwort &darr;"
 
-#: functions.php:506
+#: functions.php:513
 #@ huskies-theme
 msgid "Your comment is awaiting moderation."
 msgstr "Dein Kommentar muss noch best&auml;tigt werden."
 
-#: functions.php:538
+#: functions.php:545
 #@ huskies-theme
 msgid "Leave a Reply"
 msgstr "Kommentiere den Beitrag"
 
-#: functions.php:538
+#: functions.php:545
 #, php-format
 #@ huskies-theme
 msgid "Leave a Reply to %s"
 msgstr "Kommentiere den Beitrag %s"
 
-#: functions.php:539
+#: functions.php:546
 #@ huskies-theme
 msgid "Cancel reply"
 msgstr "Kommentar abbrechen"
 
-#: functions.php:545
+#: functions.php:552
 #@ huskies-theme
 msgid "You must be logged in to post a comment"
 msgstr "Du musst angemeldet sein, um einen Beitrag zu kommentieren."
 
-#: functions.php:546
+#: functions.php:553
 #@ huskies-theme
 msgid "Log in"
 msgstr "Anmelden"
 
-#: functions.php:553
+#: functions.php:560
 #: header.php:57
 #: sidebar-footer.php:19
 #@ huskies-theme
 msgid "Logged in as"
 msgstr "Angemeldet als"
 
-#: functions.php:555
+#: functions.php:562
 #@ huskies-theme
 msgid "Log out of this account"
 msgstr "Aus dieses Konto abmelden"
 
-#: functions.php:555
+#: functions.php:562
 #@ huskies-theme
 msgid "Log out?"
 msgstr "Abmelden?"
 
-#: functions.php:561
+#: functions.php:568
 #@ huskies-theme
 msgid "Your email address will not be published."
 msgstr "Deine E-Mail-Adresse wird nicht ver&ouml;ffentlicht."
 
-#: functions.php:563
+#: functions.php:570
 #@ huskies-theme
 msgid "Required fields are marked with"
 msgstr "Pflichtfelder sind markiert mit "
 
-#: functions.php:576
+#: functions.php:583
 #@ huskies-theme
 msgid "Your Name"
 msgstr "Dein Name"
 
-#: functions.php:577
+#: functions.php:584
 #@ huskies-theme
 msgid "name"
 msgstr "Name"
 
-#: functions.php:584
+#: functions.php:591
 #@ huskies-theme
 msgid "Your email address<br />(will not be published)"
 msgstr "Deine E-Mail-Adresse"
 
-#: functions.php:585
+#: functions.php:592
 #@ huskies-theme
 msgid "email"
 msgstr "E-Mail"
 
-#: functions.php:592
+#: functions.php:599
 #@ huskies-theme
 msgid "Your website"
 msgstr "Deine Webseite"
 
-#: functions.php:593
+#: functions.php:600
 #@ huskies-theme
 msgid "website"
 msgstr "Webseite"
 
-#: functions.php:600
+#: functions.php:607
 #@ huskies-theme
 msgid "your great comment"
 msgstr "Dein gro&szlig;artiger Kommentar"
 
-#: functions.php:613
+#: functions.php:620
 #@ huskies-theme
 msgid "Post"
 msgstr "Beitrag"
@@ -1343,117 +1342,57 @@ msgstr "Abonnieren"
 msgid "Unsubscribe"
 msgstr "Abbestellen"
 
-#: functions.php:732
+#: bbpress/form-upload.php:4
+#@ huskies-theme
+msgid "Attachments"
+msgstr "Anh&auml;nge"
+
+#: bbpress/form-upload.php:9
+#@ huskies-theme
+msgid "Maximum file size allowed is"
+msgstr "Maximal erlaubte Dateigr&ouml;%szlig;e betr&auml;gt"
+
+#: bbpress/form-upload.php:9
+#@ huskies-theme
+msgid "Maximum amount of upload files is"
+msgstr "Maximale Anzahl f&uuml;r hochzuladende Dateien betr&auml;gt"
+
+#: bbpress/form-upload.php:19
+#@ huskies-theme
+msgid "Allowed file types"
+msgstr "Zul&auml;ssige Dateitypen"
+
+#: bbpress/form-upload.php:25
+#: bbpress/form-upload.php:33
+#: bbpress/form-user-edit.php:132
+#@ huskies-theme
+msgid "Choose"
+msgstr "W&auml;hle"
+
+#: bbpress/form-upload.php:29
+#@ huskies-theme
+msgid "Add another file"
+msgstr "F&uuml;ge eine neue Datei hinzu"
+
+#: bbpress/signature_bbpress.php:2
+#@ huskies-theme
+msgid "forum signature"
+msgstr "Forum Signatur"
+
+#: bbpress/signature_bbpress.php:6
+#: bbpress/user-profile.php:34
+#@ huskies-theme
+msgid "Signature"
+msgstr "Signatur"
+
+#: bbpress/signature_bbpress.php:10
 #, php-format
 #@ huskies-theme
-msgctxt "date at time"
-msgid "%1$s at %2$s"
-msgstr "%1$s um %2$s"
+msgid "Signature length is limited to %s characters."
+msgstr "Die L&auml;nge der Signatur ist begrenzt auf %s Zeichen."
 
-#: functions.php:742
+#: functions.php:32
 #@ huskies-theme
-msgid "sometime"
-msgstr "irgendwann"
-
-#: functions.php:743
-#@ huskies-theme
-msgid "right now"
-msgstr "gerade eben"
-
-#: functions.php:744
-#, php-format
-#@ huskies-theme
-msgid "%s ago"
-msgstr "vor %s"
-
-#: functions.php:752
-#@ huskies-theme
-msgid "year"
-msgstr "Jahr"
-
-#: functions.php:752
-#@ huskies-theme
-msgid "years"
-msgstr "Jahre"
-
-#: functions.php:753
-#@ huskies-theme
-msgid "month"
-msgstr "Monat"
-
-#: functions.php:753
-#@ huskies-theme
-msgid "months"
-msgstr "Monate"
-
-#: functions.php:754
-#@ huskies-theme
-msgid "week"
-msgstr "Woche"
-
-#: functions.php:754
-#@ huskies-theme
-msgid "weeks"
-msgstr "Wochen"
-
-#: functions.php:755
-#@ huskies-theme
-msgid "day"
-msgstr "Tag"
-
-#: functions.php:755
-#@ huskies-theme
-msgid "days"
-msgstr "Tage"
-
-#: functions.php:756
-#@ huskies-theme
-msgid "hour"
-msgstr "Stunde"
-
-#: functions.php:756
-#@ huskies-theme
-msgid "hours"
-msgstr "Stunden"
-
-#: functions.php:757
-#@ huskies-theme
-msgid "minute"
-msgstr "Minute"
-
-#: functions.php:757
-#@ huskies-theme
-msgid "minutes"
-msgstr "Minuten"
-
-#: functions.php:758
-#@ huskies-theme
-msgid "second"
-msgstr "Sekunde"
-
-#: functions.php:758
-#@ huskies-theme
-msgid "seconds"
-msgstr "Sekunden"
-
-#: functions.php:804
-#@ huskies-theme
-msgctxt "Separator in time since"
-msgid ","
-msgstr " und"
-
-#: bbpress/loop-single-reply.php:55
-#@ huskies-theme
-msgid "Split"
-msgstr "Teilen"
-
-#: bbpress/loop-single-reply.php:56
-#@ huskies-theme
-msgid "Trash"
-msgstr "M&uuml;ll"
-
-#: bbpress/loop-single-reply.php:57
-#@ huskies-theme
-msgid "Spam"
-msgstr "Spam"
+msgid "Phone"
+msgstr "Telefon"
 
