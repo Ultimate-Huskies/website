@@ -730,14 +730,10 @@ function signature_editor_file($template_file) {
 }
 add_filter('d4p_bbpresstools_signature_editor_file', 'signature_editor_file');
 
-function custom_reply_post_date( $args ) // $reply_id, $humanize, $gmt, $date, $time
+function custom_reply_post_date( $result, $reply_id, $humanize, $gmt)
 {
     // 4 days, 4 hours ago
     if ( !empty( $humanize ) ) {
-        $gmt    = !empty( $gmt ) ? 'G' : 'U';
-        $date   = get_post_time( $gmt, $reply_id, true );
-        $time   = false; // For filter below
-        $result = bbp_time_since( $date );
 
     // August 4, 2012 at 2:37 pm
     } else {
@@ -747,7 +743,7 @@ function custom_reply_post_date( $args ) // $reply_id, $humanize, $gmt, $date, $
     }
     return $result;
 }
-add_filter('bbp_get_reply_post_date', 'custom_reply_post_date');
+add_filter('bbp_get_reply_post_date', 'custom_reply_post_date', 20, 4);
 
 
 function custom_get_time_since( $args, $older_date, $newer_date ) {
