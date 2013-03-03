@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: bbPress 2.x Plugin (DU-Version)\n"
 "Report-Msgid-Bugs-To: http://deckerweb.de/kontakt/\n"
 "POT-Creation-Date: 2012-06-28 18:00+0100\n"
-"PO-Revision-Date: 2013-03-03 21:17:38+0000\n"
+"PO-Revision-Date: 2013-03-03 22:29:53+0000\n"
 "Last-Translator: David Decker <deckerweb.mobil@googlemail.com>\n"
 "Language-Team: DECKERWEB <deckerweb.mobil@googlemail.com>\n"
 "MIME-Version: 1.0\n"
@@ -4554,7 +4554,7 @@ msgstr "Dieses Thema hat noch keine Antworten."
 #: includes/users/template-tags.php:438
 #@ bbpress
 msgid "Key Master"
-msgstr "Super-Administrator"
+msgstr "Administrator"
 
 #: includes/users/template-tags.php:446
 #@ bbpress
@@ -5262,7 +5262,7 @@ msgstr "Autor der Antwort anzeigen:"
 #: includes/core/capabilities.php:406
 #@ bbpress
 msgid "Keymaster"
-msgstr "Super-Administrator"
+msgstr "Administrator"
 
 #: includes/core/capabilities.php:418
 #: includes/users/template-tags.php:454
