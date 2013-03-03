@@ -17,6 +17,23 @@
 
   table {
     tr {
+      .bbp-attachments-count {
+        &:before {
+          text-decoration: inherit;
+          display: inline-block;
+          speak: none;
+          font-family: FontAwesome;
+          content: "\f0c6";
+          font-size: 2.5rem;
+          .transition(all 1s ease);
+          color: @grayLight;
+        }
+
+        &:hover:before { color: @black; }
+        background: none;
+        margin-right: 0.75rem;
+        margin-top: 1rem;
+      }
       &.status-closed {
         .opacity(50);
 
@@ -299,7 +316,7 @@
 
               .d4p-bbt-quote-link { 
                 .label; 
-                background-color: @gray;
+                background-color: @grayLight;
               }
 
               @media (max-width: 767px) { 
@@ -308,6 +325,24 @@
               }
 
               a:hover { color: @successText; }
+            }
+          }
+
+          .bbp-attachments {
+            .d4p-bbp-attachment {
+              display: inline-block;
+              .wp-caption { 
+                text-align: center; 
+                > a { display: inline-block; }
+                > .wp-caption-text { color: @grayLight; }
+              }
+            }
+          }
+
+          .bbp-attachments-errors {
+            li {
+              .alert;
+              .alert-error;
             }
           }
         }
@@ -454,6 +489,46 @@
           padding-left: 0;
         }
       }
+
+      #plugin_additions {
+        > h3 {
+          font-size: @baseFontSize * 1.25;
+          .page-header;
+        }
+
+        > .form-table {
+          tr {
+            th { display: none; }
+            td:first-of-type {
+              width: auto !important;
+              @media (min-width: 768px) { padding-left: 5rem; }
+              padding-right: 2rem;
+              > img { 
+                display: inline; 
+                .border-radius(50%);
+              }
+            }
+            td:last-of-type {
+              text-align: left;
+              width: 77%;
+              .description { 
+                .label;
+                background-color: @infoText;
+                white-space: normal;
+                margin-top: 0.5rem;
+              }
+
+              input[type="checkbox"] {
+                margin: 0;
+                padding: 0;
+                position: relative;
+                top: -0.25rem;
+                width: auto;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -504,6 +579,34 @@
    .topic-type .select2-container {
       width: 74%;
       @media (min-width: 768px) and (max-width: 1200px) { width: 66%; }
+    }
+
+    .bbp-attachments-upload-form {
+      .page-header {
+        margin-bottom: 1rem;
+        margin-top: 0;
+        h4 {
+          margin: 0;
+          small {
+            font-size: 2rem;
+            .transition(color 0.5s linear);
+
+            &:hover { color: black; }
+          }
+
+          .icon-file-alt { 
+            cursor: pointer; 
+
+            & + div {
+              .popover-content {
+                height: 25rem;
+                overflow: auto;
+                ul li { color: @grayLight; }
+              }
+            }
+          }
+        }
+      }
     }
 
     @media (max-width: 767px) {

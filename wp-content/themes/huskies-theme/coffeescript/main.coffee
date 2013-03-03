@@ -15,6 +15,8 @@ jQuery(document).ready ($) ->
       html:       true
       placement:  'bottom'
 
+    $('#wpadminbar *[title]').tooltip 'destroy'
+
     $('.article_meta_comments').tooltip('destroy').tooltip
       animation:  true
       placement: 'left'
@@ -32,6 +34,11 @@ jQuery(document).ready ($) ->
       trigger:    'hover'
       placement:  'bottom'
 
+    $('.icon-file-alt').popover
+      animation:  true
+      html:       true
+      placement:  'left'
+
   $('#topHeader .form-search').on 'focus', 'input', ->
     $('#logo-disc, #searchform').addClass('expand')
 
@@ -47,6 +54,9 @@ jQuery(document).ready ($) ->
   if $().photobox? and $('.gallery').length > 0
     $('.gallery').photobox()
 
+  if $().photobox? and $('.bbp-attachments ol').length > 0
+    $('.bbp-attachments ol').photobox()
+
   if $().select2?
     $selector = $('#bbp_forum_id')
     if $selector? and $selector[0]? and $selector[0].outerHTML[0...7] is "<select" then $('#bbp_forum_id').select2()
@@ -56,6 +66,30 @@ jQuery(document).ready ($) ->
 
   if $().carousel?
     $('.carousel').carousel()
+
+  $(".d4p-attachment-addfile").on "click", (e) ->
+    e.stopImmediatePropagation()
+    e.preventDefault()
+    if gdbbPressAttachments.storage.files_counter < gdbbPressAttachmentsInit.max_files 
+      $(this).prev().append $(this).next('.file-template').html()
+      gdbbPressAttachments.storage.files_counter++
+
+    if gdbbPressAttachments.storage.files_counter == gdbbPressAttachmentsInit.max_files then $(this).remove();
+
+  if $('#plugin_additions').length > 0
+    $file = $('#plugin_additions .form-table input[type="file"]')
+    $file.next().remove()
+    template = $('#plugin_additions .file-template').html()
+    $file[0].outerHTML = template
+
+  $('.bbp-attachments-form, #plugin_additions').on 'click', '.file-wrapper span', (e) ->
+    $(this).prev().trigger 'click' 
+
+  $('.bbp-attachments-form, #plugin_additions').on 'change', '.file-wrapper input[type="file"]', (e) ->
+    file = $(this).val()
+    index = file.lastIndexOf('\\')
+    if index != -1 then file = file.substring(index + 1, file.length)
+    $(this).parent().find('.file_chosen').text file
 
   # if $().affix?
   #   $('#single-user-details').affix

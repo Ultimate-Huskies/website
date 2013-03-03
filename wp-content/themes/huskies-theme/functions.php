@@ -27,6 +27,13 @@ foreach (get_pages(array('parent' => 0)) as $page) {
 #               setup theme                                                                           
 ########################################################################################################
 
+#add contact infos
+function custom_user_contactmethods($methods) {
+  $methods['phone'] = __('Phone', 'huskies-theme');
+  return $methods;
+}
+add_filter('user_contactmethods', 'custom_user_contactmethods');
+
 # add theme supports 
 function add_theme_supports() {
   load_theme_textdomain('huskies-theme', get_stylesheet_directory().'/languages');
@@ -716,6 +723,13 @@ function custom_replies_created($count) {
 }
 add_filter('bbp_get_user_replies_created', 'custom_replies_created');
 
+function signature_editor_file($template_file) {
+  if (is_admin()) return $template_file;
+  
+  return get_stylesheet_directory()."/bbpress/signature_bbpress.php";
+}
+add_filter('d4p_bbpresstools_signature_editor_file', 'signature_editor_file');
+
 function custom_reply_post_date( $args ) // $reply_id, $humanize, $gmt, $date, $time
 {
     // 4 days, 4 hours ago
@@ -820,4 +834,3 @@ function custom_get_time_since( $args, $older_date, $newer_date ) {
 }
 add_filter('bbp_get_time_since', 'custom_get_time_since', 10, 3);
 ?>
-

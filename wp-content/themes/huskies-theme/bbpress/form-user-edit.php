@@ -111,7 +111,7 @@
 				<span class="help-block label label-info">
 					<?php _e('Your password should be at least ten characters long. Use upper and lower case letters, numbers, and symbols to make it even stronger.', 'huskies-theme'); ?>
 				</span>
-			</fieldset>
+			</div>
 		</div>
 
 		<?php if (current_user_can('edit_users') && ! bbp_is_user_home_edit()) : ?>
@@ -125,7 +125,16 @@
 			?>
 		<?php endif; ?>
 
-		<?php do_action('bbp_user_edit_after'); ?>
+		<div id="plugin_additions">
+      <div class="file-template">
+        <div class="file-wrapper">
+          <input type="file" name="simple-local-avatar" id="simple-local-avatar">
+          <span class="btn"><?php _e('Choose', 'huskies-theme'); ?></span>
+          <span class="file_chosen uneditable-input"></span>
+        </div>
+      </div>
+			<?php do_action('bbp_user_edit_after'); ?>
+		</div>
 
 		<div class="form-actions">
 			<?php bbp_edit_user_form_fields(); ?>
