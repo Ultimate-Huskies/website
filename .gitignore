@@ -22,6 +22,11 @@ wp-content/plugins/bbpress/languages/*
 !wp-content/plugins/bbpress/languages/bbpress-de_DE.mo
 !wp-content/plugins/bbpress/languages/bbpress-de_DE.po
 
+#changed simple avatar plugin
+!wp-content/plugins/simple-local-avatars/
+wp-content/plugins/simple-local-avatars/*
+!wp-content/plugins/simple-local-avatars/simple-local-avatars.php
+
 # Ignore everything in the "themes" directory, except our theme
 wp-content/themes/*
 !wp-content/themes/huskies-theme/
