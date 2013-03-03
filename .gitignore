@@ -22,6 +22,14 @@ wp-content/plugins/bbpress/languages/*
 !wp-content/plugins/bbpress/languages/bbpress-de_DE.mo
 !wp-content/plugins/bbpress/languages/bbpress-de_DE.po
 
+!wp-content/plugins/bbpress-post-toolbar/
+wp-content/plugins/bbpress-post-toolbar/*
+!wp-content/plugins/bbpress-post-toolbar/languages/
+wp-content/plugins/bbpress-post-toolbar/languages/*
+!wp-content/plugins/bbpress-post-toolbar/languages/bbp_5o1_toolbar-de_DE.mo
+!wp-content/plugins/bbpress-post-toolbar/languages/bbp_5o1_toolbar-de_DE.po
+
+
 #changed simple avatar plugin
 !wp-content/plugins/simple-local-avatars/
 wp-content/plugins/simple-local-avatars/*
