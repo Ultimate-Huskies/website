@@ -125,6 +125,8 @@
       }
 
       td {
+        position: relative; 
+        
         &:nth-child(2),
         &:nth-child(3),
         &:last-child {
@@ -149,6 +151,14 @@
           .pagination a,
           .pagination span { padding: 0rem 0.8rem; }
         }
+
+        .bbp-admin-links { 
+          display: none; 
+          position: absolute;
+          bottom: 0;
+          right: 0;
+        }
+        &:hover .bbp-admin-links { display: inline-block; }
       }
     }
   }
