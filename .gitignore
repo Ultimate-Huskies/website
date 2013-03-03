@@ -12,7 +12,8 @@ wp-content/*
  
 # Ignore everything in the "plugins" directory, except our plugins
 wp-content/plugins/*
-# !wp-content/plugins/my-single-file-plugin.php
+!wp-content/plugins/bbpress/languages/bbpress-de_DE.mo
+!wp-content/plugins/bbpress/languages/bbpress-de_DE.po
 # !wp-content/plugins/my-directory-plugin/
  
 # Ignore everything in the "themes" directory, except our theme
