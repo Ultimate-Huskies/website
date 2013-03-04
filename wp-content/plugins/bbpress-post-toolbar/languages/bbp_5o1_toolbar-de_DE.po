@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: bbPress Post Toolbar v0.7.5\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2013-03-03 22:54:25+0000\n"
+"PO-Revision-Date: 2013-03-04 00:10:35+0000\n"
 "Last-Translator: admin <heinvonbloedi@googlemail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -23,7 +23,7 @@ msgstr ""
 #: bbpress-post-toolbar.php:136
 #@ bbp_5o1_toolbar
 msgid "Settings"
-msgstr ""
+msgstr "Einstellungen"
 
 #: bbpress-post-toolbar.php:143
 #@ default
@@ -43,26 +43,26 @@ msgstr ""
 #: bbpress-post-toolbar.php:187
 #@ bbp_5o1_toolbar
 msgid "Options"
-msgstr ""
+msgstr "Optionen"
 
 #: bbpress-post-toolbar.php:193
 #@ bbp_5o1_toolbar
 msgid "Show video panel?"
-msgstr ""
+msgstr "Zeige Video Schaltf&auml;che?"
 
 #: bbpress-post-toolbar.php:195
 #: bbpress-post-toolbar.php:210
 #: bbpress-post-toolbar.php:229
 #@ bbp_5o1_toolbar
 msgid "Yes (default)"
-msgstr ""
+msgstr "Ja (Standard)"
 
 #: bbpress-post-toolbar.php:196
 #: bbpress-post-toolbar.php:211
 #: bbpress-post-toolbar.php:231
 #@ bbp_5o1_toolbar
 msgid "No"
-msgstr ""
+msgstr "Nein"
 
 #: bbpress-post-toolbar.php:200
 #@ bbp_5o1_toolbar
@@ -79,7 +79,7 @@ msgstr ""
 #: bbpress-post-toolbar.php:307
 #@ bbp_5o1_toolbar
 msgid "Yes"
-msgstr ""
+msgstr "Ja"
 
 #: bbpress-post-toolbar.php:204
 #: bbpress-post-toolbar.php:220
@@ -91,17 +91,17 @@ msgstr ""
 #: bbpress-post-toolbar.php:309
 #@ bbp_5o1_toolbar
 msgid "No (default)"
-msgstr ""
+msgstr "Nein (Standard)"
 
 #: bbpress-post-toolbar.php:208
 #@ bbp_5o1_toolbar
 msgid "Show smilies panel?"
-msgstr ""
+msgstr "Zeige Smilies-Schaltfl&auml;che?"
 
 #: bbpress-post-toolbar.php:217
 #@ bbp_5o1_toolbar
 msgid "Use customised smilies?"
-msgstr ""
+msgstr "Benutze eigene Smilies?"
 
 #: bbpress-post-toolbar.php:222
 #, php-format
@@ -112,32 +112,32 @@ msgstr ""
 #: bbpress-post-toolbar.php:227
 #@ bbp_5o1_toolbar
 msgid "Show formatting buttons?"
-msgstr ""
+msgstr "Zeige Schaltfl&auml;chen zur Formatierung?"
 
 #: bbpress-post-toolbar.php:237
 #@ bbp_5o1_toolbar
 msgid "Show text-alignment buttons?"
-msgstr ""
+msgstr "Zeige Schaltfl&auml;che zur Textausrichtung?"
 
 #: bbpress-post-toolbar.php:247
 #@ bbp_5o1_toolbar
 msgid "Allow images to be posted?"
-msgstr ""
+msgstr "Erlaube das posten von Bildern?"
 
 #: bbpress-post-toolbar.php:257
 #@ bbp_5o1_toolbar
 msgid "Allow users to upload images?"
-msgstr ""
+msgstr "Erlaube Benutzern das hochladen von Bildern?"
 
 #: bbpress-post-toolbar.php:264
 #@ bbp_5o1_toolbar
 msgid "Upload Directory"
-msgstr ""
+msgstr "Upload Verzeichnis"
 
 #: bbpress-post-toolbar.php:270
 #@ bbp_5o1_toolbar
 msgid "Allow unregistered users to upload images?"
-msgstr ""
+msgstr "Erlaube nicht-registrierten Benutzern das hochladen von Bildern?"
 
 #: bbpress-post-toolbar.php:282
 #@ default
@@ -148,7 +148,7 @@ msgstr ""
 #, php-format
 #@ bbp_5o1_toolbar
 msgid "Clear the text area to revert to the default css (%s)."
-msgstr ""
+msgstr "Leere das Textfeld, um das Standard-CSS (%s) wiederherzustellen."
 
 #: bbpress-post-toolbar.php:289
 #@ default
@@ -158,12 +158,12 @@ msgstr ""
 #: bbpress-post-toolbar.php:292
 #@ bbp_5o1_toolbar
 msgid "Clear the text area to revert to the default help panel message."
-msgstr ""
+msgstr "Leere das Textfeld, um die Standard-Hilfenachricht wiederherzustellen."
 
 #: bbpress-post-toolbar.php:296
 #@ bbp_5o1_toolbar
 msgid "Allow manual insertion of the bar?"
-msgstr ""
+msgstr "Erlaube manuelles Einf&uuml;gen der Leiste."
 
 #: bbpress-post-toolbar.php:302
 #@ bbp_5o1_toolbar
@@ -178,7 +178,7 @@ msgstr ""
 #: bbpress-post-toolbar.php:312
 #@ bbp_5o1_toolbar
 msgid "Example"
-msgstr ""
+msgstr "Beispiel"
 
 #: bbpress-post-toolbar.php:312
 #: bbpress-post-toolbar.php:313
@@ -186,17 +186,17 @@ msgstr ""
 #, php-format
 #@ bbp_5o1_toolbar
 msgid "Version %s by %s."
-msgstr ""
+msgstr "Version %s von %s"
 
 #: bbpress-post-toolbar.php:313
 #@ bbp_5o1_toolbar
 msgid "Default"
-msgstr ""
+msgstr "Standard"
 
 #: bbpress-post-toolbar.php:403
 #@ bbp_5o1_toolbar
 msgid "bbPress Post Toolbar Options"
-msgstr ""
+msgstr "bbPress Post Toolbar Optionen"
 
 #: bbpress-post-toolbar.php:403
 #@ bbp_5o1_toolbar
@@ -214,66 +214,66 @@ msgstr "Hilfe"
 #: bbpress-post-toolbar.php:459
 #@ bbp_5o1_toolbar
 msgid "About"
-msgstr ""
+msgstr "&Uuml;ber"
 
 #: bbpress-post-toolbar.php:452
 #: bbpress-post-toolbar.php:460
 #@ bbp_5o1_toolbar
 msgid "This toolbar allows simple click-to-add HTML elements."
-msgstr ""
+msgstr "Diese Toolbar erlaubt das einfache Hinzuf&uuml;gen von HTML-Elementen."
 
 #: bbpress-post-toolbar.php:453
 #@ bbp_5o1_toolbar
 msgid "For the options that are simple buttons (e.g. bold, italics), one can select text and then click the button to apply the tag around the selected text."
-msgstr ""
+msgstr "Bilder und Videos k&ouml;nnen durch Angabe einer URL in den Forumbeitrag eingebettet werden. Smilies k&ouml;nnen &uuml;ber das Popup-Men&uuml; hinzugef&uuml;gt werden."
 
 #: bbpress-post-toolbar.php:454
 #@ bbp_5o1_toolbar
 msgid "For the options at open panels (e.g. link), open the panel first, add the url to the text box (if link), then hit Apply Link.  If it's font sizing or colors, then select the text and click the size you want, e.g., xx-small."
-msgstr ""
+msgstr "<b>Hinweis</b>: Das Hinzuf&uuml;gen von Elementen funktioniert bisher leider nur im reinen Texteditor."
 
 #: bbpress-post-toolbar.php:588
 #@ bbp_5o1_toolbar
 msgid "Button ordering"
-msgstr ""
+msgstr "Anordnung der Schaltfl&auml;chen"
 
 #: bbpress-post-toolbar.php:590
 #@ bbp_5o1_toolbar
 msgid "Note: This is probably buggy on several cases."
-msgstr ""
+msgstr "Hinweis: Das ist m&ouml;glicherweise fehlerhaft f&uuml;r verschiedene Klassen."
 
 #: toolbar-images-panel.php:62
 #@ bbp_5o1_toolbar
 msgid "You are not permitted to upload images."
-msgstr ""
+msgstr "Du hast keine Berechtigung um Bilder hochzuladen."
 
 #: toolbar-images-panel.php:78
 #@ bbp_5o1_toolbar
 msgid "Disallowed file type."
-msgstr ""
+msgstr "Dateityp wird nicht unterstützt."
 
 #: toolbar-pastebin-panel.php:25
 #@ bbp_5o1_toolbar
 msgid "Online Paste URL:"
-msgstr ""
+msgstr "Online URL:"
 
 #: toolbar-pastebin-panel.php:26
 #@ bbp_5o1_toolbar
 msgid "Supported Paste providers:"
-msgstr ""
+msgstr "Unterst&uuml;tzte Anbieter:"
 
 #: toolbar-video-panel.php:37
 #@ bbp_5o1_toolbar
 msgid "Online Video URL:"
-msgstr ""
+msgstr "Video URL:"
 
 #: toolbar-video-panel.php:38
 #@ bbp_5o1_toolbar
 msgid "Supported video providers:"
-msgstr ""
+msgstr "Unterst&uuml;tzte Video Anbieter:"
 
 #: toolbar-video-panel.php:39
 #@ bbp_5o1_toolbar
 msgid "Random Example:"
-msgstr ""
+msgstr "Zuf&auml;lliges Beispiel:"
 
