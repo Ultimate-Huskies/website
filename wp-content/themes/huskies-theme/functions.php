@@ -27,7 +27,11 @@ foreach (get_pages(array('parent' => 0)) as $page) {
 #               setup theme                                                                           
 ########################################################################################################
 #show all logged in users the admin bar
-add_filter('show_admin_bar', '__return_true');
+function admin_bar_visibility() {
+  if (is_user_logged_in()) return true;
+  else return false;
+}
+add_filter('show_admin_bar', 'admin_bar_visibility');
 
 #add contact infos
 function custom_user_contactmethods($methods) {
