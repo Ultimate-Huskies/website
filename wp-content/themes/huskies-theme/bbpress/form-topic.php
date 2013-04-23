@@ -108,7 +108,9 @@
 						do_action('bbp_theme_before_topic_form_forum'); 
 				?>
 					<div class="span4 forum-select">
-						<label for="bbp_forum_id"><?php _e('Forum:', 'huskies-theme'); ?></label>
+						<div class="page-header">
+							<h4><?php _e('Forum:', 'huskies-theme'); ?></h4>
+						</div>
 						<?php bbp_dropdown(array('selected' => bbp_get_form_topic_forum())); ?>
 					</div>
 				<?php 
@@ -119,8 +121,11 @@
 						do_action('bbp_theme_before_topic_form_type');
 				?>
 					<div class="span4 topic-type">
-						<label for="bbp_stick_topic"><?php _e('Topic Type:', 'huskies-theme'); ?></label>
-							<?php bbp_topic_type_select(); ?>
+						<div class="page-header">
+							<h4><?php _e('Topic Type:', 'huskies-theme'); ?></h4>
+						</div>
+						
+						<?php bbp_topic_type_select(); ?>
 					</div>
 				<?php
 						do_action('bbp_theme_after_topic_form_type');
@@ -130,6 +135,9 @@
 						do_action('bbp_theme_before_topic_form_subscriptions');
 				?>
 					<div class="span4 notify">
+						<div class="page-header">
+							<h4><?php _e('Notification:', 'huskies-theme'); ?></h4>
+						</div>
 						<label class="checkbox">
 							<input name="bbp_topic_subscription" id="bbp_topic_subscription" type="checkbox" value="bbp_subscribe" <?php bbp_form_topic_subscribed(); ?> tabindex="<?php bbp_tab_index(); ?>" />
 							<?php 
@@ -171,7 +179,7 @@
 					do_action('bbp_theme_after_topic_form_revisions');
 				endif; 
 
-				do_action('bbp_theme_before_topic_form_submit_wrapper');
+				// do_action('bbp_theme_before_topic_form_submit_wrapper');
 			?>
 			 <div class="comment_form_submit form-actions">
 			 	<?php do_action('bbp_theme_before_topic_form_submit_button'); ?>

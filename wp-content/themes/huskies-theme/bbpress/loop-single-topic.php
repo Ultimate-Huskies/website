@@ -52,7 +52,7 @@
 			<?php bootstrap_topic_pagination(); ?>
 		</div>
 
-    <span class="bbp-admin-links">
+    <span class="bbp-admin-links hidden-phone">
       <?php 
         echo   bbp_get_topic_edit_link().' | '.
               bbp_get_topic_close_link().' | '.

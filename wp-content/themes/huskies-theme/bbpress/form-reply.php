@@ -81,6 +81,9 @@
 						do_action('bbp_theme_before_reply_form_subscription');
 				?>
 					<div class="span4 notify">
+						<div class="page-header">
+							<h4><?php _e('Notification:', 'huskies-theme'); ?></h4>
+						</div>
 						<label class="checkbox">
 							<input name="bbp_topic_subscription" id="bbp_topic_subscription" type="checkbox" value="bbp_subscribe" <?php bbp_form_topic_subscribed(); ?> tabindex="<?php bbp_tab_index(); ?>" />
 							<?php 
@@ -122,7 +125,7 @@
 					do_action('bbp_theme_after_reply_form_revisions');
 				endif; 
 					
-				do_action('bbp_theme_before_reply_form_submit_wrapper');
+				// do_action('bbp_theme_before_reply_form_submit_wrapper');
 			?>
 			 <div class="comment_form_submit form-actions">
 			 	<?php do_action('bbp_theme_before_reply_form_submit_button'); ?>
