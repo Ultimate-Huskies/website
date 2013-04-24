@@ -230,3 +230,50 @@
     height: 98%;
   }
 }
+
+#members {
+  .members_view { text-align: center; }
+  .media-list {
+    margin: 3rem 0;
+    text-align: left;
+
+    .media {
+      padding: 1rem;
+      .border-radius(0.5rem);
+
+      &:nth-child(2n+1) { background-color: #fafafa; }
+
+      .page-header { 
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 0;
+
+        h3 {
+          position: relative;
+          margin-bottom: 0;
+
+          small.right {
+            position: absolute;
+            right: 0;
+            top: 40%;
+          }
+        }
+      }
+
+      .member-registered { margin-bottom: 1rem; }
+
+      .row {
+        > div {
+
+          > span {
+            display: block;
+          }
+
+          > * { word-break: break-word; }
+        }
+
+        &:last-child { margin-top: 1rem; }
+      }
+    }
+  }
+}
