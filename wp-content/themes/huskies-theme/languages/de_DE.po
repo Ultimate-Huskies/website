@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Huskies-Theme v1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2013-04-23 10:07:29+0000\n"
+"PO-Revision-Date: 2013-04-24 17:29:48+0000\n"
 "Last-Translator: clemens-brummer <clemens.brummer@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -93,26 +93,31 @@ msgid "You do not have permission to view this forum."
 msgstr "Du hast keine Berechtigung das Forum anzuschauen."
 
 #: bbpress/feedback-no-forums.php:4
+#: members.php:46
 #@ huskies-theme
 msgid "You need to"
 msgstr "Du musst dich"
 
 #: bbpress/feedback-no-forums.php:4
+#: members.php:46
 #@ huskies-theme
 msgid "login"
 msgstr "anmelden"
 
 #: bbpress/feedback-no-forums.php:5
+#: members.php:47
 #@ huskies-theme
 msgid "or"
 msgstr "oder"
 
 #: bbpress/feedback-no-forums.php:5
+#: members.php:47
 #@ huskies-theme
 msgid "register"
 msgstr "registrieren"
 
 #: bbpress/feedback-no-forums.php:6
+#: members.php:48
 #@ huskies-theme
 msgid "if you are new here"
 msgstr ", um das Forum zu benutzen."
@@ -920,6 +925,7 @@ msgstr "Hervorgehobener Beitrag"
 #: content-status.php:17
 #: content-video.php:11
 #: content.php:14
+#: members.php:14
 #: page-forum.php:14
 #: page.php:8
 #@ huskies-theme
@@ -1320,7 +1326,7 @@ msgstr "Suche starten"
 msgid "search"
 msgstr "Suche"
 
-#: sidebar-footer.php:36
+#: sidebar-footer.php:41
 #@ huskies-theme
 msgid "Follow us..."
 msgstr "Finde uns bei..."
@@ -1396,4 +1402,9 @@ msgstr "Telefon"
 #@ huskies-theme
 msgid "Notification:"
 msgstr "Benachrichtigung"
+
+#: sidebar-footer.php:37
+#@ huskies-theme
+msgid "View members"
+msgstr "Mitglieder anzeigen"
 
