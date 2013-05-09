@@ -735,4 +735,10 @@ function signature_editor_file($template_file) {
   return get_stylesheet_directory()."/bbpress/signature_bbpress.php";
 }
 add_filter('d4p_bbpresstools_signature_editor_file', 'signature_editor_file');
+
+function remove_revisions($test) {
+  return '';
+}
+add_filter('bbp_get_topic_revision_log', 'remove_revisions');
+add_filter('bbp_get_reply_revision_log', 'remove_revisions');
 ?>
