@@ -52,10 +52,10 @@ jQuery(document).ready ($) ->
     $('html, body').animate {scrollTop: $('body').height()}, 800
 
   if $().photobox? and $('.gallery').length > 0
-    $('.gallery').photobox()
+    $('.gallery').photobox 'a', {history: false}
 
   if $().photobox? and $('.bbp-attachments ol').length > 0
-    $('.bbp-attachments ol').photobox()
+    $('.bbp-attachments ol').photobox 'a', {history: false}
 
   if $().select2?
     $selector = $('#bbp_forum_id')
