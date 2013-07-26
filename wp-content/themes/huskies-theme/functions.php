@@ -691,9 +691,6 @@ add_filter('bbp_topic_pagination', 'custom_pagination');
 add_filter('bbp_replies_pagination', 'custom_pagination');
 
 function bootstrap_pagination($links) {
-  if (isset($links)) {
-    return '';
-  }
   $link_list = '<ul>';
   foreach ($links as $link => $value) {
     if (strpos($value, 'current') !== false) {
