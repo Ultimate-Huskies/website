@@ -70,6 +70,14 @@ class bootstrap_nav_walker extends Walker_Nav_Menu {
       $item_output .= ($args->has_children && $depth == 0) ? ' <span class="caret"></span></a>' : '</a>';
       $item_output .= $args->after;
 
+      if (is_user_logged_in() && strtolower($item->title) === 'forum') {
+        $counts = get_unread_counts();
+        if ($counts['topics'] > 0) :
+            $item_output .= '<span class="badge badge-important">'.$counts['topics'].'</span>';
+        endif;
+      }
+      
+
       $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
     } else {
       $output .= $indent . '<li class="divider"></li>';

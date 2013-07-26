@@ -641,6 +641,24 @@ function bootstrap_custom_comments_form($post_id = null) {
 ###########################################################################
 #                   bbPress
 ###########################################################################
+function get_unread_counts() {
+  $countForums = 0;
+  $countTopics = 0;
+  if (bbp_has_forums(array('post_parent'=>0))) {
+    while (bbp_forums()) : bbp_the_forum();
+      if (!bbppu_user_has_read_forum(bbp_get_forum_id(), bbp_get_current_user_id())) $countForums++;
+
+      if (bbp_has_topics(array('post_parent'=>bbp_get_forum_id()))) {
+        while (bbp_topics()) : bbp_the_topic();
+          if (!bbppu_user_has_read_topic(bbp_get_topic_id(), bbp_get_current_user_id())) $countTopics++;
+        endwhile; 
+      }
+    endwhile;
+  }
+
+  return array('forums' => $countForums, 'topics' => $countTopics);
+}
+
 // add_filter('bbp_show_lead_topic', '__return_true');
 
 function bootstrap_breadcrumb() {
@@ -673,6 +691,9 @@ add_filter('bbp_topic_pagination', 'custom_pagination');
 add_filter('bbp_replies_pagination', 'custom_pagination');
 
 function bootstrap_pagination($links) {
+  if (isset($links)) {
+    return '';
+  }
   $link_list = '<ul>';
   foreach ($links as $link => $value) {
     if (strpos($value, 'current') !== false) {

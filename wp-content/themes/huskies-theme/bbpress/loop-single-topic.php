@@ -52,16 +52,18 @@
 			<?php bootstrap_topic_pagination(); ?>
 		</div>
 
-    <span class="bbp-admin-links hidden-phone">
-      <?php 
-        echo   bbp_get_topic_edit_link().' | '.
-              bbp_get_topic_close_link().' | '.
-              bbp_get_topic_stick_link().' | '.
-              bbp_get_topic_merge_link().' | '.
-              bbp_get_topic_trash_link().' | '.
-              bbp_get_topic_spam_link (); 
-      ?>
-    </span>
+		<div class="visible-desktop">
+	    <span class="bbp-admin-links">
+	      <?php 
+	        echo   bbp_get_topic_edit_link().' | '.
+	              bbp_get_topic_close_link().' | '.
+	              bbp_get_topic_stick_link().' | '.
+	              bbp_get_topic_merge_link().' | '.
+	              bbp_get_topic_trash_link().' | '.
+	              bbp_get_topic_spam_link (); 
+	      ?>
+	    </span>
+	  </div>
 
 		<?php 
 			do_action('bbp_theme_after_topic_meta');
