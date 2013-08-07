@@ -12,14 +12,56 @@
 @gridColumnWidth768:      37px;
 @gridGutterWidth768:      15px;
 
-h1, h2, h3, h4, h5 {
-  font-weight: normal;
+// h1, h2, h3, h4, h5 {
+//   font-weight: normal;
+// }
+
+h2 {
+  margin: 4rem 0 2rem;
+  border-bottom: 1px solid @grayLight;
+}
+
+h3 { margin: 3rem 0 1.5rem; }
+
+p {
+  font-size: 1.5rem;
+  line-height: 28px;
+}
+
+blockquote {
+  margin: 3rem 0rem 3rem 5rem;
+  padding: 2rem;
+  #gradient .horizontal(@startColor: #fafafa, @endColor: #fff);
+  position: relative;
+  border: none;
+  padding-left: 4rem;
+
+  &:before {
+    content: "”";
+    position: absolute;
+    top: 5.5rem;
+    left: -3rem;
+    font-family: @serifFontFamily;
+    font-size: 12.5rem;
+    color: @successText;
+  }
+
+  p {
+    font-size: 2.5rem;
+    font-weight: 100;
+    line-height: 32px;
+    color: #555;
+    font-family: serif;
+    font-style: italic;
+  }
 }
 
 *.serif { font-family: @serifFontFamily; }
 *.sans { font-family: @sansFontFamily; }
 
 .tooltip { font-size: 1.5rem; }
+
+address { font-style: italic; }
 
 a,
 a > * {
@@ -128,7 +170,7 @@ hr.fancy {
   }
 }
 
-blockquote {
+#forums blockquote {
   .well;
   .well-small;
   margin-left: 1.5rem;
