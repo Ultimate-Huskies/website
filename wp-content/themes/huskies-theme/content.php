@@ -59,7 +59,10 @@
     <div>
       <a href="<?php the_permalink(); ?>" title="<?php _e("Read the rest of", "huskies-theme") ?> <strong><?php the_title(); ?></strong>" class="more-link btn btn-block"><?php _e("read the complete post", "huskies-theme"); ?></a>
     </div>
-  <?php endif; ?>
+  <?php 
+    if (!is_single()) { do_quickshare_output(); }
+    endif; 
+  ?>
 </article>
 
 <hr class="fancy" />
