@@ -759,4 +759,10 @@ function remove_revisions($test) {
 }
 add_filter('bbp_get_topic_revision_log', 'remove_revisions');
 add_filter('bbp_get_reply_revision_log', 'remove_revisions');
+
+function no_edit_lock($retval, $cur_time, $lock_time, $post_date_gmt){
+  return false;
+}
+add_filter('bbp_past_edit_lock', 'no_edit_lock', 1, 4);
+
 ?>

@@ -56,6 +56,22 @@ blockquote {
   }
 }
 
+#forums blockquote {
+  .well;
+  .well-small;
+  margin-left: 1.5rem;
+  background-color: @grayLighter;
+  
+  &:before {
+    content: '';
+  }
+
+  p {
+    font-size: 1.5rem;
+    line-height: 28px;
+  }
+}
+
 *.serif { font-family: @serifFontFamily; }
 *.sans { font-family: @sansFontFamily; }
 
@@ -168,13 +184,6 @@ hr.fancy {
     // height: 60rem;
     // @media (max-width: 767px) { height: 30rem; }
   }
-}
-
-#forums blockquote {
-  .well;
-  .well-small;
-  margin-left: 1.5rem;
-  background-color: @grayLighter;
 }
 
 #pass-strength-result {
