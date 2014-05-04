@@ -127,6 +127,7 @@ function custom_login_stylesheet() { ?>
     <script type="text/javascript" src="<?php echo BOOTSTRAP_PATH.'bootstrap-tooltip.js'; ?>"></script>
     <script type="text/javascript" src="<?php echo BOOTSTRAP_PATH.'bootstrap-alert.js'; ?>"></script>
     <script type="text/javascript" src="<?php echo THEMEROOT.'/javascript/main.js'; ?>"></script>
+    <script type="text/javascript"> var RecaptchaOptions = {theme : 'clean', lang : 'de'}; </script>
 <?php }
 add_action('login_enqueue_scripts', 'custom_login_stylesheet');
 
