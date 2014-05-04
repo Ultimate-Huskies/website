@@ -60,10 +60,14 @@
       }, 800);
     });
     if (($().photobox != null) && $('.gallery').length > 0) {
-      $('.gallery').photobox();
+      $('.gallery').photobox('a', {
+        history: false
+      });
     }
     if (($().photobox != null) && $('.bbp-attachments ol').length > 0) {
-      $('.bbp-attachments ol').photobox();
+      $('.bbp-attachments ol').photobox('a', {
+        history: false
+      });
     }
     if ($().select2 != null) {
       $selector = $('#bbp_forum_id');

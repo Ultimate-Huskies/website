@@ -9,6 +9,9 @@
 wp-content/*
 !wp-content/plugins/
 !wp-content/themes/
+!wp-content/languages/
+wp-content/languages/*
+!wp-content/languages/bbpress/
  
 # Ignore everything in the "plugins" directory, except our plugins
 wp-content/plugins/*

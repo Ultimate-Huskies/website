@@ -33,7 +33,7 @@
   #user_info {
     position: absolute;
     z-index: 500;
-    top: -5rem;
+    top: -9rem;
     width: 100%; 
 
     > hr {
@@ -106,6 +106,21 @@
         border: none;
         box-shadow: none;
       }
+
+      .menu-item {
+        position: relative;
+        .badge {
+          position: absolute;
+          top: -0.5rem;
+          right: -1rem;
+          box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);
+
+          @media (max-width: 767px) { 
+            top: 0.65rem;
+            right: 1rem;
+          }
+        }
+      }
     }
 
     .caret { 
@@ -172,6 +187,8 @@
       position: static;
       text-align: center;
     }
+
+    .btn { height: 3rem; }
 
     &.expand { 
       right: 10rem; 

@@ -37,7 +37,7 @@
 
 		<?php 
       if (is_user_logged_in()) : 
-        $website = bbp_displayed_user_field('user_url');
+        $website = bbp_get_displayed_user_field('user_url');
     ?>
 			<div class="page-header clearfix">
 				<h4><?php _e('Contact informations', 'huskies-theme'); ?></h4>

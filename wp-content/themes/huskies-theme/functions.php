@@ -27,7 +27,11 @@ foreach (get_pages(array('parent' => 0)) as $page) {
 #               setup theme                                                                           
 ########################################################################################################
 #show all logged in users the admin bar
-add_filter('show_admin_bar', '__return_true');
+function admin_bar_visibility() {
+  if (is_user_logged_in()) return true;
+  else return false;
+}
+add_filter('show_admin_bar', 'admin_bar_visibility');
 
 #add contact infos
 function custom_user_contactmethods($methods) {
@@ -69,7 +73,7 @@ function enqueue_scripts() {
   wp_register_script('bootstrap_alert', BOOTSTRAP_PATH.'bootstrap-alert.js', array('jquery'), '1', false);
   wp_register_script('bootstrap_affix', BOOTSTRAP_PATH.'bootstrap-affix.js', array('jquery'), '1', false);
   wp_register_script('bootstrap_carousel', BOOTSTRAP_PATH.'bootstrap-carousel.js', array('jquery'), '1', false);
-  wp_register_script('gallery', THEMEROOT.'/photobox/photobox/photobox.min.js', array('jquery'), '1', false);
+  wp_register_script('gallery', THEMEROOT.'/photobox/photobox/photobox.js', array('jquery'), '1', false);
   wp_register_script('select2', THEMEROOT.'/javascript/select2.min.js', array('jquery'), '1', false);
   wp_register_script('gce_replacement', THEMEROOT.'/javascript/gce-script.js', array('jquery', 'bootstrap_popover'), '1', false);
   wp_register_script('main_script', THEMEROOT.'/javascript/main.js', array('bootstrap_transition', 'bootstrap_affix', 'bootstrap_carousel', 'bootstrap_dropdown', 'bootstrap_collapse', 'bootstrap_tooltip', 'bootstrap_popover', 'bootstrap_tab', 'bootstrap_alert', 'gallery', 'select2', 'gce_replacement'), '1.0.0', false);
@@ -638,6 +642,24 @@ function bootstrap_custom_comments_form($post_id = null) {
 ###########################################################################
 #                   bbPress
 ###########################################################################
+function get_unread_counts() {
+  $countForums = 0;
+  $countTopics = 0;
+  if (bbp_has_forums(array('post_parent'=>0))) {
+    while (bbp_forums()) : bbp_the_forum();
+      if (!bbppu_user_has_read_forum(bbp_get_forum_id(), bbp_get_current_user_id())) $countForums++;
+
+      if (bbp_has_topics(array('post_parent'=>bbp_get_forum_id()))) {
+        while (bbp_topics()) : bbp_the_topic();
+          if (!bbppu_user_has_read_topic(bbp_get_topic_id(), bbp_get_current_user_id())) $countTopics++;
+        endwhile; 
+      }
+    endwhile;
+  }
+
+  return array('forums' => $countForums, 'topics' => $countTopics);
+}
+
 // add_filter('bbp_show_lead_topic', '__return_true');
 
 function bootstrap_breadcrumb() {
@@ -732,4 +754,16 @@ function signature_editor_file($template_file) {
   return get_stylesheet_directory()."/bbpress/signature_bbpress.php";
 }
 add_filter('d4p_bbpresstools_signature_editor_file', 'signature_editor_file');
+
+function remove_revisions($test) {
+  return '';
+}
+add_filter('bbp_get_topic_revision_log', 'remove_revisions');
+add_filter('bbp_get_reply_revision_log', 'remove_revisions');
+
+function no_edit_lock($retval, $cur_time, $lock_time, $post_date_gmt){
+  return false;
+}
+add_filter('bbp_past_edit_lock', 'no_edit_lock', 1, 4);
+
 ?>

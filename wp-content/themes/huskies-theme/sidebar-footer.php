@@ -32,6 +32,11 @@
               <p><a href="<?php echo home_url(); ?>/wp-login.php?action=register"><?php _e('Register','huskies-theme'); ?> <i class="icon-share"></i></a></p>
             <?php endif; ?>
           </div>
+          <?php if (is_user_logged_in()) : ?>
+            <div id="link-members">
+              <a href="/mitglieder" class="btn btn-success"><?php _e('View members', 'huskies-theme'); ?></a>
+            </div>
+          <?php endif; ?>
           <div class="follow">
             <h3><?php _e('Follow us...', 'huskies-theme'); ?></h3>
             <div class="social">

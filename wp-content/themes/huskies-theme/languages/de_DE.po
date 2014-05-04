@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Huskies-Theme v1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2013-03-03 22:19:22+0000\n"
+"PO-Revision-Date: 2013-04-24 17:29:48+0000\n"
 "Last-Translator: clemens-brummer <clemens.brummer@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -82,11 +82,6 @@ msgstr ""
 msgid "Archives"
 msgstr ""
 
-#: bbpress/feedback-logged-in.php:13
-#@ huskies-theme
-msgid "You are already logged in."
-msgstr "Du bist bereits angemeldet."
-
 #: bbpress/feedback-no-access.php:2
 #@ huskies-theme
 msgid "Private"
@@ -98,26 +93,31 @@ msgid "You do not have permission to view this forum."
 msgstr "Du hast keine Berechtigung das Forum anzuschauen."
 
 #: bbpress/feedback-no-forums.php:4
+#: members.php:46
 #@ huskies-theme
 msgid "You need to"
 msgstr "Du musst dich"
 
 #: bbpress/feedback-no-forums.php:4
+#: members.php:46
 #@ huskies-theme
 msgid "login"
 msgstr "anmelden"
 
 #: bbpress/feedback-no-forums.php:5
+#: members.php:47
 #@ huskies-theme
 msgid "or"
 msgstr "oder"
 
 #: bbpress/feedback-no-forums.php:5
+#: members.php:47
 #@ huskies-theme
 msgid "register"
 msgstr "registrieren"
 
 #: bbpress/feedback-no-forums.php:6
+#: members.php:48
 #@ huskies-theme
 msgid "if you are new here"
 msgstr ", um das Forum zu benutzen."
@@ -161,14 +161,14 @@ msgstr "Antwort"
 
 #: bbpress/form-reply.php:51
 #: bbpress/form-topic.php:79
-#: functions.php:612
+#: functions.php:618
 #@ huskies-theme
 msgid "You may use these"
 msgstr "Du kannst diese"
 
 #: bbpress/form-reply.php:53
 #: bbpress/form-topic.php:81
-#: functions.php:614
+#: functions.php:620
 #@ huskies-theme
 msgid "tags and attributes"
 msgstr "Tags und Attribute benutzen"
@@ -190,72 +190,72 @@ msgstr "Tags"
 msgid "Tags for this topic"
 msgstr "Tags für dieses Thema"
 
-#: bbpress/form-reply.php:88
-#: bbpress/form-topic.php:137
+#: bbpress/form-reply.php:91
+#: bbpress/form-topic.php:145
 #@ huskies-theme
 msgid "Notify the author of follow-up replies via email"
 msgstr "Benachrichtige den Autor über kommende Antworten per Email."
 
-#: bbpress/form-reply.php:90
-#: bbpress/form-topic.php:139
+#: bbpress/form-reply.php:93
+#: bbpress/form-topic.php:147
 #@ huskies-theme
 msgid "Notify me of follow-up replies via email"
 msgstr "Benachrichtige mich über kommende Antworten per Email"
 
-#: bbpress/form-reply.php:106
-#: bbpress/form-topic.php:155
+#: bbpress/form-reply.php:109
+#: bbpress/form-topic.php:163
 #@ huskies-theme
 msgid "Revision"
 msgstr "Revision"
 
-#: bbpress/form-reply.php:111
-#: bbpress/form-topic.php:160
+#: bbpress/form-reply.php:114
+#: bbpress/form-topic.php:168
 #@ huskies-theme
 msgid "Keep a log of this edit"
 msgstr "Protokolliere diese &Auml;nderung"
 
-#: bbpress/form-reply.php:116
-#: bbpress/form-topic.php:165
+#: bbpress/form-reply.php:119
+#: bbpress/form-topic.php:173
 #@ huskies-theme
 msgid "Optional reason for editing:"
 msgstr "Optionaler Grund für die &Auml;nderung"
 
-#: bbpress/form-reply.php:129
+#: bbpress/form-reply.php:132
 #@ huskies-theme
 msgid "Edit Reply"
 msgstr "Bearbeite die Antwort"
 
-#: bbpress/form-reply.php:129
+#: bbpress/form-reply.php:132
 #@ huskies-theme
 msgid "Create Reply"
 msgstr "Antworten"
 
-#: bbpress/form-reply.php:131
-#: bbpress/form-topic.php:180
-#: functions.php:621
+#: bbpress/form-reply.php:134
+#: bbpress/form-topic.php:188
+#: functions.php:627
 #@ huskies-theme
 msgid "Clear"
 msgstr "Löschen"
 
-#: bbpress/form-reply.php:142
+#: bbpress/form-reply.php:145
 #, php-format
 #@ huskies-theme
 msgid "The topic &#8216;%s&#8217; is closed to new replies."
 msgstr "Das Thema &#8216;%s&#8217; ist geschlossen für neue Antworten."
 
-#: bbpress/form-reply.php:146
-#: bbpress/form-topic.php:191
+#: bbpress/form-reply.php:149
+#: bbpress/form-topic.php:199
 #, php-format
 #@ huskies-theme
 msgid "The forum &#8216;%s&#8217; is closed to new topics and replies."
 msgstr "Das Forum &#8216;%s&#8217; ist geschlossen für neue Themen und Antworten."
 
-#: bbpress/form-reply.php:150
+#: bbpress/form-reply.php:153
 #@ huskies-theme
 msgid "You cannot reply to this topic."
 msgstr "Du kannst auf dieses Thema nicht antworten."
 
-#: bbpress/form-reply.php:150
+#: bbpress/form-reply.php:153
 #@ huskies-theme
 msgid "You must be logged in to reply to this topic."
 msgstr "Du musst angemeldet sein, um auf dieses Thema zu antworten."
@@ -442,8 +442,8 @@ msgid "Topic Title (Maximum Length %d):"
 msgstr "Titel des Themas (Maximale L&auml;nge: %d):"
 
 #: bbpress/form-topic.php:52
-#: functions.php:586
-#: functions.php:594
+#: functions.php:592
+#: functions.php:600
 #@ huskies-theme
 msgid "required field"
 msgstr "Pflichtfeld"
@@ -458,32 +458,32 @@ msgstr "Inhalt des Themas"
 msgid "Topic Tags"
 msgstr "Tags des Themas"
 
-#: bbpress/form-topic.php:111
+#: bbpress/form-topic.php:112
 #@ huskies-theme
 msgid "Forum:"
 msgstr "Forum:"
 
-#: bbpress/form-topic.php:122
+#: bbpress/form-topic.php:125
 #@ huskies-theme
 msgid "Topic Type:"
 msgstr "Typ des Themas"
 
-#: bbpress/form-topic.php:178
+#: bbpress/form-topic.php:186
 #@ huskies-theme
 msgid "Edit Topic"
 msgstr "Thema bearbeiten"
 
-#: bbpress/form-topic.php:178
+#: bbpress/form-topic.php:186
 #@ huskies-theme
 msgid "Create Topic"
 msgstr "Thema erstellen"
 
-#: bbpress/form-topic.php:195
+#: bbpress/form-topic.php:203
 #@ huskies-theme
 msgid "You cannot create new topics."
 msgstr "Du kannst keine neuen Themen erstellen."
 
-#: bbpress/form-topic.php:195
+#: bbpress/form-topic.php:203
 #@ huskies-theme
 msgid "You must be logged in to create new topics."
 msgstr "Du musst angemeldet sein, um neue Themen zu erstellen."
@@ -925,6 +925,7 @@ msgstr "Hervorgehobener Beitrag"
 #: content-status.php:17
 #: content-video.php:11
 #: content.php:14
+#: members.php:14
 #: page-forum.php:14
 #: page.php:8
 #@ huskies-theme
@@ -1042,37 +1043,37 @@ msgstr "Fu&szlig;zeile umschalten"
 msgid "scroll to top"
 msgstr "nach oben"
 
-#: functions.php:82
+#: functions.php:88
 #@ huskies-theme
 msgid "Main Menu - Only 3 entries on first level!"
 msgstr "Hauptmen&uuml; - Nur 3 Eintr&auml;ge werden angezeigt."
 
-#: functions.php:95
+#: functions.php:101
 #@ huskies-theme
 msgid "left footer widget"
 msgstr ""
 
-#: functions.php:97
+#: functions.php:103
 #@ huskies-theme
 msgid "The left footer widget"
 msgstr ""
 
-#: functions.php:105
+#: functions.php:111
 #@ huskies-theme
 msgid "right footer widget"
 msgstr ""
 
-#: functions.php:107
+#: functions.php:113
 #@ huskies-theme
 msgid "The right footer widget"
 msgstr ""
 
-#: functions.php:247
+#: functions.php:253
 #@ huskies-theme
 msgid "Look at the complete gallery"
 msgstr "Schau dir die gesamte Galerie an"
 
-#: functions.php:247
+#: functions.php:253
 #, php-format
 #@ huskies-theme
 msgid "This gallery contains %s photo"
@@ -1080,163 +1081,163 @@ msgid_plural "This gallery contains %s photos"
 msgstr[0] "Diese Galerie enth&auml;lt %s Photo"
 msgstr[1] "Diese Galerie enth&auml;lt %s Photos"
 
-#: functions.php:375
+#: functions.php:381
 #@ huskies-theme
 msgid "This post is password protected. Please enter the correct password:"
 msgstr "Dieser Beitrag ist passwortgeschützt. Bitte gebe das korrekte Passwort ein:"
 
-#: functions.php:376
+#: functions.php:382
 #@ huskies-theme
 msgid "password"
 msgstr "Passwort"
 
-#: functions.php:377
+#: functions.php:383
 #@ huskies-theme
 msgid "Enter password"
 msgstr "Passwort eingeben"
 
-#: functions.php:401
+#: functions.php:407
 #@ huskies-theme
 msgid "&larr; Older posts "
 msgstr "&larr; &Auml;ltere Beitr&auml;ge"
 
-#: functions.php:402
+#: functions.php:408
 #@ huskies-theme
 msgid "Newer posts &rarr;"
 msgstr "Neuere Beitr&auml;ge &rarr;"
 
-#: functions.php:417
+#: functions.php:423
 #@ huskies-theme
 msgid "Next page"
 msgstr "N&auml;chste Seite"
 
-#: functions.php:418
+#: functions.php:424
 #@ huskies-theme
 msgid "Previous page"
 msgstr "Vorherige Seite"
 
-#: functions.php:471
+#: functions.php:477
 #@ huskies-theme
 msgid "Pingback: "
 msgstr ""
 
-#: functions.php:473
+#: functions.php:479
 #@ huskies-theme
 msgid "Trackback: "
 msgstr ""
 
-#: functions.php:476
-#: functions.php:505
+#: functions.php:482
+#: functions.php:511
 #@ huskies-theme
 msgid "Edit comment"
 msgstr "Kommentar bearbeiten"
 
 #. translators: 1: date, 2: time
-#: functions.php:502
+#: functions.php:508
 #, php-format
 #@ huskies-theme
 msgid "%1$s at %2$s"
 msgstr "%1$s auf %2$s"
 
-#: functions.php:509
+#: functions.php:515
 #@ huskies-theme
 msgid "Reply &darr;"
 msgstr "Antwort &darr;"
 
-#: functions.php:513
+#: functions.php:519
 #@ huskies-theme
 msgid "Your comment is awaiting moderation."
 msgstr "Dein Kommentar muss noch best&auml;tigt werden."
 
-#: functions.php:545
+#: functions.php:551
 #@ huskies-theme
 msgid "Leave a Reply"
 msgstr "Kommentiere den Beitrag"
 
-#: functions.php:545
+#: functions.php:551
 #, php-format
 #@ huskies-theme
 msgid "Leave a Reply to %s"
 msgstr "Kommentiere den Beitrag %s"
 
-#: functions.php:546
+#: functions.php:552
 #@ huskies-theme
 msgid "Cancel reply"
 msgstr "Kommentar abbrechen"
 
-#: functions.php:552
+#: functions.php:558
 #@ huskies-theme
 msgid "You must be logged in to post a comment"
 msgstr "Du musst angemeldet sein, um einen Beitrag zu kommentieren."
 
-#: functions.php:553
+#: functions.php:559
 #@ huskies-theme
 msgid "Log in"
 msgstr "Anmelden"
 
-#: functions.php:560
+#: functions.php:566
 #: header.php:57
 #: sidebar-footer.php:19
 #@ huskies-theme
 msgid "Logged in as"
 msgstr "Angemeldet als"
 
-#: functions.php:562
+#: functions.php:568
 #@ huskies-theme
 msgid "Log out of this account"
 msgstr "Aus dieses Konto abmelden"
 
-#: functions.php:562
+#: functions.php:568
 #@ huskies-theme
 msgid "Log out?"
 msgstr "Abmelden?"
 
-#: functions.php:568
+#: functions.php:574
 #@ huskies-theme
 msgid "Your email address will not be published."
 msgstr "Deine E-Mail-Adresse wird nicht ver&ouml;ffentlicht."
 
-#: functions.php:570
+#: functions.php:576
 #@ huskies-theme
 msgid "Required fields are marked with"
 msgstr "Pflichtfelder sind markiert mit "
 
-#: functions.php:583
+#: functions.php:589
 #@ huskies-theme
 msgid "Your Name"
 msgstr "Dein Name"
 
-#: functions.php:584
+#: functions.php:590
 #@ huskies-theme
 msgid "name"
 msgstr "Name"
 
-#: functions.php:591
+#: functions.php:597
 #@ huskies-theme
 msgid "Your email address<br />(will not be published)"
 msgstr "Deine E-Mail-Adresse"
 
-#: functions.php:592
+#: functions.php:598
 #@ huskies-theme
 msgid "email"
 msgstr "E-Mail"
 
-#: functions.php:599
+#: functions.php:605
 #@ huskies-theme
 msgid "Your website"
 msgstr "Deine Webseite"
 
-#: functions.php:600
+#: functions.php:606
 #@ huskies-theme
 msgid "website"
 msgstr "Webseite"
 
-#: functions.php:607
+#: functions.php:613
 #@ huskies-theme
 msgid "your great comment"
 msgstr "Dein gro&szlig;artiger Kommentar"
 
-#: functions.php:620
+#: functions.php:626
 #@ huskies-theme
 msgid "Post"
 msgstr "Beitrag"
@@ -1325,7 +1326,7 @@ msgstr "Suche starten"
 msgid "search"
 msgstr "Suche"
 
-#: sidebar-footer.php:36
+#: sidebar-footer.php:41
 #@ huskies-theme
 msgid "Follow us..."
 msgstr "Finde uns bei..."
@@ -1391,8 +1392,19 @@ msgstr "Signatur"
 msgid "Signature length is limited to %s characters."
 msgstr "Die L&auml;nge der Signatur ist begrenzt auf %s Zeichen."
 
-#: functions.php:32
+#: functions.php:38
 #@ huskies-theme
 msgid "Phone"
 msgstr "Telefon"
+
+#: bbpress/form-reply.php:85
+#: bbpress/form-topic.php:139
+#@ huskies-theme
+msgid "Notification:"
+msgstr "Benachrichtigung"
+
+#: sidebar-footer.php:37
+#@ huskies-theme
+msgid "View members"
+msgstr "Mitglieder anzeigen"
 
