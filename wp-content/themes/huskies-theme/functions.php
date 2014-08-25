@@ -766,4 +766,10 @@ function no_edit_lock($retval, $cur_time, $lock_time, $post_date_gmt){
 }
 add_filter('bbp_past_edit_lock', 'no_edit_lock', 1, 4);
 
+function enable_visual_editor( $args = array() ) {
+    $args['tinymce'] = true;
+    return $args;
+}
+add_filter( 'bbp_after_get_the_content_parse_args', 'enable_visual_editor' );
+
 ?>
