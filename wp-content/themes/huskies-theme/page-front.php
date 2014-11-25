@@ -68,7 +68,7 @@ Template Name: frontpage
       <h2><?php _e('Next events', 'huskies-theme'); ?></h2>
     </div>
 
-    <?php echo do_shortcode('[google-calendar-events id="2" title="Termine am " type="list-grouped" max="3"]'); ?>
+    <?php echo do_shortcode('[gcal id="3940" title="Termine am " type="list-grouped" max="3" paging="false"]'); ?>
   </div>
 </div>
 
