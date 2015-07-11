@@ -1,0 +1,40 @@
+{
+  "name": "Ultimate-Huskies/website",
+  "type": "Website",
+  "license": "MIT",
+  "description": "A modern WordPress site for the ultimate frisbee team Ultime Huskies",
+  "homepage": "http://ultimate-huskies.de/",
+  "authors": [
+    {
+      "name": "Patrick Müller",
+      "email": "dev@mupat.net",
+      "homepage": "http://mupat.net"
+    }
+  ],
+  "config": {
+    "preferred-install": "dist"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "http://wpackagist.org"
+    }
+  ],
+  "require": {
+    "php": ">=5.4",
+    "composer/installers": "~1.0.12",
+    "vlucas/phpdotenv": "^2.0.1",
+    "johnpbloch/wordpress": "4.2.2",
+    "wpackagist-plugin/bbPress": "^2.5",
+    "wpackagist-plugin/bbpress-pencil-unread": "^1.0",
+    "jarednova/timber": "^0.21.6"
+  },
+  "extra": {
+    "installer-paths": {
+      "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin", "jarednova/timber"],
+      "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
+      "web/app/themes/{$name}/": ["type:wordpress-theme"]
+    },
+    "wordpress-install-dir": "web/wp"
+  }
+}

@@ -1,43 +1,35 @@
-# based on this template -> https://gist.github.com/444295
-# Ignore everything in the root except the "wp-content" directory.
-/*
-!.gitignore
-!wp-content/
- 
-# Ignore everything in the "wp-content" directory, except the "plugins"
-# and "themes" directories.
-wp-content/*
-!wp-content/plugins/
-!wp-content/themes/
-!wp-content/languages/
-wp-content/languages/*
-!wp-content/languages/bbpress/
- 
-# Ignore everything in the "plugins" directory, except our plugins
-wp-content/plugins/*
-# !wp-content/plugins/my-directory-plugin/
+# Application
+web/app/plugins/*
+!web/app/plugins/.gitkeep
+web/app/mu-plugins/*
+!web/app/mu-plugins/.gitkeep
+web/app/upgrade
+web/app/uploads/*
+!web/app/uploads/.gitkeep
+!web/app/mu-plugins/disallow-indexing.php
+!web/app/mu-plugins/bedrock-autoloader.php
 
-# Ignore everything in the "plugins" directory, except plugins with own localization
-!wp-content/plugins/bbpress/
-wp-content/plugins/bbpress/*
-!wp-content/plugins/bbpress/languages/
-wp-content/plugins/bbpress/languages/*
-!wp-content/plugins/bbpress/languages/bbpress-de_DE.mo
-!wp-content/plugins/bbpress/languages/bbpress-de_DE.po
+# WordPress
+web/wp
+web/.htaccess
 
-!wp-content/plugins/bbpress-post-toolbar/
-wp-content/plugins/bbpress-post-toolbar/*
-!wp-content/plugins/bbpress-post-toolbar/languages/
-wp-content/plugins/bbpress-post-toolbar/languages/*
-!wp-content/plugins/bbpress-post-toolbar/languages/bbp_5o1_toolbar-de_DE.mo
-!wp-content/plugins/bbpress-post-toolbar/languages/bbp_5o1_toolbar-de_DE.po
+# WP-CLI
+db-sync
+sql-dump-*.sql
 
+# Dotenv
+.env
+.env.*
+!.env.example
 
-#changed simple avatar plugin
-!wp-content/plugins/simple-local-avatars/
-wp-content/plugins/simple-local-avatars/*
-!wp-content/plugins/simple-local-avatars/simple-local-avatars.php
+# Vendor (e.g. Composer)
+vendor/*
+!vendor/.gitkeep
 
-# Ignore everything in the "themes" directory, except our theme
-wp-content/themes/*
-!wp-content/themes/huskies-theme/
+# Node Package Manager
+node_modules
+
+# Vagrant
+bin
+.vagrant
+.DS_Store
