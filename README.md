@@ -17,8 +17,45 @@ This wordpress site uses a modern stack to make development easy and maintainabl
 - install theme dependencies `npm install`
     - it installs libs to convert less and coffeescript 
 
-## Watch changes for theme files
-Run `npm run watch` to autocompile changed coffeescript and less files.
+## Available build scripts
+Run to (auto)compile changed coffeescript and less files.
+
+### Watch changes for theme files
+```
+npm run watch
+```
+
+### One time compile all theme files
+```
+nom run build
+```
+
+### One time compile all coffeescript files
+```
+nom run build:scripts
+```
+
+### One time compile all less files
+```
+nom run build:styles
+```
+
+## Installing new dependencies
+### For PHP
+```
+composer require <pkg>
+composer update
+```
+
+### For NodeJS
+```
+npm install <pkg> [--save|--save-dev]
+```
+
+### For Frontend stuff using bower
+```
+./node_modules/.bin/bower install <pkg> [--save|--save-dev]
+```
 
 [composer_link]: https://getcomposer.org/doc/00-intro.md#globally
 [node_link]: https://nodejs.org/

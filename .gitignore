@@ -29,7 +29,13 @@ vendor/*
 # Node Package Manager
 node_modules
 
+# Bower
+bower_components
+
 # Vagrant
 bin
 .vagrant
 .DS_Store
+
+app.js
+style.css
