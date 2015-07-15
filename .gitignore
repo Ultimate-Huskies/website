@@ -31,11 +31,12 @@ node_modules
 
 # Bower
 bower_components
+web/app/themes/huskies-theme/vendor/
 
 # Vagrant
 bin
 .vagrant
 .DS_Store
 
-app.js
-style.css
+web/app/themes/huskies-theme/app.js
+web/app/themes/huskies-theme/styles.css

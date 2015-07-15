@@ -1,3 +1,1 @@
-require './test'
-
-console.log 'blub'
+console.log 'sc'
