@@ -1,0 +1,152 @@
+/*
+Theme Name: Huskies-Theme
+Theme URI: http://ultimate-huskies.de/
+Description: The theme for the ultimate huskies website
+Author: Mupat
+Author URI: http://mupat.net
+Version: 1.0
+
+License: GNU General Public License version 3.0
+License URI: http://www.gnu.org/licenses/gpl-3.0
+*/
+html,
+body,
+ul {
+  margin: 0;
+  padding: 0;
+}
+header {
+  max-height: 500px;
+  height: 300px;
+}
+.slideshow {
+  position: relative;
+  display: block;
+  height: 100%;
+  list-style: none;
+}
+.slideshow__item {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  -webkit-animation: slide 2s infinite backwards cubic-bezier(0.1, 0.3, 0.3, 1) 2s;
+  -moz-animation: slide 2s infinite backwards cubic-bezier(0.1, 0.3, 0.3, 1) 2s;
+  -ms-animation: slide 2s infinite backwards cubic-bezier(0.1, 0.3, 0.3, 1) 2s;
+  -o-animation: slide 2s infinite backwards cubic-bezier(0.1, 0.3, 0.3, 1) 2s;
+  animation: slide 2s infinite backwards cubic-bezier(0.1, 0.3, 0.3, 1) 2s;
+}
+@-webkit-keyframes slide {
+  0% {
+    left: 0;
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+@-moz-keyframes slide {
+  0% {
+    left: 0;
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+@-ms-keyframes slide {
+  0% {
+    left: 0;
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+@-o-keyframes slide {
+  0% {
+    left: 0;
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+@keyframes slide {
+  0% {
+    left: 0;
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+.slideshow__item:nth-child(2n) {
+  -webkit-animation: slide2 2s infinite backwards cubic-bezier(0.1, 0.3, 0.3, 1);
+  -moz-animation: slide2 2s infinite backwards cubic-bezier(0.1, 0.3, 0.3, 1);
+  -ms-animation: slide2 2s infinite backwards cubic-bezier(0.1, 0.3, 0.3, 1);
+  -o-animation: slide2 2s infinite backwards cubic-bezier(0.1, 0.3, 0.3, 1);
+  animation: slide2 2s infinite backwards cubic-bezier(0.1, 0.3, 0.3, 1);
+}
+@-webkit-keyframes slide2 {
+  0% {
+    left: 0;
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+@-moz-keyframes slide2 {
+  0% {
+    left: 0;
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+@-ms-keyframes slide2 {
+  0% {
+    left: 0;
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+@-o-keyframes slide2 {
+  0% {
+    left: 0;
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+@keyframes slide2 {
+  0% {
+    left: 0;
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}

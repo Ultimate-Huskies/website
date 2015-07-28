@@ -10,6 +10,87 @@ License: GNU General Public License version 3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0
 */
 
-body {
-  background-color: green;
+.background-size(@value) {
+  -webkit-background-size: @value;
+  -moz-background-size: @value;
+  -o-background-size: @value;
+  background-size: @value;
+}
+
+.animation(@values) {
+  -webkit-animation: @values;
+  -moz-animation: @values;
+  -ms-animation: @values;
+  -o-animation: @values;
+  animation: @values;
+}
+
+.animation-state(@value) {
+  -webkit-animation-play-state: @value;
+  -moz-animation-play-state: @value;
+  -ms-animation-play-state: @value;
+  -o-animation-play-state: @value;
+  animation-play-state: @value;
+}
+
+.keyframes(@name, @value) {
+  @-webkit-keyframes @name { @value(); }
+  @-moz-keyframes @name { @value(); }
+  @-ms-keyframes @name { @value(); }
+  @-o-keyframes @name { @value(); }
+  @keyframes @name { @value(); }
+}
+
+html, body, ul {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  max-height: 500px;
+  height: 300px;
+}
+
+.slideshow {
+  position: relative;
+  display: block;
+  height: 100%;
+  list-style: none;
+}
+
+.slideshow__item {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  .background-size(cover);
+  background-position: center center;
+
+  .animation(slide 2s infinite backwards cubic-bezier(0.1, 0.3, 0.3, 1) 2s);
+  .keyframes(slide, {
+      0% {
+        left: 0;
+        opacity: 1;
+      }
+      100% {
+        left: 100%;
+         opacity: 0;
+      }
+  });
+
+  &:nth-child(2n) {
+    .animation(slide2 2s infinite backwards cubic-bezier(0.1, 0.3, 0.3, 1));
+    .keyframes(slide2, {
+        0% {
+          left: 0;
+          opacity: 1;
+        }
+        100% {
+          left: 100%;
+           opacity: 0;
+        }
+    });
+  }
 }

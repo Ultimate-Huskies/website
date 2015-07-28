@@ -9,7 +9,7 @@
   "scripts": {
     "install": "$npm_package_config_bin/bower install",
     "build:scripts": "$npm_package_config_bin/browserify -t coffeeify --extension='.coffee' $npm_package_config_theme/scripts/index.coffee > $npm_package_config_theme/app.js",
-    "build:styles": "$npm_package_config_bin/lessc $npm_package_config_theme/styles/index.less > $npm_package_config_theme/styles.css",
+    "build:styles": "$npm_package_config_bin/lessc $npm_package_config_theme/styles/index.less > $npm_package_config_theme/style.css",
     "build": "npm run build:scripts && npm run build:styles",
     "watch:scripts": "DEBUG=onchange $npm_package_config_bin/onchange $npm_package_config_theme/scripts/**/*.coffee -- npm run build:scripts",
     "watch:styles": "DEBUG=onchange $npm_package_config_bin/onchange $npm_package_config_theme/styles/**/*.less -- npm run build:styles",

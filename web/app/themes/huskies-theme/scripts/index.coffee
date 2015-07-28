@@ -1,1 +1,2 @@
-console.log 'sc'
+$(document).ready ->
+  console.log 'Started'

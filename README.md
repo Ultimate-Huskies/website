@@ -1,7 +1,7 @@
 The repository for the ultimate-huskies website.
 
 # Development
-This wordpress site uses a modern stack to make development easy and maintainable. So make sure you have the required tools installed. The used file structure is based [Bedrock][bedrock_link] to enable [Composer][composer_link] for wordpress. Its also using [Timber][timber_link] to make use of [TWIG][twig_link] as templating engine.
+This wordpress site uses a modern stack to make development easy and maintainable. So make sure you have the required tools installed. The used file structure is based on [Bedrock][bedrock_link] to enable [Composer][composer_link] for wordpress. Its also using [Timber][timber_link] to make use of [TWIG][twig_link] as templating engine.
 
 ## Requirements
 - [Composer][composer_link]

@@ -1,0 +1,16 @@
+{% extends "layout/base.twig" %}
+
+{% block header %}
+  {{ post.content }}
+{% endblock %}
+
+{% block content %}
+  {% for last_post in last_posts %}
+    <article {{ function("post_class", '') }} id="post-{{ last_post.ID }}">
+      <h3>
+        <a href="{{ last_post.permalink }}">{{ last_post.title }}</a>
+        <small>{{ last_post.display_date }}</small>
+      </h3>
+    </article>
+  {% endfor %}
+{% endblock %}
