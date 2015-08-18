@@ -44,7 +44,7 @@
               <a href="https://github.com/Ultimate-Huskies" title="Github" target="_blank" class="github icon-github-sign"></a>
             </div>
             <div class="ffindr">
-              <a href="http://ffindr.com/de/team/germany/huskies" target="_blank" title="FFindr! find Frisbee anywhere."><img alt="FFindr" src="<?php echo THEMEROOT; ?>/images/ffindr.png"></a>
+              <a href="http://ultimatecentral.com/de_DE/t/huskies" title="Ultimate Central - Find and manage ultimate frisbee events all over the world."><img alt="Ultimate Central" src="<?php echo THEMEROOT; ?>/images/ultimatecentral.png"></a>
             </div>
           </div>
         </fieldset>
