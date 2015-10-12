@@ -13,7 +13,7 @@ function custom_user_contactmethods($methods) {
 }
 add_filter('user_contactmethods', 'custom_user_contactmethods');
 
-# add theme supports 
+# add theme supports
 function add_theme_supports() {
   // load_theme_textdomain('huskies-theme', get_stylesheet_directory().'/languages');
 
@@ -42,9 +42,9 @@ function enqueue_scripts() {
   wp_register_script('gallery', VENDOR_PATH.'/photobox/photobox/jquery.photobox.js', array('jquery'));
   wp_register_script('main_script', THEMEROOT.'/app.js', array('gallery'));
 
-  wp_enqueue_script('main_script'); 
+  wp_enqueue_script('main_script');
 }
-add_action('wp_enqueue_scripts', 'enqueue_scripts');  
+add_action('wp_enqueue_scripts', 'enqueue_scripts');
 
 # register custom menus (in admin interface available)
 function register_menus() {

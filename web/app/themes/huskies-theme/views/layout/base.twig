@@ -17,7 +17,7 @@
 
     <link rel="profile" href="http://gmpg.org/xfn/11" />
     <link rel="pingback" href="{{ site.pingback_url }}" />
-    <link rel="alternate" type="application/rss+xml" title="{{ ste.name }} feed" href="{{ site.rss2_url }}" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} feed" href="{{ site.rss2_url }}" />
     <link rel="shortcut icon" href="{{ site.theme.link }}/images/favicon.ico" />
     <link rel="apple-touch-icon" href="{{ site.theme.link }}/images/apple-touch-icon.png"/>
 
@@ -28,8 +28,9 @@
       {% block header %}{% endblock %}
       {% include 'layout/header.twig' %}
     </header>
-    
+
     {% block content %}{% endblock %}
     {% use 'layout/footer.twig' %}
+    {{ function('wp_footer') }}
   </body>
 </html>
