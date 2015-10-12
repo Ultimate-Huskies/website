@@ -29,7 +29,7 @@ add_action('after_setup_theme', 'add_theme_supports');
 function enqueue_styles() {
   wp_register_style('normalize', VENDOR_PATH.'/normalize.css/normalize.css');
   wp_register_style('gallery', VENDOR_PATH.'/photobox/photobox/photobox.css', array('normalize'));
-  wp_register_style('main_style', THEMEROOT.'/style.css', array('gallery'));
+  wp_register_style('main_style', THEMEROOT.'/style/compiled.css', array('gallery'));
 
   wp_enqueue_style('main_style');
 }

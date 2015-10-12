@@ -39,4 +39,4 @@ bin
 .DS_Store
 
 web/app/themes/huskies-theme/app.js
-web/app/themes/huskies-theme/styles.css
+web/app/themes/huskies-theme/styles/compiled.css

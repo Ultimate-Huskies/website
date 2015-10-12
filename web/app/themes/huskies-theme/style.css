@@ -8,10 +8,6 @@ Version: 1.0
 
 License: GNU General Public License version 3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0
+
+You can find the real stylesheets in styles/ folder.
 */
-html,
-body,
-ul {
-  margin: 0;
-  padding: 0;
-}
