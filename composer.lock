@@ -4,7 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8ccf7777f5f2c809a74d5d77c0543bdb",
+    "hash": "c295c9057ed63b4a66b1a5752e151a45",
+    "content-hash": "34f68d816baa6d6284ee67a2ea6a2c2a",
     "packages": [
         {
             "name": "altorouter/altorouter",
@@ -206,16 +207,16 @@
         },
         {
             "name": "jarednova/timber",
-            "version": "0.21.6",
+            "version": "0.21.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jarednova/timber.git",
-                "reference": "ae8fb50dd2c2058950186ba1d65754a8feb49ed5"
+                "reference": "301950c008cb4c191f954148ba7306a0a352ccb1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jarednova/timber/zipball/ae8fb50dd2c2058950186ba1d65754a8feb49ed5",
-                "reference": "ae8fb50dd2c2058950186ba1d65754a8feb49ed5",
+                "url": "https://api.github.com/repos/jarednova/timber/zipball/301950c008cb4c191f954148ba7306a0a352ccb1",
+                "reference": "301950c008cb4c191f954148ba7306a0a352ccb1",
                 "shasum": ""
             },
             "require": {
@@ -226,7 +227,7 @@
                 "upstatement/routes": "0.3"
             },
             "require-dev": {
-                "evert/phpdoc-md": "~0.1.1",
+                "jarednova/markdowndocs": "dev-master",
                 "phpdocumentor/phpdocumentor": "2.*",
                 "phpunit/phpunit": "~4.0",
                 "satooshi/php-coveralls": "dev-master",
@@ -258,20 +259,20 @@
                 "timber",
                 "twig"
             ],
-            "time": "2015-07-08 12:34:31"
+            "time": "2015-09-16 20:47:15"
         },
         {
             "name": "johnpbloch/wordpress",
-            "version": "4.2.2",
+            "version": "4.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress.git",
-                "reference": "998358f3b7a2c75caae11ff3c79e514951aac7f6"
+                "reference": "cfcf25eb42baeb7316a61c7a64e9a1ab3e291f2f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/998358f3b7a2c75caae11ff3c79e514951aac7f6",
-                "reference": "998358f3b7a2c75caae11ff3c79e514951aac7f6",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/cfcf25eb42baeb7316a61c7a64e9a1ab3e291f2f",
+                "reference": "cfcf25eb42baeb7316a61c7a64e9a1ab3e291f2f",
                 "shasum": ""
             },
             "require": {
@@ -295,7 +296,7 @@
                 "blog",
                 "cms"
             ],
-            "time": "2015-05-07 01:46:09"
+            "time": "2015-09-15 15:01:23"
         },
         {
             "name": "johnpbloch/wordpress-core-installer",
@@ -347,25 +348,29 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.18.2",
+            "version": "v1.22.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "e8e6575abf6102af53ec283f7f14b89e304fa602"
+                "reference": "79249fc8c9ff62e41e217e0c630e2e00bcadda6a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/e8e6575abf6102af53ec283f7f14b89e304fa602",
-                "reference": "e8e6575abf6102af53ec283f7f14b89e304fa602",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/79249fc8c9ff62e41e217e0c630e2e00bcadda6a",
+                "reference": "79249fc8c9ff62e41e217e0c630e2e00bcadda6a",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.2.7"
             },
+            "require-dev": {
+                "symfony/debug": "~2.7",
+                "symfony/phpunit-bridge": "~2.7"
+            },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.18-dev"
+                    "dev-master": "1.22-dev"
                 }
             },
             "autoload": {
@@ -400,7 +405,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2015-06-06 23:31:24"
+            "time": "2015-09-22 13:59:32"
         },
         {
             "name": "upstatement/routes",
@@ -501,15 +506,15 @@
         },
         {
             "name": "wpackagist-plugin/bbpress",
-            "version": "2.5.7",
+            "version": "2.5.8",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/bbpress/",
-                "reference": "tags/2.5.7"
+                "reference": "tags/2.5.8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/bbpress.2.5.7.zip",
+                "url": "https://downloads.wordpress.org/plugin/bbpress.2.5.8.zip",
                 "reference": null,
                 "shasum": null
             },
