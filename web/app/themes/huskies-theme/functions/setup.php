@@ -1,8 +1,9 @@
 <?php
 #show all logged in users the admin bar
 function admin_bar_visibility() {
-  if (is_user_logged_in()) return true;
-  else return false;
+  return false;
+  // if (is_user_logged_in()) return true;
+  // else return false;
 }
 add_filter('show_admin_bar', 'admin_bar_visibility');
 
@@ -29,7 +30,7 @@ add_action('after_setup_theme', 'add_theme_supports');
 function enqueue_styles() {
   wp_register_style('normalize', VENDOR_PATH.'/normalize.css/normalize.css');
   wp_register_style('gallery', VENDOR_PATH.'/photobox/photobox/photobox.css', array('normalize'));
-  wp_register_style('main_style', THEMEROOT.'/style/compiled.css', array('gallery'));
+  wp_register_style('main_style', THEMEROOT.'/styles/compiled.css', array('gallery'));
 
   wp_enqueue_style('main_style');
 }

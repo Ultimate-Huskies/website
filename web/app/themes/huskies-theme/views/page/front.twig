@@ -5,12 +5,19 @@
 {% endblock %}
 
 {% block content %}
-  {% for last_post in last_posts %}
-    <article {{ function("post_class", '') }} id="post-{{ last_post.ID }}">
-      <h3>
-        <a href="{{ last_post.permalink }}">{{ last_post.title }}</a>
-        <small>{{ last_post.display_date }}</small>
-      </h3>
-    </article>
-  {% endfor %}
+  <section class="section">
+    <h1 class="section__title">{{ __('Posts', 'huskies') }}</h1>
+    {% for last_post in last_posts %}
+      <article class="post_short {{ last_post.class }}" id="post-{{ last_post.ID }}">
+        <h2 class="post_short__title clear">
+          <a href="{{ last_post.permalink }}">{{ last_post.title }}</a>
+          <div>
+            <strong>{{ function('get_post_format', last_post.ID)|humanize_type }}</strong>
+            <small>{{ last_post.display_date }}</small>
+          </div>
+        </h2>
+        <a class="post_short__button button button--primary" href="{{ last_post.permalink }}">{{ __('More', 'huskies') }}</a>
+      </article>
+    {% endfor %}
+  </section>
 {% endblock %}
