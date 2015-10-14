@@ -1,0 +1,21 @@
+.button {
+  background-color: @c-black;
+  color: @c-white;
+  padding: 0 0.7rem;
+  line-height: 3rem;
+  font-size: @fs-l;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    background-color: lighten(@c-black, 10%);
+  }
+
+  &.button--primary {
+    background-color: @c-blue;
+
+    &:hover {
+      background-color: darken(@c-blue, 10%);
+    }
+  }
+}

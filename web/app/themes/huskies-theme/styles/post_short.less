@@ -1,0 +1,25 @@
+.post_short {
+  margin: 0 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &:not(:last-child) {
+    padding-bottom: 50px;
+    border-bottom: 1px solid @c-blue;
+  }
+}
+
+.post_short__title {
+  align-self: flex-start;
+  max-width: 75%;
+
+  > a {
+    color: @c-black;
+    text-decoration: none;
+  }
+}
+
+.post_short__button {
+  margin-right: 5px;
+}

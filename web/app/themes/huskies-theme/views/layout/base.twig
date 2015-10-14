@@ -31,7 +31,7 @@
     </header>
 
     {% block content %}{% endblock %}
-    {% use 'layout/footer.twig' %}
+    {% include 'layout/footer.twig' %}
     {{ function('wp_footer') }}
   </body>
 </html>

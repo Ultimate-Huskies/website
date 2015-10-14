@@ -1,0 +1,26 @@
+.slideshow {
+  list-style: none;
+  height: 200px;
+  position: relative;
+
+  &:after {
+    content: '';
+    bottom: 0;
+    border-left: transparent 0 solid;
+    border-right: transparent 100vw solid;
+    border-bottom: @c-white 50px solid;
+    position: absolute;
+    left: 0;
+  }
+}
+
+.slideshow__item {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
