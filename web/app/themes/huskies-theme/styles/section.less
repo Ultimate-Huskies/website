@@ -1,7 +1,19 @@
 .section {
   padding: 25px;
+  position: relative;
+  padding-top: 200px;
+
+  &:before {
+    content: '';
+    top: -50px;
+    border-left: transparent 0 solid;
+    border-right: transparent 100vw solid;
+    border-bottom: @c-white 50px solid;
+    position: absolute;
+    left: 0;
+  }
 }
 
 .section__title {
-  margin-bottom: 25px; 
+  margin-bottom: 25px;
 }

@@ -1,24 +1,30 @@
 .header{
+
+}
+
+.header__mobile {
   position: fixed;
   height: 50px;
   top: 0;
   left: 0;
   width: 100%;
-}
+  z-index: 10;
 
-.header__mobile {
   > [class^="icon-"] {
     .icon(@c-white);
     font-size: 30px;
     line-height: 50px;
-    margin: 5px;
+    margin: 0 5px;
   }
 }
 
 .logo {
+  position: fixed;
   margin: 0 auto;
-  width: 150px;
+  z-index: 11;
+  // width: 150px;
   display: block;
-  position: relative;
-  top: -15px;
+  // position: relative;
+  // top: -15px;
+  left: calc(~"50% - 150px");
 }

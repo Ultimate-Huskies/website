@@ -41,7 +41,8 @@ function enqueue_scripts() {
   wp_deregister_script('jquery');
   wp_register_script('jquery', VENDOR_PATH.'/jquery/dist/jquery.min.js');
   wp_register_script('gallery', VENDOR_PATH.'/photobox/photobox/jquery.photobox.js', array('jquery'));
-  wp_register_script('main_script', THEMEROOT.'/app.js', array('gallery'));
+  wp_register_script('skrollr', VENDOR_PATH.'/skrollr/dist/skrollr.min.js');
+  wp_register_script('main_script', THEMEROOT.'/app.js', array('gallery', 'skrollr'));
 
   wp_enqueue_script('main_script');
 }

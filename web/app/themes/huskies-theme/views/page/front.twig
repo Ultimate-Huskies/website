@@ -6,6 +6,9 @@
 
 {% block content %}
   <section class="section">
+    {% include 'images/logo.svg' %}
+
+    <!-- <svg><use xlink:href="#logo-font" width="100%" height="100%"></use></svg> -->
     <h1 class="section__title">{{ __('Posts', 'huskies') }}</h1>
     {% for last_post in last_posts %}
       <article class="post_short {{ last_post.class }}" id="post-{{ last_post.ID }}">

@@ -1,2 +1,2 @@
 $(document).ready ->
-  console.log 'Started'
+  s = skrollr.init()
