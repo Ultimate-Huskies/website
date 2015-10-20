@@ -1,2 +1,4 @@
 $(document).ready ->
-  s = skrollr.init()
+  s = skrollr.init
+    forceHeight: false
+    mobileCheck: -> return false

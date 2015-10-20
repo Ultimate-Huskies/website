@@ -24,20 +24,20 @@
 
     {{ function('wp_head') }}
   </head>
-  <body class="{{ body_class }}" >
+  <body class="{{ body_class }}" id="skrollr-body">
     <header class="header">
-      {% block header %}{% endblock %}
       {% include 'layout/header.twig' %}
+      {% block header %}{% endblock %}
     </header>
-    <div id="skrollr-body">
-      <main class="main">
-        {% block content %}{% endblock %}
-      </main>
 
-      <footer class="footer">
-        {% include 'layout/footer.twig' %}
-      </footer>
-    </div>
+    <main class="main">
+      {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+      {% include 'layout/footer.twig' %}
+    </footer>
+
     {{ function('wp_footer') }}
   </body>
 </html>
