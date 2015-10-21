@@ -21,6 +21,13 @@ html, body {
   font-size: 75%;
 }
 
+.content {
+  transition: transform 0.5s ease, left 0.5s ease;
+  transform-origin: top;
+  left: 0;
+  position: relative;
+}
+
 .pull-left {
   float: left;
 }
@@ -49,6 +56,7 @@ html, body {
   }
 }
 
+@import "main_menu";
 @import "section";
 @import "header";
 @import "slideshow";

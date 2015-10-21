@@ -1,5 +1,5 @@
 .header{
-
+  height: @height-header;
 }
 
 .header__mobile {
@@ -8,7 +8,8 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10;
+  z-index: @z-top;
+  transition: @transition-menu;
 
   > [class^="icon-"] {
     .icon(@c-white);
@@ -23,15 +24,11 @@
 }
 
 .logo {
-  // position: relative;
   margin: auto;
   left: 0;
   right: 0;
-  z-index: 11;
+  z-index: @z-top + 1;
   top: 0;
-  // width: 150px;
   display: block;
-  // position: relative;
-  // top: -15px;
-  // left: calc(~"50% - 150px");
+  transition: @transition-menu;
 }
