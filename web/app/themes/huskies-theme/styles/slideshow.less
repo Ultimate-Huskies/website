@@ -5,19 +5,26 @@
   left: 0;
   top: 0;
   width: 100%;
-  z-index: -1;
+  // z-index: -1;
 }
 
 .slideshow__item {
   width: 100%;
   height: 100%;
-  // background-size: 170%;
   background-size: cover;
   position: absolute;
   top: 0;
   left: 0;
   background-position: center top;
   background-repeat: no-repeat;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .5s ease, visibility .5s ease;
+
+  &.slideshow__item--visible {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 .slideshow--no-images {
