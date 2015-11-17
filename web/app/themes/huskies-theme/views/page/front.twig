@@ -1,4 +1,5 @@
 {% extends "layout/base.twig" %}
+{% from 'macro.twig' import post_short %}
 
 {% block header %}
   {{ post.content }}
@@ -6,22 +7,22 @@
 
 {% block content %}
   <section class="section">
-    <div class="logo__wrapper" data-anchor-target="#logo" data-70-top-top="height: 250px;" data-top-top="height: 50px;">
-      {% include 'images/logo.svg' %}
+    <div class="logo__wrapper">
+      <svg>
+        <use xlink:href="#logo-font" width="60%" height="60%" x="21.5%" y="41.5%"></use>
+        <use xlink:href="#logo-husky" width="90%" height="90%" x="-14%" y="0%"></use>
+      </svg>
     </div>
-    
+
     <h1 class="section__title">{{ __('Posts', 'huskies') }}</h1>
     {% for last_post in last_posts %}
-      <article class="post_short {{ last_post.class }}" id="post-{{ last_post.ID }}">
-        <h2 class="post_short__title clear">
-          <a href="{{ last_post.permalink }}">{{ last_post.title }}</a>
-          <div>
-            <strong>{{ function('get_post_format', last_post.ID)|humanize_type }}</strong>
-            <small>{{ last_post.display_date }}</small>
-          </div>
-        </h2>
-        <a class="post_short__button button button--primary" href="{{ last_post.permalink }}">{{ __('More', 'huskies') }}</a>
-      </article>
+      {{ post_short(last_post) }}
+    {% endfor %}
+  </section>
+  <section class="section section--inverse">
+    <h1 class="section__title">{{ __('Appointments', 'huskies') }}</h1>
+    {% for appointment in appointments %}
+      {{ appointment.get_event_markup('list', 1, 1) }}
     {% endfor %}
   </section>
 {% endblock %}

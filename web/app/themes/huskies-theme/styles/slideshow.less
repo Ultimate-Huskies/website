@@ -11,10 +11,26 @@
 .slideshow__item {
   width: 100%;
   height: 100%;
-  background-size: 170%;
+  // background-size: 170%;
+  background-size: cover;
   position: absolute;
   top: 0;
   left: 0;
   background-position: center top;
   background-repeat: no-repeat;
+}
+
+.slideshow--no-images {
+  background-color: @c-blue;
+  height: @height-header / 2;
+}
+
+.slideshow__title {
+  position: absolute;
+  font-size: @fs-xxl;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  color: @c-white;
 }

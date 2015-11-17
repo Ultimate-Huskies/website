@@ -1,7 +1,6 @@
 .section {
-  padding: 25px;
+  padding: 25px 25px 50px;
   position: relative;
-  // padding-top: 200px;
   background-color: @c-white;
 
   &:before {
@@ -13,8 +12,20 @@
     position: absolute;
     left: 0;
   }
+
+  &:last-of-type {
+    padding-bottom: 25vh;
+  }
 }
 
 .section__title {
   margin-bottom: 25px;
+}
+
+.section--inverse {
+  background-color: @c-grey;
+
+  &:before {
+    border-bottom-color: @c-grey;
+  }
 }

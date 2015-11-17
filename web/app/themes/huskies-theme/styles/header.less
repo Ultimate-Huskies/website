@@ -1,4 +1,8 @@
 .header{
+  height: @height-header / 2;
+}
+
+.home .header {
   height: @height-header;
 }
 
@@ -16,6 +20,22 @@
     font-size: 30px;
     line-height: 60px;
     margin: 0 5px;
+  }
+}
+
+.header__mobile-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 50%;
+  height: 45px;
+
+  > svg {
+    height: 100%;
+    width: 100%;
   }
 }
 

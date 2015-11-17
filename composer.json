@@ -27,7 +27,8 @@
     "johnpbloch/wordpress": "4.3.1",
     "wpackagist-plugin/bbPress": "^2.5",
     "wpackagist-plugin/bbpress-pencil-unread": "^1.0",
-    "jarednova/timber": "^0.21.6"
+    "jarednova/timber": "^0.21.6",
+    "wpackagist-plugin/google-calendar-events": "^2.4"
   },
   "extra": {
     "installer-paths": {

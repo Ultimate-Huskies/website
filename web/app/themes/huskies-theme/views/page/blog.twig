@@ -1,0 +1,19 @@
+{% extends "layout/base.twig" %}
+{% from 'macro.twig' import post_short %}
+
+{% block header %}
+  <div class="slideshow slideshow--no-images">
+    <h1 class="slideshow__title">{{ __('Galleries', 'huskies') }}</h1>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div id="logo">
+
+  </div>
+  <section class="section">
+    {% for last_post in last_posts %}
+      {{ post_short(last_post) }}
+    {% endfor %}
+  </section>
+{% endblock %}
