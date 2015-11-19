@@ -8,7 +8,8 @@
   padding-left: 40px;
   transition: @transition-menu;
   top: 0;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 
   @media @tablet {
     position: absolute;
@@ -21,6 +22,11 @@
   @media @desktop {
     margin-left: 10%;
   }
+}
+
+.main_menu--sticky {
+  position: fixed;
+  top: 50px;
 }
 
 .main_menu__overlay {
@@ -37,6 +43,8 @@
 }
 
 .main_menu--is-open {
+  overflow: hidden;
+  
   .container {
     left: @width-sidebar;
     overflow: hidden;
@@ -93,6 +101,7 @@
   color: @c-blue;
   text-decoration: none;
   transition: color 0.3s ease;
+  display: block;
 }
 
 .main_menu__item {
@@ -131,5 +140,14 @@
     &:before {
       border-color: @c-blue;
     }
+  }
+
+  &.main_menu__item--seperate {
+    // margin-bottom: 25px;
+    // padding-bottom: 25px;
+    //
+    // &:not(:last-child):after {
+    //   height: 80px;
+    // }
   }
 }

@@ -5,12 +5,14 @@
       <use xlink:href="#logo-font" width="60%" height="60%" x="21.5%" y="41.5%"></use>
       <use class="main_menu__logo--husky" xlink:href="#logo-husky" width="90%" height="90%" x="-14%" y="0%"></use>
     </svg>
-    <!-- <svg><use xlink:href="#logo-font" width="100%" height="100%"></use></svg> -->
   </a>
   <ul class="main_menu__items">
+    <li class="main_menu__item main_menu__item--seperate">
+      <a class="main_menu__link" href="{{ function('wp_login_url', function('get_permalink')) }}"> {{ __('Login', 'huskies') }} </a>
+    </li>
     {% for item in menu.get_items %}
       <li class="main_menu__item {{ item.classes | join(' ') }}">
-        <a class="main_menu__link" href="{{ item.get_link}}">{{ item.title }}</a>
+        <a class="main_menu__link" href="{{ item.get_link }}">{{ item.title }}</a>
       </li>
     {% endfor %}
   </ul>

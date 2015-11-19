@@ -1,5 +1,5 @@
 .header {
-  height: @height-header / 2;
+  height: @height-header / 2.5;
 }
 
 .home .header {
@@ -13,7 +13,9 @@
   left: 0;
   width: 100%;
   z-index: @z-top;
-  transition: @transition-menu;
+  transition: @transition-menu, background-color .3s ease, box-shadow .3s ease;
+  background-color: transparent;
+  box-shadow: none;
 
   > [class^="icon-"] {
     .icon(@c-white);
@@ -36,9 +38,26 @@
   margin: auto;
   width: 50%;
   height: 45px;
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility .3s ease, opacity .3s ease;
 
   > svg {
     height: 100%;
     width: 100%;
+  }
+}
+
+.header__mobile--inverse {
+  background-color: @c-white;
+  box-shadow:0 2px 5px fade(@c-black, 25%);
+
+  .header__mobile-logo {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  *[class^='icon-'] {
+    .icon(@c-black);
   }
 }
