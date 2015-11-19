@@ -8,7 +8,12 @@
   position: absolute;
   bottom: 99%;
   left: 0;
-  width: 100vw;
+  width: 100%;
+  max-height: 300px;
+  height: 100%;
+  pointer-events: none;
+  background-repeat: repeat-x;
+  background-position: bottom;
 }
 
 .footer__headline {
@@ -27,13 +32,16 @@
 .footer-menu {
   list-style: none;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: nowrap;
   margin-bottom: 25px;
   padding: 0 25px;
+  .maxwidth();
 }
 
 .footer-menu__item {
+  margin-right: 7%;
+
   > a {
     .icon(@c-white);
     text-decoration: none;

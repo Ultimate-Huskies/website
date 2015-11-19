@@ -16,6 +16,14 @@
   &:last-of-type {
     padding-bottom: 25vh;
   }
+
+  @media @tablet {
+    padding-left: calc(~"5% + @{width-sidebar} + 50px");
+  }
+
+  @media @desktop {
+    padding-left: calc(~"10% + @{width-sidebar} + 50px");
+  }
 }
 
 .section__title {

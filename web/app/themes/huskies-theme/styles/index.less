@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
 @import "_variables";
+@import "_mixins";
 @import "_fonts";
 @import "_typography";
 @import "_buttons";
@@ -19,9 +20,10 @@ html, body {
   font-weight: @fw-normal;
   color: @c-black;
   font-size: 75%;
+  min-width: 300px;
 }
 
-.content {
+.container {
   transition: transform 0.5s ease, left 0.5s ease;
   transform-origin: top;
   left: 0;
@@ -48,12 +50,17 @@ html, body {
   }
 }
 
-.icon(@color: @c-white) {
-  cursor: pointer;
-  color: @color;
-  &:hover {
-    color: darken(@color, 10%);
+.logo__wrapper {
+  height: 250px;
+  text-align: center;
+
+  @media @tablet {
+    display: none;
   }
+}
+
+.main {
+  position: relative;
 }
 
 @import "main_menu";

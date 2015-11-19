@@ -25,15 +25,14 @@
     {{ function('wp_head') }}
   </head>
   <body class="{{ body_class }}" id="skrollr-body">
-    {% include 'layout/main_menu.twig' %}
-
-    <div class="content">
+    <div class="container">
       <header class="header">
         {% include 'layout/header.twig' %}
         {% block header %}{% endblock %}
       </header>
 
       <main class="main">
+        {% include 'layout/main_menu.twig' %}
         {% block content %}{% endblock %}
       </main>
 

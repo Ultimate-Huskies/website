@@ -2,10 +2,11 @@
   list-style: none;
   height: @height-header;
   position: fixed;
+  // position: relative;
   left: 0;
   top: 0;
   width: 100%;
-  // z-index: -1;
+  z-index: -1;
 }
 
 .slideshow__item {
@@ -15,11 +16,11 @@
   position: absolute;
   top: 0;
   left: 0;
-  background-position: center top;
+  background-position: center 50%;
   background-repeat: no-repeat;
   opacity: 0;
   visibility: hidden;
-  transition: opacity .5s ease, visibility .5s ease;
+  transition: opacity 1s ease, visibility 1s ease;
 
   &.slideshow__item--visible {
     opacity: 1;

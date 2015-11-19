@@ -1,4 +1,4 @@
-.header{
+.header {
   height: @height-header / 2;
 }
 
@@ -21,6 +21,10 @@
     line-height: 60px;
     margin: 0 5px;
   }
+
+  @media @tablet {
+    display: none;
+  }
 }
 
 .header__mobile-logo {
@@ -37,18 +41,4 @@
     height: 100%;
     width: 100%;
   }
-}
-
-.logo__wrapper {
-  height: 250px;
-}
-
-.logo {
-  margin: auto;
-  left: 0;
-  right: 0;
-  z-index: @z-top + 1;
-  top: 0;
-  display: block;
-  transition: @transition-menu;
 }

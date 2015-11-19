@@ -1,6 +1,6 @@
 <ul class="slideshow">
-  {% for item in items %}
-    <li class="slideshow__item" style="background-image: url('{{ item.url }}');">
+  {% for index, item in items %}
+    <li class="slideshow__item {{ index == 0 ? 'slideshow__item--visible' : '' }}" style="background-image: url('{{ item.url }}');">
     </li>
   {% endfor %}
 </ul>

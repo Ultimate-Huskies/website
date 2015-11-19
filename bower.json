@@ -4,6 +4,7 @@
     "jquery": "~2.1.4",
     "photobox": "~1.9.9",
     "normalize.css": "~3.0.3",
-    "skrollr": "~0.6.30"
+    "skrollr": "~0.6.30",
+    "stickUp2": "~2.3.0"
   }
 }

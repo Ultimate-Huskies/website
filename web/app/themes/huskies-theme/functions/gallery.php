@@ -3,7 +3,7 @@ function gallery($fist, $attr) {
   $post = get_post();
 
   extract(shortcode_atts(array(
-    'order'      => 'ASC',
+    'order'      => 'DESC',
     'orderby'    => 'menu_order ID',
     'id'         => $post->ID,
     'columns'    => 3,
@@ -16,10 +16,10 @@ function gallery($fist, $attr) {
   $id = intval($id);
   if ('RAND' == $order) $orderby = 'none';
   $search = array(
-    'post_status'     => 'inherit', 
-    'post_type'       => 'attachment', 
-    'post_mime_type'  => 'image', 
-    'order'           => $order, 
+    'post_status'     => 'inherit',
+    'post_type'       => 'attachment',
+    'post_mime_type'  => 'image',
+    'order'           => $order,
     'orderby'         => $orderby
   );
 
@@ -61,10 +61,10 @@ function gallery($fist, $attr) {
   }
 
   $template = 'gallery/general.twig';
-  if (is_page_template("page-front.php")) {    
+  if (is_page_template("page-front.php")) {
     $template = 'gallery/front.twig';
   }
 
-  return Timber::compile($template, array('items' => array_reverse($items)));
+  return Timber::compile($template, array('items' => $items));
 }
 add_filter('post_gallery', 'gallery', 20, 2);
