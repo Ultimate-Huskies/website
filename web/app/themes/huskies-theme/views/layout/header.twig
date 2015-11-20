@@ -3,5 +3,9 @@
   <a href="{{ site.url }}" class="header__mobile-logo">
     <svg><use xlink:href="#logo-font" width="100%" height="100%"></use></svg>
   </a>
-  <span class="icon-paw pull-right"></span>
+  {% if page.user.logged_in %}
+    <a class="icon-custom-user pull-right" href="{{ page.user.profile_url }}">{{ page.user.profile_image_url }}</div>
+  {% else %}
+    <a class="icon-paw pull-right" href="{{ page.login_url }}"></a>
+  {% endif %}
 </nav>
