@@ -72,6 +72,7 @@
   left: 30px;
   width: 70%;
   bottom: -20px;
+  pointer-events: none;
 
   > svg {
     width: 100%;
@@ -97,10 +98,30 @@
   color: @c-blue;
   text-decoration: none;
   transition: color 0.3s ease;
-  display: block;
+  display: inline-block;
+  position: relative;
 
-  &:hover {
-    color: darken(@c-blue, 10);
+  &:before {
+    content: "";
+    position: absolute;
+    transition: left .3s ease, right .3s ease;
+    left: 50%;
+    right: 50%;
+    height: 1px;
+    bottom: 0;
+    background-color: @c-blue;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    left: -15px;
+    top: 20px;
+    background-color: #209ADC;
+    transform: rotate(25deg);
+    transition: width .3s ease;
   }
 }
 
@@ -132,9 +153,10 @@
     background-color: @c-black;
   }
 
-  &:hover {
+  &:hover,
+  &.current-menu-item {
     &:before {
-      border-color: @c-blue;
+      border-color: @c-blue
     }
   }
 
@@ -155,6 +177,22 @@
    .main_menu__link:first-of-type {
      margin-bottom: 5px;
    }
+
+   .main_menu__link:after {
+     display: none;
+   }
+  }
+}
+
+.current-menu-item > .main_menu__link,
+.main_menu__link:hover {
+  &:before {
+    left: 0;
+    right: 0;
+  }
+
+  &:after {
+    width: 16px;
   }
 }
 
