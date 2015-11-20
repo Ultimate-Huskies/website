@@ -1,6 +1,6 @@
 run = ($slides) ->
   changeTime = 5000
-  mainOffset = $('.main').offset().top
+  mainOffset = $('main').offset().top
   $body = $('body')
   $slideshow = $('.slideshow')
 

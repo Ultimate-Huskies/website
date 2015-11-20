@@ -7,7 +7,6 @@
 
 {% block content %}
   <section class="section">
-    <!-- <hr class="section__triangle" /> -->
     <div class="logo__wrapper">
       <svg>
         <use xlink:href="#logo-font" width="60%" height="60%" x="21.5%" y="41.5%"></use>
@@ -20,8 +19,8 @@
       {{ post_short(last_post) }}
     {% endfor %}
   </section>
+
   <section class="section section--inverse">
-    <!-- <hr class="section__triangle" /> -->
     <h1 class="section__title">{{ __('Appointments', 'huskies') }}</h1>
     {% for appointment in appointments %}
       {{ appointment.get_event_markup('list', 1, 1) }}

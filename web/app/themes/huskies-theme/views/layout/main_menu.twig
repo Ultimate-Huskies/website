@@ -1,14 +1,16 @@
 <div class="main_menu__overlay"></div>
-<div class="main_menu">
-  <a href="{{ site.url }}" class="main_menu__logo">
-    <svg>
-      <use xlink:href="#logo-font" width="60%" height="60%" x="21.5%" y="41.5%"></use>
-      <use class="main_menu__logo--husky" xlink:href="#logo-husky" width="90%" height="90%" x="-14%" y="0%"></use>
-    </svg>
-  </a>
+<nav class="main_menu">
   <ul class="main_menu__items">
     <li class="main_menu__item main_menu__item--seperate">
-      <a class="main_menu__link" href="{{ function('wp_login_url', function('get_permalink')) }}"> {{ __('Login', 'huskies') }} </a>
+      {% if page.user.logged_in %}
+        <div class="main_menu__user">{{ page.user.profile_image_url }}</div>
+        <a class="main_menu__link" href="{{ page.user.profile_url }}"> {{ page.user.name }} </a>
+        <a class="main_menu__link" href="{{ page.logout_url }}"> {{ __('Logout', 'huskies') }} </a>
+      {% else %}
+        <div class="main_menu__user"><img src="{{ site.theme.link }}/images/user.svg" alt="not logged in user" /></div>
+        <a class="main_menu__link" href="{{ page.login_url }}"> {{ __('Login', 'huskies') }} </a>
+        <a class="main_menu__link" href="{{ page.register_url }}"> {{ __('Register', 'huskies') }} </a>
+      {% endif %}
     </li>
     {% for item in menu.get_items %}
       <li class="main_menu__item {{ item.classes | join(' ') }}">
@@ -16,4 +18,7 @@
       </li>
     {% endfor %}
   </ul>
-</div>
+  <a href="{{ site.url }}" class="main_menu__logo">
+    <svg><use xlink:href="#logo-font" width="100%" height="100%"></use></svg>
+  </a>
+</nav>

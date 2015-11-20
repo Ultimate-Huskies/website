@@ -11,7 +11,7 @@ run = ($main, $header, $body) ->
 $ ->
   $header = $('.header__mobile')
   $body = $('body')
-  $main = $('.main')
+  $main = $('main')
 
   $(window).on 'scroll', run.bind(@, $main, $header, $body)
   $(window).on 'resize', run.bind(@, $main, $header, $body)

@@ -10,7 +10,6 @@ run = ($main, $menu, $body) ->
   bodyTop = $body.scrollTop()
   actualBottom = bodyTop + $menu.height()
 
-  console.log 'scrolling', top, bottom, bodyTop, actualBottom
   if bodyTop > top
     if actualBottom >= bottom
       $menu.removeClass CLASS
@@ -23,7 +22,7 @@ run = ($main, $menu, $body) ->
 
 $ ->
   $menu = $('.main_menu')
-  $main = $('.main')
+  $main = $('main')
   $body = $('body')
 
   $(window).on 'scroll', run.bind(@, $main, $menu, $body)

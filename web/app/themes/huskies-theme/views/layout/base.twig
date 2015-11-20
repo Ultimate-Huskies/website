@@ -26,17 +26,17 @@
   </head>
   <body class="{{ body_class }}" id="skrollr-body">
     <div class="container">
-      <header class="header">
+      <header>
         {% include 'layout/header.twig' %}
         {% block header %}{% endblock %}
       </header>
 
-      <main class="main">
+      <main>
         {% include 'layout/main_menu.twig' %}
         {% block content %}{% endblock %}
       </main>
 
-      <footer class="footer">
+      <footer>
         {% include 'layout/footer.twig' %}
       </footer>
     </div>
