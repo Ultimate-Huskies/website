@@ -14,7 +14,7 @@ function add_to_context($data){
       'logged_in' => is_user_logged_in(),
       'name' => TimberHelper::function_wrapper('bbp_current_user_name'),
       'profile_url' => TimberHelper::function_wrapper('bbp_get_user_profile_url', array(bbp_get_current_user_id())),
-      'profile_image_url' => TimberHelper::function_wrapper('bbp_get_current_user_avatar', array(50)), 
+      'profile_image_url' => TimberHelper::function_wrapper('bbp_get_current_user_avatar', array(50)),
     ),
   );
 

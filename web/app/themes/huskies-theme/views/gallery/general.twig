@@ -1,0 +1,9 @@
+<ul class="gallery">
+  {% for index, item in items %}
+    <li class="gallery__item">
+      <a href="{{ item.url.original }}" class="gallery__image">
+        <img src="{{ item.url.thumbnail }}" alt="gallery image {{ item.title }}" />
+      </a>
+    </li>
+  {% endfor %}
+</ul>

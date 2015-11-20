@@ -29,8 +29,8 @@ add_action('after_setup_theme', 'add_theme_supports');
 # add styles to theme
 function enqueue_styles() {
   wp_register_style('normalize', VENDOR_PATH.'/normalize.css/normalize.css');
-  wp_register_style('gallery', VENDOR_PATH.'/photobox/photobox/photobox.css', array('normalize'));
-  wp_register_style('main_style', THEMEROOT.'/styles/compiled.css', array('gallery'));
+  wp_register_style('gallery', VENDOR_PATH.'/photobox/photobox/photobox.css');
+  wp_register_style('main_style', THEMEROOT.'/styles/compiled.css', array('gallery', 'normalize'));
 
   wp_enqueue_style('main_style');
 }

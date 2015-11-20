@@ -56,7 +56,12 @@ function gallery($fist, $attr) {
       'image' => wp_get_attachment_image($idAttachment, (is_page_template("page-front.php") ? 'full' : $size)),
       'title' => $attachment->post_title,
       'excerpt' => $attachment->post_excerpt,
-      'url' => wp_get_attachment_url($idAttachment)
+      'url' => array(
+        'original' => wp_get_attachment_url($idAttachment),
+        'thumbnail' => wp_get_attachment_image_src($idAttachment, 'thumbnail')[0],
+        'medium' => wp_get_attachment_image_src($idAttachment, 'medium')[0],
+        'large' => wp_get_attachment_image_src($idAttachment, 'large')[0]
+      )
     );
   }
 
