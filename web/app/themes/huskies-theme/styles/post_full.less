@@ -1,3 +1,65 @@
 .post_full {
   .maxwidth();
+
+  h1, h2, h3 {
+    color: @c-blue;
+    font-family: @f-highlight;
+    font-weight: @fw-normal;
+    margin-bottom: 15px;
+  }
+
+  h1 {
+    font-size: @fs-xxxl;
+  }
+
+  h2 {
+    font-size: @fs-xxl;
+  }
+
+  h3 {
+    font-size: @fs-xl;
+  }
+
+  p {
+    font-family: @f-normal;
+    font-weight: @fw-normal;
+    line-height: 1.8;
+    font-size: @fs-l;
+    margin-bottom: 50px;
+
+    strong {
+      color: @c-blue;
+      font-family: @f-highlight;
+      font-size: @fs-xl;
+      font-weight: @fw-normal;
+    }
+  }
+
+  blockquote {
+    border-left: 3px solid @c-blue;
+    margin: 40px 0;
+    padding: 10px 0 10px 40px;
+
+    > p {
+      font-family: @f-highlight;
+      font-weight: @fw-normal;
+      font-size: @fs-xxl;
+      margin: 0;
+    }
+  }
+
+  a {
+    color: @c-blue;
+    text-decoration: none;
+    transition: color .3s ease;
+
+    &:hover {
+      color: darken(@c-blue, 15);
+    }
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
 }

@@ -12,5 +12,6 @@ $args = array(
   )
 );
 $context['last_posts'] = Timber::get_posts(new WP_Query($args));
+$context['headline'] = 'Posts';
 
 Timber::render('page/blog.twig', $context);
