@@ -1,0 +1,20 @@
+{% extends "layout/base.twig" %}
+
+{% block header %}
+  <div class="slideshow slideshow--no-images">
+    <h1 class="slideshow__title">{{ post.title }}</h1>
+    <div class="slideshow__desc">
+      <time>{{ post.display_date }}</time>
+      {{ __('by', 'huskies') }}
+      {{ post.author }}
+    </div>
+  </div>
+{% endblock %}
+
+{% block content %}
+<section class="section">
+  <article class="post-full {{ post.class }}">
+    {{ post.content }}
+  </article>
+</section>
+{% endblock %}

@@ -11,4 +11,4 @@ $context['pagination'] = Timber::get_pagination();
 $title = single_cat_title('', false);
 $context['headline'] = isset($title) ? $title : 'Blog';
 
-Timber::render('index.twig', $context);
+Timber::render('post/index.twig', $context);
