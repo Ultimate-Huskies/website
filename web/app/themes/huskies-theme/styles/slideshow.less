@@ -5,7 +5,6 @@
   left: 0;
   top: 0;
   width: 100%;
-  z-index: -1;
 }
 
 .slideshow__item {
@@ -27,6 +26,12 @@
   }
 }
 
+.slideshow__link {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
 .slideshow--no-images {
   background-color: @c-blue;
   height: @height-header / 2.5;
@@ -36,8 +41,19 @@
   position: absolute;
   font-size: @fs-xxxl;
   bottom: 50px;
-  left: 0;
-  right: 0;
+  left: 20px;
+  right: 20px;
   margin: auto;
   color: @c-white;
+  line-height: 1;
+}
+
+.slideshow__desc {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  text-align: center;
+  font-size: @fs-xl;
+  color: @c-black;
+  font-family: @f-highlight;
 }

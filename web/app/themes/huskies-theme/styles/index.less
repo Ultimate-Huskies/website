@@ -8,6 +8,11 @@
 
 * {
   box-sizing: border-box;
+
+  &::selection {
+    background-color: @c-blue;
+    color: @c-white;
+  }
 }
 
 html, body, ul, h1, h2 {
@@ -53,14 +58,26 @@ html, body {
 .logo__wrapper {
   height: 250px;
   text-align: center;
-
-  @media @tablet {
-    display: none;
-  }
+  color: @c-black;
 }
 
 main {
   position: relative;
+}
+
+.logo {
+  fill: currentColor;
+  stroke-opacity: 0;
+
+  .logo__tower {
+    fill: @c-white;
+    stroke: @c-blue;
+    stroke-opacity: 1;
+  }
+
+  .logo__sub-headline {
+    fill: @c-blue;
+  }
 }
 
 @import "main_menu";

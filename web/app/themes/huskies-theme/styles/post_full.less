@@ -1,4 +1,4 @@
-.post_full {
+.post-full {
   .maxwidth();
 
   h1, h2, h3 {
@@ -33,6 +33,8 @@
       font-size: @fs-xl;
       font-weight: @fw-normal;
     }
+
+    .clear;
   }
 
   blockquote {
@@ -59,7 +61,13 @@
   }
 
   img {
-    width: 100%;
+    max-width: 100%;
+    margin: 10px;
     height: auto;
+  }
+
+  .alignleft {
+    float: left;
+    margin-right: auto;
   }
 }

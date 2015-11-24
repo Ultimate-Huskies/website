@@ -3,8 +3,12 @@ run = ($slides) ->
   mainOffset = $('main').offset().top
   $body = $('body')
   $slideshow = $('.slideshow')
+  $pbOverlay = $('#pbOverlay')
 
   hide = (index) =>
+    #check if photobox is shown, if so don't change
+    return setTimeout hide.bind(@, index), changeTime if $pbOverlay.hasClass 'show'
+
     # check if the slideshow is out of visibility for the user, if so don't change
     return setTimeout hide.bind(@, index), changeTime if mainOffset < $body.scrollTop()
 
@@ -19,4 +23,16 @@ run = ($slides) ->
 
 $ ->
   $slides = $('.slideshow__item')
-  run $slides if $slides.length
+  $slideshow = $('.slideshow')
+
+  return unless $slides.length
+
+  run $slides
+
+  options = {
+    thumbs: false
+    zoomable: false
+    history: false
+  }
+
+  $slideshow.photobox '.slideshow__item a', options

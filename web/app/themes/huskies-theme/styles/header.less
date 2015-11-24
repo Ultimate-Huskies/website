@@ -38,10 +38,6 @@ header {
       border-radius: 50%;
     }
   }
-
-  @media @tablet {
-    display: none;
-  }
 }
 
 .header__mobile-logo {
@@ -56,6 +52,7 @@ header {
   opacity: 0;
   visibility: hidden;
   transition: visibility .3s ease, opacity .3s ease;
+  color: @c-black;
 
   > svg {
     height: 100%;

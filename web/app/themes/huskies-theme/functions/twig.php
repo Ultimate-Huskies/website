@@ -9,10 +9,10 @@ function add_to_twig($twig) {
 function humanize_type($text) {
   switch (strtolower($text)) {
     case 'gallery':
-      return  __('PHOTOS', 'huskies');
+      return  __('photos', 'huskies');
     case false:
     case 'standard':
-      return __('POST', 'huskies');
+      return __('report', 'huskies');
     default:
       return $text;
   }

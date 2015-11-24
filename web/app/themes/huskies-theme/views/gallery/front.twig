@@ -1,5 +1,8 @@
 <ul class="slideshow">
   {% for index, item in items %}
-    <li class="slideshow__item {{ index == 0 ? 'slideshow__item--visible' : '' }}" style="background-image: url('{{ item.url.original }}');"></li>
+  <li class="slideshow__item {{ index == 0 ? 'slideshow__item--visible' : '' }}" style="background-image: url('{{ item.url.original }}');">
+    <a href="{{ item.url.original }}" class="slideshow__link">
+    </a>
+  </li>
   {% endfor %}
 </ul>
