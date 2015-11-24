@@ -12,5 +12,14 @@
     {% for post in posts %}
       {{ post_short(post) }}
     {% endfor %}
+
+    <nav class="pagination">
+      {% if pagination.next %}
+        <a href="{{ pagination.next.link }}" class="pagination__link button button--primary">< {{ __('Older posts', 'huskies') }}</a>
+      {% endif %}
+      {% if pagination.prev %}
+        <a href="{{ pagination.prev.link }}" class="pagination__link button button--primary">{{ __('Newer posts', 'huskies') }} ></a>
+      {% endif %}
+    </nav>
   </section>
 {% endblock %}

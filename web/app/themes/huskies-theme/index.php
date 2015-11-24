@@ -6,6 +6,8 @@ if (!class_exists('Timber')) {
 
 $context = Timber::get_context();
 $context['posts'] = Timber::get_posts();
+$context['pagination'] = Timber::get_pagination();
+
 $title = single_cat_title('', false);
 $context['headline'] = isset($title) ? $title : 'Blog';
 
