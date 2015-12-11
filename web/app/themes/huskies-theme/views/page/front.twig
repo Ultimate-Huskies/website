@@ -2,7 +2,7 @@
 {% from 'macro.twig' import post_short %}
 
 {% block header %}
-  {{ page.content }}
+  {{ post.content }}
 {% endblock %}
 
 {% block content %}
@@ -23,7 +23,7 @@
   <section class="section section--inverse">
     <h1 class="section__title">{{ __('Appointments', 'huskies') }}</h1>
     {% for appointment in appointments %}
-      {{ appointment.get_event_markup('list', 1, 1) }}
+      {{ calendar.get_event_html(appointment[0]) }}
     {% endfor %}
   </section>
 {% endblock %}

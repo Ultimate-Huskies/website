@@ -9,6 +9,8 @@ function add_to_context($data){
     'login_url' => TimberHelper::function_wrapper('wp_login_url', array(get_permalink())),
     'logout_url' => TimberHelper::function_wrapper('wp_logout_url', array(home_url())),
     'register_url' => TimberHelper::function_wrapper('wp_registration_url'),
+    'date_format' => get_option('date_format'),
+    'time_format' => get_option('time_format'),
 
     'user' => array(
       'logged_in' => is_user_logged_in(),
