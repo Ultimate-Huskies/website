@@ -1,0 +1,27 @@
+@media @mobile {
+  .simcal-calendar-grid {
+    .simcal-calendar-head {
+      display: none;
+    }
+
+    .simcal-day {
+      display: none;
+    }
+
+    .simcal-day-has-events {
+      display: block;
+
+      .simcal-events {
+        display: block !important;
+      }
+
+      .simcal-events-dots {
+        display: none !important;
+      }
+
+      .simcal-tooltip-content {
+        pointer-events: none !important;
+      }
+    }
+  }
+}
