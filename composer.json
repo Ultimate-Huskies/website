@@ -27,6 +27,7 @@
     "johnpbloch/wordpress": "4.4.0",
     "wpackagist-plugin/bbPress": "^2.5",
     "wpackagist-plugin/bbpress-pencil-unread": "^1.0",
+    "wpackagist-plugin/gd-bbpress-attachments": "^2.3.1",
     "jarednova/timber": "^0.21.6",
     "wpackagist-plugin/google-calendar-events": "^3.0.8"
   },

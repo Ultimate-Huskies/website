@@ -1,0 +1,18 @@
+<p>{{ __('Maximum file size allowed is %s KiB', 'huskies')|format(forum.max_file_size) }}</p>
+<p>{{ __('Maximum amount of upload files is %s')|format(forum.max_to_upload) }}</p>
+
+<div class="bbp-attachments-form">
+  <div class="file-wrapper">
+    <input type="file" name="d4p_attachment[]" />
+    <span class="btn">{{ __('Choose', 'huskies') }}</span>
+    <span class="file_chosen uneditable-input"></span>
+  </div>
+</div>
+<a class="d4p-attachment-addfile" href="#">{{ __("Add another file", "huskies") }}</a>
+<div class="file-template">
+  <div class="file-wrapper">
+    <input type="file" name="d4p_attachment[]" />
+    <span class="btn">{{ __('Choose', 'huskies') }}</span>
+    <span class="file_chosen uneditable-input"></span>
+  </div>
+</div>

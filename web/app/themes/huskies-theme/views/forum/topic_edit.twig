@@ -1,0 +1,11 @@
+{% extends "layout/forum.twig" %}
+
+{% block forum_headline %}
+  {{ __('Now Editing "%s"', 'huskies')|format(topic.title) }}
+{% endblock %}
+
+{% block forum_content %}
+  <section class="section">
+    {% include 'forum/forms/topic.twig' %}
+  </section>
+{% endblock %}

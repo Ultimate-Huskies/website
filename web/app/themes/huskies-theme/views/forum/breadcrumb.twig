@@ -1,0 +1,10 @@
+<ul class="breadcrumb">
+  {% if not overview %}
+    <li class="breadcrumb__item">
+      <a href='{{ site.url }}/forum'>{{ __('Forums', 'huskies') }}</a>
+    </li>
+  {% endif %}
+  {% for index, item in items %}
+    <li class="breadcrumb__item">{{ item }}</li>
+  {% endfor %}
+</ul>

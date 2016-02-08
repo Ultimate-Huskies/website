@@ -1,0 +1,58 @@
+<h2>
+  {% if not topic is defined %}
+    {{ __('Create new Topic in "%s"', 'huskies')|format(forum.title) }}
+  {% endif %}
+</h2>
+
+{% if topic is defined and forum.is_closed %}
+  {{ __('This forum is marked as closed to new topics, however your posting capabilities still allow you to do so.', 'huskies') }}
+{% endif %}
+
+{% do action('bbp_template_notices') %}
+
+<form id="new-post" name="new-post" method="post" action="{{ topic is defined ? topic.link : forum.link }}">
+  <fieldset>
+    <label for="bbp_topic_title">{{ __('Name of the topic (Max. length %s)', 'huskies')|format(page.bbpress.title_max_length) }}</label>
+    <input type="text" id="bbp_topic_title" name="bbp_topic_title" value="{{ topic is defined ? topic.title }}" tabindex="{{ page.bbpress.tabindex }}" maxlength="{{ page.bbpress.title_max_length }}">
+  </fieldset>
+
+  <fieldset>
+    {{ page.bbpress.content_topic }}
+  </fieldset>
+
+  {% if page.bbpress.current_user.can.unfiltered_html %}
+    {{ __('Your account has the ability to post unrestricted HTML content.', 'huskies') }}
+  {% else %}
+    {{ __('You may use these HTML tags and attributes.', 'huskies') }}
+    {{ page.bbpress.allowed_tags }}
+  {% endif %}
+
+  <fieldset>
+    {% include 'forum/forms/upload.twig' %}
+  </fieldset>
+
+  {% if page.bbpress.current_user.can.moderate %}
+    <fieldset>
+      <label for="bbp_stick_topic_select">{{ __('Topic type', 'huskies') }}</label>
+      {{ page.bbpress.topic_types }}
+    </fieldset>
+  {% endif %}
+
+  {% if page.bbpress.subscription_active %}
+    <fieldset>
+      <label for="bbp_topic_subscription">{{ __('Notifications', 'huskies') }}</label>
+      <input name="bbp_topic_subscription" id="bbp_topic_subscription" type="checkbox" value="bbp_subscribe" {{ page.bbpress.topic_subscribed }} tabindex="{{ page.bbpress.tabindex }}" />
+      {% if topic is defined and topic.is_author_current_user %}
+        {{ __('Notify the author of follow-up replies via email', 'huskies')}}
+      {% else %}
+        {{ __('Notify me of follow-up replies via email', 'huskies') }}
+      {% endif %}
+    </fieldset>
+  {% endif %}
+
+  <fieldset>
+    <input type="submit" id="bbp_topic_submit" name="bbp_topic_submit" class="btn btn-success" value="{{ topic is defined ? __('Edit Topic', 'huskies') : __('Create Topic', 'huskies') }}" tabindex="{{ page.bbress.tabindex }}" />
+    <input type="reset" class="btn" value="{{ __('Clear', 'huskies') }}">
+    {{ page.bbpress.topic_additional_fields }}
+  </fieldset>
+</form>

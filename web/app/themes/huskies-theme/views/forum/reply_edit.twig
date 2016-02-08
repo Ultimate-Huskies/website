@@ -1,0 +1,11 @@
+{% extends "layout/forum.twig" %}
+
+{% block forum_headline %}
+  {{ reply.title }}
+{% endblock %}
+
+{% block forum_content %}
+  <section class="section">
+    {% include 'forum/forms/reply.twig' %}
+  </section>
+{% endblock %}

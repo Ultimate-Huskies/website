@@ -1,0 +1,27 @@
+{% extends "layout/forum.twig" %}
+
+{% block forum_headline %}
+  {{ __('Forums', 'huskies') }}
+{% endblock %}
+
+{% block forum_content %}
+  {% for index, forum in forums %}
+    <article class="post-short {{ forum.status }}">
+      <h2><a href="{{ forum.link }}">{{ forum.title }}</a></h2>
+      <p>{{ forum.content }}</p>
+      <p>{% do action('bbp_forum_row_actions') %}</p>
+      <p>
+        <span>{{ forum.topic_count }}</span>|
+        <span>{{ forum.reply_count }}</span>|
+        <a href="{{ forum.freshness_link }}">
+          {{ __('last update', 'huskies') }}
+          <span>{{ forum.freshness_time }}</span>
+          {{ __('in', 'huskies') }}
+          <span>{{ forum.freshness_topic }}</span>
+          {{ __('from', 'huskies') }}
+          <span>{{ forum.freshness_author }}</span>
+        </a>
+      </p>
+    </article>
+  {% endfor %}
+{% endblock %}
