@@ -1,46 +1,39 @@
-<h2>
+{% extends "forum/forms/base.twig" %}
+
+{% block form_header %}
   {% if not reply is defined %}
     {{ __('Reply To: %s', 'huskies')|format(topic.title) }}
   {% endif %}
-</h2>
+{% endblock %}
 
-{% if reply is defined and topic.is_closed %}
-  {{ __('This topic is marked as closed to new replies, however your posting capabilities still allow you to do so.', 'huskies') }}
-{% endif %}
+{% block form_infos %}
+  {% if reply is defined and topic.is_closed %}
+    {{ __('This topic is marked as closed to new replies, however your posting capabilities still allow you to do so.', 'huskies') }}
+  {% endif %}
+{% endblock %}
 
-{% do action('bbp_template_notices') %}
+{% block form_action %}
+  {{ reply is defined ? reply.link : topic.link }}
+{% endblock %}
 
-<form id="new-post" name="new-post" method="post" action="{{ reply is defined ? reply.link : topic.link }}">
+{% block form_inputs %}
   <fieldset>
-    {{ page.bbpress.content_reply }}
+    {% do action('bbpress_content', 'reply') %}
   </fieldset>
+{% endblock %}
 
-  {% if page.bbpress.current_user.can.unfiltered_html %}
-    {{ __('Your account has the ability to post unrestricted HTML content.', 'huskies') }}
+{% block form_subscription_text %}
+  {% if reply is defined and reply.is_author_current_user %}
+    {{ __('Notify the author of follow-up replies via email', 'huskies')}}
   {% else %}
-    {{ __('You may use these HTML tags and attributes.', 'huskies') }}
-    {{ page.bbpress.allowed_tags }}
+    {{ __('Notify me of follow-up replies via email', 'huskies') }}
   {% endif %}
+{% endblock %}
 
-  <fieldset>
-    {% include 'forum/forms/upload.twig' %}
-  </fieldset>
+{% block form_submit_value %}
+  {{ reply is defined ? __('Edit Reply', 'huskies') : __('Create Reply', 'huskies') }}
+{% endblock %}
 
-  {% if page.bbpress.subscription_active %}
-    <fieldset>
-      <label for="bbp_topic_subscription">{{ __('Notifications', 'huskies') }}</label>
-      <input name="bbp_topic_subscription" id="bbp_topic_subscription" type="checkbox" value="bbp_subscribe" {{ page.bbpress.topic_subscribed }} tabindex="{{ page.bbpress.tabindex }}" />
-      {% if reply is defined and reply.is_author_current_user %}
-        {{ __('Notify the author of follow-up replies via email', 'huskies')}}
-      {% else %}
-        {{ __('Notify me of follow-up replies via email', 'huskies') }}
-      {% endif %}
-    </fieldset>
-  {% endif %}
-
-  <fieldset>
-    <input type="submit" id="bbp_topic_submit" name="bbp_topic_submit" class="btn btn-success" value="{{ reply is defined ? __('Edit Reply', 'huskies') : __('Create Reply', 'huskies') }}" tabindex="{{ page.bbress.tabindex }}" />
-    <input type="reset" class="btn" value="{{ __('Clear', 'huskies') }}">
-    {{ page.bbpress.reply_additional_fields }}
-  </fieldset>
-</form>
+{% block form_footer %}
+  {% do action('bbpress_additional_fields', 'reply') %}
+{% endblock %}

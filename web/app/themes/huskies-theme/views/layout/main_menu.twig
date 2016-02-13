@@ -3,8 +3,8 @@
   <ul class="main_menu__items">
     <li class="main_menu__item main_menu__item--seperate">
       {% if page.user.logged_in %}
-        <div class="main_menu__user">{{ page.user.profile_image_url }}</div>
-        <a class="main_menu__link" href="{{ page.user.profile_url }}"> {{ page.user.name }} </a>
+        <div class="main_menu__user">{{ page.user.profile.image }}</div>
+        <a class="main_menu__link" href="{{ page.user.profile.url }}"> {{ page.user.profile.name }} </a>
         <a class="main_menu__link" href="{{ page.logout_url }}"> {{ __('Logout', 'huskies') }} </a>
       {% else %}
         <div class="main_menu__user"><img src="{{ site.theme.link }}/images/user.svg" alt="not logged in user" /></div>

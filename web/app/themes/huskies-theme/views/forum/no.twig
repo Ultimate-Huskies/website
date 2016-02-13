@@ -1,4 +1,4 @@
-{% extends "layout/base.twig" %}
+{% extends "layout/forum.twig" %}
 
 {% block header %}
   <div class="slideshow slideshow--no-images">
@@ -6,8 +6,6 @@
   </div>
 {% endblock %}
 
-{% block content %}
-<section class="section">
-Not logged in
-</section>
+{% block forum_content %}
+  {{ reason }}
 {% endblock %}

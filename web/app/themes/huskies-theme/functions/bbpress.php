@@ -1,4 +1,9 @@
 <?php
+require_once(FUNCTIONS_PATH.'/bbpress/base.php');
+require_once(FUNCTIONS_PATH.'/bbpress/forum.php');
+require_once(FUNCTIONS_PATH.'/bbpress/topic.php');
+require_once(FUNCTIONS_PATH.'/bbpress/reply.php');
+
 function custom_bbp_get_breadcrumb($trail, $crumbs) {
   $data = array(
     'items' => $crumbs,

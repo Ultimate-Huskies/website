@@ -9,24 +9,8 @@
 {% endblock %}
 
 {% block content %}
-  {% do action('bbp_template_notices') %}
-
   <section class="section">
-    {% if page.bbpress.allow_search %}
-        <form role="search" method="get" id="bbp-search-form" action="{{ page.bbpress.search_url }}">
-          <div>
-            <label class="screen-reader-text hidden" for="bbp_search">{{ __('Search for:', 'huskies') }}</label>
-            <input type="hidden" name="action" value="bbp-search-request" />
-            <input tabindex="{{ page.bbpress.tab_index }}" type="text" value="{{ page.bbpress.search_terms|escape }}" name="bbp_search" id="bbp_search" />
-            <input tabindex="{{ page.bbpress.tab_index }}" class="button" type="submit" id="bbp_search_submit" value="{{ __('Search', 'huskies') }}" />
-          </div>
-        </form>
-    {% endif %}
-
     {{ page.bbpress.breadcrumb }}
-    {{ page.bbpress.subscription_link }}
+    {% block forum_content %}{% endblock %}
   </section>
-
-  {% block forum_content %}{% endblock %}
-
 {% endblock %}

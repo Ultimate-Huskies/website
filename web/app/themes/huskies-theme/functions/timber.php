@@ -1,7 +1,7 @@
 <?php
 add_filter('timber_context', 'add_to_context');
 function add_to_context($data){
-  $data['menu'] = new TimberMenu('main_menu'); // This is where you can also send a Wordpress menu slug or ID
+  $data['menu'] = new TimberMenu('main_menu');
 
   $data['page'] = array(
     'permalink' => get_permalink(),
@@ -14,9 +14,18 @@ function add_to_context($data){
 
     'user' => array(
       'logged_in' => is_user_logged_in(),
-      'name' => TimberHelper::function_wrapper('bbp_current_user_name'),
-      'profile_url' => TimberHelper::function_wrapper('bbp_get_user_profile_url', array(bbp_get_current_user_id())),
-      'profile_image_url' => TimberHelper::function_wrapper('bbp_get_current_user_avatar', array(50)),
+      'profile' => array(
+        'url' => TimberHelper::function_wrapper('bbp_get_user_profile_url', array(bbp_get_current_user_id())),
+        'image' => TimberHelper::function_wrapper('bbp_get_current_user_avatar', array(50)),
+        'id' => TimberHelper::function_wrapper('bbp_get_current_user_id'),
+        'name' => TimberHelper::function_wrapper('bbp_current_user_name')
+      ),
+      'can' => array(
+        'access_topic_form' => TimberHelper::function_wrapper('bbp_current_user_can_access_create_topic_form'),
+        'access_reply_form' => TimberHelper::function_wrapper('bbp_current_user_can_access_create_reply_form'),
+        'unfiltered_html' => TimberHelper::function_wrapper('current_user_can', array('unfiltered_html')),
+        'moderate' => TimberHelper::function_wrapper('current_user_can', array('moderate')),
+      )
     ),
   );
 

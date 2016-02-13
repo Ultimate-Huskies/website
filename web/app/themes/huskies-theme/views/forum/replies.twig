@@ -6,7 +6,6 @@
 {% endblock %}
 
 {% block forum_content %}
-<section class="section">
   {{ pagination(pagination.pages) }}
   {{ reply_count }}
   <p>
@@ -17,7 +16,6 @@
     <article class="post-short {{ reply.status }} {{ reply.class }}">
       <h2><a href="{{ reply.author_link }}">{{ reply.author }}</a> <span>{{ reply.date }}</span></h2>
       <p>{{ reply.content }}</p>
-      {% do action('bbp_theme_after_reply_content') %}
       {{ reply.author_avatar }}
       <p>{{ reply.author_role }}</p>
       <p>{{ reply.author_topic_count }}</p>
@@ -25,6 +23,10 @@
       <p>{{ reply.admin_links }}</p>
     </article>
   {% endfor %}
-  {% include 'forum/forms/reply.twig' %}
-</section>
+
+  {% if page.user.can.access_reply_form %}
+    {% include 'forum/forms/reply.twig' %}
+  {% else %}
+    {{ __('The Topic "%s" is closed to new replies', 'huskies')|format(topic.title) }}
+  {% endif %}
 {% endblock %}

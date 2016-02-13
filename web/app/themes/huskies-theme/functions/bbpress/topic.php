@@ -1,5 +1,5 @@
 <?php
-class Topic extends TimberPost {
+class Topic extends Base {
 
   function voice_count() {
     return $this->_bbp_voice_count;
@@ -9,12 +9,32 @@ class Topic extends TimberPost {
     return $this->_bbp_reply_count;
   }
 
+  function freshness_link() {
+    return bbp_get_topic_last_reply_permalink($this->id);
+  }
+
+  function freshness_time() {
+    return bbp_get_topic_last_active_time($this->id);
+  }
+
+  function is_sticky() {
+    return bbp_is_topic_sticky($this->id);
+  }
+
+  function is_super_sticky() {
+    return bbp_is_topic_super_sticky($this->id);
+  }
+
+  function freshness_author($id = 0) {
+    return parent::freshness_author($this->_bbp_last_active_id);
+  }
+
   function pagination() {
     global $wp_rewrite;
-    if ( $wp_rewrite->using_permalinks() ) {
-      $base = trailingslashit( get_permalink( $this->id ) ) . user_trailingslashit( $wp_rewrite->pagination_base . '/%#%/' );
+    if ($wp_rewrite->using_permalinks()) {
+      $base = trailingslashit(get_permalink($this->id)).user_trailingslashit($wp_rewrite->pagination_base.'/%#%/');
     } else {
-      $base = add_query_arg( 'paged', '%#%', get_permalink( $this->id ) );
+      $base = add_query_arg('paged', '%#%', get_permalink($this->id));
     }
 
     $total = $this->reply_count();
@@ -35,23 +55,6 @@ class Topic extends TimberPost {
     return TimberHelper::paginate_links($pagination);
   }
 
-  function freshness_link() {
-    return bbp_get_topic_last_reply_permalink($this->id);
-  }
-
-  function freshness_time() {
-    return bbp_get_topic_last_active_time($this->id);
-  }
-
-  function freshness_author() {
-    $post_id = get_post_field('post_author', $this->_bbp_last_active_id);
-    return get_the_author_meta('display_name', $post_id);
-  }
-
-  function is_sticky() {
-    return bbp_is_topic_sticky($this->id);
-  }
-
   function admin_links() {
     if (!is_super_admin()) return '';
 
@@ -66,29 +69,13 @@ class Topic extends TimberPost {
     return join(' | ', $links);
   }
 
-  function is_closed() {
-    return $this->post_status === 'closed';
-  }
-
-  function is_author_current_user() {
-    return $this->post_author === bbp_get_current_user_id();
-  }
-
-  function subscribe_link() {
-    $args = array(
-      'user_id' => bbp_get_current_user_id(),
-      'topic_id' => $this->id,
-      'before' => '',
-      'subscribe' => __('Subscribe', 'huskies'),
-      'unsubscribe' => __('Unsubscribe', 'huskies')
-    );
-
-    return bbp_get_user_subscribe_link($args, 0, false);
+  function subscribe_link($args = array()) {
+    return parent::subscribe_link(array('topic_id' => $this->id));
   }
 
   function favorite_link() {
     $args = array(
-      'user_id' => bbp_get_current_user_id(),
+      'user_id' => parent::current_user(),
       'topic_id' => $this->id,
       'favorite' => __('Favorite', 'huskies'),
       'favorited' => __('Favorited', 'huskies')

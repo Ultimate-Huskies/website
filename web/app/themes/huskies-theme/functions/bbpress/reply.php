@@ -1,5 +1,5 @@
 <?php
-class Reply extends TimberPost {
+class Reply extends Base {
 
   function date($date_format = '') {
     return bbp_reply_post_date($this->id);
@@ -11,7 +11,6 @@ class Reply extends TimberPost {
 
   function admin_links() {
     if (!is_super_admin()) return '';
-
     return bbp_get_reply_admin_links(array('id' => $this->id, 'before' => '', 'after' => ''));
   }
 
@@ -33,9 +32,5 @@ class Reply extends TimberPost {
 
   function author_reply_count() {
     return bbp_get_user_reply_count_raw($this->post_author);
-  }
-
-  function is_author_current_user() {
-    return $this->post_author === bbp_get_current_user_id();
   }
 }
