@@ -1,18 +1,28 @@
+{% from 'macro.twig' import icon %}
+
 <div class="footer__img" style="background-image: url('{{ site.theme.link }}/images/berlin.svg');"></div>
 
 <h1 class="footer__headline">{{ __('Visit us in web', 'huskies') }}</h1>
 <ul class="footer-menu">
   <li class="footer-menu__item">
-    <a href="http://ultimatecentral.com/de_DE/t/huskies" class="icon-ultimate-central"></a>
+    <a href="http://ultimatecentral.com/de_DE/t/huskies">
+      {{ icon('ultimate-central') }}
+    </a>
   </li>
   <li class="footer-menu__item">
-    <a href="https://de-de.facebook.com/Ultimate-Huskies-Berlin-119812154765363" class="icon-facebook"></a>
+    <a href="https://de-de.facebook.com/Ultimate-Huskies-Berlin-119812154765363">
+      {{ icon('facebook') }}
+    </a>
   </li>
   <li class="footer-menu__item">
-    <a href="https://github.com/Ultimate-Huskies" class="icon-github"></a>
+    <a href="https://github.com/Ultimate-Huskies">
+      {{ icon('github') }}
+    </a>
   </li>
   <li class="footer-menu__item">
-    <a href="mailto:info@ultimate-huskies.de" class="icon-mail"></a>
+    <a href="mailto:info@ultimate-huskies.de">
+      {{ icon('mail') }}
+    </a>
   </li>
 </ul>
 

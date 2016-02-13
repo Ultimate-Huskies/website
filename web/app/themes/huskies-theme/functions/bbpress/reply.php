@@ -2,7 +2,7 @@
 class Reply extends Base {
 
   function date($date_format = '') {
-    return bbp_reply_post_date($this->id);
+    return bbp_get_reply_post_date($this->id);
   }
 
   function content($page = 0) {

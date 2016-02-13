@@ -1,13 +1,17 @@
 @charset "UTF-8";
 
-@import "_variables";
-@import "_mixins";
-@import "_fonts";
-@import "_typography";
-@import "_buttons";
+@import "common/variables";
+@import "common/mixins";
+@import "common/typography";
+@import "common/buttons";
 
 * {
   box-sizing: border-box;
+
+  &:before,
+  &:after {
+    box-sizing: border-box;
+  }
 
   &::selection {
     background-color: @c-blue;
@@ -26,6 +30,15 @@ html, body {
   color: @c-black;
   font-size: 75%;
   min-width: 300px;
+}
+
+.icon {
+  height: 32px;
+  width: 32px;
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentColor;
+  transition: fill .3s ease;
 }
 
 .container {

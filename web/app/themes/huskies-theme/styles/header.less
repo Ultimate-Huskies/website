@@ -17,12 +17,11 @@ header {
   background-color: transparent;
   box-shadow: none;
 
-  > [class^="icon-"] {
-    .icon(@c-white);
-    font-size: 30px;
-    line-height: 60px;
+  > .header__links {
+    .icon_link(@c-white);
     margin: 0 5px;
     text-decoration: none;
+    line-height: 44px;
   }
 
   .icon-custom-user {
@@ -69,7 +68,7 @@ header {
     visibility: visible;
   }
 
-  *[class^='icon-'] {
-    .icon(@c-black);
+  .header__links {
+    .icon_link(@c-black);
   }
 }
