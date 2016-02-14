@@ -1,3 +1,5 @@
+{% from 'macro.twig' import icon %}
+
 <!DOCTYPE html>
 <!--[if lt IE 7]><html class="no-js ie ie6 lt-ie9 lt-ie8 lt-ie7" {{ site.language_attributes }}> <![endif]-->
 <!--[if IE 7]><html class="no-js ie ie7 lt-ie9 lt-ie8" {{ site.language_attributes }}> <![endif]-->
@@ -27,7 +29,20 @@
   <body class="{{ body_class }}">
     <div class="container">
       <header>
-        {% include 'layout/header.twig' %}
+        <nav class="header__mobile clear">
+          <span class="header__links pull-left main_menu__toggle">{{ icon('menu') }}</span>
+          <a href="{{ site.url }}" class="header__mobile-logo">
+            <svg><use xlink:href="#logo-font" width="100%" height="100%"></use></svg>
+          </a>
+          {% if page.user.logged_in %}
+            <div class="header__additional-actions additional-actions">
+              {% block header_actions %}{% endblock %}
+            </div>
+            <a class="icon-custom-user pull-right" href="{{ page.user.profile.url }}">{{ page.user.profile.image }}</a>
+          {% else %}
+            <a class="header__links pull-right" href="{{ page.login_url }}">{{ icon('paw') }}</a>
+          {% endif %}
+        </nav>
         {% block header %}{% endblock %}
       </header>
 

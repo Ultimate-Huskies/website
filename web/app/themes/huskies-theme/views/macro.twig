@@ -1,9 +1,21 @@
+{% macro icon(name) %}
+  <svg class="icon icon--{{ name }}"><use xlink:href="#icon-{{ name }}"></use></svg>
+{% endmacro %}
+
+{% macro header_action(icon, link, class = "") %}
+  {% from _self import icon %}
+
+  <a class="additional-actions__link class" href="{{ link }}">{{ icon(icon) }}</a>
+{% endmacro %}
+
 {% macro post_short(post) %}
+  {% from _self import icon %}
+
   <article class="post_short {{ post.class }}" id="post-{{ post.ID }}">
     <h2 class="post_short__title clear">
       <a href="{{ post.permalink }}">{{ post.title }}</a>
       <div>
-        <strong>{{ function('get_post_format', post.ID)|humanize_type }}</strong>
+        <strong>{{ icon(function('get_post_format', post.ID)|humanize_type) }}</strong>
         <small>{{ post.display_date }}</small>
       </div>
     </h2>
@@ -21,8 +33,4 @@
       {% endif %}
     {% endfor %}
   </nav>
-{% endmacro %}
-
-{% macro icon(name) %}
-  <svg class="icon icon--{{ name }}"><use xlink:href="#icon-{{ name }}"></use></svg>
 {% endmacro %}

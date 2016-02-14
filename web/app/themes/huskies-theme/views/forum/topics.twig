@@ -1,5 +1,5 @@
 {% extends "layout/forum.twig" %}
-{% from 'macro.twig' import pagination %}
+{% from 'macro.twig' import pagination, header_action %}
 
 {% macro topic(topic) %}
   <pre>{{ dump(topic.is_sticky) }}</pre>
@@ -27,6 +27,10 @@
 
 {% block forum_headline %}
   {{ __('Topics', 'huskies') }}
+{% endblock %}
+
+{% block header_actions %}
+  {{ header_action('plus', '') }}
 {% endblock %}
 
 {% block forum_content %}
