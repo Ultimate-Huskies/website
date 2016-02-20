@@ -1,15 +1,15 @@
-CLASS = 'header__mobile--inverse'
+CLASS = 'header-nav--inverse'
 
 run = ($main, $header, $body) ->
   return unless $header.is(":visible")
 
-  if ($main.offset().top - 25) <= $body.scrollTop()
+  if ($main.offset().top - 50) <= $body.scrollTop()
     $header.addClass CLASS
   else
     $header.removeClass CLASS
 
 $ ->
-  $header = $('.header__mobile')
+  $header = $('.header-nav')
   $body = $('body')
   $main = $('main')
 

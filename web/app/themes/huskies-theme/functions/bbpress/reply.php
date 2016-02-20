@@ -6,7 +6,7 @@ class Reply extends Base {
   }
 
   function content($page = 0) {
-    return bbp_reply_content($this->id);
+    return bbp_get_reply_content($this->id);
   }
 
   function admin_links() {
@@ -18,12 +18,12 @@ class Reply extends Base {
     return bbp_reply_author_url($this->id);
   }
 
-  function author_avatar() {
-    return bbp_get_reply_author_avatar($this->id, 100);
+  function author_avatar($size = 100) {
+    return get_avatar(bbp_get_reply_author_id($this->id), $size, '', '', array('class' => 'reply__author-image'));
   }
 
   function author_role() {
-    return bbp_get_reply_author_role(array('reply_id' => $this->id));
+    return bbp_get_user_display_role(bbp_get_reply_author_id($this->id));
   }
 
   function author_topic_count() {

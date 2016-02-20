@@ -1,12 +1,12 @@
-header {
+.header-main {
   height: @height-header / 2.5;
 }
 
-.home header {
+.home .header-main {
   height: @height-header;
 }
 
-.header__mobile {
+.header-nav {
   position: fixed;
   height: 50px;
   top: 0;
@@ -16,19 +16,19 @@ header {
   transition: @transition-menu, background-color .3s ease, box-shadow .3s ease;
   background-color: transparent;
   box-shadow: none;
+}
 
-  > .header__links {
-    .icon_link(@c-white);
-    margin: 0 5px;
-    text-decoration: none;
-    line-height: 44px;
-  }
+.header-nav__links {
+  .icon_link(@c-white);
+  margin: 0 5px;
+  text-decoration: none;
+  line-height: 44px;
 
-  .icon-custom-user {
+  &.header-nav__links--user {
     width: 30px;
     height: 30px;
     filter: grayscale(100%);
-    margin-top: 12px;
+    margin-top: 10px;
 
     > img {
       width: 100%;
@@ -39,7 +39,7 @@ header {
   }
 }
 
-.header__mobile-logo {
+.header-nav__logo {
   position: absolute;
   top: 0;
   left: 0;
@@ -59,16 +59,45 @@ header {
   }
 }
 
-.header__mobile--inverse {
+.header-nav__addition-button {
+  position: absolute;
+  background-color: @c-blue;
+  top: calc(~"100% - 20px");
+  right: 50px;
+  color: @c-white;
+  border-radius: 50%;
+  padding: 5px;
+  box-shadow: 0 2px 5px fade(@c-black, 25%);
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility .3s ease, opacity .3s ease;
+
+  > .icon {
+    width: 30px;
+    height: 30px;
+    transition: transform .3s ease;
+  }
+
+  &:hover {
+    color: darken(@c-white, 10%);
+
+    > .icon {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.header-nav--inverse {
   background-color: @c-white;
   box-shadow:0 2px 5px fade(@c-black, 25%);
 
-  .header__mobile-logo {
+  .header-nav__logo,
+  .header-nav__addition-button {
     opacity: 1;
     visibility: visible;
   }
 
-  .header__links {
+  .header-nav__links {
     .icon_link(@c-black);
   }
 }

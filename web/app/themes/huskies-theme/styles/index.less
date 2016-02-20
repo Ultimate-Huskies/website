@@ -1,9 +1,9 @@
 @charset "UTF-8";
 
-@import "common/variables";
-@import "common/mixins";
-@import "common/typography";
-@import "common/buttons";
+@import "variables";
+@import "mixins";
+@import "typography";
+@import "buttons";
 
 * {
   box-sizing: border-box;
@@ -28,8 +28,26 @@ html, body {
   font-family: @f-normal;
   font-weight: @fw-normal;
   color: @c-black;
-  font-size: 75%;
+  font-size: 80%;
   min-width: 300px;
+
+  @media @from-tablet {
+    font-size: 90%;
+  }
+
+  @media @from-desktop {
+    font-size: 100%;
+  }
+}
+
+a {
+  color: @c-blue;
+  text-decoration: none;
+  transition: color .3s ease;
+
+  &:hover {
+    color: darken(@c-blue, 10%);
+  }
 }
 
 .icon {
@@ -103,3 +121,6 @@ main {
 @import "post_short";
 @import "post_full";
 @import "footer";
+@import "breadcrumb";
+@import "forum";
+@import "reply";

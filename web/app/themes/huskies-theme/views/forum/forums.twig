@@ -1,26 +1,26 @@
 {% extends "layout/forum.twig" %}
+{% from 'macro.twig' import icon %}
 
-{% block forum_headline %}
+{% block forum_title %}
   {{ __('Forums', 'huskies') }}
 {% endblock %}
 
 {% block forum_content %}
-  {% for index, forum in forums %}
-    <article class="post-short {{ forum.status }}">
-      <h2><a href="{{ forum.link }}">{{ forum.title }}</a></h2>
-      <p>{{ forum.content }}</p>
-      <p>{% do action('bbp_forum_row_actions') %}</p>
-      <p>
-        <span>{{ forum.topic_count }}</span>|
-        <span>{{ forum.reply_count }}</span>|
-        <a href="{{ forum.freshness_link }}">
-          {{ __('last update', 'huskies') }}
-          <span>{{ forum.freshness_time }}</span>
-          {{ __('in', 'huskies') }}
-          <span>{{ forum.freshness_topic }}</span>
-          {{ __('from', 'huskies') }}
-          <span>{{ forum.freshness_author }}</span>
-        </a>
+  {% for forum in forums %}
+    <article class="forum-short forum-short--{{ forum.status }}">
+      <div class="forum-short__image forum-short__image--fake">
+        {{ forum.title|first }}
+      </div>
+      <h2 class="forum-short__title">
+        <a href="{{ forum.link }}">{{ forum.title }}</a>
+        <small>{{ forum.post_content }}</small>
+      </h2>
+      <p class="forum-short__meta">
+        {{ icon('topics') }}
+        {{ forum.topic_count }}
+        |
+        {{ icon('update') }}
+        {{ forum.freshness_time }}
       </p>
     </article>
   {% endfor %}

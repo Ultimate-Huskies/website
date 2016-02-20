@@ -1,17 +1,17 @@
 <?php
 class Topic extends Base {
 
-  function voice_count() {
-    return $this->_bbp_voice_count;
-  }
+  // function voice_count() {
+  //   return $this->_bbp_voice_count;
+  // }
 
   function reply_count() {
     return $this->_bbp_reply_count;
   }
 
-  function freshness_link() {
-    return bbp_get_topic_last_reply_permalink($this->id);
-  }
+  // function freshness_link() {
+  //   return bbp_get_topic_last_reply_permalink($this->id);
+  // }
 
   function freshness_time() {
     return bbp_get_topic_last_active_time($this->id);
@@ -27,6 +27,11 @@ class Topic extends Base {
 
   function freshness_author($id = 0) {
     return parent::freshness_author($this->_bbp_last_active_id);
+  }
+
+  function author_avatar($size = 50) {
+    $post_id = get_post_field('post_author', $this->id);
+    return get_avatar(get_the_author_meta('ID', $post_id), $size, '', '', array('class' => 'forum-short__image'));
   }
 
   function pagination() {

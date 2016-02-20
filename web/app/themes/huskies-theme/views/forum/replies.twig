@@ -1,32 +1,95 @@
 {% extends "layout/forum.twig" %}
-{% from 'macro.twig' import pagination %}
+{% from 'macro.twig' import pagination, header_top_link, icon %}
 
-{% block forum_headline %}
+{% block forum_title %}
   {{ __('Replies', 'huskies') }}
 {% endblock %}
 
+{% block header_top_link %}
+  {{ header_top_link('plus', '') }}
+{% endblock %}
+
+{% block forum_header %}
+  <section class="section section--inverse">
+    <header class="forum-header">
+      <div class="forum-header__breadcrumb">
+        {{ page.bbpress.breadcrumb }}
+      </div>
+      <div class="forum-header__infos">
+        <span class="pull-left">
+          <strong>{{ reply_count }}</strong>
+          {{ __('replies', 'huskies') }}
+        </span>
+        <span class="pull-right">
+          {{ topic.subscribe_link }}
+          |
+          {{ topic.favorite_link }}
+        </span>
+      </div>
+
+      {{ pagination(pagination.pages) }}
+    </header>
+  </section>
+{% endblock %}
+
 {% block forum_content %}
-  {{ pagination(pagination.pages) }}
-  {{ reply_count }}
-  <p>
-    {{ topic.subscribe_link }}
-    {{ topic.favorite_link }}
-  </p>
-  {% for index, reply in replies %}
-    <article class="post-short {{ reply.status }} {{ reply.class }}">
-      <h2><a href="{{ reply.author_link }}">{{ reply.author }}</a> <span>{{ reply.date }}</span></h2>
-      <p>{{ reply.content }}</p>
-      {{ reply.author_avatar }}
-      <p>{{ reply.author_role }}</p>
-      <p>{{ reply.author_topic_count }}</p>
-      <p>{{ reply.author_reply_count }}</p>
-      <p>{{ reply.admin_links }}</p>
+  {% for reply in replies %}
+    <article class="reply reply--{{ reply.status }}">
+      <div class="reply__author">
+        {{ reply.author_avatar(75) }}
+        {% if reply.author_role == 'Administrator' %}
+          <span class="reply__author-role">{{ icon('admin') }}</span>
+        {% endif %}
+        <p class="reply__author-counts">
+          <span>
+            {{ icon('topics') }}
+            {{ reply.author_topic_count }}
+          </span>
+          <span>
+            {{ icon('replies') }}
+            {{ reply.author_reply_count }}
+          </span>
+        </p>
+      </div>
+      <div class="reply__content-wrapper">
+        <p class="reply__admin-links">{{ reply.admin_links }}</p>
+        <h2 class="reply__title">
+          {{ reply.author_avatar(40) }}
+          <a href="{{ reply.author_link }}">{{ reply.author }}</a>
+          <small>{{ reply.date }}</small>
+        </h2>
+
+        <div class="reply__content">{{ reply.content }}</div>
+      </div>
     </article>
   {% endfor %}
+{% endblock %}
 
-  {% if page.user.can.access_reply_form %}
-    {% include 'forum/forms/reply.twig' %}
-  {% else %}
-    {{ __('The Topic "%s" is closed to new replies', 'huskies')|format(topic.title) }}
-  {% endif %}
+{% block forum_footer %}
+  <section class="section section--inverse">
+    <footer class="forum-footer">
+      {{ pagination(pagination.pages) }}
+
+      <div class="forum-header__breadcrumb">
+        {{ page.bbpress.breadcrumb }}
+      </div>
+      <div class="forum-header__infos">
+        <span class="pull-left">
+          <strong>{{ reply_count }}</strong>
+          {{ __('replies', 'huskies') }}
+        </span>
+        <span class="pull-right">
+          {{ topic.subscribe_link }}
+          |
+          {{ topic.favorite_link }}
+        </span>
+      </div>
+
+      {% if page.user.can.access_reply_form %}
+        {% include 'forum/forms/reply.twig' %}
+      {% else %}
+        {{ __('The Topic "%s" is closed to new replies', 'huskies')|format(topic.title) }}
+      {% endif %}
+    </footer>
+  </section>
 {% endblock %}

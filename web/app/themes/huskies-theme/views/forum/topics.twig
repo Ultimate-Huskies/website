@@ -1,59 +1,72 @@
 {% extends "layout/forum.twig" %}
-{% from 'macro.twig' import pagination, header_action %}
+{% from 'macro.twig' import pagination, header_top_link, topic %}
 
-{% macro topic(topic) %}
-  <pre>{{ dump(topic.is_sticky) }}</pre>
-  <pre>{{ dump(topic.is_super_sticky) }}</pre>
-  <pre>{{ dump(topic.post_status) }}</pre>
-  <article class="post-short {{ topic.status }} {{ topic.class }}">
-    <h2><a href="{{ topic.link }}">{{ topic.title }}</a></h2>
-    <p>{{ __('started by', 'huskies') }} {{ topic.author }}</p>
-    {{ pagination(topic.pagination) }}
-    <p>
-      <span>{{ topic.voice_count }}</span>|
-      <span>{{ topic.reply_count }}</span>|
-      <a href="{{ topic.freshness_link }}">
-        {{ __('last update', 'huskies') }}
-        <span>{{ topic.freshness_time }}</span>
-        {{ __('from', 'huskies') }}
-        <span>{{ topic.freshness_author }}</span>
-      </a>
-    </p>
-    <p>
-      {{ topic.admin_links }}
-    </p>
-  </article>
-{% endmacro %}
-
-{% block forum_headline %}
+{% block forum_title %}
   {{ __('Topics', 'huskies') }}
 {% endblock %}
 
-{% block header_actions %}
-  {{ header_action('plus', '') }}
+{% block header_top_link %}
+  {{ header_top_link('plus', '') }}
+{% endblock %}
+
+{% block forum_header %}
+  <section class="section section--inverse">
+    <header class="forum-header">
+      <div class="forum-header__breadcrumb">
+        {{ page.bbpress.breadcrumb }}
+      </div>
+      <div class="forum-header__infos">
+        <span class="pull-left">
+          <strong>{{ topic_count }}</strong>
+          {{ __('topics', 'huskies') }}
+        </span>
+        <span class="pull-right">{{ forum.subscribe_link }}</span>
+      </div>
+
+      {% if not sticky_topics|length > 0 %}
+        {{ pagination(pagination.pages) }}
+      {% endif %}
+    </header>
+  </section>
+
+  {% if sticky_topics|length > 0 %}
+    <section class="section section--inverse">
+      {% for index, topic in sticky_topics %}
+        {{ topic(topic, true) }}
+      {% endfor %}
+
+      {{ pagination(pagination.pages) }}
+    </section>
+  {% endif %}
 {% endblock %}
 
 {% block forum_content %}
-  {{ pagination(pagination.pages) }}
-  <p>
-    {{ __('total topics', 'huskies') }}
-    <strong>{{ topic_count }}</strong>
-  </p>
-  <p>
-    {{ forum.subscribe_link }}
-  </p>
-  {% do action('bbp_template_before_topics_loop') %}
-  {% for index, topic in sticky_topics %}
-    topic(topic)
-  {% endfor %}
-
   {% for index, topic in topics %}
-    topic(topic)
+    {{ topic(topic, false) }}
   {% endfor %}
+{% endblock %}
 
-  {% if page.user.can.access_topic_form %}
-    {% include 'forum/forms/topic.twig' %}
-  {% else %}
-    {{ __('The forum "%s" is closed to new topics and replies', 'huskies')|format(forum.title) }}
-  {% endif %}
+{% block forum_footer %}
+  <section class="section section--inverse">
+    <footer class="forum-footer">
+      {{ pagination(pagination.pages) }}
+      
+      <div class="forum-header__breadcrumb">
+        {{ page.bbpress.breadcrumb }}
+      </div>
+      <div class="forum-header__infos">
+        <span class="pull-left">
+          <strong>{{ topic_count }}</strong>
+          {{ __('topics', 'huskies') }}
+        </span>
+        <span class="pull-right">{{ forum.subscribe_link }}</span>
+      </div>
+
+      {% if page.user.can.access_topic_form %}
+        {% include 'forum/forms/topic.twig' %}
+      {% else %}
+        {{ __('The forum "%s" is closed to new topics and replies', 'huskies')|format(forum.title) }}
+      {% endif %}
+    </footer>
+  </section>
 {% endblock %}

@@ -4,7 +4,7 @@ require_once('forum_before.php');
 if (!bbp_user_can_view_forum())
   return Timber::render('forum/no.twig', array('reason' => __('No Access', 'huskies'), 'context' => $context));
 
-if (!bbp_has_topics(array('orderby' => '_bbp_last_active_time', 'show_stickies' => false)))
+if (!bbp_has_topics(array('orderby' => 'post_status meta_value', 'order' => 'DESC', 'show_stickies' => false)))
   return Timber::render('forum/no.twig', array('reason' => __('No Topics', 'huskies'), 'context' => $context));
 
 $context['pagination'] = Timber::get_pagination(bbpress()->topic_query->pagination_args);

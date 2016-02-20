@@ -28,20 +28,18 @@
   </head>
   <body class="{{ body_class }}">
     <div class="container">
-      <header>
-        <nav class="header__mobile clear">
-          <span class="header__links pull-left main_menu__toggle">{{ icon('menu') }}</span>
-          <a href="{{ site.url }}" class="header__mobile-logo">
+      <header class="header-main">
+        <nav class="header-nav clear">
+          <span class="header-nav__links pull-left main_menu__toggle">{{ icon('menu') }}</span>
+          <a href="{{ site.url }}" class="header-nav__logo">
             <svg><use xlink:href="#logo-font" width="100%" height="100%"></use></svg>
           </a>
           {% if page.user.logged_in %}
-            <div class="header__additional-actions additional-actions">
-              {% block header_actions %}{% endblock %}
-            </div>
-            <a class="icon-custom-user pull-right" href="{{ page.user.profile.url }}">{{ page.user.profile.image }}</a>
+            <a class="header-nav__links header-nav__links--user pull-right" href="{{ page.user.profile.url }}">{{ page.user.profile.image }}</a>
           {% else %}
-            <a class="header__links pull-right" href="{{ page.login_url }}">{{ icon('paw') }}</a>
+            <a class="header-nav__links pull-right" href="{{ page.login_url }}">{{ icon('paw') }}</a>
           {% endif %}
+          {% block header_top_link %}{% endblock %}
         </nav>
         {% block header %}{% endblock %}
       </header>
@@ -51,7 +49,7 @@
         {% block content %}{% endblock %}
       </main>
 
-      <footer>
+      <footer class="footer-main">
         {% include 'layout/footer.twig' %}
       </footer>
     </div>

@@ -2,8 +2,27 @@
   .maxwidth();
   display: flex;
   justify-content: center;
+  padding-top: 25px;
 }
 
 .pagination__link {
   margin-right: 10px;
+  padding: 5px 7px;
+
+  &:not(.pagination__link--placeholder) {
+    border: 1px solid @c-blue;
+    transition: background-color .3s ease, color .3s ease;
+    background-color: transparent;
+  }
+
+  &.pagination__link--current,
+  &:not(.pagination__link--placeholder):hover {
+    background-color: @c-blue;
+    color: @c-white;
+  }
+
+  &.pagination__link--placeholder {
+    font-size: @fs-l;
+    margin-top: -5px;
+  }
 }

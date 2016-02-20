@@ -1,0 +1,13 @@
+.breadcrumb {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  padding: 5px 0;
+}
+
+.breadcrumb__item {
+  &:not(:last-of-type):after {
+    content: '/';
+    margin: 0 5px;
+  }
+}

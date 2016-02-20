@@ -12,7 +12,7 @@
     "build:styles": "$npm_package_config_bin/lessc $npm_package_config_theme/styles/index.less > $npm_package_config_theme/styles/compiled.css --autoprefix='last 5 version'",
     "build": "npm run build:scripts && npm run build:styles",
     "watch:scripts": "DEBUG=onchange $npm_package_config_bin/onchange $npm_package_config_theme/scripts/**/*.coffee -- npm run build:scripts",
-    "watch:styles": "DEBUG=onchange $npm_package_config_bin/onchange $npm_package_config_theme/styles/**/*.less -- npm run build:styles",
+    "watch:styles": "DEBUG=onchange $npm_package_config_bin/onchange $npm_package_config_theme/styles/*.less -- npm run build:styles",
     "watch": "npm run watch:scripts & npm run watch:styles"
   },
   "repository": {

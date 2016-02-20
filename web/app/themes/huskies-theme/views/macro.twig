@@ -2,10 +2,10 @@
   <svg class="icon icon--{{ name }}"><use xlink:href="#icon-{{ name }}"></use></svg>
 {% endmacro %}
 
-{% macro header_action(icon, link, class = "") %}
+{% macro header_top_link(icon, link) %}
   {% from _self import icon %}
 
-  <a class="additional-actions__link class" href="{{ link }}">{{ icon(icon) }}</a>
+  <a class="header-nav__addition-button" href="{{ link }}">{{ icon(icon) }}</a>
 {% endmacro %}
 
 {% macro post_short(post) %}
@@ -24,13 +24,47 @@
 {% endmacro %}
 
 {% macro pagination(pages) %}
-  <nav class="pagination">
-    {% for page in pages %}
-      {% if page.link is defined %}
-        <a class="pagination__link" href="{{ page.link }}">{{ page.title }}</a>
-      {% else %}
-        <span class="pagination__link pagination--placeholder">{{ page.title }}</span>
-      {% endif %}
-    {% endfor %}
-  </nav>
+  {% if pages|length > 0 %}
+    <nav class="pagination">
+      {% for page in pages %}
+        {% if page.link is defined %}
+          <a class="pagination__link" href="{{ page.link }}">{{ page.title }}</a>
+        {% else %}
+          <span class="pagination__link  {{ 'current' in page.class ? 'pagination__link--current' }} {{ 'dots' in page.class ? 'pagination__link--placeholder' }}">{{ page.title }}</span>
+        {% endif %}
+      {% endfor %}
+    </nav>
+  {% endif %}
+{% endmacro %}
+
+{% macro topic(topic, sticky = false) %}
+  {% from _self import pagination, icon %}
+
+  <article class="forum-short forum-short--{{ topic.post_status }} {{ topic.is_sticky ? 'forum-short--sticky' }} {{ topic.is_super_sticky ? 'forum-short--super-sticky' }}">
+    {% if sticky and topic.is_super_sticky %}
+      <div class="forum-short__image forum-short__image--fake">{{ icon('super-sticky') }}</div>
+    {% elseif sticky and topic.is_sticky %}
+      <div class="forum-short__image forum-short__image--fake">{{ icon('sticky') }}</div>
+    {% elseif topic.post_status == 'closed' %}
+      <div class="forum-short__image forum-short__image--fake">{{ icon('closed') }}</div>
+    {% else %}
+      {{ topic.author_avatar }}
+    {% endif %}
+    <h2 class="forum-short__title">
+      <a href="{{ topic.link }}">{{ topic.title }}</a>
+      <small>
+        {{ __('started by', 'huskies') }}
+        {{ topic.author }}
+        {{ pagination(topic.pagination) }}
+      </small>
+    </h2>
+    <p class="forum-short__meta">
+      {{ icon('replies') }}
+      {{ topic.reply_count }}
+      |
+      {{ icon('update') }}
+      {{ topic.freshness_time }}
+      <span class="forum-short__admin-links">{{ topic.admin_links }}</span>
+    </p >
+  </article>
 {% endmacro %}

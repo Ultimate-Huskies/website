@@ -30,13 +30,22 @@ function enable_visual_editor($args = array()) {
 add_filter( 'bbp_after_get_the_content_parse_args', 'enable_visual_editor');
 
 function topic_pagination($args = array()) {
+  $args['mid_size'] = 2;
+  $args['end_size'] = 3;
   bbpress()->topic_query->pagination_args = $args;
   return $args;
 }
 add_filter('bbp_topic_pagination', 'topic_pagination');
 
 function reply_pagination($args = array()) {
+  $args['mid_size'] = 2;
+  $args['end_size'] = 3;
   bbpress()->reply_query->pagination_args = $args;
   return $args;
 }
 add_filter('bbp_replies_pagination', 'reply_pagination');
+
+function revision_log($log, $content) {
+  return $content;
+}
+add_filter('bbp_reply_append_revisions', 'revision_log', 100, 2);
