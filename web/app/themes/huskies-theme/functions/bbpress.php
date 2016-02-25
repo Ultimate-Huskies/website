@@ -49,3 +49,13 @@ function revision_log($log, $content) {
   return $content;
 }
 add_filter('bbp_reply_append_revisions', 'revision_log', 100, 2);
+
+function topic_type_dropdown($ob, $r) {
+  $ob = str_replace(
+    array('Normal', 'Super Sticky', 'Sticky'),
+    array(__('normal', 'huskies'), __('sticky', 'huskies'), __('super-sticky', 'huskies')),
+    $ob
+  );
+  return $ob;
+}
+add_filter('bbp_get_form_topic_type_dropdown', 'topic_type_dropdown', 100, 2);

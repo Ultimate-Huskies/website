@@ -1,24 +1,26 @@
 <?php
 class Topic extends Base {
 
-  // function voice_count() {
-  //   return $this->_bbp_voice_count;
-  // }
+  function max_file_size() {
+    global $gdbbpress_attachments;
+    return $gdbbpress_attachments->get_file_size(false, $this->_bbp_forum_id);
+  }
+
+  function max_to_upload() {
+    global $gdbbpress_attachments;
+    return $gdbbpress_attachments->get_max_files(false, $this->_bbp_forum_id);
+  }
 
   function reply_count() {
     return $this->_bbp_reply_count;
   }
-
-  // function freshness_link() {
-  //   return bbp_get_topic_last_reply_permalink($this->id);
-  // }
 
   function freshness_time() {
     return bbp_get_topic_last_active_time($this->id);
   }
 
   function is_sticky() {
-    return bbp_is_topic_sticky($this->id);
+    return bbp_is_topic_sticky($this->id, false);
   }
 
   function is_super_sticky() {
@@ -31,7 +33,7 @@ class Topic extends Base {
 
   function author_avatar($size = 50) {
     $post_id = get_post_field('post_author', $this->id);
-    return get_avatar(get_the_author_meta('ID', $post_id), $size, '', '', array('class' => 'forum-short__image'));
+    return get_avatar(get_the_author_meta('ID', $post_id), $size);
   }
 
   function pagination() {
@@ -67,7 +69,6 @@ class Topic extends Base {
       bbp_get_topic_edit_link(array('id' => $this->id)),
       bbp_get_topic_close_link(array('id' => $this->id)),
       bbp_get_topic_stick_link(array('id' => $this->id)),
-      bbp_get_topic_merge_link(array('id' => $this->id)),
       bbp_get_topic_trash_link(array('id' => $this->id))
     );
 

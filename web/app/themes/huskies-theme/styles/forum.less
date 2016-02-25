@@ -15,9 +15,19 @@
   display: flex;
   flex-wrap: wrap;
   padding: 0 0 50px 0;
+  transition: opacity .5s ease;
 
   &:not(:last-of-type) {
     border-bottom: 1px solid @c-blue;
+  }
+
+  &.forum-short--hidden,
+  &.forum-short--closed {
+    opacity: .5;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 
   @media @from-tablet {
@@ -35,7 +45,14 @@
   width: 50px;
   height: 50px;
   margin-right: 10px;
-  border-radius: 50%;
+
+  &[data-title] {
+    .title;
+  }
+
+  > img {
+    border-radius: 50%;
+  }
 
   &.forum-short__image--fake {
     background-color: @c-blue;
@@ -45,6 +62,7 @@
     align-items: center;
     justify-content: center;
     font-size: @fs-xl;
+    border-radius: 50%;
   }
 }
 

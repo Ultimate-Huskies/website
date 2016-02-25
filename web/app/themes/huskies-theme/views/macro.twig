@@ -37,24 +37,38 @@
   {% endif %}
 {% endmacro %}
 
-{% macro topic(topic, sticky = false) %}
-  {% from _self import pagination, icon %}
+{% macro forum_image_fake(name, text) %}
+  {% from _self import icon %}
+
+  <div class="forum-short__image forum-short__image--fake" data-title="{{ text }}">
+    {{ icon(name) }}
+  </div>
+{% endmacro %}
+
+{% macro topic(topic) %}
+  {% from _self import pagination, icon, forum_image_fake %}
 
   <article class="forum-short forum-short--{{ topic.post_status }} {{ topic.is_sticky ? 'forum-short--sticky' }} {{ topic.is_super_sticky ? 'forum-short--super-sticky' }}">
-    {% if sticky and topic.is_super_sticky %}
-      <div class="forum-short__image forum-short__image--fake">{{ icon('super-sticky') }}</div>
-    {% elseif sticky and topic.is_sticky %}
-      <div class="forum-short__image forum-short__image--fake">{{ icon('sticky') }}</div>
+    {% if topic.is_super_sticky %}
+      {{ forum_image_fake('super-sticky', __('super-sticky', 'huskies')) }}
+    {% elseif topic.is_sticky %}
+      {{ forum_image_fake('sticky', __('sticky', 'huskies')) }}
     {% elseif topic.post_status == 'closed' %}
-      <div class="forum-short__image forum-short__image--fake">{{ icon('closed') }}</div>
+      {{ forum_image_fake('closed', __('closed', 'huskies')) }}
     {% else %}
-      {{ topic.author_avatar }}
+      <div class="forum-short__image" data-title="{{ topic.author }}">
+        {{ topic.author_avatar }}
+      </div>
     {% endif %}
     <h2 class="forum-short__title">
       <a href="{{ topic.link }}">{{ topic.title }}</a>
       <small>
         {{ __('started by', 'huskies') }}
         {{ topic.author }}
+        {% if topic.is_super_sticky %}
+          {{ __('in', 'huskies') }}
+          {{ function('bbp_get_forum_title', topic.post_parent) }}
+        {% endif %}
         {{ pagination(topic.pagination) }}
       </small>
     </h2>
@@ -67,4 +81,25 @@
       <span class="forum-short__admin-links">{{ topic.admin_links }}</span>
     </p >
   </article>
+{% endmacro %}
+
+{% macro modal(id, title, content, footer = '') %}
+  {% from _self import icon %}
+
+  <div class="modal__wrapper" id="modal-{{ id }}">
+    <div class="modal">
+      <header class="modal__header">
+        <h2 class=modal__title"">{{ title }}</h2>
+        <button class="modal__close modal__close--button" type="button">{{ icon('plus') }}</button>
+      </header>
+
+      <main class="modal__content">
+        {{ content }}
+      </main>
+
+      <footer class="modal__footer">
+        {{ footer }}
+      </footer>
+    </div>
+  </div>
 {% endmacro %}

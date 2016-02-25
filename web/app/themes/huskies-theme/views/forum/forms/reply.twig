@@ -1,14 +1,10 @@
 {% extends "forum/forms/base.twig" %}
 
-{% block form_header %}
-  {% if not reply is defined %}
-    {{ __('Reply To: %s', 'huskies')|format(topic.title) }}
-  {% endif %}
-{% endblock %}
-
 {% block form_infos %}
-  {% if reply is defined and topic.is_closed %}
-    {{ __('This topic is marked as closed to new replies, however your posting capabilities still allow you to do so.', 'huskies') }}
+  {% if topic.is_closed %}
+    <p class="form__infos">
+      {{ __('This topic is marked as closed to new replies, however your posting capabilities still allow you to do so.', 'huskies') }}
+    </p>
   {% endif %}
 {% endblock %}
 
@@ -17,7 +13,7 @@
 {% endblock %}
 
 {% block form_inputs %}
-  <fieldset>
+  <fieldset class="form__section">
     {% do action('bbpress_content', 'reply') %}
   </fieldset>
 {% endblock %}

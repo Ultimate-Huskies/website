@@ -1,9 +1,14 @@
 <?php
 $context = Timber::get_context();
 
-if (!$context['page']['user']['logged_in']) {
-  Timber::render('forum/no.twig', array('reason' => __('Not logged In', 'huskies'), 'context' => $context));
+function abort($context, $reason) {
+  $context['reason'] = $reason;
+  Timber::render('forum/no.twig', $context);
   die();
+}
+
+if (!$context['page']['user']['logged_in']) {
+  abort($context, __('Not logged In', 'huskies'));
 }
 
 $context['page']['bbpress'] = array(

@@ -1,37 +1,44 @@
-<h2>
-  {% block form_header %}{% endblock %}
-</h2>
+{% from 'macro.twig' import icon %}
 
 {% block form_infos %}{% endblock %}
-{% do action('bbp_template_notices') %}
 
-<form method="post" action="{% block form_action %}{% endblock %}">
+<form method="post" action="{% block form_action %}{% endblock %}" class="form">
   {% block form_inputs %}{% endblock %}
 
-  {% if page.user.can.unfiltered_html %}
-    {{ __('Your account has the ability to post unrestricted HTML content.', 'huskies') }}
-  {% else %}
-    {{ __('You may use these HTML tags and attributes.', 'huskies') }}
-    {{ page.bbpress.form.allowed_tags }}
-  {% endif %}
+  <p class="form__infos">
+    {% if page.user.can.unfiltered_html %}
+      {{ __('Your account has the ability to post unrestricted HTML content.', 'huskies') }}
+    {% else %}
+      {{ __('You may use these HTML tags and attributes.', 'huskies') }}
+      {{ page.bbpress.form.allowed_tags }}
+    {% endif %}
+  </p>
 
-  <fieldset>
-    {% include 'forum/forms/upload.twig' %}
-  </fieldset>
-
-  {% if page.bbpress.form.subscriptions_active %}
-    <fieldset>
-      <label for="bbp_topic_subscription">{{ __('Notifications', 'huskies') }}</label>
-      <input name="bbp_topic_subscription" id="bbp_topic_subscription" type="checkbox" value="bbp_subscribe" {{ page.bbpress.form.topic_subscribed }} tabindex="{{ page.bbpress.form.tabindex }}" />
-      {% block form_subscription_text %}{% endblock %}
+  <div class="form__additional-sections">
+    <fieldset class="form__section">
+      <h3 class="form__section-headline">
+        {{ __('Uploads', 'huskies') }}
+        <button type="button" class="form__infos--trigger">{{ icon('info') }}</button>
+      </h3>
+      {% include 'forum/forms/upload.twig' %}
     </fieldset>
-  {% endif %}
 
-  {% block form_inputs_additional %}{% endblock %}
+    {% if page.bbpress.form.subscriptions_active %}
+      <fieldset class="form__section form__section--checkbox">
+        <h3 class="form__section-headline">{{ __('Notifications', 'huskies') }}</h3>
+        <label for="bbp_topic_subscription">
+          <input name="bbp_topic_subscription" id="bbp_topic_subscription" type="checkbox" value="bbp_subscribe" {{ page.bbpress.form.topic_subscribed }} tabindex="{{ page.bbpress.form.tabindex }}" />
+          {% block form_subscription_text %}{% endblock %}
+        </label>
+      </fieldset>
+    {% endif %}
 
-  <fieldset>
-    <input type="submit" id="bbp_topic_submit" name="bbp_topic_submit" class="btn btn-success" value="{% block form_submit_value %}{% endblock %}" tabindex="{{ page.bbress.tabindex }}" />
-    <input type="reset" class="btn" value="{{ __('Clear', 'huskies') }}">
+    {% block form_inputs_additional %}{% endblock %}
+  </div>
+
+  <fieldset class="form__section form__section--actions">
+    <input type="reset" class="button modal__close" value="{{ __('Close', 'huskies') }}">
+    <input type="submit" id="bbp_topic_submit" name="bbp_topic_submit" class="button button--primary" value="{% block form_submit_value %}{% endblock %}" tabindex="{{ page.bbress.tabindex }}" />
   </fieldset>
 
   {% block form_footer %}{% endblock %}

@@ -11,7 +11,18 @@ class Reply extends Base {
 
   function admin_links() {
     if (!is_super_admin()) return '';
-    return bbp_get_reply_admin_links(array('id' => $this->id, 'before' => '', 'after' => ''));
+
+    if (bbp_is_topic($this->id)) {
+      $topic = new Topic(array('id' => $this->_bbp_topic_id));
+      return $topic->admin_links();
+    }
+
+    $links = array(
+      bbp_get_reply_edit_link(array('id' => $this->id)),
+      bbp_get_reply_trash_link(array('id' => $this->id)),
+    );
+
+    return join(' | ', $links);
   }
 
   function author_link() {

@@ -4,14 +4,6 @@ class Base extends TimberPost {
     return $this->post_status === 'closed';
   }
 
-  function max_file_size() {
-    return $this->_gdbbatt_settings['max_file_size'];
-  }
-
-  function max_to_upload() {
-    return $this->_gdbbatt_settings['max_to_upload'];
-  }
-
   function subscribe_link($args = array()) {
     $defaults = array(
       'user_id' => $this->current_user(),
@@ -29,7 +21,7 @@ class Base extends TimberPost {
   }
 
   function is_author_current_user() {
-    return $this->post_author === parent::current_user();
+    return $this->post_author === $this->current_user();
   }
 
   protected function current_user() {

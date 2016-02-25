@@ -1,14 +1,10 @@
 {% extends "forum/forms/base.twig" %}
 
-{% block form_header %}
-  {% if not topic is defined %}
-    {{ __('Create new Topic in "%s"', 'huskies')|format(forum.title) }}
-  {% endif %}
-{% endblock %}
-
 {% block form_infos %}
-  {% if topic is defined and forum.is_closed %}
-    {{ __('This forum is marked as closed to new topics, however your posting capabilities still allow you to do so.', 'huskies') }}
+  {% if forum.is_closed %}
+    <p class="form__infos">
+      {{ __('This forum is marked as closed to new topics, however your posting capabilities still allow you to do so.', 'huskies') }}
+    </p>
   {% endif %}
 {% endblock %}
 
@@ -17,27 +13,31 @@
 {% endblock %}
 
 {% block form_inputs %}
-  <fieldset>
+  <fieldset class="form__section form__section--text-input">
+    <input type="text" id="bbp_topic_title" name="bbp_topic_title" value="{{ topic is defined ? topic.title }}" tabindex="{{ page.bbpress.form.tabindex }}" maxlength="{{ page.bbpress.form.title_max_length }}" required>
     <label for="bbp_topic_title">{{ __('Name of the topic (Max. length %s)', 'huskies')|format(page.bbpress.form.title_max_length) }}</label>
-    <input type="text" id="bbp_topic_title" name="bbp_topic_title" value="{{ topic is defined ? topic.title }}" tabindex="{{ page.bbpress.form.tabindex }}" maxlength="{{ page.bbpress.form.title_max_length }}">
   </fieldset>
 
-  <fieldset>
+  <fieldset class="form__section">
     {% do action('bbpress_content', 'topic') %}
   </fieldset>
 {% endblock %}
 
 {% block form_inputs_additional %}
   {% if page.user.can.moderate %}
-    <fieldset>
-      <label for="bbp_stick_topic_select">{{ __('Topic type', 'huskies') }}</label>
+    <fieldset class="form__section form__section--select">
+      <label for="bbp_stick_topic_select">
+        <h3 class="form__section-headline">{{ __('Topic Type', 'huskies') }}</h3>
+      </label>
       {{ page.bbpress.form.topic_types }}
     </fieldset>
   {% endif %}
 
   {% if topic is defined %}
-    <fieldset>
-      <label for="">{{ __('Forum', 'huskies') }}</label>
+    <fieldset class="form__section form__section--select">
+      <label for="bbp_forum_id">
+        <h3 class="form__section-headline">{{ __('Forum', 'huskies') }}</h3>
+      </label>
       {% do action('forum_dropdown') %}
     </fieldset>
   {% endif %}

@@ -1,13 +1,15 @@
 {% extends "layout/forum.twig" %}
-{% from 'macro.twig' import pagination, header_top_link, topic %}
+{% from 'macro.twig' import pagination, header_top_link, topic, modal %}
 
 {% block forum_title %}
   {{ __('Topics', 'huskies') }}
 {% endblock %}
 
-{% block header_top_link %}
-  {{ header_top_link('plus', '') }}
-{% endblock %}
+{% if page.user.can.access_topic_form %}
+  {% block header_top_link %}
+    {{ header_top_link('plus', '#modal') }}
+  {% endblock %}
+{% endif %}
 
 {% block forum_header %}
   <section class="section section--inverse">
@@ -29,10 +31,14 @@
     </header>
   </section>
 
-  {% if sticky_topics|length > 0 %}
+  {% if super_sticky_topics|length > 0 or sticky_topics|length > 0 %}
     <section class="section section--inverse">
+      {% for index, topic in super_sticky_topics %}
+        {{ topic(topic) }}
+      {% endfor %}
+
       {% for index, topic in sticky_topics %}
-        {{ topic(topic, true) }}
+        {{ topic(topic) }}
       {% endfor %}
 
       {{ pagination(pagination.pages) }}
@@ -42,7 +48,7 @@
 
 {% block forum_content %}
   {% for index, topic in topics %}
-    {{ topic(topic, false) }}
+    {{ topic(topic) }}
   {% endfor %}
 {% endblock %}
 
@@ -50,7 +56,7 @@
   <section class="section section--inverse">
     <footer class="forum-footer">
       {{ pagination(pagination.pages) }}
-      
+
       <div class="forum-header__breadcrumb">
         {{ page.bbpress.breadcrumb }}
       </div>
@@ -61,12 +67,12 @@
         </span>
         <span class="pull-right">{{ forum.subscribe_link }}</span>
       </div>
-
-      {% if page.user.can.access_topic_form %}
-        {% include 'forum/forms/topic.twig' %}
-      {% else %}
-        {{ __('The forum "%s" is closed to new topics and replies', 'huskies')|format(forum.title) }}
-      {% endif %}
     </footer>
   </section>
 {% endblock %}
+
+{% if page.user.can.access_topic_form %}
+  {% block modal %}
+    {{ modal('topic-form', __('Create new Topic in "%s"', 'huskies')|format(forum.title), include('forum/forms/topic.twig')) }}
+  {% endblock %}
+{% endif %}

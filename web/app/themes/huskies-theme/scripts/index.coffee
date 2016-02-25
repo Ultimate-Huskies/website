@@ -1,5 +1,7 @@
 require './slideshow'
 require './header'
+require './modal'
+require './form'
 
 $(document).ready ->
   $body = $('body')

@@ -1,0 +1,39 @@
+.title {
+  position: relative;
+
+  &:after {
+    content: attr(data-title);
+    position: absolute;
+    top: calc(~"100% + 10px");
+    left: calc(~"25% - 17px");
+    background-color: @c-black;
+    color: @c-white;
+    font-size: @fs-m;
+    padding: 10px;
+    transition: opacity .5s ease, visibility .5s ease;
+    opacity: 0;
+    visibility: hidden;
+    z-index: @z-top;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: calc(~"100% + 5px");
+    left: calc(~"50% - 10px");
+    border-bottom: 5px solid @c-black;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    transition: opacity .5s ease, visibility .5s ease;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &:hover {
+    &:after,
+    &:before {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
