@@ -5,7 +5,7 @@
 {% macro header_top_link(icon, link) %}
   {% from _self import icon %}
 
-  <a class="header-nav__addition-button" href="{{ link }}">{{ icon(icon) }}</a>
+  <a class="header-nav__addition-button modal__trigger" href="{{ link }}">{{ icon(icon) }}</a>
 {% endmacro %}
 
 {% macro post_short(post) %}
