@@ -14,7 +14,6 @@ $(document).ready ->
     $input.one 'change', (event) -> $trigger.text this.files[0].name
     $input.trigger 'click'
 
-
   $form.on 'click', '.form__upload--new-file', (event) ->
       event.stopImmediatePropagation();
       event.preventDefault();

@@ -37,7 +37,7 @@
           {% if page.user.logged_in %}
             <a class="header-nav__links header-nav__links--user pull-right" href="{{ page.user.profile.url }}">{{ page.user.profile.image }}</a>
           {% else %}
-            <a class="header-nav__links pull-right" href="{{ page.login_url }}">{{ icon('paw') }}</a>
+            <a class="header-nav__links pull-right modal__trigger" href="#modal-login-form">{{ icon('paw') }}</a>
           {% endif %}
           {% block header_top_link %}{% endblock %}
         </nav>
@@ -53,6 +53,12 @@
         {% include 'layout/footer.twig' %}
       </footer>
     </div>
+
+    {% if not page.user.logged_in %}
+      {% include 'layout/forms/login.twig' %}
+      {% include 'layout/forms/register.twig' %}
+      {% include 'layout/forms/lost_password.twig' %}
+    {% endif %}
 
     {% block modal %}{% endblock %}
 

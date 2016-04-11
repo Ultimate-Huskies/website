@@ -8,8 +8,8 @@
         <a class="main_menu__link" href="{{ page.logout_url }}"> {{ __('Logout', 'huskies') }} </a>
       {% else %}
         <div class="main_menu__user"><img src="{{ site.theme.link }}/images/user.svg" alt="not logged in user" /></div>
-        <a class="main_menu__link" href="{{ page.login_url }}"> {{ __('Login', 'huskies') }} </a>
-        <a class="main_menu__link" href="{{ page.register_url }}"> {{ __('Register', 'huskies') }} </a>
+        <a class="main_menu__link modal__trigger" href="#modal-login-form"> {{ __('Login', 'huskies') }} </a>
+        <a class="main_menu__link modal__trigger" href="#modal-register-form"> {{ __('Register', 'huskies') }} </a>
       {% endif %}
     </li>
     {% for item in menu.get_items %}

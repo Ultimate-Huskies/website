@@ -1,0 +1,13 @@
+{% from 'macro.twig' import icon, modal %}
+{% from _self import content, footer %}
+
+{{ modal('login-form', __('Login', 'huskies'), content(), footer()) }}
+
+{% macro content() %}
+  {% filter shortcodes %} [wppb-login] {% endfilter %}
+{% endmacro %}
+
+{% macro footer() %}
+  <a class="modal__trigger" href="#modal-register-form">{{ __('Not registered?', 'huskies') }}</a>
+  <a class="modal__trigger" href="#modal-lost-password-form">{{ __('Forgot Password?', 'huskies') }}</a>
+{% endmacro %}
