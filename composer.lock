@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "bce3e4483276b6fee68daa97080eabf4",
-    "content-hash": "cf0f4c641da43a317986e0b5b161ac8b",
+    "hash": "2953396e650e2bddb08e29cc55b06fe2",
+    "content-hash": "01dfc3c2764530c5d3a3d67b1ee7485e",
     "packages": [
         {
             "name": "altorouter/altorouter",
@@ -60,16 +60,16 @@
         },
         {
             "name": "asm89/twig-cache-extension",
-            "version": "1.1.0",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/asm89/twig-cache-extension.git",
-                "reference": "127410728db193a88254c399e3455274fc05fa5d"
+                "reference": "76a801d6da8e1a1015af974d93df4ade0dda7267"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/asm89/twig-cache-extension/zipball/127410728db193a88254c399e3455274fc05fa5d",
-                "reference": "127410728db193a88254c399e3455274fc05fa5d",
+                "url": "https://api.github.com/repos/asm89/twig-cache-extension/zipball/76a801d6da8e1a1015af974d93df4ade0dda7267",
+                "reference": "76a801d6da8e1a1015af974d93df4ade0dda7267",
                 "shasum": ""
             },
             "require": {
@@ -82,7 +82,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0-dev"
+                    "dev-master": "1.1-dev"
                 }
             },
             "autoload": {
@@ -107,20 +107,20 @@
                 "extension",
                 "twig"
             ],
-            "time": "2015-10-17 11:55:02"
+            "time": "2016-02-14 13:52:38"
         },
         {
             "name": "composer/installers",
-            "version": "v1.0.23",
+            "version": "v1.0.24",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "6213d900e92647831f7a406d5c530ea1f3d4360e"
+                "reference": "1cf7cc4b89d5e8549bbb7d6ab1de75da13d27988"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/6213d900e92647831f7a406d5c530ea1f3d4360e",
-                "reference": "6213d900e92647831f7a406d5c530ea1f3d4360e",
+                "url": "https://api.github.com/repos/composer/installers/zipball/1cf7cc4b89d5e8549bbb7d6ab1de75da13d27988",
+                "reference": "1cf7cc4b89d5e8549bbb7d6ab1de75da13d27988",
                 "shasum": ""
             },
             "require": {
@@ -142,8 +142,8 @@
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Composer\\Installers\\": "src/"
+                "psr-4": {
+                    "Composer\\Installers\\": "src/Composer/Installers"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -158,12 +158,14 @@
                 }
             ],
             "description": "A multi-framework Composer library installer",
-            "homepage": "http://composer.github.com/installers/",
+            "homepage": "https://composer.github.io/installers/",
             "keywords": [
                 "Craft",
                 "Dolibarr",
                 "Hurad",
+                "ImageCMS",
                 "MODX Evo",
+                "Mautic",
                 "OXID",
                 "SMF",
                 "Thelia",
@@ -205,19 +207,19 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2016-01-27 12:54:22"
+            "time": "2016-04-05 11:42:46"
         },
         {
             "name": "jarednova/timber",
             "version": "0.21.10",
             "source": {
                 "type": "git",
-                "url": "https://github.com/jarednova/timber.git",
+                "url": "https://github.com/timber/timber.git",
                 "reference": "301950c008cb4c191f954148ba7306a0a352ccb1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jarednova/timber/zipball/301950c008cb4c191f954148ba7306a0a352ccb1",
+                "url": "https://api.github.com/repos/timber/timber/zipball/301950c008cb4c191f954148ba7306a0a352ccb1",
                 "reference": "301950c008cb4c191f954148ba7306a0a352ccb1",
                 "shasum": ""
             },
@@ -265,16 +267,16 @@
         },
         {
             "name": "johnpbloch/wordpress",
-            "version": "4.4",
+            "version": "4.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress.git",
-                "reference": "ad70e5cf518b697eed94f558ca6c88e5cc87e65b"
+                "reference": "fe9320de0793602084c600e22c0c5e0bb601a264"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/ad70e5cf518b697eed94f558ca6c88e5cc87e65b",
-                "reference": "ad70e5cf518b697eed94f558ca6c88e5cc87e65b",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/fe9320de0793602084c600e22c0c5e0bb601a264",
+                "reference": "fe9320de0793602084c600e22c0c5e0bb601a264",
                 "shasum": ""
             },
             "require": {
@@ -298,7 +300,7 @@
                 "blog",
                 "cms"
             ],
-            "time": "2015-12-08 23:46:14"
+            "time": "2016-02-02 17:16:14"
         },
         {
             "name": "johnpbloch/wordpress-core-installer",
@@ -410,6 +412,26 @@
             "time": "2016-01-25 21:22:18"
         },
         {
+            "name": "ultimate-huskies/bbpress-digest",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Ultimate-Huskies/bbpress-digest.git",
+                "reference": "bfb105a60c190a14f0c23ed2d54da136e9f48333"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Ultimate-Huskies/bbpress-digest/zipball/bfb105a60c190a14f0c23ed2d54da136e9f48333",
+                "reference": "bfb105a60c190a14f0c23ed2d54da136e9f48333",
+                "shasum": ""
+            },
+            "type": "wordpress-plugin",
+            "support": {
+                "source": "https://github.com/Ultimate-Huskies/bbpress-digest/tree/master"
+            },
+            "time": "2016-04-11 15:02:35"
+        },
+        {
             "name": "upstatement/routes",
             "version": "0.3",
             "source": {
@@ -516,7 +538,7 @@
             "version": "2.5.8",
             "source": {
                 "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/bbpress/",
+                "url": "https://plugins.svn.wordpress.org/bbpress/",
                 "reference": "tags/2.5.8"
             },
             "dist": {
@@ -536,7 +558,7 @@
             "version": "1.0.9",
             "source": {
                 "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/bbpress-pencil-unread/",
+                "url": "https://plugins.svn.wordpress.org/bbpress-pencil-unread/",
                 "reference": "trunk"
             },
             "dist": {
@@ -552,11 +574,91 @@
             "homepage": "https://wordpress.org/plugins/bbpress-pencil-unread/"
         },
         {
+            "name": "wpackagist-plugin/bbpress-post-toolbar",
+            "version": "0.7.5",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/bbpress-post-toolbar/",
+                "reference": "tags/0.7.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/bbpress-post-toolbar.0.7.5.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/bbpress-post-toolbar/"
+        },
+        {
+            "name": "wpackagist-plugin/bulk-resize-media",
+            "version": "1.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/bulk-resize-media/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/bulk-resize-media.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/bulk-resize-media/"
+        },
+        {
+            "name": "wpackagist-plugin/confirm-user-registration",
+            "version": "2.1.5",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/confirm-user-registration/",
+                "reference": "tags/2.1.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/confirm-user-registration.2.1.5.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/confirm-user-registration/"
+        },
+        {
+            "name": "wpackagist-plugin/contact-form-7",
+            "version": "4.4.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/contact-form-7/",
+                "reference": "tags/4.4.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/contact-form-7.4.4.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/contact-form-7/"
+        },
+        {
             "name": "wpackagist-plugin/gd-bbpress-attachments",
             "version": "2.3.1",
             "source": {
                 "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/gd-bbpress-attachments/",
+                "url": "https://plugins.svn.wordpress.org/gd-bbpress-attachments/",
                 "reference": "tags/2.3.1"
             },
             "dist": {
@@ -572,16 +674,36 @@
             "homepage": "https://wordpress.org/plugins/gd-bbpress-attachments/"
         },
         {
-            "name": "wpackagist-plugin/google-calendar-events",
-            "version": "3.0.13",
+            "name": "wpackagist-plugin/gd-bbpress-tools",
+            "version": "1.8",
             "source": {
                 "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/google-calendar-events/",
-                "reference": "tags/3.0.13"
+                "url": "https://plugins.svn.wordpress.org/gd-bbpress-tools/",
+                "reference": "tags/1.8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/google-calendar-events.3.0.13.zip",
+                "url": "https://downloads.wordpress.org/plugin/gd-bbpress-tools.1.8.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/gd-bbpress-tools/"
+        },
+        {
+            "name": "wpackagist-plugin/google-calendar-events",
+            "version": "3.0.16",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/google-calendar-events/",
+                "reference": "tags/3.0.16"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/google-calendar-events.3.0.16.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -590,12 +712,154 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/google-calendar-events/"
+        },
+        {
+            "name": "wpackagist-plugin/imsanity",
+            "version": "2.3.6",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/imsanity/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/imsanity.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/imsanity/"
+        },
+        {
+            "name": "wpackagist-plugin/limit-login-attempts",
+            "version": "1.7.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/limit-login-attempts/",
+                "reference": "tags/1.7.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/limit-login-attempts.1.7.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/limit-login-attempts/"
+        },
+        {
+            "name": "wpackagist-plugin/mappress-google-maps-for-wordpress",
+            "version": "2.43.4",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/mappress-google-maps-for-wordpress/",
+                "reference": "tags/2.43.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/mappress-google-maps-for-wordpress.2.43.4.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/mappress-google-maps-for-wordpress/"
+        },
+        {
+            "name": "wpackagist-plugin/profile-builder",
+            "version": "2.3.4",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/profile-builder/",
+                "reference": "tags/2.3.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/profile-builder.2.3.4.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/profile-builder/"
+        },
+        {
+            "name": "wpackagist-plugin/really-simple-captcha",
+            "version": "1.8.0.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/really-simple-captcha/",
+                "reference": "tags/1.8.0.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/really-simple-captcha.1.8.0.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/really-simple-captcha/"
+        },
+        {
+            "name": "wpackagist-plugin/shariff",
+            "version": "3.4.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/shariff/",
+                "reference": "tags/3.4.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/shariff.3.4.2.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/shariff/"
+        },
+        {
+            "name": "wpackagist-plugin/simple-local-avatars",
+            "version": "2.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/simple-local-avatars/",
+                "reference": "tags/2.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/simple-local-avatars.2.0.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/simple-local-avatars/"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "ultimate-huskies/bbpress-digest": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
