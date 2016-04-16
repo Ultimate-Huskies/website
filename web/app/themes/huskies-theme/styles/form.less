@@ -82,6 +82,10 @@
     font-size: @fs-l;
     color: @c-grey-dark;
     text-align: left;
+
+    &:hover {
+      color: @c-black;
+    }
   }
 
   input {
@@ -99,20 +103,16 @@
     &:valid {
      border-bottom-color: @c-blue;
      color: @c-black;
-
-     + label {
-       color: @c-black;
-     }
     }
+  }
 
-    &:focus,
-    &:valid {
-      + label {
-        top: -20px;
-        left: -10px;
-        font-size: @fs-m;
-      }
-    }
+  input:focus + label,
+  input:valid + label,
+  label.is-active {
+    top: -20px;
+    left: -10px;
+    font-size: @fs-m;
+    color: @c-black;
   }
 }
 
@@ -284,5 +284,50 @@
   .wp-editor-area {
     margin: 0;
     width: 100% !important;
+  }
+}
+
+#loginform,
+#wppb-register-user,
+#wppb-recover-password {
+
+  > ul {
+    list-style: none;
+  }
+
+  .login-username,
+  .login-password,
+  .wppb-default-e-mail,
+  .wppb-default-username,
+  .wppb-default-password,
+  .wppb-default-repeat-password,
+  .wppb-username-email {
+    .form__section;
+    .form__section--text-input;
+  }
+
+  #wppb-submit,
+  #register,
+  #wppb-recover-password-button {
+    .button;
+    .button--primary;
+
+    text-indent: 0;
+  }
+
+  .login-submit,
+  .form-submit {
+    .form__section;
+    .form__section--actions;
+
+    @media @from-tablet {
+      text-align: center;
+    }
+  }
+
+  .login-remember,
+  .wppb-send-credentials-checkbox {
+    .form__section;
+    .form__section--checkbox;
   }
 }

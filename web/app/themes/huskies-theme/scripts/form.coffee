@@ -1,4 +1,3 @@
-
 $(document).ready ->
   $form = $('.form')
   $formUploadArea = $form.find('.form__upload--area')
@@ -7,6 +6,7 @@ $(document).ready ->
 
   $form.on 'click', '.form__infos--trigger', ->
     $(this).closest('.form__section').find('.form__infos').toggleClass 'form__infos--hidden'
+
 
   $form.on 'click', '.form__upload--button', ->
     $trigger = $(this)
