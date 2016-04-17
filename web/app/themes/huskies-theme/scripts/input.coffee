@@ -1,14 +1,22 @@
+handle = ($input, $label) ->
+  $label.addClass('is-active')
+
+  $input.one 'blur', ->
+    $label.removeClass('is-active') unless $input.is(':valid')
+
 $(document).ready ->
-  $form = $('form#loginform, form#wppb-register-user, form#wppb-recover-password')
+  $form = $('form#loginform, form#wppb-register-user, form#wppb-recover-password, form.wpcf7-form')
   return unless $form.length
 
-  $inputsLoginForm = $form.find('label + input')
-  $inputsLoginForm.attr('required', true) # make input fields required so html validation is kicking in
-  $inputsLoginForm.on 'focus', ->
-    $input = $(this)
-    $label = $(this).prev('label')
+  $labelLogins = $form.find('label + input')
+  $spanLogins = $form.find('span > input, span > textarea')
 
-    $label.addClass('is-active')
+  # make input fields required so html validation is kicking in
+  $labelLogins.attr('required', true)
+  $spanLogins.attr('required', true)
 
-    $input.one 'blur', ->
-      $label.removeClass('is-active') unless $input.is(':valid')
+  $labelLogins.on 'focus', ->
+    handle $(this), $(this).prev('label')
+
+  $spanLogins.on 'focus', ->
+    handle $(this), $(this).parent().nextAll('label')

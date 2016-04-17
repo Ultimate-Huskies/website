@@ -70,6 +70,7 @@
 .form__section--text-input {
   position: relative;
   padding-top: 5px;
+  .maxwidth();
 
   > label {
     position: absolute;
@@ -88,7 +89,7 @@
     }
   }
 
-  input {
+  input, textarea {
     width: 100%;
     border: none;
     border-bottom: 1px solid @c-black;
@@ -101,9 +102,15 @@
     &:hover,
     &:focus,
     &:valid {
-     border-bottom-color: @c-blue;
+     border-color: @c-blue;
      color: @c-black;
     }
+  }
+
+  textarea {
+    resize: vertical;
+    border: 1px solid @c-black;
+    margin-top: 5px;
   }
 
   input:focus + label,
