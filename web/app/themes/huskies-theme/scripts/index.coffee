@@ -3,6 +3,7 @@ require './header'
 require './modal'
 require './form'
 require './input'
+require './calendar'
 
 $(document).ready ->
   $body = $('body')
