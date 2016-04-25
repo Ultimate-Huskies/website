@@ -5,12 +5,19 @@
   flex-wrap: wrap;
 }
 
+.members-list__entry {
+  width: 250px;
+
+  &.members-list__entry--full {
+    width: 100%;
+  }
+}
+
 .member {
   position: relative;
   padding: 20px;
   box-shadow: 0 0 5px 1px @c-grey-dark;
   border-radius: 5px;
-  width: 250px;
   margin-top: 65px;
   background-color: @c-white;
 

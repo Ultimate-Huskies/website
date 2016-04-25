@@ -1,0 +1,48 @@
+{% extends "layout/forum.twig" %}
+{% from 'macro.twig' import member %}
+
+{% block forum_title %}
+  {{ user.name }}
+{% endblock %}
+
+{% block forum_header %}
+  {% if user.can_edit %}
+    <section class="section section--inverse">
+      <ul class="member__nav">
+        {% if page.bbpress.form.favorites_active %}
+          <li class="member__nav-item {{ page.bbpress.user_pages.is_favorites ? 'current' }}">
+            <a class="member__nav-link" href="{{ user.favorites_link }}">{{ __('Favorites', 'huskies') }}</a>
+          </li>
+        {% endif %}
+
+        {% if page.bbpress.form.subscriptions_active %}
+          <li class="member__nav-item {{ page.bbpress.user_pages.is_subscriptions ? 'current' }}">
+            <a class="member__nav-link" href="{{ user.subscriptions_link }}">{{ __('Subscriptions', 'huskies') }}</a>
+          </li>
+        {% endif %}
+
+        <li class="member__nav-item {{ page.bbpress.user_pages.is_edit ? 'current' }}">
+          <a class="member__nav-link" href="{{ user.edit_link }}">{{ __('Edit', 'huskies') }}</a>
+        </li>
+      </ul>
+    </section>
+  {% endif %}
+{% endblock %}
+
+{% block forum_content %}
+  {% if not user.can_edit %}
+    {% include 'forum/user/profile.twig' %}
+  {% elseif page.bbpress.user_pages.is_favorites %}
+    {% include 'forum/user/favorites.twig' %}
+  {% elseif page.bbpress.user_pages.is_subscriptions %}
+    {% include 'forum/user/subscriptions.twig' %}
+  {% elseif page.bbpress.user_pages.is_edit %}
+    {% include 'forum/user/edit.twig' %}
+  {% else %}
+    {% include 'forum/user/profile.twig' %}
+  {% endif %}
+{% endblock %}
+
+{% block forum_footer %}
+
+{% endblock %}
