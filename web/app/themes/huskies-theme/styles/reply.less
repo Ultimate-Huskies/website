@@ -32,10 +32,10 @@
   @media @from-tablet {
     display: block;
   }
-}
 
-.reply__author-image {
-  border-radius: 50%;
+  > img {
+    border-radius: 50%;
+  }
 }
 
 .reply__author-role {
@@ -75,9 +75,10 @@
     }
   }
 
-  .reply__author-image {
+  img {
     float: left;
     margin-right: 10px;
+    border-radius: 50%;
 
     @media @from-tablet {
       display: none;

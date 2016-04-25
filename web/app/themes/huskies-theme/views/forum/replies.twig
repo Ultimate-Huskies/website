@@ -39,9 +39,6 @@
     <article class="reply reply--{{ reply.status }}">
       <div class="reply__author">
         {{ reply.author_avatar(75) }}
-        {% if reply.author_role == 'Administrator' %}
-          <span class="reply__author-role">{{ icon('admin') }}</span>
-        {% endif %}
         <p class="reply__author-counts">
           <span>
             {{ icon('topics') }}
