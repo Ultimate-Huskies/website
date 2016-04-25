@@ -59,3 +59,14 @@ function topic_type_dropdown($ob, $r) {
   return $ob;
 }
 add_filter('bbp_get_form_topic_type_dropdown', 'topic_type_dropdown', 100, 2);
+
+function custom_order_by($orderby, $query) {
+  if (array_key_exists("orderby", $query->query)) {
+    if (strpos($query->query['orderby'], 'post_status') !== false) {
+      return "wp_posts.post_status DESC, ".$orderby;
+    }
+  }
+
+  return $orderby;
+}
+add_filter('posts_orderby', 'custom_order_by', 1, 2);

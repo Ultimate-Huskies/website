@@ -13,14 +13,11 @@ require_once(FUNCTIONS_PATH.'/twig.php');
 require_once(FUNCTIONS_PATH.'/timber.php');
 require_once(FUNCTIONS_PATH.'/bbpress.php');
 require_once(FUNCTIONS_PATH.'/actions.php');
+require_once(FUNCTIONS_PATH.'/user.php');
 
-function custom_order_by($orderby, $query) {
-  if (array_key_exists("orderby", $query->query)) {
-    if (strpos($query->query['orderby'], 'post_status') !== false) {
-      return "wp_posts.post_status DESC, ".$orderby;
-    }
-  }
-
-  return $orderby;
+function abort($context, $headline, $reason = '') {
+  $context['headline'] = $headline;
+  $context['reason'] = $reason;
+  Timber::render('abort.twig', $context);
+  die();
 }
-add_filter('posts_orderby', 'custom_order_by', 1, 2);

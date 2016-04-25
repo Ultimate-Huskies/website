@@ -1,5 +1,6 @@
 <?php
-require_once('forum_before.php');
+$context = Timber::get_context();
+require_once('forum.php');
 
 if (!bbp_user_can_view_forum()) {
   abort($context, __('No Access', 'huskies'));

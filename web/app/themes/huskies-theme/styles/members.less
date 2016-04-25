@@ -1,0 +1,53 @@
+.members-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.member {
+  position: relative;
+  padding: 20px;
+  box-shadow: 0 0 5px 1px @c-grey-dark;
+  border-radius: 5px;
+  width: 250px;
+  margin-top: 65px;
+  background-color: @c-white;
+
+  &:not(:last-of-type) {
+    margin-right: 25px;
+  }
+}
+
+.member__link {
+  text-align: center;
+  margin-top: 25px;
+  display: block;
+
+  .avatar {
+    border-radius: 50%;
+    position: absolute;
+    top: -40px;
+    left: calc(~"50% - 40px");
+    width: 80px;
+    height: 80px;
+    box-shadow: 0 -2px 5px 1px @c-grey-dark;
+    background-color: @c-white;
+  }
+}
+
+.member__facts {
+  margin: 0;
+
+  > dt {
+    font-weight: @fw-bold;
+    display: block;
+    margin: 10px 0;
+    padding: 0;
+  }
+
+  > dd {
+    margin: 0;
+    padding: 0;
+  }
+}
