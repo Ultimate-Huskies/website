@@ -1,0 +1,30 @@
+.user-nav {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  position: relative;
+  border-bottom: 1px solid @c-grey-dark;
+  margin-bottom: 25px;
+}
+
+.user-nav__item {
+  flex-basis: 33%;
+  text-align: center;
+  border-bottom: 1px solid transparent;
+  padding: 15px 0;
+  font-size: @fs-l;
+
+  > a {
+    color: @c-black;
+    display: block;
+  }
+
+  &.current,
+  &:hover {
+    border-color: @c-blue;
+
+    > a {
+      color: @c-blue;
+    }
+  }
+}

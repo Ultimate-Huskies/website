@@ -6,6 +6,7 @@ $context['page']['bbpress'] = array(
     'is_favorites' => bbp_is_favorites(),
     'is_subscriptions' => bbp_is_subscriptions(),
     'is_edit' => bbp_is_single_user_edit(),
+    'is_profile' => !bbp_is_favorites() && !bbp_is_subscriptions() && !bbp_is_single_user_edit(),
   ),
   'form' => array(
     'tab_index' => TimberHelper::function_wrapper('bbp_tab_index'),
