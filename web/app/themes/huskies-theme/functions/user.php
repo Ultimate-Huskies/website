@@ -19,6 +19,10 @@ class User extends TimberPost {
     return $this->userdata()->user_email;
   }
 
+  function login_name() {
+    return $this->userdata()->user_login;
+  }
+
   function phone() {
     return $this->metadata('phone');
   }
