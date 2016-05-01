@@ -9,6 +9,11 @@
         <a class="main_menu__link" href="{{ page.user.profile.url }}"> {{ page.user.profile.name }} </a>
         <a class="main_menu__link" href="{{ page.logout_url }}"> {{ __('Logout', 'huskies') }} </a>
       </li>
+      {% if function('is_super_admin') %}
+        <li class="main_menu__item">
+          <a class="main_menu__link" href="/admin">{{ __('Admin Area', 'huskies') }}</a>
+        </li>
+      {% endif %}
       <li class="main_menu__item">
         <a class="main_menu__link" href="{{ function('get_permalink', 2220) }} ">{{ __('Members', 'huskies') }}</a>
       </li>

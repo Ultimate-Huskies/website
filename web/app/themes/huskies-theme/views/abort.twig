@@ -1,13 +1,21 @@
 {% extends "layout/base.twig" %}
+{% from 'macro.twig' import abort %}
+
+{% block body_class %}
+error404
+{% endblock %}
 
 {% block header %}
-  <div class="slideshow slideshow--no-images">
-    <h1 class="slideshow__title">{{ headline }}</h1>
-  </div>
+  {{ abort() }}
 {% endblock %}
 
 {% block content %}
-  <section class="section">
-    {{ reason }}
-  </section>
+<section class="section">
+  <h2 class="center">{{ __(headline, 'huskies') }}</h2>
+  <p class="center">{{ __('So go ahead and login or go back to the start page.', 'huskies') }}</p>
+  <div class="form__section form__section--actions">
+    <a class="button" href="/"> {{ __('Start', 'huskies') }} </a>
+    <a class="button button--primary modal__trigger" href="#modal-login-form"> {{ __('Login', 'huskies') }} </a>
+  </div>
+</section>
 {% endblock %}
