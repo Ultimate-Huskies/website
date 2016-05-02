@@ -30,6 +30,7 @@
     "browserify": "^10.2.6",
     "coffeeify": "^1.1.0",
     "less": "^2.5.1",
+    "less-plugin-autoprefix": "^1.5.1",
     "onchange": "^1.1.0"
   }
 }
