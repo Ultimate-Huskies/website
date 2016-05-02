@@ -27,7 +27,12 @@
 
     {% for item in menu.get_items %}
       <li class="main_menu__item {{ item.classes | join(' ') }}">
-        <a class="main_menu__link" href="{{ item.get_link }}">{{ item.title }}</a>
+        <a class="main_menu__link" href="{{ item.get_link }}">
+          {{ item.title }}
+          {% if page.user.logged_in and item.title == 'Forum' and page.user.profile.unread_topics > 0 %}
+            <span class="main_menu__badge">{{ page.user.profile.unread_topics }}</span>
+          {% endif %}
+        </a>
       </li>
     {% endfor %}
   </ul>

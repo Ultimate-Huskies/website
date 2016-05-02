@@ -19,6 +19,14 @@ class Topic extends Base {
     return bbp_get_topic_last_active_time($this->id);
   }
 
+  function is_unread() {
+    if (!is_array($this->bbppu_read_by)) {
+      return true;
+    }
+
+    return !in_array(bbp_get_current_user_id(), $this->bbppu_read_by);
+  }
+
   function is_sticky() {
     return bbp_is_topic_sticky($this->id, false);
   }

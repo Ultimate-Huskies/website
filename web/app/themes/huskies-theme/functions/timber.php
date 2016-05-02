@@ -18,7 +18,8 @@ function add_to_context($data){
         'url' => TimberHelper::function_wrapper('bbp_get_user_profile_url', array(bbp_get_current_user_id())),
         'image' => TimberHelper::function_wrapper('bbp_get_current_user_avatar', array(50)),
         'id' => TimberHelper::function_wrapper('bbp_get_current_user_id'),
-        'name' => TimberHelper::function_wrapper('bbp_current_user_name')
+        'name' => TimberHelper::function_wrapper('bbp_current_user_name'),
+        'unread_topics' => get_unread_counts()
       ),
       'can' => array(
         'access_topic_form' => TimberHelper::function_wrapper('bbp_current_user_can_access_create_topic_form'),
@@ -30,4 +31,24 @@ function add_to_context($data){
   );
 
   return $data;
+}
+
+function get_unread_counts() {
+  if (!is_user_logged_in()) {
+    return 0 ;
+  }
+
+  $query = array(
+    'post_type' => bbp_get_topic_post_type(),
+    'post_parent' => 'any',
+    'meta_key' => 'bbppu_read_by',
+    'meta_value' => 'i:'.bbp_get_current_user_id(),
+    'meta_compare' => 'NOT LIKE',
+    'orderby' => 'title',
+    'order' => 'DESC',
+    'nopaging' => true
+  );
+
+  $topics = new WP_Query($query);
+  return count($topics->posts);
 }

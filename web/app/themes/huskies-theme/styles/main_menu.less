@@ -107,10 +107,29 @@
   line-height: 2.5;
 }
 
+.main_menu__badge {
+  position: absolute;
+  font-family: @f-normal;
+  font-size: @fs-m;
+  line-height: 1;
+  right: 5px;
+  top: 15px;
+  border-radius: 50%;
+  background-color: @c-blue;
+  padding: 5px;
+  color: @c-white;
+  transition: color .3s ease, background-color .3s ease;
+}
+
 .current-menu-item > .main_menu__link,
 .main_menu__link:hover {
   background-color: @c-blue;
   color: @c-white;
+
+  .main_menu__badge {
+    background-color: @c-white;
+    color: @c-blue;
+  }
 }
 
 .main_menu__user {

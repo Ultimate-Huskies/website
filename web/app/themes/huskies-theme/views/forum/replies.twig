@@ -36,6 +36,7 @@
 
 {% block forum_content %}
   {% for reply in replies %}
+    {% do action('bbp_template_before_replies_loop') %}
     <article class="reply reply--{{ reply.status }}">
       <div class="reply__author">
         {{ reply.author_avatar(75) }}
@@ -61,6 +62,7 @@
         <div class="reply__content">{{ reply.content }}</div>
       </div>
     </article>
+    {% do action('bbp_template_after_replies_loop') %}
   {% endfor %}
 {% endblock %}
 

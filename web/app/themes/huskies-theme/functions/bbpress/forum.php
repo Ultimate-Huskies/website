@@ -19,4 +19,20 @@ class Forum extends Base {
   function subscribe_link($args = array()) {
     return parent::subscribe_link(array('forum_id' => $this->id));
   }
+
+  function is_unread() {
+    $query = array(
+      'post_type' => bbp_get_topic_post_type(),
+      'post_parent' => $this->id,
+      'meta_key' => 'bbppu_read_by',
+      'meta_value' => 'i:'.bbp_get_current_user_id(),
+      'meta_compare' => 'NOT LIKE',
+      'orderby' => 'title',
+      'order' => 'DESC',
+      'nopaging' => true
+    );
+
+    $topics = new WP_Query($query);
+    return count($topics->posts) > 0;
+  }
 }

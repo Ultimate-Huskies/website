@@ -13,11 +13,11 @@
 
   <article class="post_short {{ post.class }}" id="post-{{ post.ID }}">
     <h2 class="post_short__title clear">
-      <a href="{{ post.permalink }}">{{ post.title }}</a>
-      <div>
-        <strong>{{ icon(function('get_post_format', post.ID)|humanize_type) }}</strong>
-        <small>{{ post.display_date }}</small>
-      </div>
+        {{ icon(function('get_post_format', post.ID)|humanize_type) }}
+        <a href="{{ post.permalink }}">
+          {{ post.title }}
+          <small>{{ post.display_date }}</small>
+        </a>
     </h2>
     <a class="post_short__button button button--primary" href="{{ post.permalink }}">{{ __('More', 'huskies') }}</a>
   </article>
@@ -45,11 +45,14 @@
   </div>
 {% endmacro %}
 
-{% macro topic(topic) %}
+{% macro topic(topic, show_forum = false) %}
   {% from _self import pagination, icon, forum_image_fake %}
 
-  <article class="forum-short forum-short--{{ topic.post_status }} {{ topic.is_sticky ? 'forum-short--sticky' }} {{ topic.is_super_sticky ? 'forum-short--super-sticky' }}">
-    {% if topic.is_super_sticky %}
+  {% do action('bbp_template_before_topics_loop') %}
+  <article class="forum-short forum-short--{{ topic.post_status }} {{ topic.is_sticky ? 'forum-short--sticky' }} {{ topic.is_super_sticky ? 'forum-short--super-sticky'}}">
+    {% if topic.is_unread %}
+      {{ forum_image_fake('unread', __('unread', 'huskies')) }}
+    {% elseif topic.is_super_sticky %}
       {{ forum_image_fake('super-sticky', __('super-sticky', 'huskies')) }}
     {% elseif topic.is_sticky %}
       {{ forum_image_fake('sticky', __('sticky', 'huskies')) }}
@@ -65,7 +68,7 @@
       <small>
         {{ __('started by', 'huskies') }}
         {{ topic.author }}
-        {% if topic.is_super_sticky %}
+        {% if show_forum or topic.is_super_sticky %}
           {{ __('in', 'huskies') }}
           {{ function('bbp_get_forum_title', topic.post_parent) }}
         {% endif %}
@@ -81,6 +84,7 @@
       <span class="forum-short__admin-links">{{ topic.admin_links }}</span>
     </p >
   </article>
+  {% do action('bbp_template_after_topics_loop') %}
 {% endmacro %}
 
 {% macro modal(id, title, content, footer = '') %}
