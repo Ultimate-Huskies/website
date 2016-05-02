@@ -1,0 +1,19 @@
+{% extends "layout/base.twig" %}
+
+{% block header %}
+  <div class="slideshow slideshow--no-images">
+    <h1 class="slideshow__title">
+      {% block forum_title %}{% endblock %}
+    </h1>
+  </div>
+{% endblock %}
+
+{% block content %}
+  {% block forum_header %}{% endblock %}
+
+  <section class="section">
+    {% block forum_content %}{% endblock %}
+  </section>
+
+  {% block forum_footer %}{% endblock %}
+{% endblock %}

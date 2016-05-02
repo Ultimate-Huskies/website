@@ -1,0 +1,510 @@
+.form {
+  font-size: @fs-l;
+}
+
+.form__infos {
+  padding: 15px;
+  margin-bottom: 15px;
+  background-color: @c-blue;
+  color: @c-white;
+  font-size: @fs-m;
+  transition: max-height .5s ease, padding-top .5s ease, padding-bottom .5s ease, margin .5s ease;
+  max-height: 1000px;
+  overflow: hidden;
+
+  &.form__infos--hidden {
+    max-height: 0;
+    padding: 0 15px;
+    margin: 0;
+  }
+}
+
+.form__infos--trigger {
+  color: @c-grey-dark;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0 0 0 5px;
+  outline: none;
+
+  &:hover {
+    color: @c-black;
+  }
+
+  > .icon {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.form__section {
+  margin: 0;
+  padding: 0;
+  border: none;
+  position: relative;
+  text-align: center;
+
+  &:not(:last-of-type) {
+    margin-bottom: 15px;
+  }
+
+  &.form__section--actions {
+    margin: 30px -25px 0;
+    width: calc(~"100% + 50px");
+    padding-top: 20px;
+    border-top: 1px solid @c-blue;
+    text-align: center;
+
+    > input[type='submit'] {
+      min-width: 175px;
+      text-indent: -10%;
+    }
+  }
+
+  @media @from-tablet {
+    text-align: left;
+  }
+}
+
+.form__section--text-input {
+  position: relative;
+  padding-top: 5px;
+  .maxwidth();
+
+  > label {
+    position: absolute;
+    transition: top .3s ease, left .3s ease, color .3s ease, font .3s ease;
+    cursor: text;
+    top: 5px;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    font-size: @fs-l;
+    color: @c-grey-dark;
+    text-align: left;
+
+    &:hover {
+      color: @c-black;
+    }
+  }
+
+  input, textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid @c-black;
+    transition: border .3s ease, color 3.s ease;
+    color: @c-grey-dark;
+    padding: 10px;
+    font-size: @fs-l;
+    outline: none;
+
+    &:hover,
+    &:focus,
+    &:valid {
+     border-color: @c-blue;
+     color: @c-black;
+    }
+  }
+
+  textarea {
+    resize: vertical;
+    border: 1px solid @c-black;
+    margin-top: 5px;
+  }
+
+  input:focus + label,
+  input:valid + label,
+  label.is-active {
+    top: -20px;
+    left: -10px;
+    font-size: @fs-m;
+    color: @c-black;
+  }
+}
+
+.form__section--checkbox {
+  > label {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    display: inline-block;
+
+    > input {
+      background-color: @c-blue;
+      box-shadow: inset 0 0 0 20px @c-white;
+      width: 20px;
+      height: 20px;
+      border: 1px solid @c-grey-dark;
+      transition: border .3s ease, box-shadow .3s ease;
+      appearance: none;
+      outline: none;
+      margin-right: 10px;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      &::-ms-expand { /* for IE 11 */
+        display: none;
+      }
+
+      &:checked {
+        box-shadow: inset 0 0 0 4px @c-white;
+      }
+    }
+
+    &:hover > input,
+    &:focus > input {
+      border-color: @c-blue;
+    }
+  }
+}
+
+.form__section--select {
+  select {
+    appearance: none;
+    .button;
+    .button--secondary;
+    width: 100%;
+    max-width: 220px;
+    margin: 0 auto;
+    padding-right: 25px;
+    cursor: pointer;
+    border-radius: 0;
+    background-image: url('./../images/arrow_down.svg');
+    background-repeat: no-repeat;
+    background-position: calc(~"100% - 5px") 50%;
+    appearance: none;
+    &::-ms-expand { /* for IE 11 */
+      display: none;
+    }
+  }
+}
+
+.form__additional-sections {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 25px 0;
+
+  @media @from-tablet {
+    flex-direction: row;
+  }
+
+  .form__section {
+    flex: 1;
+    &:not(:last-of-type) {
+      margin: 0 0 25px 0;
+      padding: 0 0 25px 0;
+      border-bottom: 1px solid @c-grey-dark;
+    }
+
+    @media @from-tablet {
+      &:not(:last-of-type) {
+        margin: 0 25px 0 0;
+        padding: 0 25px 0 0;
+        border-bottom: none;
+        border-right: 1px solid @c-grey-dark;
+      }
+    }
+  }
+}
+
+.form__section-headline {
+  margin: 0 0 15px 0;
+  text-align: left;
+}
+
+.form__upload {
+  &:not(:last-of-type) {
+    margin-bottom: 10px;
+  }
+}
+
+.form__upload--new-file {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 3px;
+  right: 25px;
+  color: @c-blue;
+
+  > .icon {
+    width: 25px;
+    height: 25px;
+    position: relative;
+    top: -1px;
+  }
+}
+
+.form__upload--button {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  max-width: 220px;
+  margin: 0 auto;
+}
+
+.wp-core-ui {
+  margin: 25px 0;
+
+  .ed_button.button{
+    .button;
+    .button--secondary;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .wp-editor-container {
+    border: 2px solid @c-grey;
+  }
+
+  .quicktags-toolbar,
+  div.mce-toolbar-grp {
+    background-color: @c-grey;
+    border: none;
+  }
+
+  .wp-editor-tabs {
+    float: left;
+  }
+
+  .wp-switch-editor {
+    background-color: transparent;
+    border: none;
+    font-size: @fs-l;
+    padding: 10px 15px;
+    margin: 0;
+  }
+
+  &.tmce-active .switch-tmce,
+  &.html-active .switch-html {
+    background-color: @c-grey;
+    color: @c-blue;
+  }
+
+  .wp-editor-area {
+    margin: 0;
+    width: 100% !important;
+  }
+}
+
+#loginform,
+#wppb-register-user,
+#wppb-recover-password {
+
+  > ul {
+    list-style: none;
+  }
+
+  .login-username,
+  .login-password,
+  .wppb-default-e-mail,
+  .wppb-default-username,
+  .wppb-default-password,
+  .wppb-default-repeat-password,
+  .wppb-username-email {
+    .form__section;
+    .form__section--text-input;
+  }
+
+  #wppb-submit,
+  #register,
+  #wppb-recover-password-button {
+    .button;
+    .button--primary;
+
+    text-indent: 0;
+  }
+
+  .login-submit,
+  .form-submit {
+    .form__section;
+    .form__section--actions;
+
+    @media @from-tablet {
+      text-align: center;
+    }
+  }
+
+  .login-remember,
+  .wppb-send-credentials-checkbox {
+    .form__section;
+    .form__section--checkbox;
+  }
+}
+
+.entry-title {
+  .form__section-headline;
+}
+
+#profile {
+  .section__title,
+  .entry-title,
+  h3 {
+    .h1;
+    margin: 50px 0 25px;
+    text-align: center;
+    font-size: @fs-xl;
+
+    @media @from-phablet {
+      font-size: @fs-xxl;
+    }
+  }
+}
+
+#user-edit-plugins {
+  .bbp-form {
+    .form__section;
+    text-align: left;
+
+    br {
+      display: none;
+    }
+
+    label {
+      text-align: left;
+      margin-bottom: 10px;
+    }
+
+    #bbp-digest-check-row,
+    #bbp-digest-when-selection,
+    #bbp-digest-day-list,
+    #bbp-digest-pool-selection,
+    #bbp-digest-forum-list,
+    #bbp-digest-time-row {
+      margin-bottom: 15px;
+      line-height: 1.5;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      justify-content: flex-end;
+    }
+
+    #bbp-digest-check-row,
+    #bbp-digest-when-selection,
+    #bbp-digest-pool-selection,
+    #bbp-digest-forum-list {
+      .form__section--checkbox;
+    }
+
+    #bbp-digest-day-list,
+    #bbp-digest-time-row {
+      .form__section--select;
+    }
+
+    #bbp-digest-day-list,
+    #bbp-digest-time-row {
+      .description {
+        margin-bottom: 15px;
+      }
+
+      select {
+        margin: 0;
+      }
+    }
+
+    #bbp-digest-time-row {
+      margin-bottom: 15px;
+      flex-direction: column;
+
+      label {
+        margin-bottom: 15px;
+      }
+
+      .description {
+        display: none;
+      }
+    }
+  }
+
+  .form-table {
+    display: block;
+
+    tbody {
+      display: block;
+    }
+
+    tr:first-of-type {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      > th:first-child {
+        display: none;
+      }
+
+      #simple-local-avatar-photo {
+        width: auto !important;
+        margin-right: 15px;
+        margin-bottom: 15px;
+
+        > img {
+          border-radius: 50%;
+          box-shadow: 0 0 10px 1px fade(@c-black, 50%);
+        }
+      }
+
+      > td:last-child {
+        display: block;
+        width: 100%;
+
+        > p {
+          width: auto !important;
+          margin-bottom: 10px;
+          display: block !important;
+          text-align: center;
+
+          &:first-of-type {
+            margin-top: -10px;
+          }
+
+          .description {
+            display: none;
+          }
+
+          #simple-local-avatar {
+            position: relative;
+            height: 40px;
+            width: 100%;
+            max-width: 250px;
+
+            &::after {
+              content: 'Neues Profilbild';
+              .button;
+              .button--primary;
+              position: absolute;
+              left: 0;
+              top: 0;
+              width: 100%;
+              height: 100%;
+              cursor: pointer;
+              text-align: center;
+              outline: none;
+            }
+          }
+
+          #simple-local-avatar-remove {
+            width: 100%;
+            max-width: 250px;
+            text-align: center;
+            height: 40px;
+          }
+        }
+      }
+    }
+    tr:last-of-type {
+      display: none;
+    }
+  }
+}
+#bbp_user_edit_submit {
+  text-indent: 0;
+}

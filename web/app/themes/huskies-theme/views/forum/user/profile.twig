@@ -1,0 +1,32 @@
+<ul class="members-list">
+  <li class="members-list__entry members-list__entry--full member">
+    <a href="{{ user.profile_link }}" class="member__link">
+      {{ user.avatar(100) }}
+    </a>
+    <h3>{{ __('Details', 'huskies') }}</h3>
+    <dl class="member__facts">
+      <dt>{{ __('Display Name', 'huskies') }}</dt>
+      <dd>{{ user.name }}</dd>
+      <dt>{{ __('First Name', 'huskies') }}</dt>
+      <dd>{{ user.first_name }}</dd>
+      <dt>{{ __('Last Name', 'huskies') }}</dt>
+      <dd>{{ user.last_name }}</dd>
+      <dt>{{ __('Nickname', 'huskies') }}</dt>
+      <dd>{{ user.nickname }}</dd>
+      <dt>{{ __('E-mail Address', 'huskies') }}</dt>
+      <dd>{{ user.email }}</dd>
+      <dt>{{ __('Phonenumber', 'huskies') }}</dt>
+      <dd><pre>{{ user.phone }}</pre></dd>
+    <dl>
+
+    <h3>{{ __('Activity', 'huskies') }}</h3>
+    <dl class="member__facts">
+      <dt>{{ __('Started Topics', 'huskies') }}</dt>
+      <dd>{{ user.topic_count }}</dd>
+      <dt>{{ __('Created Replies', 'huskies') }}</dt>
+      <dd>{{ user.reply_count }}</dd>
+      <dt>{{ __('Forum Role', 'huskies') }}</dt>
+      <dd>{{ user.forum_role }}</dd>
+    <dl>
+  </li>
+</ul>

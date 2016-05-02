@@ -1,0 +1,43 @@
+{% extends "layout/forum.twig" %}
+{% from 'macro.twig' import icon, forum_image_fake, topic %}
+
+{% block forum_title %}
+  {{ __('Forums', 'huskies') }}
+{% endblock %}
+
+{% block forum_header %}
+  {% if unread_topics|length > 0 %}
+    <section class="section section--inverse">
+      <h1 class="section__title center">{{ __('%s Unread Topics', 'huskies')|format(unread_topics|length) }}</h1>
+      {% for index, topic in unread_topics %}
+        {{ topic(topic, true) }}
+      {% endfor %}
+    </section>
+  {% endif %}
+{% endblock %}
+
+{% block forum_content %}
+  {% do action('bbp_template_before_forums_loop') %}
+  {% for forum in forums %}
+    <article class="forum-short forum-short--{{ forum.status }}">
+      {% if forum.is_unread %}
+        {{ forum_image_fake('unread', __('unread', 'huskies')) }}
+      {% else %}
+        <div class="forum-short__image forum-short__image--fake">
+          {{ forum.title|first }}
+        </div>
+      {% endif %}
+      <h2 class="forum-short__title">
+        <a href="{{ forum.link }}">{{ forum.title }}</a>
+        <small>{{ forum.post_content }}</small>
+      </h2>
+      <p class="forum-short__meta">
+        {{ icon('topics') }}
+        {{ forum.topic_count }}
+        |
+        {{ icon('update') }}
+        {{ forum.freshness_time }}
+      </p>
+    </article>
+  {% endfor %}
+{% endblock %}

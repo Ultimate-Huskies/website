@@ -1,0 +1,35 @@
+{
+  "name": "UltimateHuskiesWebsite",
+  "version": "2.0.0",
+  "description": "A modern WordPress site for the ultimate frisbee team Ultime Huskies",
+  "config": {
+    "theme": "web/app/themes/huskies-theme",
+    "bin": "./node_modules/.bin"
+  },
+  "scripts": {
+    "install": "$npm_package_config_bin/bower install",
+    "build:scripts": "$npm_package_config_bin/browserify -t coffeeify --extension='.coffee' $npm_package_config_theme/scripts/index.coffee > $npm_package_config_theme/app.js",
+    "build:styles": "$npm_package_config_bin/lessc $npm_package_config_theme/styles/index.less > $npm_package_config_theme/styles/compiled.css --autoprefix='last 5 version'",
+    "build": "npm run build:scripts && npm run build:styles",
+    "watch:scripts": "DEBUG=onchange $npm_package_config_bin/onchange $npm_package_config_theme/scripts/**/*.coffee -- npm run build:scripts",
+    "watch:styles": "DEBUG=onchange $npm_package_config_bin/onchange $npm_package_config_theme/styles/*.less -- npm run build:styles",
+    "watch": "npm run watch:scripts & npm run watch:styles"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Ultimate-Huskies/website.git"
+  },
+  "author": "Patrick Müller (dev@mupat.net)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ultimate-Huskies/website/issues"
+  },
+  "homepage": "http://ultimate-huskies.de/",
+  "devDependencies": {
+    "bower": "^1.4.1",
+    "browserify": "^10.2.6",
+    "coffeeify": "^1.1.0",
+    "less": "^2.5.1",
+    "onchange": "^1.1.0"
+  }
+}

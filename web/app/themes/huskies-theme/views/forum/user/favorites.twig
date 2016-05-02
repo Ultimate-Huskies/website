@@ -1,0 +1,8 @@
+{% if not favorites|length > 0 %}
+  {{ __('no favorites', 'huskies') }}
+{% else %}
+  {% from 'macro.twig' import topic %}
+  {% for index, favorite in favorites %}
+    {{ topic(favorite) }}
+  {% endfor %}
+{% endif %}

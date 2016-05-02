@@ -1,0 +1,14 @@
+.maxwidth() {
+  max-width: @max-width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.icon_link(@color: @c-white) {
+  cursor: pointer;
+  color: @color;
+
+  &:hover {
+    color: darken(@color, 10%);
+  }
+}

@@ -1,0 +1,5455 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: bbPress 2.x Plugin (DU-Version)\n"
+"Report-Msgid-Bugs-To: http://deckerweb.de/kontakt/\n"
+"POT-Creation-Date: 2012-06-28 18:00+0100\n"
+"PO-Revision-Date: 2013-03-03 22:29:53+0000\n"
+"Last-Translator: David Decker <deckerweb.mobil@googlemail.com>\n"
+"Language-Team: DECKERWEB <deckerweb.mobil@googlemail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: GERMANY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: /home/wemaflo/Desktop/bp_i18n/bbpress/\n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: bbpress.php:471
+#: bbpress.php:472
+#: includes/admin/admin.php:208
+#: includes/admin/admin.php:209
+#: includes/admin/admin.php:219
+#: includes/admin/admin.php:220
+#: includes/admin/users.php:82
+#: includes/extend/buddypress/group.php:596
+#: includes/extend/buddypress/loader.php:42
+#: includes/extend/buddypress/loader.php:170
+#: includes/extend/buddypress/loader.php:259
+#: includes/extend/buddypress/loader.php:310
+#: templates/default/extras/page-forum-statistics.php:39
+#@ bbpress
+msgid "Forums"
+msgstr "Foren"
+
+#: bbpress.php:474
+#: includes/admin/tools.php:1015
+#@ bbpress
+msgid "All Forums"
+msgstr "Alle Foren"
+
+#: bbpress.php:475
+#: bbpress.php:479
+#@ bbpress
+msgid "New Forum"
+msgstr "Neues Forum"
+
+#: bbpress.php:476
+#: templates/default/bbpress/form-forum.php:37
+#@ bbpress
+msgid "Create New Forum"
+msgstr "Forum erstellen"
+
+#: bbpress.php:477
+#: bbpress.php:534
+#: bbpress.php:591
+#: includes/common/template-tags.php:1959
+#: includes/replies/template-tags.php:1525
+#: includes/topics/template-tags.php:2261
+#: templates/default/bbpress/user-details.php:65
+#@ bbpress
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: bbpress.php:478
+#@ bbpress
+msgid "Edit Forum"
+msgstr "Forum bearbeiten"
+
+#: bbpress.php:480
+#: bbpress.php:481
+#@ bbpress
+msgid "View Forum"
+msgstr "Forum anzeigen"
+
+#: bbpress.php:482
+#@ bbpress
+msgid "Search Forums"
+msgstr "Foren suchen"
+
+#: bbpress.php:483
+#@ bbpress
+msgid "No forums found"
+msgstr "Es wurden keine Foren gefunden."
+
+#: bbpress.php:484
+#@ bbpress
+msgid "No forums found in Trash"
+msgstr "Es wurden keine Foren im Papierkorb gefunden."
+
+#: bbpress.php:485
+#: templates/default/bbpress/form-forum.php:129
+#@ bbpress
+msgid "Parent Forum:"
+msgstr "Übergeordnetes Forum:"
+
+#: bbpress.php:508
+#@ bbpress
+msgid "bbPress Forums"
+msgstr "bbPress-Foren"
+
+#: bbpress.php:528
+#: bbpress.php:529
+#: includes/admin/forums.php:421
+#: includes/admin/settings.php:187
+#: includes/admin/settings.php:208
+#: includes/admin/topics.php:685
+#: includes/extend/buddypress/activity.php:398
+#: includes/extend/buddypress/group.php:600
+#: includes/forums/template-tags.php:2283
+#: templates/default/bbpress/loop-forums.php:20
+#: templates/default/extras/page-forum-statistics.php:44
+#@ bbpress
+msgid "Topics"
+msgstr "Themen"
+
+#: bbpress.php:531
+#: includes/admin/tools.php:1016
+#: includes/topics/functions.php:3240
+#@ bbpress
+msgid "All Topics"
+msgstr "Alle Themen"
+
+#: bbpress.php:532
+#: bbpress.php:536
+#@ bbpress
+msgid "New Topic"
+msgstr "Neues Thema"
+
+#: bbpress.php:533
+#: templates/default/bbpress/form-topic.php:43
+#@ bbpress
+msgid "Create New Topic"
+msgstr "Neues Thema erstellen"
+
+#: bbpress.php:535
+#@ bbpress
+msgid "Edit Topic"
+msgstr "Thema bearbeiten"
+
+#: bbpress.php:537
+#: bbpress.php:538
+#@ bbpress
+msgid "View Topic"
+msgstr "Thema anzeigen"
+
+#: bbpress.php:539
+#@ bbpress
+msgid "Search Topics"
+msgstr "Themen suchen"
+
+#: bbpress.php:540
+#@ bbpress
+msgid "No topics found"
+msgstr "Keine Themen gefunden."
+
+#: bbpress.php:541
+#@ bbpress
+msgid "No topics found in Trash"
+msgstr "Keine Themen im Papierkorb gefunden."
+
+#: bbpress.php:542
+#: includes/admin/metaboxes.php:357
+#: includes/admin/metaboxes.php:410
+#: includes/extend/buddypress/group.php:897
+#: templates/default/bbpress/form-topic.php:125
+#@ bbpress
+msgid "Forum:"
+msgstr "Forum:"
+
+#: bbpress.php:565
+#@ bbpress
+msgid "bbPress Topics"
+msgstr "bbPress Themen"
+
+#: bbpress.php:585
+#: bbpress.php:586
+#: includes/admin/forums.php:422
+#: includes/admin/settings.php:195
+#: includes/admin/settings.php:216
+#: includes/admin/topics.php:687
+#: includes/core/theme-compat.php:552
+#: includes/extend/buddypress/activity.php:399
+#: includes/forums/template-tags.php:2347
+#: templates/default/bbpress/loop-forums.php:21
+#: templates/default/bbpress/loop-replies.php:32
+#: templates/default/bbpress/loop-replies.php:62
+#: templates/default/bbpress/loop-topics.php:21
+#: templates/default/extras/page-forum-statistics.php:49
+#@ bbpress
+msgid "Replies"
+msgstr "Antworten"
+
+#: bbpress.php:588
+#: includes/admin/tools.php:1017
+#: includes/replies/functions.php:1514
+#@ bbpress
+msgid "All Replies"
+msgstr "Alle Antworten"
+
+#: bbpress.php:589
+#: bbpress.php:593
+#@ bbpress
+msgid "New Reply"
+msgstr "Neue Antwort"
+
+#: bbpress.php:590
+#@ bbpress
+msgid "Create New Reply"
+msgstr "Antwort erstellen"
+
+#: bbpress.php:592
+#@ bbpress
+msgid "Edit Reply"
+msgstr "Antwort bearbeiten"
+
+#: bbpress.php:594
+#: bbpress.php:595
+#@ bbpress
+msgid "View Reply"
+msgstr "Antwort anzeigen"
+
+#: bbpress.php:596
+#@ bbpress
+msgid "Search Replies"
+msgstr "Antworten suchen"
+
+#: bbpress.php:597
+#@ bbpress
+msgid "No replies found"
+msgstr "Es wurden keine Antworten gefunden."
+
+#: bbpress.php:598
+#@ bbpress
+msgid "No replies found in Trash"
+msgstr "Es wurden keine Antworten im Papierkorb gefunden."
+
+#: bbpress.php:599
+#: includes/admin/metaboxes.php:436
+#@ bbpress
+msgid "Topic:"
+msgstr "Thema:"
+
+#: bbpress.php:622
+#@ bbpress
+msgid "bbPress Replies"
+msgstr "bbPress Antworten"
+
+#: bbpress.php:657
+#@ bbpress
+msgctxt "post"
+msgid "Closed"
+msgstr "Geschlossen"
+
+#: bbpress.php:668
+#@ bbpress
+msgctxt "post"
+msgid "Spam"
+msgstr "Spam"
+
+#: bbpress.php:681
+#@ bbpress
+msgctxt "post"
+msgid "Orphan"
+msgstr "Verwaist"
+
+#: bbpress.php:694
+#@ bbpress
+msgctxt "post"
+msgid "Hidden"
+msgstr "Verborgen"
+
+#: bbpress.php:740
+#: templates/default/extras/page-forum-statistics.php:54
+#@ bbpress
+msgid "Topic Tags"
+msgstr "Themen-Schlagwörter"
+
+#: bbpress.php:742
+#@ bbpress
+msgid "Search Tags"
+msgstr "Schlagwörter suchen"
+
+#: bbpress.php:743
+#@ bbpress
+msgid "Popular Tags"
+msgstr "Beliebte Schlagwörter"
+
+#: bbpress.php:744
+#@ bbpress
+msgid "All Tags"
+msgstr "Alle Schlagwörter"
+
+#: bbpress.php:745
+#@ bbpress
+msgid "Edit Tag"
+msgstr "Schlagwort bearbeiten"
+
+#: bbpress.php:746
+#@ bbpress
+msgid "Update Tag"
+msgstr "Schlagwort aktualisieren"
+
+#: bbpress.php:747
+#@ bbpress
+msgid "Add New Tag"
+msgstr "Neues Schlagwort hinzufügen"
+
+#: bbpress.php:748
+#@ bbpress
+msgid "New Tag Name"
+msgstr "Neuer Schlagwortname"
+
+#: bbpress.php:787
+#@ bbpress
+msgid "Topics with no replies"
+msgstr "Themen ohne Antworten"
+
+#: templates/default/extras/page-topic-tags.php:22
+#@ bbpress
+msgid "<p>This is a collection of tags that are currently popular on our forums.</p>"
+msgstr "<p>Dies ist eine Sammlung von Schlagwörtern, die zurzeit im Forum beliebt sind.</p>"
+
+#: includes/admin/replies.php:623
+#: includes/admin/topics.php:689
+#: templates/default/bbpress/loop-replies.php:18
+#: templates/default/bbpress/loop-replies.php:52
+#@ bbpress
+msgid "Author"
+msgstr "Autor"
+
+#: templates/default/extras/page-forum-statistics.php:26
+#@ bbpress
+msgid "<p>Here are the statistics and popular topics of our forums.</p>"
+msgstr "<p>Statistiken und beliebte Themen des Forums</p>"
+
+#: templates/default/extras/page-forum-statistics.php:34
+#@ bbpress
+msgid "Registered Users"
+msgstr "Registrierte Benutzer"
+
+#: templates/default/extras/page-forum-statistics.php:61
+#@ bbpress
+msgid "Empty Topic Tags"
+msgstr "Leere Themen-Schlagwörter"
+
+#: templates/default/extras/page-forum-statistics.php:70
+#@ bbpress
+msgid "Hidden Topics"
+msgstr "Verborgene Themen"
+
+#: templates/default/extras/page-forum-statistics.php:81
+#@ bbpress
+msgid "Hidden Replies"
+msgstr "Verborgene Antworten"
+
+#: includes/common/widgets.php:677
+#: templates/default/extras/page-forum-statistics.php:100
+#@ bbpress
+msgid "Popular Topics"
+msgstr "Beliebte Themen"
+
+#: templates/default/bbpress-functions.php:251
+#@ bbpress
+msgid "favorites"
+msgstr "Favoriten"
+
+#: templates/default/bbpress-functions.php:252
+#@ bbpress
+msgid "?"
+msgstr "?"
+
+#: templates/default/bbpress-functions.php:253
+#, php-format
+#@ bbpress
+msgid "This topic is one of your %favLinkYes% [%favDel%]"
+msgstr "Dieses Thema gehört zu Deinen %favLinkYes% [%favDel%]"
+
+#: templates/default/bbpress-functions.php:254
+#, php-format
+#@ bbpress
+msgid "%favAdd% (%favLinkNo%)"
+msgstr "%favAdd% (%favLinkNo%)"
+
+#: includes/users/template-tags.php:682
+#: templates/default/bbpress-functions.php:255
+#@ bbpress
+msgid "&times;"
+msgstr "&times;"
+
+#: includes/users/template-tags.php:674
+#: templates/default/bbpress-functions.php:256
+#@ bbpress
+msgid "Add this topic to your favorites"
+msgstr "Dieses Thema zu Deinen Favoriten hinzufügen"
+
+#: includes/users/template-tags.php:825
+#: templates/default/bbpress-functions.php:265
+#@ bbpress
+msgid "Subscribe"
+msgstr "Abonnieren"
+
+#: includes/users/template-tags.php:826
+#: templates/default/bbpress-functions.php:266
+#@ bbpress
+msgid "Unsubscribe"
+msgstr "Abbestellen"
+
+#: includes/common/template-tags.php:1955
+#: includes/common/template-tags.php:2065
+#: includes/common/template-tags.php:2282
+#: includes/core/theme-compat.php:607
+#: templates/default/extras/taxonomy-topic-tag-edit.php:17
+#: templates/default/extras/taxonomy-topic-tag.php:17
+#, php-format
+#@ bbpress
+msgid "Topic Tag: %s"
+msgstr "Themen-Schlagwort: %s"
+
+#: templates/default/bbpress/user-subscriptions.php:19
+#@ bbpress
+msgid "Subscribed Forum Topics"
+msgstr "Abonnierte Forenthemen"
+
+#: templates/default/bbpress/user-subscriptions.php:32
+#@ bbpress
+msgid "You are not currently subscribed to any topics."
+msgstr "Du hast bisher keine Themen abonniert."
+
+#: templates/default/bbpress/user-subscriptions.php:32
+#@ bbpress
+msgid "This user is not currently subscribed to any topics."
+msgstr "Dieser Benutzer hat noch keine Themen abonniert."
+
+#: templates/default/bbpress/form-topic-merge.php:24
+#, php-format
+#@ bbpress
+msgid "Merge topic \"%s\""
+msgstr "Thema \"%s\" zusammenführen"
+
+#: templates/default/bbpress/form-topic-merge.php:29
+#@ bbpress
+msgid "Select the topic to merge this one into. The destination topic will remain the lead topic, and this one will change into a reply."
+msgstr "Wähle das (Ziel-) Thema, mit dem dieses Thema hier zusammengeführt werden soll. Das Zielthema wird das Hauptthema bleiben, und dieses Thema wird in einen Antwort verwandelt."
+
+#: templates/default/bbpress/form-topic-merge.php:30
+#@ bbpress
+msgid "To keep this topic as the lead, go to the other topic and use the merge tool from there instead."
+msgstr "Um dieses Thema als Hauptthema zu erhalten, gehe in das andere Thema und verwende das Zusammenführungswerkzeug von dort aus."
+
+#: templates/default/bbpress/form-topic-merge.php:34
+#@ bbpress
+msgid "All replies within both topics will be merged chronologically. The order of the merged replies is based on the time and date they were posted. If the destination topic was created after this one, it's post date will be updated to second earlier than this one."
+msgstr "Alle Antworten zu beiden Themen werden chronologisch zusammengeführt. Die Reihenfolge der zusammengeführten Antworten basiert auf Zeit und Datum ihrer Veröffentlichung. Falls das Zielthema nach diesem Thema erstellt wurde, wird sein Veröffentlichungsdatum auf einen früheren Zeitpunkt aktualisiert."
+
+#: templates/default/bbpress/form-topic-merge.php:38
+#@ bbpress
+msgid "Destination"
+msgstr "Ziel"
+
+#: templates/default/bbpress/form-topic-merge.php:42
+#@ bbpress
+msgid "Merge with this topic:"
+msgstr "Mit diesem Thema zusammenführen:"
+
+#: templates/default/bbpress/form-topic-merge.php:51
+#@ bbpress
+msgid "No topics were found to which the topic could be merged to!"
+msgstr "Es wurden keine Themen gefunden, mit denen dieses Thema zusammengeführt werden könnte."
+
+#: templates/default/bbpress/form-topic-merge.php:57
+#@ bbpress
+msgid "There are no other topics in this forum to merge with."
+msgstr "In diesem Forum gibt es keine anderen Themen, mit denen zusammengeführt werden könnte."
+
+#: templates/default/bbpress/form-topic-merge.php:65
+#: templates/default/bbpress/form-topic-split.php:69
+#@ bbpress
+msgid "Topic Extras"
+msgstr "Themen-Extras"
+
+#: templates/default/bbpress/form-topic-merge.php:72
+#@ bbpress
+msgid "Merge topic subscribers"
+msgstr "Themen-Abonnenten zusammenführen"
+
+#: templates/default/bbpress/form-topic-merge.php:77
+#@ bbpress
+msgid "Merge topic favoriters"
+msgstr "Themen-Favoriten zusammenführen"
+
+#: templates/default/bbpress/form-topic-merge.php:82
+#@ bbpress
+msgid "Merge topic tags"
+msgstr "Themen-Schlagwörter zusammenführen"
+
+#: templates/default/bbpress/form-topic-merge.php:90
+#: templates/default/bbpress/form-topic-split.php:94
+#@ bbpress
+msgid "<strong>WARNING:</strong> This process cannot be undone."
+msgstr "<strong>WARNUNG:</strong> Dieser Prozess kann nicht rückgängig gemacht werden!"
+
+#: templates/default/bbpress/form-forum.php:149
+#: templates/default/bbpress/form-reply.php:149
+#: templates/default/bbpress/form-topic-merge.php:94
+#: templates/default/bbpress/form-topic-split.php:98
+#: templates/default/bbpress/form-topic.php:198
+#@ bbpress
+msgid "Submit"
+msgstr "Senden"
+
+#: templates/default/bbpress/form-topic-merge.php:107
+#: templates/default/bbpress/form-topic-split.php:111
+#@ bbpress
+msgid "You do not have the permissions to edit this topic!"
+msgstr "Du bist nicht berechtigt, dieses Thema zu bearbeiten. "
+
+#: templates/default/bbpress/form-topic-merge.php:107
+#: templates/default/bbpress/form-topic-split.php:111
+#@ bbpress
+msgid "You cannot edit this topic."
+msgstr "Du kannst dieses Thema nicht bearbeiten."
+
+#: templates/default/bbpress/form-topic-split.php:24
+#, php-format
+#@ bbpress
+msgid "Split topic \"%s\""
+msgstr "Thema \"%s\" teilen"
+
+#: templates/default/bbpress/form-topic-split.php:29
+#@ bbpress
+msgid "When you split a topic, you are slicing it in half starting with the reply you just selected. Choose to use that reply as a new topic with a new title, or merge those replies into an existing topic."
+msgstr "Wenn Du ein Thema teilst, trennst Du es auf, beginnend mit der von Dir ausgewählten Antwort. Lege diesen Beitrag als neues Thema mit neuem Titel fest - oder führe solche Themen innerhalb eines vorhandenen Themas zusammen."
+
+#: templates/default/bbpress/form-topic-split.php:33
+#@ bbpress
+msgid "If you use the existing topic option, replies within both topics will be merged chronologically. The order of the merged replies is based on the time and date they were posted."
+msgstr "Wenn Du die Option des vorhandenen Themas verwendest, werden die Antworten beider Themen chronologisch zusammengeführt. Die Reihenfolge der zusammengeführten Antworten basiert auf Zeit und Datum ihrer Veröffentlichung."
+
+#: templates/default/bbpress/form-topic-split.php:37
+#@ bbpress
+msgid "Split Method"
+msgstr "Teilmethode"
+
+#: templates/default/bbpress/form-topic-split.php:41
+#, php-format
+#@ bbpress
+msgid "New topic in <strong>%s</strong> titled:"
+msgstr "Neues Thema in <strong>%s</strong>. Titel:"
+
+#: templates/default/bbpress/form-topic-split.php:42
+#, php-format
+#@ bbpress
+msgid "Split: %s"
+msgstr "Teilen: %s"
+
+#: templates/default/bbpress/form-topic-split.php:49
+#@ bbpress
+msgid "Use an existing topic in this forum:"
+msgstr "Ein vorhandenes Thema in diesem Forum verwenden:"
+
+#: templates/default/bbpress/form-topic-split.php:58
+#@ bbpress
+msgid "No other topics found!"
+msgstr "Keine weiteren Themen gefunden."
+
+#: templates/default/bbpress/form-topic-split.php:76
+#@ bbpress
+msgid "Copy subscribers to the new topic"
+msgstr "Abonnenten in neues Thema kopieren"
+
+#: templates/default/bbpress/form-topic-split.php:81
+#@ bbpress
+msgid "Copy favoriters to the new topic"
+msgstr "Favoriten in das neue Thema kopieren"
+
+#: templates/default/bbpress/form-topic-split.php:86
+#@ bbpress
+msgid "Copy topic tags to the new topic"
+msgstr "Themen-Schlagwörter in das neue Thema kopieren"
+
+#: templates/default/bbpress/form-topic-tag.php:18
+#, php-format
+#@ bbpress
+msgid "Manage Tag: \"%s\""
+msgstr "Schlagwort verwalten: \"%s\""
+
+#: templates/default/bbpress/form-topic-tag.php:22
+#@ bbpress
+msgid "Rename"
+msgstr "Umbenennen"
+
+#: templates/default/bbpress/form-topic-tag.php:25
+#@ bbpress
+msgid "Leave the slug empty to have one automatically generated."
+msgstr "Diesen Titel leer lassen, um automatisch einen zu generieren."
+
+#: templates/default/bbpress/form-topic-tag.php:29
+#@ bbpress
+msgid "Changing the slug affects its permalink. Any links to the old slug will stop working."
+msgstr "Die Änderung des Titels wirkt sich auf dessen Permalink aus. Alle Links zum alten Titel werden nicht mehr funktionieren."
+
+#: includes/admin/metaboxes.php:467
+#: templates/default/bbpress/form-topic-tag.php:35
+#@ bbpress
+msgid "Name:"
+msgstr "Name:"
+
+#: templates/default/bbpress/form-topic-tag.php:40
+#@ bbpress
+msgid "Slug:"
+msgstr "URL-Titel (Slug):"
+
+#: includes/topics/template-tags.php:2587
+#: templates/default/bbpress/form-topic-tag.php:59
+#: templates/default/bbpress/form-topic-tag.php:73
+#@ bbpress
+msgid "Merge"
+msgstr "Zusammenführen"
+
+#: templates/default/bbpress/form-topic-tag.php:62
+#@ bbpress
+msgid "Merging tags together cannot be undone."
+msgstr "Das Zusammenführen von Schlagwörtern kann nicht rückgängig gemacht werden."
+
+#: templates/default/bbpress/form-topic-tag.php:68
+#@ bbpress
+msgid "Existing tag:"
+msgstr "Vorhandenes Schlagwort:"
+
+#: templates/default/bbpress/form-topic-tag.php:73
+#, php-format
+#@ bbpress
+msgid "Are you sure you want to merge the \"%s\" tag into the tag you specified?"
+msgstr "Bist Du sicher, dass Du das Schlagwort \"%s\" mit dem markierten Schlagwort zusammenführen willst?"
+
+#: includes/replies/template-tags.php:1650
+#: includes/topics/template-tags.php:2388
+#: templates/default/bbpress/form-topic-tag.php:88
+#: templates/default/bbpress/form-topic-tag.php:101
+#@ bbpress
+msgid "Delete"
+msgstr "Löschen"
+
+#: templates/default/bbpress/form-topic-tag.php:91
+#@ bbpress
+msgid "This does not delete your topics. Only the tag itself is deleted."
+msgstr "Dies wird Deine Themen nicht löschen. Nur das Schlagwort selbst wird gelöscht."
+
+#: templates/default/bbpress/form-topic-tag.php:94
+#@ bbpress
+msgid "Deleting a tag cannot be undone."
+msgstr "Das Löschen eines Schlagwortes kann nicht rückgängig gemacht werden."
+
+#: templates/default/bbpress/form-topic-tag.php:95
+#@ bbpress
+msgid "Any links to this tag will no longer function."
+msgstr "Alle Links zu diesem Schlagwort werden nicht mehr funktionieren."
+
+#: templates/default/bbpress/form-topic-tag.php:101
+#, php-format
+#@ bbpress
+msgid "Are you sure you want to delete the \"%s\" tag? This is permanent and cannot be undone."
+msgstr "Bist Du sicher, dass Du das Schlagwort \"%s\"  löschen willst? Diese Aktion kann nicht rückgängig gemacht werden ..."
+
+#: includes/admin/metaboxes.php:468
+#: templates/default/bbpress/form-user-edit.php:14
+#: templates/default/bbpress/form-user-edit.php:19
+#@ bbpress
+msgid "Name"
+msgstr "Name"
+
+#: templates/default/bbpress/form-user-edit.php:24
+#@ bbpress
+msgid "First Name"
+msgstr "Vorname"
+
+#: templates/default/bbpress/form-user-edit.php:29
+#@ bbpress
+msgid "Last Name"
+msgstr "Nachname"
+
+#: templates/default/bbpress/form-user-edit.php:34
+#@ bbpress
+msgid "Nickname"
+msgstr "Pseudonym"
+
+#: templates/default/bbpress/form-user-edit.php:49
+#: templates/default/bbpress/form-user-edit.php:52
+#@ bbpress
+msgid "Contact Info"
+msgstr "Kontaktinfos"
+
+#: includes/admin/metaboxes.php:480
+#: templates/default/bbpress/form-user-edit.php:57
+#@ bbpress
+msgid "Website"
+msgstr "Webseite"
+
+#: templates/default/bbpress/form-user-edit.php:74
+#: templates/default/bbpress/form-user-edit.php:77
+#@ bbpress
+msgid "About Yourself"
+msgstr "Über Dich"
+
+#: templates/default/bbpress/form-user-edit.php:74
+#: templates/default/bbpress/form-user-edit.php:77
+#@ bbpress
+msgid "About the user"
+msgstr "Über den Benutzer"
+
+#: templates/default/bbpress/form-user-edit.php:82
+#@ bbpress
+msgid "Biographical Info"
+msgstr "Biografische Infos"
+
+#: templates/default/bbpress/form-user-edit.php:90
+#: templates/default/bbpress/form-user-edit.php:93
+#@ bbpress
+msgid "Account"
+msgstr "Konto"
+
+#: includes/common/widgets.php:85
+#: templates/default/bbpress/form-user-edit.php:98
+#: templates/default/bbpress/form-user-login.php:17
+#: templates/default/bbpress/form-user-register.php:23
+#@ bbpress
+msgid "Username"
+msgstr "Benutzername"
+
+#: templates/default/bbpress/form-user-edit.php:115
+#, php-format
+#@ bbpress
+msgid "There is a pending email address change to <code>%1$s</code>. <a href=\"%2$s\">Cancel</a>"
+msgstr "Es gibt eine ausstehende E-Mail-Adress-Änderung in <code>%1$s</code>. <a href=\"%2$s\">Abbrechen</a>"
+
+#: templates/default/bbpress/form-user-edit.php:124
+#@ bbpress
+msgid "New Password"
+msgstr "Neues Passwort"
+
+#: templates/default/bbpress/form-user-edit.php:127
+#@ bbpress
+msgid "If you would like to change the password type a new one. Otherwise leave this blank."
+msgstr "Wenn Du das Passwort ändern möchtest, gib bitte ein Neues ein. Ansonsten das Feld einfach leer lassen."
+
+#: templates/default/bbpress/form-user-edit.php:130
+#@ bbpress
+msgid "Type your new password again."
+msgstr "Bitte gib Dein neues Passwort erneut ein."
+
+#: templates/default/bbpress/form-user-edit.php:156
+#@ bbpress
+msgid "Grant this user super admin privileges for the Network."
+msgstr "Diesem Benutzer Superadminrechte für das Netzwerk gewähren."
+
+#: includes/admin/settings.php:1002
+#: templates/default/bbpress/form-user-edit.php:173
+#@ bbpress
+msgid "Save Changes"
+msgstr "Änderungen speichern"
+
+#: templates/default/bbpress/form-user-edit.php:178
+#@ bbpress
+msgid "Update Profile"
+msgstr "Profil aktualisieren"
+
+#: templates/default/bbpress/form-user-edit.php:178
+#@ bbpress
+msgid "Update User"
+msgstr "Benutzer aktualisieren"
+
+#: includes/admin/settings.php:1423
+#: templates/default/bbpress/loop-forums.php:21
+#: templates/default/bbpress/loop-replies.php:24
+#: templates/default/bbpress/loop-replies.php:58
+#: templates/default/bbpress/loop-topics.php:21
+#@ bbpress
+msgid "Posts"
+msgstr "Beiträge"
+
+#: includes/admin/topics.php:688
+#: templates/default/bbpress/loop-topics.php:20
+#@ bbpress
+msgid "Voices"
+msgstr "Stimmen"
+
+#: includes/admin/forums.php:425
+#: includes/admin/topics.php:691
+#: templates/default/bbpress/loop-forums.php:22
+#: templates/default/bbpress/loop-topics.php:22
+#@ bbpress
+msgid "Freshness"
+msgstr "Zuletzt aktiv"
+
+#: templates/default/bbpress/loop-single-topic.php:60
+#, php-format
+#@ bbpress
+msgid "Started by: %1$s"
+msgstr "Gestartet von: %1$s"
+
+#: templates/default/bbpress/loop-single-topic.php:68
+#, php-format
+#@ bbpress
+msgid "in: <a href=\"%1$s\">%2$s</a>"
+msgstr "in: <a href=\"%1$s\">%2$s</a>"
+
+#: templates/default/bbpress/feedback-logged-in.php:13
+#@ bbpress
+msgid "You are already logged in."
+msgstr "Du bist schon angemeldet."
+
+#: templates/default/bbpress/form-reply.php:36
+#@ bbpress
+msgid "This topic is marked as closed to new replies, however your posting capabilities still allow you to do so."
+msgstr "Dieses Thema ist für neue Antworten geschlossen, obwohl die Veröffentlichungsfunktionen diese weiterhin zulassen."
+
+#: templates/default/bbpress/form-forum.php:55
+#: templates/default/bbpress/form-reply.php:44
+#: templates/default/bbpress/form-topic.php:61
+#@ bbpress
+msgid "Your account has the ability to post unrestricted HTML content."
+msgstr "Du darfst mit diesem Benutzerkonto uneingeschränkt HTML verwenden."
+
+#: templates/default/bbpress/form-reply.php:60
+#: templates/default/bbpress/form-topic.php:86
+#@ bbpress
+msgid "Reply:"
+msgstr "Antwort:"
+
+#: templates/default/bbpress/form-forum.php:93
+#: templates/default/bbpress/form-reply.php:75
+#: templates/default/bbpress/form-topic.php:101
+#@ bbpress
+msgid "You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags and attributes:"
+msgstr "Du kannst folgende <abbr title=\"HyperText Markup Language\">HTML</abbr>-Begriffe und -Attribute verwenden:"
+
+#: templates/default/bbpress/form-reply.php:86
+#@ bbpress
+msgid "Tags:"
+msgstr "Schlagwörter:"
+
+#: templates/default/bbpress/form-reply.php:104
+#: templates/default/bbpress/form-topic.php:158
+#@ bbpress
+msgid "Notify the author of follow-up replies via email"
+msgstr "Den Autor via E-Mail über eingehende Antworten informieren"
+
+#: templates/default/bbpress/form-reply.php:108
+#: templates/default/bbpress/form-topic.php:162
+#@ bbpress
+msgid "Notify me of follow-up replies via email"
+msgstr "Mich via E-Mail über eingehende Antworten informieren"
+
+#: templates/default/bbpress/form-reply.php:123
+#: templates/default/bbpress/form-topic.php:176
+#@ bbpress
+msgid "Revision"
+msgstr "Überarbeitung"
+
+#: templates/default/bbpress/form-reply.php:126
+#: templates/default/bbpress/form-topic.php:179
+#@ bbpress
+msgid "Keep a log of this edit:"
+msgstr "Aufzeichnung für folgende Bearbeitung behalten:"
+
+#: templates/default/bbpress/form-reply.php:130
+#: templates/default/bbpress/form-topic.php:183
+#@ bbpress
+msgid "Optional reason for editing:"
+msgstr "Optionaler Grund für die Bearbeitung:"
+
+#: templates/default/bbpress/form-reply.php:188
+#@ bbpress
+msgid "You cannot reply to this topic."
+msgstr "Du kannst zu diesem Thema keinen Antwort verfassen."
+
+#: templates/default/bbpress/form-reply.php:188
+#@ bbpress
+msgid "You must be logged in to reply to this topic."
+msgstr "Du musst angemeldet sein, um zu diesem Thema eine Antwort verfassen zu können."
+
+#: includes/admin/forums.php:423
+#: templates/default/bbpress/content-single-topic-lead.php:18
+#: templates/default/bbpress/content-single-topic-lead.php:90
+#@ bbpress
+msgid "Creator"
+msgstr "Verfasser"
+
+#: templates/default/bbpress/user-topics-created.php:28
+#@ bbpress
+msgid "You have not created any topics."
+msgstr "Du hast noch keine Themen erstellt."
+
+#: templates/default/bbpress/user-topics-created.php:28
+#@ bbpress
+msgid "This user has not created any topics."
+msgstr "Dieser Benutzer hat keine Themen erstellt."
+
+#: templates/default/bbpress/user-details.php:65
+#, php-format
+#@ bbpress
+msgid "Edit Profile of User %s"
+msgstr "Profil von Benutzer %s bearbeiten"
+
+#: includes/common/template-tags.php:1951
+#@ bbpress
+msgid "(Edit)"
+msgstr "(Bearbeiten)"
+
+#: templates/default/bbpress/user-favorites.php:15
+#@ bbpress
+msgid "Favorite Forum Topics"
+msgstr "Favorisierte Forenthemen"
+
+#: templates/default/bbpress/user-favorites.php:28
+#@ bbpress
+msgid "You currently have no favorite topics."
+msgstr "Du hast zur Zeit keine favorisierten Forenthemen."
+
+#: templates/default/bbpress/user-favorites.php:28
+#@ bbpress
+msgid "This user has no favorite topics."
+msgstr "Dieser Benutzer hat keine favorisierten Themen."
+
+#: includes/common/widgets.php:90
+#: templates/default/bbpress/form-user-login.php:22
+#@ bbpress
+msgid "Password"
+msgstr "Passwort"
+
+#: templates/default/bbpress/form-user-login.php:28
+#@ bbpress
+msgid "Keep me signed in"
+msgstr "Angemeldet bleiben"
+
+#: templates/default/bbpress/feedback-no-forums.php:13
+#@ bbpress
+msgid "Oh bother! No forums were found here!"
+msgstr "Es wurden keine Foren gefunden."
+
+#: templates/default/bbpress/form-topic.php:53
+#@ bbpress
+msgid "This forum is marked as closed to new topics, however your posting capabilities still allow you to do so."
+msgstr "Dieses Forum ist für neue Themen geschlossen, obwohl die Veröffentlichungsfunktionen diese weiterhin zulassen."
+
+#: templates/default/bbpress/form-topic.php:75
+#, php-format
+#@ bbpress
+msgid "Topic Title (Maximum Length: %d):"
+msgstr "Themen-Titel (Maximale Länge: %d Zeichen):"
+
+#: templates/default/bbpress/form-topic.php:112
+#@ bbpress
+msgid "Topic Tags:"
+msgstr "Themen-Schlagwörter:"
+
+#: templates/default/bbpress/form-topic.php:139
+#@ bbpress
+msgid "Topic Type:"
+msgstr "Thementyp:"
+
+#: templates/default/bbpress/form-topic.php:229
+#@ bbpress
+msgid "You must be logged in to create new topics."
+msgstr "Du musst angemeldet sein, um neue Themen erstellen zu können."
+
+#: includes/forums/template-tags.php:2212
+#: templates/default/bbpress/feedback-no-access.php:13
+#@ bbpress
+msgid "Private"
+msgstr "Privat"
+
+#: templates/default/bbpress/feedback-no-access.php:16
+#@ bbpress
+msgid "You do not have permission to view this forum."
+msgstr "Du bist nicht berechtigt, dieses Forum anzuzeigen."
+
+#: templates/default/bbpress/form-protected.php:14
+#@ bbpress
+msgid "Protected"
+msgstr "Geschützt"
+
+#: templates/default/bbpress/form-anonymous.php:17
+#@ bbpress
+msgid "Your information:"
+msgstr "Deine Informationen:"
+
+#: templates/default/bbpress/form-anonymous.php:22
+#@ bbpress
+msgid "Name (required):"
+msgstr "Name (erforderlich):"
+
+#: templates/default/bbpress/form-anonymous.php:27
+#@ bbpress
+msgid "Mail (will not be published) (required):"
+msgstr "E-Mail (erforderlich, wird nicht veröffentlicht):"
+
+#: includes/admin/metaboxes.php:479
+#: templates/default/bbpress/form-anonymous.php:32
+#@ bbpress
+msgid "Website:"
+msgstr "Webseite:"
+
+#: includes/common/widgets.php:121
+#: templates/default/bbpress/form-user-lost-pass.php:14
+#@ bbpress
+msgid "Lost Password"
+msgstr "Passwort vergessen"
+
+#: templates/default/bbpress/form-user-lost-pass.php:18
+#@ bbpress
+msgid "Username or Email"
+msgstr "Benutzername oder E-Mail"
+
+#: templates/default/bbpress/feedback-no-topics.php:13
+#@ bbpress
+msgid "Oh bother! No topics were found here!"
+msgstr "Es wurden keine Themen gefunden."
+
+#: templates/default/bbpress/form-user-register.php:14
+#@ bbpress
+msgid "Create an Account"
+msgstr "Konto erstellen"
+
+#: templates/default/bbpress/form-user-register.php:17
+#@ bbpress
+msgid "Your username must be unique, and cannot be changed later."
+msgstr "Der Benutzername muss einzigartig sein und kann später nicht geändert werden."
+
+#: templates/default/bbpress/form-user-register.php:18
+#@ bbpress
+msgid "We use your email address to email you a secure password and verify your account."
+msgstr "Deine E-Mail-Adresse wird verwendet, um Dir ein sicheres Passwort zuzusenden und Dein Konto zu bestätigen."
+
+#: includes/common/widgets.php:115
+#: templates/default/bbpress/form-user-register.php:36
+#@ bbpress
+msgid "Register"
+msgstr "Registrieren"
+
+#: includes/admin/metaboxes.php:42
+#@ bbpress
+msgid "Discussion"
+msgstr "Diskussionen"
+
+#: includes/admin/metaboxes.php:135
+#@ bbpress
+msgid "User"
+msgid_plural "Users"
+msgstr[0] "Benutzer"
+msgstr[1] "Benutzer"
+
+#: includes/admin/metaboxes.php:154
+#@ bbpress
+msgid "Hidden Topic"
+msgid_plural "Hidden Topics"
+msgstr[0] "Verborgenes Thema"
+msgstr[1] "Verborgene Themen"
+
+#: includes/admin/metaboxes.php:176
+#@ bbpress
+msgid "Hidden Reply"
+msgid_plural "Hidden Replies"
+msgstr[0] "Verborgene Antwort"
+msgstr[1] "Verborgene Antworten"
+
+#: includes/admin/metaboxes.php:198
+#@ bbpress
+msgid "Empty Topic Tag"
+msgid_plural "Empty Topic Tags"
+msgstr[0] "Leeres Themen-Schlagwort"
+msgstr[1] "Leere Themen-Schlagwörter"
+
+#: includes/admin/metaboxes.php:222
+#, php-format
+#@ bbpress
+msgid "You are using <span class=\"b\">bbPress %s</span>."
+msgstr "Du verwendest <span class=\"b\">bbPress %s</span>"
+
+#: includes/forums/template-tags.php:2136
+#@ bbpress
+msgid "Category"
+msgstr "Kategorie"
+
+#: includes/forums/template-tags.php:2211
+#@ bbpress
+msgid "Public"
+msgstr "Öffentlich"
+
+#: includes/forums/template-tags.php:2213
+#@ bbpress
+msgid "Hidden"
+msgstr "Verborgen"
+
+#: includes/admin/metaboxes.php:261
+#: includes/admin/metaboxes.php:262
+#: includes/admin/metaboxes.php:351
+#@ bbpress
+msgid "Type:"
+msgstr "Typ:"
+
+#: includes/admin/metaboxes.php:273
+#: includes/admin/metaboxes.php:274
+#: templates/default/bbpress/form-forum.php:111
+#@ bbpress
+msgid "Status:"
+msgstr "Status:"
+
+#: includes/admin/metaboxes.php:285
+#: includes/admin/metaboxes.php:286
+#: templates/default/bbpress/form-forum.php:120
+#@ bbpress
+msgid "Visibility:"
+msgstr "Sichtbar:"
+
+#: includes/admin/metaboxes.php:299
+#@ bbpress
+msgid "Parent:"
+msgstr "Eltern:"
+
+#: includes/admin/metaboxes.php:300
+#@ bbpress
+msgid "Forum Parent"
+msgstr "Eltern-Forum:"
+
+#: templates/default/bbpress/form-forum.php:134
+#@ bbpress
+msgid "(No Parent)"
+msgstr "(kein übergeordnetes)"
+
+#: includes/admin/metaboxes.php:323
+#@ bbpress
+msgid "Order:"
+msgstr "Sort.:"
+
+#: includes/admin/metaboxes.php:324
+#@ bbpress
+msgid "Forum Order"
+msgstr "Foren-Reihenfolge"
+
+#: includes/admin/topics.php:748
+#@ bbpress
+msgid "(No Forum)"
+msgstr "(Kein Forum)"
+
+#: includes/admin/metaboxes.php:474
+#: templates/default/bbpress/form-user-edit.php:103
+#: templates/default/bbpress/form-user-register.php:28
+#@ bbpress
+msgid "Email"
+msgstr "E-Mail"
+
+#: includes/admin/metaboxes.php:488
+#@ bbpress
+msgid "IP Address"
+msgstr "IP-Adresse"
+
+#: includes/admin/settings.php:386
+#: includes/common/functions.php:121
+#@ bbpress
+msgid "minutes"
+msgstr "Minuten"
+
+#: includes/admin/settings.php:402
+#: includes/common/functions.php:122
+#@ bbpress
+msgid "seconds"
+msgstr "Sekunden"
+
+#: includes/admin/settings.php:434
+#@ bbpress
+msgid "Allow users to subscribe to topics"
+msgstr "Benutzern erlauben, Themen zu abonnieren?"
+
+#: includes/admin/settings.php:482
+#@ bbpress
+msgid "Allow guest users without accounts to create topics and replies"
+msgstr "Gastbenutzern ohne Konto erlauben, Themen und Antworten zu erstellen?"
+
+#: includes/admin/settings.php:630
+#: includes/admin/settings.php:646
+#: includes/admin/settings.php:677
+#: includes/admin/settings.php:693
+#@ bbpress
+msgid "per page"
+msgstr "pro Seite"
+
+#: includes/admin/settings.php:1293
+#@ bbpress
+msgid "In the Main Settings you have a number of options:"
+msgstr "In den Haupteinstellungen gibt es einige Optionen:"
+
+#: includes/admin/settings.php:1296
+#@ bbpress
+msgid "You can choose to lock a post after a certain number of minutes. \"Locking post editing\" will prevent the author from editing some amount of time after saving a post."
+msgstr "Du kannst wählen, einen Beitrag nach einigen Minuten zu schließen. \"Beitragsbearbeitung schließen\" wird den Autor daran hindern, nach Ablauf eines festgelegten Zeitraums gespeicherte Beiträge zu bearbeiten."
+
+#: includes/admin/settings.php:1297
+#@ bbpress
+msgid "\"Throttle time\" is the amount of time required between posts from a single author. The higher the throttle time, the longer a user will need to wait between posting to the forum."
+msgstr "\"Zeitintervall\" ist die erforderliche Zeit zwischen zwei Veröffentlichungen ein- und desselben Autors. Je höher dieses Zeitintervall ist, desto länger muss ein Benutzer zwischen zwei Veröffentlichungen im Forum warten."
+
+#: includes/admin/settings.php:1306
+#@ bbpress
+msgid "You must click the Save Changes button at the bottom of the screen for new settings to take effect."
+msgstr "Du musst unten auf \"Änderungen speichern\" klicken, um die neuen Einstellungen zu übernehmen."
+
+#: includes/admin/settings.php:1424
+#@ bbpress
+msgid "Pages"
+msgstr "Seiten"
+
+#: includes/admin/settings.php:97
+#: includes/admin/settings.php:1425
+#@ bbpress
+msgid "Revisions"
+msgstr "Überarbeitungen"
+
+#: includes/admin/settings.php:1426
+#@ bbpress
+msgid "Attachments"
+msgstr "Anhänge"
+
+#: includes/admin/settings.php:1427
+#@ bbpress
+msgid "Menus"
+msgstr "Menüs"
+
+#: includes/admin/settings.php:1430
+#@ bbpress
+msgid "Tag base"
+msgstr "Schlagwort-Basis"
+
+#: includes/admin/settings.php:1433
+#@ bbpress
+msgid "Category base"
+msgstr "Kategorie-Basis"
+
+#: includes/admin/settings.php:229
+#: includes/admin/settings.php:1438
+#@ bbpress
+msgid "Forums base"
+msgstr "Foren-Basis"
+
+#: includes/admin/settings.php:237
+#: includes/admin/settings.php:1441
+#@ bbpress
+msgid "Topics base"
+msgstr "Themen-Basis"
+
+#: includes/admin/settings.php:258
+#: includes/admin/settings.php:1444
+#@ bbpress
+msgid "Forum slug"
+msgstr "Forentitel"
+
+#: includes/admin/settings.php:266
+#: includes/admin/settings.php:1447
+#@ bbpress
+msgid "Topic slug"
+msgstr "Thementitel"
+
+#: includes/admin/settings.php:282
+#: includes/admin/settings.php:1450
+#@ bbpress
+msgid "Reply slug"
+msgstr "Antworttitel"
+
+#: includes/admin/settings.php:1453
+#@ bbpress
+msgid "User base"
+msgstr "Benutzerbasis"
+
+#: includes/admin/settings.php:1456
+#@ bbpress
+msgid "View base"
+msgstr "Basis anzeigen"
+
+#: includes/admin/settings.php:274
+#: includes/admin/settings.php:1459
+#@ bbpress
+msgid "Topic tag slug"
+msgstr "Themen-Schlagworttitel"
+
+#: includes/admin/replies.php:146
+#@ bbpress
+msgid "You can view replies in a simple title list or with an excerpt. Choose the view you prefer by clicking on the icons at the top of the list on the right."
+msgstr "Du kannst Antworten in einer einfachen Titelliste oder als Auszug anzeigen lassen. Wähle die von Dir bevorzugte Ansicht durch Klicken auf die Symbole oben rechts in der Liste."
+
+#: includes/admin/replies.php:156
+#@ bbpress
+msgid "Hovering over a row in the replies list will display action links that allow you to manage your reply. You can perform the following actions:"
+msgstr "Das \"Überfahren\" einer Zeile in der Antwortenliste wird Aktionslinks anzeigen, die Dir die Verwaltung Deiner Antwort ermöglichen. Du kannst folgende Aktionen ausführen:"
+
+#: includes/admin/replies.php:221
+#: includes/admin/replies.php:266
+#@ bbpress
+msgid "Reply Attributes"
+msgstr "Antwort-Attribute"
+
+#: includes/admin/replies.php:351
+#: includes/admin/topics.php:369
+#: templates/default/bbpress/form-anonymous.php:17
+#@ bbpress
+msgid "Author Information"
+msgstr "Autoreninformationen"
+
+#: includes/admin/replies.php:512
+#@ bbpress
+msgid "The reply was not found!"
+msgstr "Die Antwort wurde nicht gefunden."
+
+#: includes/admin/replies.php:515
+#: includes/admin/topics.php:541
+#@ bbpress
+msgid "You do not have the permission to do that!"
+msgstr "Dazu bist Du nicht berechtigt ..."
+
+#: includes/admin/replies.php:583
+#, php-format
+#@ bbpress
+msgid "There was a problem marking the reply \"%1$s\" as spam."
+msgstr "Es gab ein Problem beim Markieren des Beitrags \"%1$s\" als Spam."
+
+#: includes/admin/replies.php:583
+#, php-format
+#@ bbpress
+msgid "Reply \"%1$s\" successfully marked as spam."
+msgstr "Beitrag \"%1$s\" erfolgreich als Spam markiert."
+
+#: includes/admin/replies.php:587
+#, php-format
+#@ bbpress
+msgid "There was a problem unmarking the reply \"%1$s\" as spam."
+msgstr "Es gab ein Problem beim Demarkieren des Beitrags \"%1$s\" als Spam."
+
+#: includes/admin/replies.php:587
+#, php-format
+#@ bbpress
+msgid "Reply \"%1$s\" successfully unmarked as spam."
+msgstr "Beitrag \"%1$s\" erfolgreich als Spam demarkiert."
+
+#: includes/admin/replies.php:620
+#@ bbpress
+msgid "Title"
+msgstr "Titel"
+
+#: includes/admin/forums.php:424
+#: includes/admin/replies.php:624
+#: includes/admin/topics.php:690
+#@ bbpress
+msgid "Created"
+msgstr "Erstellt"
+
+#: includes/admin/replies.php:677
+#: includes/admin/replies.php:685
+#@ bbpress
+msgid "No Topic"
+msgstr "Keine Themen"
+
+#: includes/admin/replies.php:703
+#: includes/admin/replies.php:718
+#: includes/admin/topics.php:741
+#@ bbpress
+msgid "No Forum"
+msgstr "Kein Forum"
+
+#: includes/admin/replies.php:709
+#@ bbpress
+msgid "(Mismatch)"
+msgstr "(Stimmt nicht überein)"
+
+#: includes/admin/forums.php:462
+#: includes/admin/replies.php:732
+#: includes/admin/topics.php:770
+#, php-format
+#@ bbpress
+msgid "%1$s <br /> %2$s"
+msgstr "%1$s <br /> %2$s"
+
+#: includes/admin/replies.php:777
+#: includes/admin/topics.php:830
+#, php-format
+#@ bbpress
+msgid "View &#8220;%s&#8221;"
+msgstr "Anzeigen &#8220;%s&#8221;"
+
+#: includes/admin/replies.php:777
+#: includes/admin/topics.php:830
+#@ bbpress
+msgid "View"
+msgstr "Anzeigen"
+
+#: includes/admin/replies.php:788
+#: includes/admin/topics.php:861
+#@ bbpress
+msgid "Not spam"
+msgstr "Kein Spam"
+
+#: includes/admin/replies.php:790
+#: includes/admin/topics.php:863
+#: includes/replies/template-tags.php:1719
+#: includes/topics/template-tags.php:2643
+#@ bbpress
+msgid "Spam"
+msgstr "Spam"
+
+#: includes/admin/replies.php:799
+#: includes/admin/topics.php:871
+#: includes/replies/template-tags.php:1663
+#: includes/topics/template-tags.php:2401
+#@ bbpress
+msgid "Restore this item from the Trash"
+msgstr "Element aus dem Papierkorb wiederherstellen"
+
+#: includes/admin/replies.php:799
+#: includes/admin/topics.php:871
+#: includes/replies/template-tags.php:1649
+#: includes/topics/template-tags.php:2387
+#@ bbpress
+msgid "Restore"
+msgstr "Wiederherstellen"
+
+#: includes/admin/replies.php:801
+#: includes/admin/topics.php:873
+#: includes/replies/template-tags.php:1665
+#: includes/topics/template-tags.php:2403
+#@ bbpress
+msgid "Move this item to the Trash"
+msgstr "Element in Papierkorb verschieben"
+
+#: includes/admin/replies.php:801
+#: includes/admin/topics.php:873
+#: includes/replies/template-tags.php:1648
+#: includes/topics/template-tags.php:2386
+#@ bbpress
+msgid "Trash"
+msgstr "Müll"
+
+#: includes/admin/replies.php:805
+#: includes/admin/topics.php:877
+#: includes/replies/template-tags.php:1669
+#: includes/topics/template-tags.php:2407
+#@ bbpress
+msgid "Delete this item permanently"
+msgstr "Element endgültig löschen"
+
+#: includes/admin/replies.php:805
+#: includes/admin/topics.php:877
+#@ bbpress
+msgid "Delete Permanently"
+msgstr "Endgültig löschen"
+
+#: includes/admin/replies.php:841
+#: includes/admin/topics.php:913
+#@ bbpress
+msgid "In all forums"
+msgstr "In allen Foren"
+
+#: includes/admin/replies.php:901
+#, php-format
+#@ bbpress
+msgid "Reply updated. <a href=\"%s\">View topic</a>"
+msgstr "Antwort aktualisiert. <a href=\"%s\">Vorschau</a>"
+
+#: includes/admin/forums.php:543
+#: includes/admin/replies.php:904
+#: includes/admin/topics.php:976
+#@ bbpress
+msgid "Custom field updated."
+msgstr "Benutzerdefinierte Felder aktualisiert"
+
+#: includes/admin/forums.php:546
+#: includes/admin/replies.php:907
+#: includes/admin/topics.php:979
+#@ bbpress
+msgid "Custom field deleted."
+msgstr "Benutzerdefiniertes Feld gelöscht"
+
+#: includes/admin/replies.php:910
+#@ bbpress
+msgid "Reply updated."
+msgstr "Antwort aktualisiert"
+
+#: includes/admin/replies.php:915
+#, php-format
+#@ bbpress
+msgid "Reply restored to revision from %s"
+msgstr "Antwort zur Durchsicht gespeichert von %s"
+
+#: includes/admin/replies.php:919
+#, php-format
+#@ bbpress
+msgid "Reply created. <a href=\"%s\">View topic</a>"
+msgstr "Antwort erstellt. <a href=\"%s\">Thema anzeigen</a>"
+
+#: includes/admin/replies.php:922
+#@ bbpress
+msgid "Reply saved."
+msgstr "Antwort gespeichert"
+
+#: includes/admin/replies.php:925
+#, php-format
+#@ bbpress
+msgid "Reply submitted. <a target=\"_blank\" href=\"%s\">Preview topic</a>"
+msgstr "Antwort veröffentlicht. <a target=\"_blank\" href=\"%s\">Vorschau</a>"
+
+#: includes/admin/replies.php:928
+#, php-format
+#@ bbpress
+msgid "Reply scheduled for: <strong>%1$s</strong>. <a target=\"_blank\" href=\"%2$s\">Preview topic</a>"
+msgstr "Antwort geplant für: <strong>%1$s</strong>. <a target=\"_blank\" href=\"%2$s\">Vorschau</a>"
+
+#: includes/admin/forums.php:569
+#: includes/admin/replies.php:930
+#: includes/admin/topics.php:1002
+#@ bbpress
+msgid "M j, Y @ G:i"
+msgstr "j. F Y @  H:i "
+
+#: includes/admin/replies.php:935
+#, php-format
+#@ bbpress
+msgid "Reply draft updated. <a target=\"_blank\" href=\"%s\">Preview topic</a>"
+msgstr "Antwortentwurf aktualisiert. <a target=\"_blank\" href=\"%s\">Vorschau</a>"
+
+#: includes/admin/forums.php:206
+#: includes/admin/forums.php:254
+#@ bbpress
+msgid "Forum Attributes"
+msgstr "Foren-Attribute"
+
+#: includes/common/functions.php:112
+#, php-format
+#@ bbpress
+msgid "%s ago"
+msgstr "vor %s"
+
+#: includes/admin/forums.php:474
+#: includes/forums/template-tags.php:533
+#@ bbpress
+msgid "No Topics"
+msgstr "Keine Themen"
+
+#: includes/admin/forums.php:540
+#, php-format
+#@ bbpress
+msgid "Forum updated. <a href=\"%s\">View forum</a>"
+msgstr "Forum aktualisiert. <a href=\"%s\">Vorschau</a>"
+
+#: includes/admin/forums.php:549
+#@ bbpress
+msgid "Forum updated."
+msgstr "Forum aktualisiert"
+
+#: includes/admin/forums.php:554
+#, php-format
+#@ bbpress
+msgid "Forum restored to revision from %s"
+msgstr "Forum zur Durchsicht gespeichert von %s"
+
+#: includes/admin/forums.php:558
+#, php-format
+#@ bbpress
+msgid "Forum created. <a href=\"%s\">View forum</a>"
+msgstr "Forum erstellt. <a href=\"%s\">Forum anzeigen</a>"
+
+#: includes/admin/forums.php:561
+#@ bbpress
+msgid "Forum saved."
+msgstr "Forum gespeichert"
+
+#: includes/admin/forums.php:564
+#, php-format
+#@ bbpress
+msgid "Forum submitted. <a target=\"_blank\" href=\"%s\">Preview forum</a>"
+msgstr "Forum veröffentlicht. <a target=\"_blank\" href=\"%s\">Vorschau</a>"
+
+#: includes/admin/forums.php:567
+#, php-format
+#@ bbpress
+msgid "Forum scheduled for: <strong>%1$s</strong>. <a target=\"_blank\" href=\"%2$s\">Preview forum</a>"
+msgstr "Forum geplant für: <strong>%1$s</strong>. <a target=\"_blank\" href=\"%2$s\">Vorschau</a>"
+
+#: includes/admin/forums.php:574
+#, php-format
+#@ bbpress
+msgid "Forum draft updated. <a target=\"_blank\" href=\"%s\">Preview forum</a>"
+msgstr "Forenentwurf aktualisiert. <a target=\"_blank\" href=\"%s\">Vorschau</a>"
+
+#: includes/admin/settings.php:24
+#: includes/admin/settings.php:1292
+#@ bbpress
+msgid "Main Settings"
+msgstr "Haupteinstellungen"
+
+#: includes/admin/settings.php:34
+#: includes/admin/settings.php:1312
+#@ bbpress
+msgid "Per Page"
+msgstr "Für Seiten im Forum"
+
+#: includes/admin/settings.php:39
+#@ bbpress
+msgid "Per RSS Page"
+msgstr "Für RSS-Seiten des Forums (von Themen)"
+
+#: includes/admin/settings.php:44
+#@ bbpress
+msgid "Archive Slugs"
+msgstr "Archiv-Permalinks"
+
+#: includes/admin/settings.php:49
+#@ bbpress
+msgid "Single Slugs"
+msgstr "Einzel-Permalinks"
+
+#: includes/admin/settings.php:250
+#@ bbpress
+msgid "Forum Prefix"
+msgstr "Foren-Präfix"
+
+#: includes/admin/admin.php:468
+#@ bbpress
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: includes/admin/admin.php:481
+#@ bbpress
+msgid "Right Now in Forums"
+msgstr "Jetzt in Foren"
+
+#: includes/admin/topics.php:222
+#: includes/admin/topics.php:267
+#@ bbpress
+msgid "Topic Attributes"
+msgstr "Themen-Attribute"
+
+#: includes/admin/topics.php:538
+#@ bbpress
+msgid "The topic was not found!"
+msgstr "Das Thema wurde nicht gefunden."
+
+#: includes/admin/topics.php:628
+#, php-format
+#@ bbpress
+msgid "There was a problem opening the topic \"%1$s\"."
+msgstr "Es gab ein Problem beim Öffnen des Themas \"%1$s\"."
+
+#: includes/admin/topics.php:628
+#, php-format
+#@ bbpress
+msgid "Topic \"%1$s\" successfully opened."
+msgstr "Thema \"%1$s\" erfolgreich eröffnet."
+
+#: includes/admin/topics.php:632
+#, php-format
+#@ bbpress
+msgid "There was a problem closing the topic \"%1$s\"."
+msgstr "Es gab ein Problem beim Schließen des Themas \"%1$s\"."
+
+#: includes/admin/topics.php:632
+#, php-format
+#@ bbpress
+msgid "Topic \"%1$s\" successfully closed."
+msgstr "Thema \"%1$s\" erfolgreich geschlossen."
+
+#: includes/admin/topics.php:636
+#, php-format
+#@ bbpress
+msgid "There was a problem sticking the topic \"%1$s\" to front."
+msgstr "Es gab ein Problem beim Fixieren des Themas \"%1$s\"."
+
+#: includes/admin/topics.php:636
+#, php-format
+#@ bbpress
+msgid "Topic \"%1$s\" successfully sticked to front."
+msgstr "Thema \"%1$s\" erfolgreich oben fixiert."
+
+#: includes/admin/topics.php:640
+#, php-format
+#@ bbpress
+msgid "There was a problem sticking the topic \"%1$s\"."
+msgstr "Es gab ein Problem beim Fixieren des Themas \"%1$s\"."
+
+#: includes/admin/topics.php:640
+#, php-format
+#@ bbpress
+msgid "Topic \"%1$s\" successfully sticked."
+msgstr "Thema \"%1$s\" erfolgreich fixiert."
+
+#: includes/admin/topics.php:644
+#, php-format
+#@ bbpress
+msgid "There was a problem unsticking the topic \"%1$s\"."
+msgstr "Es gab ein Problem beim Lösen des Themas \"%1$s\"."
+
+#: includes/admin/topics.php:644
+#, php-format
+#@ bbpress
+msgid "Topic \"%1$s\" successfully unsticked."
+msgstr "Thema \"%1$s\" erfolgreich gelöst."
+
+#: includes/admin/topics.php:648
+#, php-format
+#@ bbpress
+msgid "There was a problem marking the topic \"%1$s\" as spam."
+msgstr "Es gab ein Problem beim Markieren des Themas \"%1$s\" als Spam."
+
+#: includes/admin/topics.php:648
+#, php-format
+#@ bbpress
+msgid "Topic \"%1$s\" successfully marked as spam."
+msgstr "Thema \"%1$s\" erfolgreich als Spam gekennzeichnet."
+
+#: includes/admin/topics.php:652
+#, php-format
+#@ bbpress
+msgid "There was a problem unmarking the topic \"%1$s\" as spam."
+msgstr "Es gab ein Problem beim Demarkieren des Themas \"%1$s\" als Spam."
+
+#: includes/admin/topics.php:652
+#, php-format
+#@ bbpress
+msgid "Topic \"%1$s\" successfully unmarked as spam."
+msgstr "Thema \"%1$s\" erfolgreich als Spam demarkiert."
+
+#: includes/admin/topics.php:783
+#: includes/topics/template-tags.php:1828
+#@ bbpress
+msgid "No Replies"
+msgstr "Keine Antworten"
+
+#: includes/admin/topics.php:851
+#: includes/topics/template-tags.php:2517
+#@ bbpress
+msgid "Unstick"
+msgstr "Lösen"
+
+#: includes/admin/topics.php:854
+#: includes/topics/template-tags.php:2516
+#@ bbpress
+msgid "Stick"
+msgstr "Fixieren"
+
+#: includes/admin/topics.php:854
+#: includes/topics/template-tags.php:2518
+#@ bbpress
+msgid "to front"
+msgstr "Ganz oben"
+
+#: includes/admin/topics.php:973
+#, php-format
+#@ bbpress
+msgid "Topic updated. <a href=\"%s\">View topic</a>"
+msgstr "Thema aktualisiert. <a href=\"%s\">Thema anzeigen</a>"
+
+#: includes/admin/topics.php:982
+#@ bbpress
+msgid "Topic updated."
+msgstr "Thema aktualisiert"
+
+#: includes/admin/topics.php:987
+#, php-format
+#@ bbpress
+msgid "Topic restored to revision from %s"
+msgstr "Thema zur Durchsicht vorgemerkt von %s"
+
+#: includes/admin/topics.php:991
+#, php-format
+#@ bbpress
+msgid "Topic created. <a href=\"%s\">View topic</a>"
+msgstr "Thema erstellt.<a href=\"%s\">Thema anzeigen</a>"
+
+#: includes/admin/topics.php:994
+#@ bbpress
+msgid "Topic saved."
+msgstr "Thema gespeichert"
+
+#: includes/admin/topics.php:997
+#, php-format
+#@ bbpress
+msgid "Topic submitted. <a target=\"_blank\" href=\"%s\">Preview topic</a>"
+msgstr "Thema veröffentlicht. <a target=\"_blank\" href=\"%s\">Vorschau</a>"
+
+#: includes/admin/topics.php:1000
+#, php-format
+#@ bbpress
+msgid "Topic scheduled for: <strong>%1$s</strong>. <a target=\"_blank\" href=\"%2$s\">Preview topic</a>"
+msgstr "Thema geplant für: <strong>%1$s</strong>. <a target=\"_blank\" href=\"%2$s\">Vorschau</a>"
+
+#: includes/admin/topics.php:1007
+#, php-format
+#@ bbpress
+msgid "Topic draft updated. <a target=\"_blank\" href=\"%s\">Preview topic</a>"
+msgstr "Themen-Entwurf aktualisiert. <a target=\"_blank\" href=\"%s\">Vorschau</a>"
+
+#: includes/admin/tools.php:165
+#@ bbpress
+msgid "Count topics in each forum"
+msgstr "Themen in allen Foren zählen"
+
+#: includes/admin/tools.php:166
+#@ bbpress
+msgid "Count replies in each forum"
+msgstr "Antworten in allen Foren zählen"
+
+#: includes/admin/tools.php:167
+#@ bbpress
+msgid "Count replies in each topic"
+msgstr "Antworten zu jedem Thema zählen"
+
+#: includes/admin/tools.php:168
+#@ bbpress
+msgid "Count voices in each topic"
+msgstr "Stimmen zu jedem Thema zählen"
+
+#: includes/admin/tools.php:169
+#@ bbpress
+msgid "Count spammed & trashed replies in each topic"
+msgstr "Spam und in den Papierkorb verschobene Antworten zu jedem Thema zählen"
+
+#: includes/admin/tools.php:171
+#@ bbpress
+msgid "Count replies for each user"
+msgstr "Antworten jedes Benutzers zählen"
+
+#: includes/admin/tools.php:172
+#@ bbpress
+msgid "Remove trashed topics from user favorites"
+msgstr "In den Papierkorb verschobene Themen aus den Benutzerfavoritzen entfernen"
+
+#: includes/admin/tools.php:173
+#@ bbpress
+msgid "Remove trashed topics from user subscriptions"
+msgstr "In den Papierkorb verschobene aus den Benutzerabonnements entfernen"
+
+#: includes/admin/tools.php:163
+#@ bbpress
+msgid "Recalculate last activity in each topic and forum"
+msgstr "Neukalkulation der letzten Aktivität in jedem Thema und Forum"
+
+#: includes/admin/tools.php:194
+#, php-format
+#@ bbpress
+msgid "Counting the number of replies in each topic&hellip; %s"
+msgstr "Anzahl der Antworten zu jedem Thema&hellip; %s zählen"
+
+#: includes/admin/tools.php:195
+#: includes/admin/tools.php:238
+#: includes/admin/tools.php:280
+#: includes/admin/tools.php:323
+#: includes/admin/tools.php:411
+#: includes/admin/tools.php:445
+#: includes/admin/tools.php:477
+#: includes/admin/tools.php:522
+#: includes/admin/tools.php:567
+#: includes/admin/tools.php:629
+#: includes/admin/tools.php:697
+#: includes/admin/tools.php:745
+#: includes/admin/tools.php:852
+#: includes/admin/tools.php:901
+#: includes/admin/tools.php:955
+#@ bbpress
+msgid "Failed!"
+msgstr "Anmeldung fehlgeschlagen!"
+
+#: includes/admin/tools.php:221
+#: includes/admin/tools.php:264
+#: includes/admin/tools.php:290
+#: includes/admin/tools.php:426
+#: includes/admin/tools.php:460
+#: includes/admin/tools.php:505
+#: includes/admin/tools.php:550
+#: includes/admin/tools.php:612
+#: includes/admin/tools.php:673
+#: includes/admin/tools.php:835
+#: includes/admin/tools.php:885
+#: includes/admin/tools.php:939
+#: includes/admin/tools.php:984
+#@ bbpress
+msgid "Complete!"
+msgstr "Abgeschlossen!"
+
+#: includes/admin/tools.php:237
+#, php-format
+#@ bbpress
+msgid "Counting the number of voices in each topic&hellip; %s"
+msgstr "Stimmen zu jedem Thema zählen&hellip; %s"
+
+#: includes/admin/tools.php:279
+#, php-format
+#@ bbpress
+msgid "Counting the number of spammed and trashed replies in each topic&hellip; %s"
+msgstr "Anzahl der spamverdächtigen und in den Papierkorb verschobenen Antworten zu jedem Thema&hellip; %s"
+
+#: includes/admin/tools.php:410
+#, php-format
+#@ bbpress
+msgid "Counting the number of topics in each forum&hellip; %s"
+msgstr "Themen in jedem Forum zählen&hellip; %s"
+
+#: includes/admin/tools.php:444
+#, php-format
+#@ bbpress
+msgid "Counting the number of replies in each forum&hellip; %s"
+msgstr "Anzahl der Antworten in jedem Forum&hellip; %s"
+
+#: includes/admin/tools.php:521
+#, php-format
+#@ bbpress
+msgid "Counting the number of topics to which each user has replied&hellip; %s"
+msgstr "Anzahl der Themen, zu denen jeder Benutzer eine Antwort verfasst hat&hellip; %s"
+
+#: includes/admin/tools.php:566
+#, php-format
+#@ bbpress
+msgid "Removing trashed topics from user favorites&hellip; %s"
+msgstr "In den Papierkorb verschobene Themen aus den Benutzerfavoriten entfernens&hellip; %s"
+
+#: includes/admin/tools.php:596
+#: includes/admin/tools.php:657
+#@ bbpress
+msgid "Nothing to remove!"
+msgstr "Nichts zum Löschen"
+
+#: includes/admin/tools.php:628
+#, php-format
+#@ bbpress
+msgid "Removing trashed topics from user subscriptions&hellip; %s"
+msgstr "In den Papierkorb verschobene Themen aus den Benutzerabonnements entfernens&hellip; %s"
+
+#: includes/admin/tools.php:744
+#, php-format
+#@ bbpress
+msgid "Recomputing latest post in every topic and forum&hellip; %s"
+msgstr "Letzten Beitrag zu jedem Thema und Forum wieder hinzurechnen&hellip; %s"
+
+#: includes/admin/admin.php:1555
+#: includes/admin/admin.php:1609
+#@ bbpress
+msgid "Go Back"
+msgstr "Zurück"
+
+#: includes/common/template-tags.php:1477
+#: includes/topics/functions.php:1239
+#: includes/topics/functions.php:1597
+#: templates/default/bbpress/form-reply.php:29
+#, php-format
+#@ bbpress
+msgid "Reply To: %s"
+msgstr "Antwort zu: %s"
+
+#: includes/replies/template-tags.php:1031
+#: includes/topics/template-tags.php:1340
+#: includes/users/template-tags.php:1383
+#, php-format
+#@ bbpress
+msgid "View %s's profile"
+msgstr "%s's Profil anzeigen"
+
+#: includes/replies/template-tags.php:1031
+#: includes/topics/template-tags.php:1340
+#: includes/users/template-tags.php:1383
+#, php-format
+#@ bbpress
+msgid "Visit %s's website"
+msgstr "%s's Webseite anzeigen"
+
+#: includes/forums/template-tags.php:1849
+#: includes/topics/template-tags.php:1868
+#, php-format
+#@ bbpress
+#@ default
+msgid "%s reply"
+msgid_plural "%s replies"
+msgstr[0] "%s Antwort"
+msgstr[1] "%s Antworten"
+
+#: includes/forums/template-tags.php:1137
+#: includes/topics/template-tags.php:1884
+#, php-format
+#@ bbpress
+msgid " (+ %d hidden)"
+msgstr " (+ %d versteckt)"
+
+#: includes/topics/template-tags.php:2060
+#@ bbpress
+msgid "Tagged:"
+msgstr "Verschlagwortet:"
+
+#: includes/replies/template-tags.php:1669
+#: includes/topics/template-tags.php:2407
+#@ bbpress
+msgid "Are you sure you want to delete that permanently?"
+msgstr "Willst Du das wirklich endgültig löschen?"
+
+#: includes/replies/template-tags.php:1720
+#: includes/topics/template-tags.php:2644
+#@ bbpress
+msgid "Unspam"
+msgstr "Kein Spam"
+
+#: includes/topics/template-tags.php:2763
+#@ bbpress
+msgid "This topic is marked as spam."
+msgstr "Dieses Thema ist als Spam markiert."
+
+#: includes/topics/template-tags.php:2768
+#@ bbpress
+msgid "This topic is in the trash."
+msgstr "Dieses Thema befindet sich im Papierkorb."
+
+#: includes/topics/template-tags.php:2806
+#@ bbpress
+msgid "Normal"
+msgstr "Normal"
+
+#: includes/topics/template-tags.php:2807
+#@ bbpress
+msgid "Sticky"
+msgstr "Fixiert"
+
+#: includes/topics/template-tags.php:2808
+#@ bbpress
+msgid "Super Sticky"
+msgstr "Super-Fixiert"
+
+#: includes/topics/template-tags.php:2929
+#, php-format
+#@ bbpress
+msgid "%s voice"
+msgid_plural "%s voices"
+msgstr[0] "%s Stimme"
+msgstr[1] "%s Stimmen"
+
+#: includes/common/widgets.php:82
+#: includes/common/widgets.php:103
+#: templates/default/bbpress/form-user-login.php:14
+#: templates/default/bbpress/form-user-login.php:35
+#@ bbpress
+msgid "Log In"
+msgstr "Anmelden"
+
+#: includes/common/widgets.php:182
+#: includes/common/widgets.php:308
+#: includes/common/widgets.php:450
+#: includes/common/widgets.php:668
+#: includes/common/widgets.php:856
+#@ bbpress
+msgid "Title:"
+msgstr "Titel:"
+
+#: includes/common/widgets.php:493
+#@ bbpress
+msgid "A list of recent topics, sorted by popularity or freshness."
+msgstr "Eine Liste aktueller Themen, sortiert nach Beliebtheit und Aktualität."
+
+#: includes/common/widgets.php:669
+#@ bbpress
+msgid "Maximum topics to show:"
+msgstr "Max. Anzahl anzuzeigender Themen:"
+
+#: includes/common/widgets.php:670
+#: includes/common/widgets.php:858
+#@ bbpress
+msgid "Show post date:"
+msgstr "Veröffentlichungsdatum anzeigen:"
+
+#: includes/common/widgets.php:857
+#@ bbpress
+msgid "Maximum replies to show:"
+msgstr "Max. Anzahl anzuzeigender Antworten:"
+
+#: includes/common/functions.php:488
+#: includes/common/functions.php:520
+#, php-format
+#@ bbpress
+msgid "Private: %s"
+msgstr "Privat: %s"
+
+#: includes/common/functions.php:489
+#: includes/common/functions.php:521
+#, php-format
+#@ bbpress
+msgid "Spammed: %s"
+msgstr "Spam: %s"
+
+#: includes/common/functions.php:490
+#: includes/common/functions.php:522
+#, php-format
+#@ bbpress
+msgid "Trashed: %s"
+msgstr "Papierkorb: %s"
+
+#: includes/common/functions.php:597
+#@ bbpress
+msgid "<strong>ERROR</strong>: Invalid author name submitted!"
+msgstr "<strong>FEHLER</strong>: Ungültiger Autorenname!"
+
+#: includes/common/functions.php:601
+#@ bbpress
+msgid "<strong>ERROR</strong>: Invalid email address submitted!"
+msgstr "<strong>FEHLER</strong>: Ungültige E-Mail-Adresse!"
+
+#: includes/replies/template-tags.php:930
+#: includes/topics/template-tags.php:1235
+#: includes/users/template-tags.php:165
+#@ bbpress
+msgid "Anonymous"
+msgstr "Anonym"
+
+#: includes/users/template-tags.php:497
+#@ bbpress
+msgid "Admin"
+msgstr "Admin"
+
+#: includes/users/template-tags.php:675
+#@ bbpress
+msgid " (%?%)"
+msgstr " (%?%)"
+
+#: includes/users/template-tags.php:681
+#, php-format
+#@ bbpress
+msgid "This topic is one of your %favorites% ["
+msgstr "Dieses Thema gehört zu Deinen %Favoriten% ["
+
+#: includes/users/template-tags.php:683
+#@ bbpress
+msgid "]"
+msgstr "]"
+
+#: includes/users/template-tags.php:892
+#@ bbpress
+msgid "User updated."
+msgstr "Benutzer aktualisiert"
+
+#: includes/users/template-tags.php:917
+#@ bbpress
+msgid "You have super admin privileges."
+msgstr "Du hast Superadminrechte"
+
+#: includes/users/template-tags.php:917
+#@ bbpress
+msgid "This user has super admin privileges."
+msgstr "Dieser Benutzer hat Superadminrechte"
+
+#: includes/users/template-tags.php:982
+#@ bbpress
+msgid "&mdash; No role for this site &mdash;"
+msgstr "&mdash; Keine Rolle für diese Seite &mdash;"
+
+#: includes/users/template-tags.php:1180
+#@ bbpress
+msgid "You are now logged out."
+msgstr "Du bist jetzt abgemeldet."
+
+#: includes/users/template-tags.php:1184
+#@ bbpress
+msgid "New user registration is currently not allowed."
+msgstr "Die Benutzerregistrierung ist zurzeit nicht erlaubt."
+
+#: includes/users/template-tags.php:1193
+#@ bbpress
+msgid "Check your e-mail for the confirmation link."
+msgstr "Bitte prüfe Deine E-Mails auf den Bestätigungslink."
+
+#: includes/users/template-tags.php:1198
+#@ bbpress
+msgid "Check your e-mail for your new password."
+msgstr "Bitte prüfe Deine E-Mails auf Dein neues Passwort."
+
+#: includes/users/template-tags.php:1203
+#@ bbpress
+msgid "Registration complete. Please check your e-mail."
+msgstr "Registrierung abgeschlossen. Bitte prüfe Deine E-Mails."
+
+#: includes/common/functions.php:1664
+#@ bbpress
+msgid "Conditional query tags do not work before the query is run. Before then, they always return false."
+msgstr "Konditionale Abfrage-Schlagwörter funktionieren nicht, bevor die Abfrage läuft. Vorher geben sie immer Fehler aus ..."
+
+#: includes/users/functions.php:471
+#: includes/users/functions.php:791
+#@ bbpress
+msgid "<strong>ERROR</strong>: You don't have the permission to edit favorites of that user!"
+msgstr "<strong>FEHLER</strong>: Du bist nicht berechtigt, Favoriten dieses Benutzers zu bearbeiten."
+
+#: includes/users/functions.php:463
+#@ bbpress
+msgid "<strong>ERROR</strong>: No topic was found! Which topic are you marking/unmarking as favorite?"
+msgstr "<strong>FEHLER</strong>: Es wurde kein Thema gefunden. Welches Thema willst Du als Favorit markieren/ demarkieren?"
+
+#: includes/users/functions.php:512
+#@ bbpress
+msgid "<strong>ERROR</strong>: There was a problem removing that topic from favorites!"
+msgstr "<strong>FEHLER</strong>: Es gab ein Problem beim Entfernen dieses Themas aus den Favoriten."
+
+#: includes/users/functions.php:514
+#@ bbpress
+msgid "<strong>ERROR</strong>: There was a problem favoriting that topic!"
+msgstr "<strong>FEHLER</strong>: Es gab ein Problem beim Favorisieren dieses Themas."
+
+#: includes/users/functions.php:783
+#@ bbpress
+msgid "<strong>ERROR</strong>: No topic was found! Which topic are you subscribing/unsubscribing to?"
+msgstr "<strong>FEHLER</strong>: Es wurde kein Thema gefunden. Welches Thema willst Du abonnieren/ abbestellen?"
+
+#: includes/users/functions.php:832
+#@ bbpress
+msgid "<strong>ERROR</strong>: There was a problem unsubscribing from that topic!"
+msgstr "<strong>FEHLER</strong>: Es gab ein Problem beim Abbestellen dieses Themas."
+
+#: includes/users/functions.php:834
+#@ bbpress
+msgid "<strong>ERROR</strong>: There was a problem subscribing to that topic!"
+msgstr "<strong>FEHLER</strong>: Es gab ein Problem beim Abonnieren dieses Themas."
+
+#: includes/topics/functions.php:157
+#@ bbpress
+msgid "<strong>ERROR</strong>: You do not have permission to create new topics."
+msgstr "<strong>FEHLER</strong>: Du bist nicht berechtigt, Themen zu erstellen."
+
+#: includes/topics/functions.php:181
+#: includes/topics/functions.php:536
+#@ bbpress
+msgid "<strong>ERROR</strong>: Your topic needs a title."
+msgstr "<strong>FEHLER</strong>: Dein Thema benötigt einen Titel."
+
+#: includes/topics/functions.php:193
+#: includes/topics/functions.php:548
+#@ bbpress
+msgid "<strong>ERROR</strong>: Your topic cannot be empty."
+msgstr "<strong>FEHLER</strong>: Dein Thema darf nicht leer sein."
+
+#: includes/replies/functions.php:168
+#: includes/topics/functions.php:199
+#: includes/topics/functions.php:496
+#@ bbpress
+msgid "<strong>ERROR</strong>: Forum ID is missing."
+msgstr "<strong>FEHLER</strong>: Foren-ID fehlt."
+
+#: includes/topics/functions.php:210
+#@ bbpress
+msgid "<strong>ERROR</strong>: This forum is a category. No topics can be created in this forum."
+msgstr "<strong>FEHLER</strong>: Dieses Forum ist eine Kategorie. Darin können keine Themen erstellt werden."
+
+#: includes/topics/functions.php:214
+#: includes/topics/functions.php:515
+#@ bbpress
+msgid "<strong>ERROR</strong>: This forum has been closed to new topics."
+msgstr "<strong>FEHLER</strong>: Dieses Forum wurde für neue Themen geschlossen."
+
+#: includes/topics/functions.php:218
+#: includes/topics/functions.php:519
+#@ bbpress
+msgid "<strong>ERROR</strong>: This forum is private and you do not have the capability to read or create new topics in it."
+msgstr "<strong>FEHLER</strong>: Dieses Forum ist privat. Du bist nicht berechtigt, darin zu lesen oder neue Themen zu erstellen."
+
+#: includes/topics/functions.php:222
+#: includes/topics/functions.php:523
+#@ bbpress
+msgid "<strong>ERROR</strong>: This forum is hidden and you do not have the capability to read or create new topics in it."
+msgstr "<strong>FEHLER</strong>: Dieses Forum ist verborgen. Du bist nicht berechtigt, darin zu lesen oder neue Themen zu erstellen."
+
+#: includes/forums/functions.php:211
+#: includes/replies/functions.php:206
+#: includes/topics/functions.php:228
+#@ bbpress
+msgid "<strong>ERROR</strong>: Slow down; you move too fast."
+msgstr "<strong>FEHLER</strong>: Bitte langsamer. Du bist eindeutig zu schnell ... ;-) "
+
+#: includes/topics/functions.php:233
+#@ bbpress
+msgid "<strong>ERROR</strong>: Duplicate topic detected; it looks as though you&#8217;ve already said that!"
+msgstr "<strong>FEHLER</strong>: Ein doppeltes Thema wurde entdeckt. Es sieht danach aus, als hättest Du das bereits geschrieben?!"
+
+#: includes/topics/functions.php:387
+#@ bbpress
+msgid "<strong>ERROR</strong>: The following problem(s) have been found with your topic:"
+msgstr "<strong>FEHLER</strong>: Das/Die folgende(n) Problem(e) wurde(n) beim Abrufen des Themas gefunden:"
+
+#: includes/topics/functions.php:444
+#: includes/topics/functions.php:1092
+#@ bbpress
+msgid "<strong>ERROR</strong>: Topic ID not found."
+msgstr "<strong>FEHLER</strong>: Die Themen-ID wurde nicht gefunden."
+
+#: includes/topics/functions.php:455
+#@ bbpress
+msgid "<strong>ERROR</strong>: The topic you want to edit was not found."
+msgstr "<strong>FEHLER</strong>: Das Thema, das Du bearbeiten willst, wurde nicht gefunden."
+
+#: includes/topics/functions.php:466
+#@ bbpress
+msgid "<strong>ERROR</strong>: You do not have permission to edit that topic."
+msgstr "<strong>FEHLER</strong>: Du bist nicht berechtigt, dieses Thema zu bearbeiten. "
+
+#: includes/topics/functions.php:511
+#@ bbpress
+msgid "<strong>ERROR</strong>: This forum is a category. No topics can be created in it."
+msgstr "<strong>FEHLER</strong>: Dieses Forum ist eine Kategorie. Darin können keine Themen erstellt werden."
+
+#: includes/topics/functions.php:1103
+#@ bbpress
+msgid "<strong>ERROR</strong>: The topic you want to merge was not found."
+msgstr "<strong>FEHLER</strong>: Das Thema, das Du zusammenführen willst, wurde nicht gefunden."
+
+#: includes/topics/functions.php:1109
+#: includes/topics/functions.php:1406
+#@ bbpress
+msgid "<strong>ERROR</strong>: You do not have the permissions to edit the source topic."
+msgstr "<strong>FEHLER</strong>: Du bist nicht berechtigt, das Quellthema zu bearbeiten."
+
+#: includes/topics/functions.php:1117
+#@ bbpress
+msgid "<strong>ERROR</strong>: Destination topic ID not found."
+msgstr "<strong>FEHLER</strong>: Die Zielthemen-ID wurde nicht gefunden."
+
+#: includes/topics/functions.php:1123
+#@ bbpress
+msgid "<strong>ERROR</strong>: The topic you want to merge to was not found."
+msgstr "<strong>FEHLER</strong>: Das Thema, mit dem Du zusammenführen willst, wurde nicht gefunden."
+
+#: includes/topics/functions.php:1127
+#@ bbpress
+msgid "<strong>ERROR</strong>: You do not have the permissions to edit the destination topic."
+msgstr "<strong>FEHLER</strong>: Du bist nicht berechtigt, das Zielthema zu bearbeiten."
+
+#: includes/topics/functions.php:1379
+#@ bbpress
+msgid "<strong>ERROR</strong>: Reply ID to split the topic from not found!"
+msgstr "<strong>FEHLER</strong>: Die Antwort-ID, von der das Thema geteilt werden soll, wurde nicht gefunden."
+
+#: includes/topics/functions.php:1387
+#@ bbpress
+msgid "<strong>ERROR</strong>: The reply you want to split from was not found."
+msgstr "<strong>FEHLER</strong>: Die Antwort, welches Du teilen willst, wurde nicht gefunden."
+
+#: includes/topics/functions.php:1396
+#@ bbpress
+msgid "<strong>ERROR</strong>: The topic you want to split was not found."
+msgstr "<strong>FEHLER</strong>: Das Thema, welches Du teilen willst, wurde nicht gefunden."
+
+#: includes/topics/functions.php:1414
+#@ bbpress
+msgid "<strong>ERROR</strong>: You need to choose a valid split option."
+msgstr "<strong>FEHLER</strong>: Du musst eine gültige Teiloption wählen."
+
+#: includes/topics/functions.php:1427
+#@ bbpress
+msgid "<strong>ERROR</strong>: Destination topic ID not found!"
+msgstr "<strong>FEHLER</strong>: Die Zielthemen-ID wurde nicht gefunden."
+
+#: includes/topics/functions.php:1436
+#@ bbpress
+msgid "<strong>ERROR</strong>: The topic you want to split to was not found!"
+msgstr "<strong>FEHLER</strong>: Das Thema, welches Du (auf-)teilen willst, wurde nicht gefunden."
+
+#: includes/topics/functions.php:1440
+#@ bbpress
+msgid "<strong>ERROR</strong>: You do not have the permissions to edit the destination topic!"
+msgstr "<strong>FEHLER</strong>: Du bist nicht berechtigt, das Zielthema zu bearbeiten."
+
+#: includes/topics/functions.php:1479
+#@ bbpress
+msgid "<strong>ERROR</strong>: There was a problem converting the reply into the topic. Please try again."
+msgstr "<strong>FEHLER</strong>: Es gab ein Problem beim Konvertieren der Antwort in das Thema. Bitte versuche es erneut ..."
+
+#: includes/topics/functions.php:1484
+#@ bbpress
+msgid "<strong>ERROR</strong>: You do not have the permissions to create new topics. The reply could not be converted into a topic."
+msgstr "<strong>FEHLER</strong>: Du bist nicht berechtigt, neue Themen zu erstellen. Die Antwort konnte nicht in ein Thema konvertiert werden."
+
+#: includes/topics/functions.php:1739
+#, php-format
+#@ bbpress
+msgid "<strong>ERROR</strong>: The following problem(s) have been found while getting the tag: %s"
+msgstr "<strong>FEHLER</strong>: Das/Die folgende(n) Problem(e) wurde(n) beim Abrufen des Schlagwortes gefunden: %s"
+
+#: includes/topics/functions.php:1757
+#: includes/topics/functions.php:1796
+#@ bbpress
+msgid "<strong>ERROR</strong>: You do not have the permissions to edit the topic tags."
+msgstr "<strong>FEHLER</strong>: Du bist nicht berechtigt, diese Themen-Schlagwörter zu bearbeiten."
+
+#: includes/topics/functions.php:1763
+#: includes/topics/functions.php:1802
+#@ bbpress
+msgid "<strong>ERROR</strong>: You need to enter a tag name."
+msgstr "<strong>FEHLER</strong>: Du musst einen Schlagwortnamen eingeben."
+
+#: includes/topics/functions.php:1773
+#, php-format
+#@ bbpress
+msgid "<strong>ERROR</strong>: The following problem(s) have been found while updating the tag: %s"
+msgstr "<strong>FEHLER</strong>: Das/Die folgende(n) Problem(e) wurde(n) beim Aktualisieren des Schlagwortes gefunden: %s"
+
+#: includes/topics/functions.php:1812
+#: includes/topics/functions.php:1830
+#, php-format
+#@ bbpress
+msgid "<strong>ERROR</strong>: The following problem(s) have been found while merging the tags: %s"
+msgstr "<strong>FEHLER</strong>: Das/Die folgende(n) Problem(e) wurde(n) beim Zusammenführen der Schlagwörter gefunden: %s"
+
+#: includes/topics/functions.php:1821
+#@ bbpress
+msgid "<strong>ERROR</strong>: The tags which are being merged can not be the same."
+msgstr "<strong>FEHLER</strong>: Die Schlagwörter, die zusammengeführt werden sollen, dürfen nicht identisch sein."
+
+#: includes/topics/functions.php:1853
+#@ bbpress
+msgid "<strong>ERROR</strong>: You do not have the permissions to delete the topic tags."
+msgstr "<strong>FEHLER</strong>: Du bist nicht berechtigt, diese Themen-Schlagwörter zu löschen."
+
+#: includes/topics/functions.php:1862
+#, php-format
+#@ bbpress
+msgid "<strong>ERROR</strong>: The following problem(s) have been found while deleting the tag: %s"
+msgstr "<strong>FEHLER</strong>: Das/Die folgende(n) Problem(e) wurde(n) beim Löschen des Schlagwortes gefunden: %s"
+
+#: includes/topics/functions.php:1991
+#@ bbpress
+msgid "<strong>ERROR:</strong> You do not have the permission to do that."
+msgstr "<strong>FEHLER</strong>: Dazu bist Du nicht berechtigt ..."
+
+#: includes/topics/functions.php:2004
+#@ bbpress
+msgid "<strong>ERROR</strong>: There was a problem closing the topic."
+msgstr "<strong>FEHLER</strong>: Beim Schließen des Themas ist ein Problem aufgetreten."
+
+#: includes/topics/functions.php:2004
+#@ bbpress
+msgid "<strong>ERROR</strong>: There was a problem opening the topic."
+msgstr "<strong>FEHLER</strong>: Beim Öffnen des Themas ist ein Problem aufgetreten."
+
+#: includes/topics/functions.php:2015
+#@ bbpress
+msgid "<strong>ERROR</strong>: There was a problem unsticking the topic."
+msgstr "<strong>FEHLER</strong>: Beim Lösen des Themas ist ein Problem aufgetreten."
+
+#: includes/topics/functions.php:2015
+#@ bbpress
+msgid "<strong>ERROR</strong>: There was a problem sticking the topic."
+msgstr "<strong>FEHLER</strong>: Beim Fixieren des Themas ist ein Problem aufgetreten."
+
+#: includes/topics/functions.php:2025
+#@ bbpress
+msgid "<strong>ERROR</strong>: There was a problem unmarking the topic as spam."
+msgstr "<strong>FEHLER</strong>: Beim Demarkieren des Themas als Spam ist ein Problem aufgetreten."
+
+#: includes/topics/functions.php:2025
+#@ bbpress
+msgid "<strong>ERROR</strong>: There was a problem marking the topic as spam."
+msgstr "<strong>FEHLER</strong>: Beim Markieren des Themas als Spam ist ein Problem aufgetreten."
+
+#: includes/topics/functions.php:2044
+#@ bbpress
+msgid "<strong>ERROR</strong>: There was a problem trashing the topic."
+msgstr "<strong>FEHLER</strong>: Beim Verschieben des Themas in den Papierkorb ist ein Problem aufgetreten."
+
+#: includes/topics/functions.php:2052
+#@ bbpress
+msgid "<strong>ERROR</strong>: There was a problem untrashing the topic."
+msgstr "<strong>FEHLER</strong>: Beim Wiederherstellen des Themas aus dem Papierkorb ist ein Problem aufgetreten."
+
+#: includes/topics/functions.php:2060
+#@ bbpress
+msgid "<strong>ERROR</strong>: There was a problem deleting the topic."
+msgstr "<strong>FEHLER</strong>: Beim Löschen des Themas ist ein Problem aufgetreten."
+
+#: includes/replies/functions.php:1554
+#: includes/topics/functions.php:3265
+#, php-format
+#@ bbpress
+msgid "Replies: %s"
+msgstr "Antworten: %s"
+
+#: includes/extend/akismet.php:304
+#, php-format
+#@ bbpress
+msgid "%1$s reported this %2$s as spam"
+msgstr "%1$s meldet, dass dieses/dieser %2$s Spam ist"
+
+#: includes/extend/akismet.php:311
+#, php-format
+#@ bbpress
+msgid "%1$s reported this %2$s as not spam"
+msgstr "%1$s meldet, dass dieses/dieser %2$s kein Spam ist"
+
+#: includes/extend/akismet.php:458
+#@ bbpress
+msgid "Akismet caught this post as spam"
+msgstr "Akismet hat in diesem Beitrag Spam entdeckt"
+
+#: includes/extend/akismet.php:462
+#: includes/extend/akismet.php:477
+#, php-format
+#@ bbpress
+msgid "Post status was changed to %s"
+msgstr "Beitragsstatus wurde in %s geändert"
+
+#: includes/extend/akismet.php:470
+#@ bbpress
+msgid "Akismet cleared this post"
+msgstr "Akismet hat diesen Beitrag gelöscht"
+
+#: includes/extend/akismet.php:484
+#, php-format
+#@ bbpress
+msgid "Akismet was unable to check this post (response: %s), will automatically retry again later."
+msgstr "Akismet war nicht in der Lage, diesen Beitrag zu überprüfen und wird es später nochmals versuchen (Antwort: %s)."
+
+#: includes/replies/template-tags.php:1783
+#@ bbpress
+msgid "Split"
+msgstr "Teilen"
+
+#: includes/replies/template-tags.php:1784
+#@ bbpress
+msgid "Split the topic from this reply"
+msgstr "Das Thema ab dieser Antwort teilen"
+
+#: includes/forums/template-tags.php:1121
+#: includes/forums/template-tags.php:1860
+#, php-format
+#@ default
+#@ bbpress
+msgid "%s topic"
+msgid_plural "%s topics"
+msgstr[0] "%s Thema"
+msgstr[1] "%s Themen"
+
+#: includes/forums/template-tags.php:1889
+#, php-format
+#@ bbpress
+msgid "This category contains %1$s and %2$s."
+msgstr "Diese Kategorie enthält %1$s und %2$s."
+
+#: includes/forums/template-tags.php:1891
+#, php-format
+#@ bbpress
+msgid "This forum contains %1$s and %2$s."
+msgstr "Dieses Forum enthält %1$s und %2$s."
+
+#: includes/replies/functions.php:143
+#@ bbpress
+msgid "<strong>ERROR</strong>: You do not have permission to reply."
+msgstr "<strong>FEHLER</strong>: Du bist nicht berechtigt, eine Antwort zu verfassen."
+
+#: includes/replies/functions.php:157
+#@ bbpress
+msgid "<strong>ERROR</strong>: Topic ID is missing."
+msgstr "<strong>FEHLER</strong>: Themen-ID fehlt."
+
+#: includes/replies/functions.php:189
+#@ bbpress
+msgid "<strong>ERROR</strong>: Your reply needs a title."
+msgstr "<strong>FEHLER</strong>: Dein Beitrag benötigt noch einen Titel."
+
+#: includes/replies/functions.php:201
+#: includes/replies/functions.php:492
+#@ bbpress
+msgid "<strong>ERROR</strong>: Your reply cannot be empty."
+msgstr "<strong>FEHLER</strong>: Dein Beitrag darf nicht leer sein."
+
+#: includes/replies/functions.php:211
+#@ bbpress
+msgid "<strong>ERROR</strong>: Duplicate reply detected; it looks as though you&#8217;ve already said that!"
+msgstr "<strong>FEHLER</strong>: Ein doppelter Beitrag wurde entdeckt. Es sieht so aus, als hättest Du das bereits geschrieben ..."
+
+#: includes/replies/functions.php:397
+#@ bbpress
+msgid "<strong>ERROR</strong>: Reply ID not found."
+msgstr "<strong>FEHLER</strong>: Antwort-ID nicht gefunden."
+
+#: includes/replies/functions.php:414
+#@ bbpress
+msgid "<strong>ERROR</strong>: The reply you want to edit was not found."
+msgstr "<strong>FEHLER</strong>: Die Antwort, die Du bearbeiten willst, wurde nicht gefunden."
+
+#: includes/replies/functions.php:425
+#@ bbpress
+msgid "<strong>ERROR</strong>: You do not have permission to edit that reply."
+msgstr "<strong>FEHLER</strong>: Du bist nicht berechtigt, diese Antwort zu bearbeiten."
+
+#: includes/replies/functions.php:459
+#@ bbpress
+msgid "<strong>ERROR</strong>: This forum is a category. No topics or replies can be created in it."
+msgstr "<strong>FEHLER</strong>: Dieses Forum ist eine Kategorie. Darin können keine Themen oder Antworten erstellt werden."
+
+#: includes/replies/functions.php:463
+#@ bbpress
+msgid "<strong>ERROR</strong>: This forum has been closed to new topics and replies."
+msgstr "<strong>FEHLER</strong>: Dieses Forum wurde für neue Themen und Antworten geschlossen."
+
+#: includes/replies/functions.php:467
+#@ bbpress
+msgid "<strong>ERROR</strong>: This forum is private and you do not have the capability to read or create new replies in it."
+msgstr "<strong>FEHLER</strong>: Dieses Forum ist privat. Du bist nicht berechtigt, darin zu lesen oder neue Beiträge zu erstellen."
+
+#: includes/replies/functions.php:471
+#@ bbpress
+msgid "<strong>ERROR</strong>: This forum is hidden and you do not have the capability to read or create new replies in it."
+msgstr "<strong>FEHLER</strong>: Dieses Forum ist verborgen. Du bist nicht berechtigt, darin zu lesen oder neue Beiträge zu erstellen."
+
+#: includes/replies/functions.php:1075
+#@ bbpress
+msgid "<strong>ERROR:</strong> You do not have the permission to do that!"
+msgstr "<strong>FEHLER</strong>: Dazu bist Du nicht berechtigt ..."
+
+#: includes/replies/functions.php:1088
+#@ bbpress
+msgid "<strong>ERROR</strong>: There was a problem unmarking the reply as spam!"
+msgstr "<strong>FEHLER</strong>: Es gab ein Problem beim Demarkieren des Beitrags als Spam."
+
+#: includes/replies/functions.php:1088
+#@ bbpress
+msgid "<strong>ERROR</strong>: There was a problem marking the reply as spam!"
+msgstr "<strong>FEHLER</strong>: Es gab ein Problem beim Markieren des Beitrags als Spam."
+
+#: includes/replies/functions.php:1107
+#@ bbpress
+msgid "<strong>ERROR</strong>: There was a problem trashing the reply!"
+msgstr "<strong>FEHLER</strong>: Es gab ein Problem beim Verschieben des Beitrags in den Papierkorb."
+
+#: includes/replies/functions.php:1115
+#@ bbpress
+msgid "<strong>ERROR</strong>: There was a problem untrashing the reply!"
+msgstr "<strong>FEHLER</strong>: Es gab ein Problem beim Wiederherstellen des Beitrags aus dem Papierkorb."
+
+#: includes/replies/functions.php:1123
+#@ bbpress
+msgid "<strong>ERROR</strong>: There was a problem deleting the reply!"
+msgstr "<strong>FEHLER</strong>: Es gab ein Problem beim Löschen des Beitrags."
+
+#: includes/replies/functions.php:1512
+#@ bbpress
+msgid "All Posts"
+msgstr "Alle Beiträge"
+
+#: includes/common/template-tags.php:1339
+#@ bbpress
+msgid "No topics available"
+msgstr "Keine Themen verfügbar"
+
+#: includes/common/template-tags.php:1344
+#@ bbpress
+msgid "No forums available"
+msgstr "Keine Foren verfügbar"
+
+#: includes/common/template-tags.php:1349
+#@ bbpress
+msgid "None available"
+msgstr "Keine verfügbar"
+
+#: includes/common/template-tags.php:1888
+#@ bbpress
+msgid "Home"
+msgstr "Start"
+
+#: includes/common/template-tags.php:1976
+#@ bbpress
+msgid "&rsaquo;"
+msgstr "&rsaquo;"
+
+#: includes/common/template-tags.php:2216
+#@ bbpress
+msgid "Log Out"
+msgstr "Abmelden"
+
+#: includes/common/template-tags.php:2269
+#, php-format
+#@ bbpress
+msgid "Forum: %s"
+msgstr "Foren: %s"
+
+#: includes/common/template-tags.php:2273
+#, php-format
+#@ bbpress
+msgid "Topic: %s"
+msgstr "Thema: %s"
+
+#: includes/common/template-tags.php:2291
+#@ bbpress
+msgid "Your Profile"
+msgstr "Dein Profil"
+
+#: includes/common/template-tags.php:2296
+#: templates/default/bbpress/user-details.php:29
+#, php-format
+#@ bbpress
+msgid "%s's Profile"
+msgstr "%s's Profil"
+
+#: includes/common/template-tags.php:2304
+#@ bbpress
+msgid "Edit Your Profile"
+msgstr "Profil bearbeiten "
+
+#: includes/common/template-tags.php:2309
+#, php-format
+#@ bbpress
+msgid "Edit %s's Profile"
+msgstr "%s's Profil bearbeiten"
+
+#: includes/common/template-tags.php:2316
+#, php-format
+#@ bbpress
+msgid "View: %s"
+msgstr "Anzeigen: %s"
+
+#. gettext fix: identical singular and plural forms found, that may be ambiguous! Please check the code!
+#: includes/admin/metaboxes.php:50
+#: bbpress.php:473
+#: includes/admin/forums.php:420
+#: includes/admin/metaboxes.php:358
+#: includes/admin/metaboxes.php:411
+#: includes/admin/replies.php:621
+#: includes/admin/topics.php:686
+#: includes/extend/buddypress/group.php:48
+#: includes/extend/buddypress/group.php:49
+#: includes/forums/template-tags.php:2135
+#: templates/default/bbpress/loop-forums.php:19
+#@ bbpress
+msgid "Forum"
+msgid_plural "Forums"
+msgstr[0] "Forum"
+msgstr[1] "Foren"
+
+#. gettext fix: identical singular and plural forms found, that may be ambiguous! Please check the code!
+#: includes/admin/metaboxes.php:67
+#: bbpress.php:530
+#: includes/admin/metaboxes.php:437
+#: includes/admin/replies.php:622
+#: templates/default/bbpress/content-single-topic-lead.php:22
+#: templates/default/bbpress/content-single-topic-lead.php:94
+#: templates/default/bbpress/loop-topics.php:19
+#@ bbpress
+msgid "Topic"
+msgid_plural "Topics"
+msgstr[0] "Thema"
+msgstr[1] "Themen"
+
+#. gettext fix: identical singular and plural forms found, that may be ambiguous! Please check the code!
+#: includes/admin/metaboxes.php:84
+#: bbpress.php:587
+#@ bbpress
+msgid "Reply"
+msgid_plural "Replies"
+msgstr[0] "Antwort"
+msgstr[1] "Antworten"
+
+#. gettext fix: identical singular and plural forms found, that may be ambiguous! Please check the code!
+#: includes/admin/metaboxes.php:103
+#: bbpress.php:741
+#@ bbpress
+msgid "Topic Tag"
+msgid_plural "Topic Tags"
+msgstr[0] "Themen-Schlagwort"
+msgstr[1] "Themen-Schlagwörter"
+
+#: includes/admin/replies.php:788
+#@ bbpress
+msgid "Mark the reply as not spam"
+msgstr "Die Antwort als 'kein Spam' kennzeichnen"
+
+#: includes/admin/replies.php:790
+#@ bbpress
+msgid "Mark this reply as spam"
+msgstr "Diese Antwort als 'Spam' kennzeichnen"
+
+#: includes/admin/replies.php:831
+#: includes/admin/topics.php:903
+#@ bbpress
+msgid "Empty Spam"
+msgstr "Spam leeren"
+
+#: includes/admin/topics.php:840
+#@ bbpress
+msgid "Close this topic"
+msgstr "Dieses Thema schließen"
+
+#: includes/admin/topics.php:842
+#@ bbpress
+msgid "Open this topic"
+msgstr "Dieses Thema öffnen"
+
+#: includes/admin/topics.php:851
+#@ bbpress
+msgid "Unstick this topic"
+msgstr "Thema nicht mehr fixieren"
+
+#: includes/admin/topics.php:854
+#@ bbpress
+msgid "Stick this topic to its forum"
+msgstr "Thema in dessen Forum fixieren"
+
+#: includes/admin/topics.php:854
+#@ bbpress
+msgid "Stick this topic to front"
+msgstr "Thema auf Foren-Startseite fixieren"
+
+#: includes/admin/topics.php:861
+#@ bbpress
+msgid "Mark the topic as not spam"
+msgstr "Das Thema als 'kein Spam' kennzeichnen"
+
+#: includes/admin/topics.php:863
+#@ bbpress
+msgid "Mark this topic as spam"
+msgstr "Dieses Thema als 'Spam' kennzeichnen"
+
+#: includes/extend/buddypress/activity.php:238
+#@ bbpress
+msgid "New topic created"
+msgstr "Neues Thema erstellt"
+
+#: includes/extend/buddypress/activity.php:239
+#@ bbpress
+msgid "New reply created"
+msgstr "Neue Antwort erstellt"
+
+#: includes/extend/buddypress/activity.php:464
+#, php-format
+#@ bbpress
+msgid "%1$s started the topic %2$s in the forum %3$s"
+msgstr "%1$s begann das Thema %2$s im Forum %3$s"
+
+#: includes/extend/buddypress/activity.php:614
+#, php-format
+#@ bbpress
+msgid "%1$s replied to the topic %2$s in the forum %3$s"
+msgstr "%1$s antwortete auf das Thema %2$s im Forum %3$s"
+
+#: includes/replies/functions.php:285
+#: includes/replies/functions.php:576
+#@ bbpress
+msgid "<strong>ERROR</strong>: There was a problem adding the tags to the topic."
+msgstr "<strong>Fehler</strong>: Es gab ein Problem dabei, die Schlagwörter dem Thema hinzuzufügen."
+
+#: includes/replies/functions.php:344
+#: includes/replies/functions.php:632
+#@ bbpress
+msgid "<strong>ERROR</strong>: The following problem(s) have been found with your reply:Please try again."
+msgstr "<strong>FEHLER</strong>: Die folgenden Probleme wurden bei Deiner Antwort gefunden: Bitte noch einmal versuchen."
+
+#: includes/topics/functions.php:723
+#@ bbpress
+msgid "<strong>ERROR</strong>: The following problem(s) have been found with your topic:Please try again."
+msgstr "<strong>FEHLER</strong>: Die folgenden Probleme wurden bei Deinem Thema gefunden: Bitte noch einmal versuchen."
+
+#: templates/default/bbpress/form-reply.php:172
+#, php-format
+#@ bbpress
+msgid "The topic &#8216;%s&#8217; is closed to new replies."
+msgstr "Das Thema &#8216;%s&#8217; ist für neue Antworten geschlossen."
+
+#: templates/default/bbpress/form-reply.php:180
+#: templates/default/bbpress/form-topic.php:221
+#, php-format
+#@ bbpress
+msgid "The forum &#8216;%s&#8217; is closed to new topics and replies."
+msgstr "Das Forum &#8216;%s&#8217; ist für neue Themen und Antworten geschlossen."
+
+#: templates/default/bbpress/form-topic-tag.php:45
+#@ bbpress
+msgid "Update"
+msgstr "Aktualisieren"
+
+#: templates/default/bbpress/form-forum.php:35
+#: templates/default/bbpress/form-topic.php:41
+#, php-format
+#@ bbpress
+msgid "Now Editing &ldquo;%s&rdquo;"
+msgstr "Gerade in Bearbeitung &ldquo;%s&rdquo;"
+
+#: templates/default/bbpress/form-topic.php:43
+#, php-format
+#@ bbpress
+msgid "Create New Topic in &ldquo;%s&rdquo;"
+msgstr "Neues Thema erstellen in &ldquo;%s&rdquo;"
+
+#: bbpress.php:658
+#, php-format
+#@ bbpress
+msgctxt "bbpress"
+msgid "Closed <span class=\"count\">(%s)</span>"
+msgid_plural "Closed <span class=\"count\">(%s)</span>"
+msgstr[0] "Geschlossen <span class=\"count\">(%s)</span>"
+msgstr[1] "Geschlossene <span class=\"count\">(%s)</span>"
+
+#: bbpress.php:669
+#, php-format
+#@ bbpress
+msgctxt "bbpress"
+msgid "Spam <span class=\"count\">(%s)</span>"
+msgid_plural "Spam <span class=\"count\">(%s)</span>"
+msgstr[0] "Spam <span class=\"count\">(%s)</span>"
+msgstr[1] "Spam <span class=\"count\">(%s)</span>"
+
+#: bbpress.php:682
+#, php-format
+#@ bbpress
+msgctxt "bbpress"
+msgid "Orphan <span class=\"count\">(%s)</span>"
+msgid_plural "Orphans <span class=\"count\">(%s)</span>"
+msgstr[0] "Verwaist <span class=\"count\">(%s)</span>"
+msgstr[1] "Verwaiste <span class=\"count\">(%s)</span>"
+
+#: bbpress.php:695
+#, php-format
+#@ bbpress
+msgctxt "bbpress"
+msgid "Hidden <span class=\"count\">(%s)</span>"
+msgid_plural "Hidden <span class=\"count\">(%s)</span>"
+msgstr[0] "Verborgen <span class=\"count\">(%s)</span>"
+msgstr[1] "Verborgene <span class=\"count\">(%s)</span>"
+
+#: bbpress.php:749
+#@ bbpress
+msgid "View Topic Tag"
+msgstr "Themen-Schlagwort ansehen"
+
+#: includes/admin/metaboxes.php:127
+#@ bbpress
+msgid "Users &amp; Moderation"
+msgstr "Benutzer & Moderation"
+
+#: includes/admin/settings.php:466
+#@ bbpress
+msgid "Allow topic and reply revision logging"
+msgstr "Protokollierung von Themen- und Antworten-Überarbeitungen erlauben"
+
+#: includes/common/widgets.php:96
+#@ bbpress
+msgid "Remember Me"
+msgstr "Daten merken"
+
+#: includes/common/widgets.php:187
+#@ bbpress
+msgid "Register URI:"
+msgstr "Registrieren URI:"
+
+#: includes/common/widgets.php:192
+#@ bbpress
+msgid "Lost Password URI:"
+msgstr "Passwort vergessen URI:"
+
+#: includes/common/widgets.php:456
+#@ bbpress
+msgid "Parent Forum ID:"
+msgstr "ID des übergeordneten Forums:"
+
+#: includes/common/widgets.php:462
+#@ bbpress
+msgid "\"0\" to show only root - \"any\" to show all"
+msgstr "\"0\" um nur die Wurzel (root) zu zeigen - \"any\" (= jedes) um alle Foren aufzulisten"
+
+#: includes/replies/functions.php:216
+#@ bbpress
+msgid "<strong>ERROR</strong>: Your reply cannot be created at this time."
+msgstr "<strong>FEHLER</strong>: Deine Antwort kann derzeit nicht erstellt werden."
+
+#: includes/replies/functions.php:497
+#@ bbpress
+msgid "<strong>ERROR</strong>: Your reply cannot be edited at this time."
+msgstr "<strong>FEHLER</strong>: Deine Antwort kann derzeit nicht bearbeitet werden."
+
+#: includes/topics/functions.php:238
+#@ bbpress
+msgid "<strong>ERROR</strong>: Your topic cannot be created at this time."
+msgstr "<strong>FEHLER</strong>: Dein Thema kann derzeit nicht erstellt werden."
+
+#: includes/topics/functions.php:553
+#@ bbpress
+msgid "<strong>ERROR</strong>: Your topic cannot be edited at this time."
+msgstr "<strong>FEHLER</strong>: Dein Thema kann derzeit nicht bearbeitet werden."
+
+#: includes/admin/settings.php:776
+#@ bbpress
+msgid "Prefix your forum area with the Forum Base slug (Recommended)"
+msgstr "Stelle alle Deinen Foren-Links den obigen URL-Titel (Slug) der Foren-Basis voran. (Wird empfohlen)"
+
+#: includes/admin/settings.php:1471
+#, php-format
+#@ bbpress
+msgid "%s page"
+msgstr "Seite %s"
+
+#: includes/admin/settings.php:1490
+#, php-format
+#@ bbpress
+msgid "Possible %1$s conflict: <strong>%2$s</strong>"
+msgstr "Möglicher %1$s-Konflikt: <strong>%2$s</strong>"
+
+#. translators: plugin header field 'Name'
+#: bbpress.php:0
+#@ bbpress
+msgid "bbPress"
+msgstr "bbPress"
+
+#. translators: plugin header field 'PluginURI'
+#. translators: plugin header field 'AuthorURI'
+#: bbpress.php:0
+#@ bbpress
+msgid "http://bbpress.org"
+msgstr "http://bbpress.org/"
+
+#. translators: plugin header field 'Description'
+#: bbpress.php:0
+#@ bbpress
+msgid "bbPress is forum software with a twist from the creators of WordPress."
+msgstr "bbPress ist die Forum-Software mit dem Clou - für WordPress und von den Schöpfern von WordPress."
+
+#. translators: plugin header field 'Author'
+#: bbpress.php:0
+#@ bbpress
+msgid "The bbPress Community"
+msgstr "Die bbPress-Community"
+
+#: includes/admin/settings.php:54
+#@ bbpress
+msgid "BuddyPress"
+msgstr "BuddyPress"
+
+#: includes/admin/settings.php:311
+#@ bbpress
+msgid "Enable Group Forums"
+msgstr "Gruppenforen aktivieren"
+
+#: includes/admin/settings.php:59
+#@ bbpress
+msgid "Akismet"
+msgstr "Akismet"
+
+#: includes/admin/settings.php:332
+#@ bbpress
+msgid "Use Akismet"
+msgstr "Akismet verwenden"
+
+#: includes/admin/settings.php:370
+#@ bbpress
+msgid "Main forum settings for enabling features and setting time limits"
+msgstr "Zentrale Foreneinstellungen, um Eigenschaftes/ Features zu aktivieren und die Zeitlimits zu setzen."
+
+#: includes/admin/settings.php:418
+#@ bbpress
+msgid "Allow users to mark topics as favorites"
+msgstr "Benutzern erlauben, Themen als Favoriten zu kennzeichnen"
+
+#: includes/admin/settings.php:536
+#@ bbpress
+msgid "Use the fancy WordPress editor to create and edit topics and replies"
+msgstr "Den eleganten WordPress-Editor verwenden, um Themen sowie Antworten zu erstellen und zu bearbeiten"
+
+#: includes/admin/settings.php:614
+#@ bbpress
+msgid "How many topics and replies to show per page"
+msgstr "Wieviele Themen und Antworten sollen pro Seite angezeigt werden"
+
+#: includes/admin/settings.php:661
+#@ bbpress
+msgid "How many topics and replies to show per RSS page"
+msgstr "Wieviele Themen und Antworten sollen pro RSS-Seite angezeigt werden"
+
+#: includes/admin/settings.php:711
+#@ bbpress
+msgid "Custom root slugs to prefix your forums and topics with. These can be partnered with WordPress pages to allow more flexibility."
+msgstr "Benutzerdefinierte Basis-Permalinks (Slugs), die Deinen Foren und Themen vorangestellt werden. Diese können mit WordPress-Seiten verbunden werden, um mehr Flexibilität zu ermöglichen."
+
+#: includes/admin/settings.php:760
+#@ bbpress
+msgid "Custom slugs for single forums, topics, replies, tags, users, and views here. If you change these, existing permalinks will also change."
+msgstr "Benutzerdefinierte Permalinks (Slugs) für Einzelansichten von Foren, Themen, Antworten, Foren-Schlagwörter, Benutzer und Ansichten hier. Wenn Du diese Einstellungen änderst, werden sich existierende (WordPress-) Permalinks ebenfalls verändern."
+
+#: includes/admin/settings.php:896
+#@ bbpress
+msgid "Forum settings for BuddyPress"
+msgstr "Foreneinstellungen für BuddyPress"
+
+#: includes/admin/settings.php:912
+#@ bbpress
+msgid "Allow BuddyPress Groups to have their own forums"
+msgstr "Eigene Foren für Gruppen in BuddyPress ermöglichen"
+
+#: includes/admin/settings.php:937
+#@ bbpress
+msgid "is the parent for all group forums"
+msgstr "ist die übergeordnete Basis für alle Gruppenforen"
+
+#: includes/admin/settings.php:953
+#@ bbpress
+msgid "Forum settings for Akismet"
+msgstr "Foreneinstellungen für Akismet"
+
+#: includes/extend/buddypress/loader.php:100
+#@ bbpress
+msgid "Search Forums..."
+msgstr "Foren suchen ..."
+
+#: includes/extend/buddypress/loader.php:191
+#: includes/extend/buddypress/loader.php:267
+#: templates/default/bbpress/user-details.php:35
+#@ bbpress
+msgid "Topics Started"
+msgstr "Begonnene Themen"
+
+#: includes/admin/settings.php:105
+#: includes/extend/buddypress/loader.php:213
+#: templates/default/bbpress/user-details.php:48
+#@ bbpress
+msgid "Favorites"
+msgstr "Favoriten"
+
+#: includes/admin/settings.php:113
+#: includes/extend/buddypress/loader.php:225
+#: templates/default/bbpress/user-details.php:58
+#@ bbpress
+msgid "Subscriptions"
+msgstr "Abonnements"
+
+#: includes/extend/buddypress/loader.php:283
+#@ bbpress
+msgid "Favorite Topics"
+msgstr "Favorisierte Themen"
+
+#: includes/extend/buddypress/loader.php:291
+#@ bbpress
+msgid "Subscribed Topics"
+msgstr "Abonnierte Themen"
+
+#: includes/topics/template-tags.php:2939
+#, php-format
+#@ bbpress
+msgid "This topic contains %1$s and has %2$s."
+msgstr "Dieses Thema enthält %1$s und hat %2$s."
+
+#: templates/default/bbpress/form-forum.php:37
+#, php-format
+#@ bbpress
+msgid "Create New Forum in &ldquo;%s&rdquo;"
+msgstr "Neues Forum erstellen in &ldquo;%s&rdquo;"
+
+#: templates/default/bbpress/form-forum.php:47
+#@ bbpress
+msgid "This forum is closed to new content, however your account still allows you to do so."
+msgstr "Dieses Forum ist für neue Inhalte geschlossen; wie auch immer, Dein Benutzerkonto erlaubt es Dir dennoch."
+
+#: templates/default/bbpress/form-forum.php:102
+#@ bbpress
+msgid "Forum Type:"
+msgstr "Forentyp:"
+
+#: templates/default/bbpress/form-forum.php:67
+#, php-format
+#@ bbpress
+msgid "Forum Name (Maximum Length: %d):"
+msgstr "Forenname (Maximale Länge: %d):"
+
+#: templates/default/bbpress/form-forum.php:78
+#@ bbpress
+msgid "Forum Description:"
+msgstr "Forenbeschreibung:"
+
+#: templates/default/bbpress/form-forum.php:172
+#, php-format
+#@ bbpress
+msgid "The forum &#8216;%s&#8217; is closed to new content."
+msgstr "Das Forum &#8216;%s&#8217; ist geschlossen für neue Inhalte."
+
+#: templates/default/bbpress/form-forum.php:180
+#@ bbpress
+msgid "You must be logged in to create new forums."
+msgstr "Du musst angemeldet sein, um neue Foren erstellen zu können."
+
+#: includes/admin/metaboxes.php:352
+#@ bbpress
+msgid "Topic Type"
+msgstr "Themen-Typ"
+
+#: includes/forums/functions.php:134
+#@ bbpress
+msgid "<strong>ERROR</strong>: You do not have permission to create new forums."
+msgstr "<strong>FEHLER</strong>: Du hast keine Berechtigung neue Foren zu erstellen."
+
+#: includes/forums/functions.php:157
+#: includes/forums/functions.php:459
+#@ bbpress
+msgid "<strong>ERROR</strong>: Your forum needs a title."
+msgstr "<strong>FEHLER</strong>: Dein Forum benötigt einen Titel."
+
+#: includes/forums/functions.php:189
+#@ bbpress
+msgid "<strong>ERROR</strong>: This forum is a category. No forums can be created in this forum."
+msgstr "<strong>FEHLER</strong>: Dieses Forum ist eine Kategorie. Daher können in ihm keine Foren erstellt werden."
+
+#: includes/forums/functions.php:194
+#: includes/forums/functions.php:435
+#@ bbpress
+msgid "<strong>ERROR</strong>: This forum has been closed to new forums."
+msgstr "<strong>FEHLER</strong>: Dieses Forum wurde für neue (Unter-) Foren geschlossen."
+
+#: includes/forums/functions.php:199
+#: includes/forums/functions.php:440
+#@ bbpress
+msgid "<strong>ERROR</strong>: This forum is private and you do not have the capability to read or create new forums in it."
+msgstr "<strong>FEHLER</strong>: Dieses Forum ist privat und Du hast keine Berechtigungen, es zu lesen oder neue Foren darin zu erstellen."
+
+#: includes/forums/functions.php:204
+#: includes/forums/functions.php:445
+#@ bbpress
+msgid "<strong>ERROR</strong>: This forum is hidden and you do not have the capability to read or create new forums in it."
+msgstr "<strong>FEHLER</strong>: Dieses Forum ist verborgen und Du hast keine Berechtigungen, es zu lesen oder neue Foren darin zu erstellen."
+
+#: includes/forums/functions.php:216
+#@ bbpress
+msgid "<strong>ERROR</strong>: This forum already exists."
+msgstr "<strong>FEHLER</strong>: Dieses Forum existiert bereits."
+
+#: includes/forums/functions.php:221
+#@ bbpress
+msgid "<strong>ERROR</strong>: Your forum cannot be created at this time."
+msgstr "<strong>FEHLER</strong>: Dein Forum kann derzeit nicht erstellt werden."
+
+#: includes/forums/functions.php:334
+#@ bbpress
+msgid "<strong>ERROR</strong>: The following problem(s) have been found with your forum:"
+msgstr "<strong>FEHLER</strong>: Die folgenden Probleme wurden bei Deinem Forum gefunden:"
+
+#: includes/forums/functions.php:389
+#@ bbpress
+msgid "<strong>ERROR</strong>: Forum ID not found."
+msgstr "<strong>FEHLER</strong>: Die Forum-ID wurde nicht gefunden."
+
+#: includes/forums/functions.php:405
+#@ bbpress
+msgid "<strong>ERROR</strong>: The forum you want to edit was not found."
+msgstr "<strong>FEHLER</strong>: Das Forum, welches Du bearbeiten willst, wurde nicht gefunden."
+
+#: includes/forums/functions.php:410
+#@ bbpress
+msgid "<strong>ERROR</strong>: You do not have permission to edit that forum."
+msgstr "<strong>FEHLER</strong>: Du hast keine Berechtigung dieses Forum zu bearbeiten."
+
+#: includes/forums/functions.php:476
+#@ bbpress
+msgid "<strong>ERROR</strong>: Your forum cannot be edited at this time."
+msgstr "<strong>FEHLER</strong>: Dein Forum kann derzeit nicht bearbeitet werden."
+
+#: includes/forums/functions.php:584
+#@ bbpress
+msgid "<strong>ERROR</strong>: The following problem(s) have been found with your forum:Please try again."
+msgstr "<strong>FEHLER</strong>: Die folgenden Probleme wurden bei Deinem Forum gefunden: Bitte versuche es noch einmal."
+
+#: includes/admin/admin.php:173
+#: includes/admin/functions.php:224
+#: includes/admin/tools.php:34
+#@ bbpress
+msgid "Repair Forums"
+msgstr "Foren reparieren"
+
+#: includes/admin/admin.php:174
+#@ bbpress
+msgid "Forum Repair"
+msgstr "Foren-Reparatur"
+
+#: includes/admin/admin.php:183
+#: includes/admin/functions.php:228
+#: includes/admin/settings.php:1244
+#@ bbpress
+msgid "Import Forums"
+msgstr "Foren importieren"
+
+#: includes/admin/admin.php:184
+#@ bbpress
+msgid "Forum Import"
+msgstr "Foren-Import"
+
+#: includes/admin/admin.php:193
+#: includes/admin/functions.php:232
+#: includes/admin/tools.php:1006
+#@ bbpress
+msgid "Reset Forums"
+msgstr "Foren zurücksetzen"
+
+#: includes/admin/admin.php:194
+#@ bbpress
+msgid "Forum Reset"
+msgstr "Foren zurücksetzen"
+
+#: includes/admin/admin.php:255
+#: includes/admin/admin.php:256
+#: includes/admin/admin.php:277
+#: includes/admin/admin.php:278
+#: includes/admin/admin.php:1591
+#: includes/admin/admin.php:1680
+#@ bbpress
+msgid "Update Forums"
+msgstr "Foren aktualisieren"
+
+#: includes/admin/admin.php:1543
+#: includes/admin/admin.php:1565
+#@ bbpress
+msgid "Update Forum"
+msgstr "Forum aktualisieren"
+
+#: includes/admin/admin.php:1554
+#: includes/admin/admin.php:1608
+#@ bbpress
+msgid "All done!"
+msgstr "Alles erledigt!"
+
+#: includes/admin/admin.php:1564
+#@ bbpress
+msgid "You can update your forum through this page. Hit the link below to update."
+msgstr "Du kannst Dein Forum über diese Seite aktualisieren. Klicke den Link unten, um die Aktualisierung zu starten."
+
+#: includes/admin/admin.php:1636
+#, php-format
+#@ bbpress
+msgid "Warning! Problem updating %1$s. Your server may not be able to connect to sites running on it. Error message: <em>%2$s</em>"
+msgstr "Warnung! Problem beim Aktualisieren von %1$s. Dein Webserver kann sich nicht mit den Webseiten darauf verbinden. Fehlermeldung: <em>%2$s</em>"
+
+#: includes/admin/admin.php:1660
+#@ bbpress
+msgid "If your browser doesn&#8217;t start loading the next page automatically, click this link:"
+msgstr "Wenn Dein Browser die nächste Seite nicht automatisch lädt, klicke einfach diesen Link:"
+
+#: includes/admin/admin.php:1661
+#@ bbpress
+msgid "Next Forums"
+msgstr "Nächste Foren"
+
+#: includes/admin/admin.php:1679
+#@ bbpress
+msgid "You can update all the forums on your network through this page. It works by calling the update script of each site automatically. Hit the link below to update."
+msgstr "Du kannst alle Foren in Deinem Netzwerk (Multisite-Installtion) über diese Seite aktualisieren. Dabei wird das Aktualisierungs-Skript jeder Webseite automatisch aufgerufen. Klicke den Link unten, um die Aktualisierung zu starten."
+
+#: includes/admin/converter.php:83
+#@ bbpress
+msgid "Select Platform"
+msgstr "Plattform auswählen"
+
+#: includes/admin/converter.php:87
+#@ bbpress
+msgid "Database Server"
+msgstr "Datenbank-Server"
+
+#: includes/admin/converter.php:91
+#@ bbpress
+msgid "Database Port"
+msgstr "Datenbank-Port"
+
+#: includes/admin/converter.php:95
+#@ bbpress
+msgid "Database Name"
+msgstr "Datenbank-Name"
+
+#: includes/admin/converter.php:99
+#@ bbpress
+msgid "Database User"
+msgstr "Datenbank-Benutzer"
+
+#: includes/admin/converter.php:103
+#@ bbpress
+msgid "Database Password"
+msgstr "Datenbank-Passwort"
+
+#: includes/admin/converter.php:107
+#@ bbpress
+msgid "Table Prefix"
+msgstr "Tabellenpräfix"
+
+#: includes/admin/converter.php:111
+#@ bbpress
+msgid "Options"
+msgstr "Optionen"
+
+#: includes/admin/converter.php:114
+#@ bbpress
+msgid "Rows Limit"
+msgstr "Spalten-Limit"
+
+#: includes/admin/converter.php:118
+#@ bbpress
+msgid "Delay Time"
+msgstr "Zeitversatz"
+
+#: includes/admin/converter.php:122
+#@ bbpress
+msgid "Convert Users"
+msgstr "Benutzer konvertieren"
+
+#: includes/admin/converter.php:338
+#@ bbpress
+msgid "No data to clean"
+msgstr "Es liegen keine Daten zum Säubern vor"
+
+#: includes/admin/converter.php:342
+#, php-format
+#@ bbpress
+msgid "Deleting previously converted data (%1$s - %2$s)"
+msgstr "Zuvor bereits konvertierte Daten löschen (%1$s - %2$s)"
+
+#: includes/admin/converter.php:358
+#@ bbpress
+msgid "No users to convert"
+msgstr "Es gibt keine Benutzer für eine Konvertierung"
+
+#: includes/admin/converter.php:362
+#, php-format
+#@ bbpress
+msgid "Converting users (%1$s - %2$s)"
+msgstr "Benutzer werden konvertiert (%1$s - %2$s)"
+
+#: includes/admin/converter.php:378
+#@ bbpress
+msgid "No passwords to clear"
+msgstr "Es gibt keine Passwörter zum Zurücksetzen"
+
+#: includes/admin/converter.php:382
+#, php-format
+#@ bbpress
+msgid "Delete users wordpress default passwords (%1$s - %2$s)"
+msgstr "WordPress Standard-Passwort von Benutzern löschen (%1$s - %2$s)"
+
+#: includes/admin/converter.php:397
+#@ bbpress
+msgid "No forums to convert"
+msgstr "Es gibt keine Foren für die Konvertierung"
+
+#: includes/admin/converter.php:401
+#, php-format
+#@ bbpress
+msgid "Converting forums (%1$s - %2$s)"
+msgstr "Foren werden konvertiert (%1$s - %2$s)"
+
+#: includes/admin/converter.php:412
+#@ bbpress
+msgid "No forum parents to convert"
+msgstr "Es gibt keine übergeordneten Foren zum Konvertieren"
+
+#: includes/admin/converter.php:416
+#, php-format
+#@ bbpress
+msgid "Calculating forum hierarchy (%1$s - %2$s)"
+msgstr "Foren-Hierarchie wird berechnet (%1$s - %2$s)"
+
+#: includes/admin/converter.php:427
+#@ bbpress
+msgid "No topics to convert"
+msgstr "Es gibt keine Themen für die Konvertierung"
+
+#: includes/admin/converter.php:431
+#, php-format
+#@ bbpress
+msgid "Converting topics (%1$s - %2$s)"
+msgstr "Themen werden konvertiert (%1$s - %2$s)"
+
+#: includes/admin/converter.php:442
+#@ bbpress
+msgid "No tags to convert"
+msgstr "Es gibt keine Themen-Schlagwörter für die Konvertierung"
+
+#: includes/admin/converter.php:446
+#, php-format
+#@ bbpress
+msgid "Converting topic tags (%1$s - %2$s)"
+msgstr "Themen-Schlagwörter werden konvertiert (%1$s - %2$s)"
+
+#: includes/admin/converter.php:457
+#@ bbpress
+msgid "No replies to convert"
+msgstr "Keine Antworten zum Konvertieren"
+
+#: includes/admin/converter.php:461
+#, php-format
+#@ bbpress
+msgid "Converting replies (%1$s - %2$s)"
+msgstr "Antworten werden konvertiert (%1$s - %2$s)"
+
+#: includes/admin/converter.php:244
+#: includes/admin/converter.php:471
+#@ bbpress
+msgid "Conversion Complete"
+msgstr "Konvertierung abgeschlossen"
+
+#: includes/admin/forums.php:120
+#: includes/admin/replies.php:132
+#: includes/admin/settings.php:1284
+#: includes/admin/topics.php:132
+#@ bbpress
+msgid "Overview"
+msgstr "Übersicht"
+
+#: includes/admin/replies.php:134
+#@ bbpress
+msgid "This screen provides access to all of your replies. You can customize the display of this screen to suit your workflow."
+msgstr "Diese Ansicht stellt den Zugriff auf alle Deine Beiträge/ Antworten zur Verfügung. Du kannst die Anzeige Deinen Anforderungen anpassen."
+
+#: includes/admin/forums.php:128
+#: includes/admin/replies.php:140
+#: includes/admin/topics.php:140
+#@ bbpress
+msgid "Screen Content"
+msgstr "Bildschirminhalt"
+
+#: includes/admin/forums.php:130
+#: includes/admin/replies.php:142
+#: includes/admin/topics.php:142
+#@ bbpress
+msgid "You can customize the display of this screen&#8217;s contents in a number of ways:"
+msgstr "Du kannst die Anzeige dieses Bildschirms auf verschiedene Arten anpassen:"
+
+#: includes/admin/replies.php:144
+#@ bbpress
+msgid "You can hide/display columns based on your needs and decide how many replies to list per screen using the Screen Options tab."
+msgstr "Du kannst Spalten nach Deinen Bedürfnissen verbergen/ anzeigen (Forum, Thema, Autor, erstellt) und entscheiden, wie viele Antworten pro Ansicht angezeigt werden, indem Du die Ansichtseinstellungen (Tab <em>Optionen einblenden</em>) verwendest."
+
+#: includes/admin/forums.php:141
+#: includes/admin/replies.php:154
+#: includes/admin/topics.php:153
+#@ bbpress
+msgid "Available Actions"
+msgstr "Verfügbare Aktionen"
+
+#: includes/admin/forums.php:145
+#@ bbpress
+msgid "<strong>Edit</strong> takes you to the editing screen for that forum. You can also reach that screen by clicking on the forum title."
+msgstr "<strong>Bearbeiten</strong> führt Dich zur Bearbeitungsansicht des Forums. Du kannst diese Ansicht auch über einen Klick auf den Forumstitel erreichen."
+
+#: includes/admin/forums.php:146
+#@ bbpress
+msgid "<strong>Trash</strong> removes your forum from this list and places it in the trash, from which you can permanently delete it."
+msgstr "Der <strong>Papierkorb</strong> entfernt Dein Forum aus der Liste und verschiebt es in den Papierkorb. Von dort aus kannst Du es auch dauerhaft löschen."
+
+#: includes/admin/forums.php:154
+#: includes/admin/replies.php:169
+#: includes/admin/topics.php:170
+#@ bbpress
+msgid "Bulk Actions"
+msgstr "Aktion wählen"
+
+#: includes/admin/replies.php:171
+#@ bbpress
+msgid "You can also edit or move multiple replies to the trash at once. Select the replies you want to act on using the checkboxes, then select the action you want to take from the Bulk Actions menu and click Apply."
+msgstr "Du kannst außerdem mehrere Antworten auf einmal bearbeiten oder verschieben. Wähle über die Auswahlkästchen die Antworten, die Du bearbeiten willst, wähle dann die gewünschte Aktion über \"Aktion wählen\" aus der Stapelverarbeitung und klicke auf \"Übernehmen\"."
+
+#: includes/admin/forums.php:162
+#: includes/admin/forums.php:233
+#: includes/admin/replies.php:177
+#: includes/admin/replies.php:245
+#: includes/admin/settings.php:1330
+#: includes/admin/topics.php:178
+#: includes/admin/topics.php:246
+#@ bbpress
+#@ default
+msgid "For more information:"
+msgstr "Weitere Informationen:"
+
+#: includes/admin/forums.php:164
+#: includes/admin/forums.php:235
+#: includes/admin/replies.php:179
+#: includes/admin/replies.php:247
+#: includes/admin/settings.php:1332
+#: includes/admin/topics.php:180
+#: includes/admin/topics.php:248
+#@ bbpress
+msgid "<a href=\"http://bbpress.org/forums/\" target=\"_blank\">bbPress Support Forums</a>"
+msgstr "<a href=\"http://forum.wpde.org/bbpress/\" target=\"_blank\">bbPress Support-Forum</a> (<a href=\"http://bbpress.org/forums/\" target=\"_blank\">Engl.</a>)"
+
+#: includes/admin/forums.php:178
+#@ bbpress
+msgid "The title field and the big forum editing Area are fixed in place, but you can reposition all the other boxes using drag and drop, and can minimize or expand them by clicking the title bar of each box. Use the Screen Options tab to unhide more boxes (Excerpt, Send Trackbacks, Custom Fields, Discussion, Slug, Author) or to choose a 1- or 2-column layout for this screen."
+msgstr "Das Forentitelfeld und der große Forenbearbeitungsbereich haben festgelegte Positionen, aber Du kannst alle anderen Boxen durch Ziehen und Ablegen (Drag &amp; Drop) verschieben und sie minimieren oder maximieren, indem Du auf die Titelleiste der gewünschten Box klickst. Verwende die Ansichtseinstellungen über den \"Optionen einblenden\" Tab oben rechts, um weitere Boxen anzuzeigen (etwa Auszug, Trackbacks senden, Benutzerdefinierte Felder, Diskussion, URL-Titel/Slug, Autor) oder wähle ein 1- oder 2-spaltiges Layout für diese Ansicht."
+
+#: includes/admin/forums.php:182
+#: includes/admin/replies.php:197
+#: includes/admin/topics.php:198
+#@ bbpress
+msgid "Customizing This Display"
+msgstr "Diese Anzeige anpassen"
+
+#: includes/admin/forums.php:188
+#@ bbpress
+msgid "Title and Forum Editor"
+msgstr "Titel- und Foren-Editor"
+
+#: includes/admin/forums.php:190
+#@ bbpress
+msgid "<strong>Title</strong> - Enter a title for your forum. After you enter a title, you&#8217;ll see the permalink below, which you can edit."
+msgstr "<strong>Titel</strong> - Gib Deinem Forum einen Titel. Nachdem Du einen Titel eingegeben hast, siehst Du direkt darunter den Permalink (URL-Teil/Slug), den Du auch durch direktes Reinklicken bearbeiten kannst."
+
+#: includes/admin/forums.php:191
+#@ bbpress
+msgid "<strong>Forum Editor</strong> - Enter the text for your forum. There are two modes of editing: Visual and HTML. Choose the mode by clicking on the appropriate tab. Visual mode gives you a WYSIWYG editor. Click the last icon in the row to get a second row of controls. The HTML mode allows you to enter raw HTML along with your forum text. You can insert media files by clicking the icons above the forum editor and following the directions. You can go to the distraction-free writing screen via the Fullscreen icon in Visual mode (second to last in the top row) or the Fullscreen button in HTML mode (last in the row). Once there, you can make buttons visible by hovering over the top area. Exit Fullscreen back to the regular forum editor."
+msgstr "<strong>Foren-Editor</strong> - Gib den Text Deines Forums ein. Es gibt zwei Modi zum Bearbeiten: visuell und HTML. Wähle den gewünschten Modus, indem Du das entsprechende Fenster anklickst. Der visuelle Modus stellt Dir einen WYSIWYG-Editor zur Verfügung. Klicke auf das letzte Symbol der Zeile, um eine zweite Reihe mit Steuerelementen anzuzeigen. Das Vollbildsymbol davor ermöglicht es Dir, den Editor im Vollbildmodus anzuzeigen. Der HTML-Modus gibt Dir die Möglichkeit, reines HTML innerhalb Deines Forentextes zu verwenden. Du kannst Mediendateien einfügen, indem Du das entsprechende Symbol oberhalb des Editors anklickst und den Anweisungen folgst."
+
+#: includes/admin/forums.php:194
+#@ bbpress
+msgid "<strong>Publish</strong> - You can set the terms of publishing your forum in the Publish box. For Status, Visibility, and Publish (immediately), click on the Edit link to reveal more options. Visibility includes options for password-protecting a forum or making it stay at the top of your blog indefinitely (sticky). Publish (immediately) allows you to set a future or past date and time, so you can schedule a forum to be published in the future or backdate a forum."
+msgstr "<strong>Publizieren</strong> - Du kannst die verschiedenen Angaben fürs Veröffentlichen in der gleichnamigen Box vornehmen. Für Status, Sichtbarkeit und (sofortiges) Veröffentlichen, klicke auf den Bearbeiten-Link, um mehrere Optionen anzuzeigen. Optionen für die Sichtbarkeit enthalten die Möglichkeit, ein Forum mit Passwort zu schützen, oder es in der Forenliste oben zu halten (sticky). (Sofortiges) Publizieren erlaubt es Dir, ein Datum in der Zukunft oder Vergangenheit liegend zu wählen, so kannst Du ein Forum planen oder zurückdatieren."
+
+#: includes/admin/forums.php:197
+#@ bbpress
+msgid "<strong>forum Format</strong> - This designates how your theme will display a specific forum. For example, you could have a <em>standard</em> blog forum with a title and paragraphs, or a short <em>aside</em> that omits the title and contains a short text blurb. Please refer to the Codex for <a href=\"http://codex.wordpress.org/Post_Formats#Supported_Formats\">descriptions of each forum format</a>. Your theme could enable all or some of 10 possible formats."
+msgstr "<strong>Foren-Format</strong> . Dies legt fest, wie Dein Theme ein spezifisches Forum anzeigt. Zum Beispiel könntest Du ein <em>Standard</em> Blog-Forum haben mit einem Titel und Absätzen, oder <em>Kurzbeiträge (Asides)</em> ohne Titel und nur mit kurzem Textinhalt. Bitte schaue im WordPress Codex (Engl.) für weitere <a href=\"http://codex.wordpress.org/Post_Formats#Supported_Formats\">Beschreibungen für jedes Foren-Format</a> (entspricht Artikel-Formatvorlagen bei Blog-Beiträgen) nach. Dein Theme könnte einige oder alle der 10 möglichen Formate aktiviert haben bzw. aktivieren."
+
+#: includes/admin/forums.php:201
+#@ bbpress
+msgid "<strong>Featured Image</strong> - This allows you to associate an image with your forum without inserting it. This is usually useful only if your theme makes use of the featured image as a forum thumbnail on the home page, a custom header, etc."
+msgstr "<strong>Artikelbild (Featured-Bild)</strong> - Dies erlaubt es Dir, ein Bild mit Deinem Forum zu verbinden, ohne es einzufügen. Dies ist nützlich, wenn Dein Theme Featured-Bilder als ein Foren-Vorschaubild auf der Homepage in einer angepassten Kopfzeile oder wo auch immer verwendet."
+
+#: includes/admin/forums.php:208
+#@ bbpress
+msgid "Select the attributes that your forum should have:"
+msgstr "Wähle die Eigenschaften für Dein Forum aus:"
+
+#: includes/admin/forums.php:210
+#@ bbpress
+msgid "<strong>Type</strong> indicates if the forum is a category or forum. Categories generally contain other forums."
+msgstr "<strong>Typ</strong> zeigt an, ob das Forum ein Forum oder eine Foren-Kategorie ist. Allgemein enthalten Foren-Kategorien weitere Foren."
+
+#: includes/admin/forums.php:212
+#@ bbpress
+msgid "<strong>Visibility</strong> lets you pick the scope of each forum and what users are allowed to access it."
+msgstr "<strong>Sichtbarkeit</strong> ermöglicht es Dir, die Reichweite jedes Forums festzulegen, und welche Benutzer darauf zugreifen können."
+
+#: includes/admin/forums.php:213
+#@ bbpress
+msgid "<strong>Parent</strong> dropdown determines the parent forum. Select the forum or category from the dropdown, or leave the default (No Parent) to create the forum at the root of your forums."
+msgstr "<strong>Übergeordnetes Forum</strong> - Das entsprechende Aufklappmenü bestimmt das Eltern-Forum. Wähle das entsprechende Forum bzw. die Foren-Kategorie oder lasse den Standard (kein übergeordnetes Forum), um in diesem Falle ein Forum direkt auf Deiner Forenbasis zu erstellen."
+
+#: includes/admin/forums.php:214
+#@ bbpress
+msgid "<strong>Order</strong> allows you to order your forums numerically."
+msgstr "<strong>Sortierung</strong> erlaubt es Dir, Deine Foren numerisch anzuordnen."
+
+#: includes/admin/forums.php:220
+#: includes/admin/replies.php:232
+#: includes/admin/topics.php:233
+#@ bbpress
+msgid "Publish Box"
+msgstr "Veröffentlichen Box"
+
+#: includes/admin/forums.php:226
+#: includes/admin/replies.php:238
+#: includes/admin/topics.php:239
+#@ bbpress
+msgid "Discussion Settings"
+msgstr "Diskussionseinstellungen"
+
+#: includes/admin/forums.php:228
+#: includes/admin/replies.php:240
+#: includes/admin/topics.php:241
+#@ bbpress
+msgid "<strong>Send Trackbacks</strong> - Trackbacks are a way to notify legacy blog systems that you&#8217;ve linked to them. Enter the URL(s) you want to send trackbacks. If you link to other WordPress sites they&#8217;ll be notified automatically using pingbacks, and this field is unnecessary."
+msgstr "<strong>Trackbacks versenden</strong> - Mittels Trackbacks teilst Du älteren Blogsystemen mit, dass Du diese verlinkt hast. Trage einfach die URL(s) ein, an die Du Trackbacks senden willst. Wenn Du im Artikel einen WordPress-Blog verlinkt hast, so wird automatisch ein Pingback gesendet und Du musst das Trackbackfeld nicht mehr ausfüllen."
+
+#: includes/admin/forums.php:229
+#@ bbpress
+msgid "<strong>Discussion</strong> - You can turn comments and pings on or off, and if there are comments on the forum, you can see them here and moderate them."
+msgstr "<strong>Diskussion</strong> - Du kannst Kommentare und Trackbacks/ Pingbacks an- oder abstellen. Und falls es Kommentare zum Forum gibt, kannst Du diese hier sehen und moderieren."
+
+#: includes/admin/replies.php:145
+#@ bbpress
+msgid "You can filter the list of replies by reply status using the text links in the upper left to show All, Published, Draft, or Trashed replies. The default view is to show all replies."
+msgstr "Du kannst die Liste der Antworten nach Antwortstatus filtern lassen, in dem Du die Text-Links oben links verwendest, um Alle, Veröffentlichte, Entwürfe oder Antworten im Papierkorb anzuzeigen. In der Standardansicht werden alle Antworten angezeigt."
+
+#: includes/admin/replies.php:147
+#@ bbpress
+msgid "You can refine the list to show only replies in a specific category or from a specific month by using the dropdown menus above the replies list. Click the Filter button after making your selection. You also can refine the list by clicking on the reply author, category or tag in the replies list."
+msgstr "Du kannst die Liste verfeinern, um nur Antworten einer spezifischen Kategorie oder von einem ausgewählten Monat anzuzeigen, indem Du die Aufklappmenüs über der Antworten-Liste verwendest. Klicke den Filter-Button \"Auswahl einschränken\" um Deine Auswahl zu treffen. Du kannst die Ansicht auch anpassen, indem Du direkt auf den Autor der Antwort, eine Kategorie oder ein Themen-Schlagwort in der Antworten-Liste klickst."
+
+#: includes/admin/replies.php:158
+#@ bbpress
+msgid "<strong>Edit</strong> takes you to the editing screen for that reply. You can also reach that screen by clicking on the reply title."
+msgstr "<strong>Bearbeiten</strong> führt Dich zur Bearbeiten-Ansicht für diese Antwort. Du kannst diese Ansicht auch erreichen, indem Du auf den Titel der jeweiligen Antwort klickst."
+
+#: includes/admin/replies.php:160
+#@ bbpress
+msgid "<strong>Trash</strong> removes your reply from this list and places it in the trash, from which you can permanently delete it."
+msgstr "<strong>Papierkorb</strong> entfernt Deine Antwort aus der Liste und legt sie in den Papierkorb. Von dort aus können Elemente dann dauerhaft gelöscht werden."
+
+#: includes/admin/replies.php:161
+#@ bbpress
+msgid "<strong>Spam</strong> removes your reply from this list and places it in the spam queue, from which you can permanently delete it."
+msgstr "<strong>Spam</strong> entfernt eine Antwort von der Liste und legt sie in Spam-Warteschlange. Von dort aus können Elemente dann dauerhaft gelöscht werden."
+
+#: includes/admin/replies.php:162
+#@ bbpress
+msgid "<strong>Preview</strong> will show you what your draft reply will look like if you publish it. View will take you to your live site to view the reply. Which link is available depends on your reply&#8217;s status."
+msgstr "<strong>Vorschau</strong> zeigt Dir Deinen Entwurf der Antwort wie er aussehen würde beim Veröffentlichen. Die Ansicht bringt Dich zu Deiner Live-Webseite. Welcher Link verfügbar ist, hängt von Deinem gewählten Sichtbarkeitsstatus der Antwort ab."
+
+#: includes/admin/replies.php:172
+#@ bbpress
+msgid "When using Bulk Edit, you can change the metadata (categories, author, etc.) for all selected replies at once. To remove a reply from the grouping, just click the x next to its name in the Bulk Edit area that appears."
+msgstr "Wenn Du die Stapelverarbeitung \"Aktion wählen\" verwendest, kannst Du Metadaten (Kategorien, Autoren, etc.) für alle ausgewählten Antworten auf einmal ändern. Um eine Antwort aus der Mehrfachauswahl zu entfernen, klicke einfach das Schließkreuz x, welches neben dem Name erscheint."
+
+#: includes/admin/replies.php:193
+#@ bbpress
+msgid "The title field and the big reply editing Area are fixed in place, but you can reposition all the other boxes using drag and drop, and can minimize or expand them by clicking the title bar of each box. Use the Screen Options tab to unhide more boxes (Excerpt, Send Trackbacks, Custom Fields, Discussion, Slug, Author) or to choose a 1- or 2-column layout for this screen."
+msgstr "Das Titelfeld der Antwort und der große Beitragsbearbeitungsbereich haben festgelegte Positionen, aber Du kannst alle anderen Boxen durch Ziehen und Ablegen (Drag &amp; Drop) verschieben und sie minimieren oder maximieren, indem Du auf die Titelleiste der gewünschten Box klickst. Verwende die Ansichtseinstellungen mit dem Tab \"Optionen einblenden\" oben rechts, um weitere Boxen anzuzeigen (etwa Auszug, Trackbacks senden, Benutzerdefinierte Felder, Diskussion, URL-Titel/Slug, Autor) oder wähle ein 1- oder 2-spaltiges Layout für diese Ansicht."
+
+#: includes/admin/replies.php:203
+#@ bbpress
+msgid "Title and Reply Editor"
+msgstr "Titel- und Antworten-Editor"
+
+#: includes/admin/replies.php:205
+#@ bbpress
+msgid "<strong>Title</strong> - Enter a title for your reply. After you enter a title, you&#8217;ll see the permalink below, which you can edit."
+msgstr "<strong>Titel</strong> - Gib einen Titel für Deine Antwort an. Nachdem Du einen Titel eingegeben hast, siehst Du direkt darunter den Permalink (URL-Teil/Slug), den Du auch durch direktes Reinklicken bearbeiten kannst."
+
+#: includes/admin/replies.php:206
+#@ bbpress
+msgid "<strong>Reply Editor</strong> - Enter the text for your reply. There are two modes of editing: Visual and HTML. Choose the mode by clicking on the appropriate tab. Visual mode gives you a WYSIWYG editor. Click the last icon in the row to get a second row of controls. The HTML mode allows you to enter raw HTML along with your reply text. You can insert media files by clicking the icons above the reply editor and following the directions. You can go to the distraction-free writing screen via the Fullscreen icon in Visual mode (second to last in the top row) or the Fullscreen button in HTML mode (last in the row). Once there, you can make buttons visible by hovering over the top area. Exit Fullscreen back to the regular reply editor."
+msgstr "<strong>Antworten-Editor</strong> - Gib den Text Deiner Antwort ein. Es gibt zwei Modi zum Bearbeiten: visuell und HTML. Wähle den gewünschten Modus, indem Du das entsprechende Fenster anklickst. Der visuelle Modus stellt Dir einen WYSIWYG-Editor zur Verfügung. Klicke auf das letzte Symbol der Zeile, um eine zweite Reihe mit Steuerelementen anzuzeigen. Das Vollbildsymbol davor ermöglicht es Dir, den Editor im Vollbildmodus anzuzeigen. Der HTML-Modus gibt Dir die Möglichkeit, reines HTML innerhalb Deines Forentextes zu verwenden. Du kannst Mediendateien einfügen, indem Du das entsprechende Symbol oberhalb des Editors anklickst und den Anweisungen folgst."
+
+#: includes/admin/replies.php:209
+#@ bbpress
+msgid "<strong>Publish</strong> - You can set the terms of publishing your reply in the Publish box. For Status, Visibility, and Publish (immediately), click on the Edit link to reveal more options. Visibility includes options for password-protecting a reply or making it stay at the top of your blog indefinitely (sticky). Publish (immediately) allows you to set a future or past date and time, so you can schedule a reply to be published in the future or backdate a reply."
+msgstr "<strong>Publizieren</strong> - Du kannst die verschiedenen Angaben fürs Veröffentlichen in der gleichnamigen Box vornehmen. Für Status, Sichtbarkeit und (sofortiges) Veröffentlichen, klicke auf den Bearbeiten-Link, um mehrere Optionen anzuzeigen. Optionen für die Sichtbarkeit enthalten die Möglichkeit, eine Antwort mit Passwort zu schützen, oder es in der Antworten-Liste oben zu halten (sticky). (Sofortiges) Publizieren erlaubt es Dir, ein Datum in der Zukunft oder Vergangenheit liegend zu wählen, so kannst Du eine Antwort planen oder zurückdatieren."
+
+#: includes/admin/replies.php:212
+#@ bbpress
+msgid "<strong>reply Format</strong> - This designates how your theme will display a specific reply. For example, you could have a <em>standard</em> blog reply with a title and paragraphs, or a short <em>aside</em> that omits the title and contains a short text blurb. Please refer to the Codex for <a href=\"http://codex.wordpress.org/Post_Formats#Supported_Formats\">descriptions of each reply format</a>. Your theme could enable all or some of 10 possible formats."
+msgstr "<strong>Antworten-Format</strong> . Dies legt fest, wie Dein Theme eine spezifische Antwort anzeigt. Zum Beispiel kannst Du ein <em>Standard</em> Blog-Forum haben mit einem Titel und Absätzen, oder <em>Kurzbeiträge (Asides)</em> ohne Titel und nur mit kurzem Textinhalt. Bitte schaue im WordPress Codex (Engl.) für weitere <a href=\"http://codex.wordpress.org/Post_Formats#Supported_Formats\">Beschreibungen für jedes Antworten-Format</a> (entspricht Artikel-Formatvorlagen bei Blog-Beiträgen) nach. Dein Theme könnte einige oder alle der 10 möglichen Formate aktiviert haben bzw. aktivieren."
+
+#: includes/admin/replies.php:216
+#@ bbpress
+msgid "<strong>Featured Image</strong> - This allows you to associate an image with your reply without inserting it. This is usually useful only if your theme makes use of the featured image as a reply thumbnail on the home page, a custom header, etc."
+msgstr "<strong>Artikelbild (Featured-Bild)</strong> - Dies erlaubt es Dir, ein Bild mit Deiner Antwort zu verbinden, ohne es einzufügen. Dies ist nützlich, wenn Dein Theme Featured-Bilder als ein Antwort-Vorschaubild auf der Homepage in einer angepassten Kopfzeile oder wo auch immer verwendet."
+
+#: includes/admin/replies.php:223
+#@ bbpress
+msgid "Select the attributes that your reply should have:"
+msgstr "Wähle die Eigenschaften für Deine Antwort aus:"
+
+#: includes/admin/replies.php:225
+#@ bbpress
+msgid "<strong>Forum</strong> dropdown determines the parent forum that the reply belongs to. Select the forum, or leave the default (Use Forum of Topic) to post the reply in forum of the topic."
+msgstr "<strong>Forum-Auswahlfeld</strong> - Das entsprechende Aufklappmenü bestimmt das Eltern-Forum, wozu die Antwort gehört. Wähle das entsprechende Forum oder lasse den Standard (Forum des Themas verwenden), um in diesem Falle die Antwort direkt im Forum des Ausgangsthemas hinzuzufügen."
+
+#: includes/admin/replies.php:226
+#@ bbpress
+msgid "<strong>Topic</strong> determines the parent topic that the reply belongs to."
+msgstr "<strong>Thema</strong> bestimmt das übergeordnete Thema, wozu die Antwort gehört."
+
+#: includes/admin/replies.php:241
+#@ bbpress
+msgid "<strong>Discussion</strong> - You can turn comments and pings on or off, and if there are comments on the reply, you can see them here and moderate them."
+msgstr "<strong>Diskussion</strong> - Du kannst Kommentare und Trackbacks/ Pingbacks an- oder abstellen. Und falls es Kommentare zu Antwort gibt, kannst Du diese hier sehen und moderieren."
+
+#: includes/admin/settings.php:29
+#@ bbpress
+msgid "Theme Packages"
+msgstr "Theme-Pakete"
+
+#: includes/admin/settings.php:174
+#@ bbpress
+msgid "Current Package"
+msgstr "Aktuelles Paket"
+
+#: includes/admin/settings.php:290
+#@ bbpress
+msgid "User slug"
+msgstr "Benutzer-Permalinkteil"
+
+#: includes/admin/settings.php:298
+#@ bbpress
+msgid "Topic view slug"
+msgstr "Permalinkteil für Themen-Ansicht"
+
+#: includes/admin/settings.php:319
+#@ bbpress
+msgid "Group Forums Parent"
+msgstr "Gruppenforen-Basis"
+
+#: includes/admin/settings.php:549
+#@ bbpress
+msgid "How your forum content is displayed within your existing theme."
+msgstr "Wie Deine Foren-Inhalte innerhalb Deines bestehenden WordPress-Themes angezeigt werden."
+
+#: includes/admin/settings.php:573
+#, php-format
+#@ bbpress
+msgid "%1$s - %2$s"
+msgstr "%1$s - %2$s"
+
+#: includes/admin/settings.php:579
+#@ bbpress
+msgid "will serve all bbPress templates"
+msgstr "wird alle bbPress-Templates ausliefern"
+
+#: includes/admin/settings.php:938
+#@ bbpress
+msgid "Using the Forum Root is not recommended. Changing this does not move existing forums."
+msgstr "Die Foren-Basis hier zu verwenden, wird nicht empfohlen. Wenn dies geändert wird, werden bereits bestehende Foren NICHT verschoben."
+
+#: includes/admin/settings.php:970
+#@ bbpress
+msgid "Allow Akismet to actively prevent forum spam."
+msgstr "Erlaube <em>Akismet</em> Dein Forum vor Spam zu schützen. - Hinweis des Übersetzers: Beachte bitte beim Einsatz des <em>Akismet</em>-Plugins die Datenschutzbestimmungen Deines Landes!"
+
+#: includes/admin/settings.php:1021
+#@ bbpress
+msgid "Information about your previous forums database so that they can be converted. <strong>Backup your database before proceeding.</strong>"
+msgstr "Informationen über Deine vorherige Foren-Datenbank, damit sie konvertiert werden kann. <strong>Sichere Deine Datenbank, bevor Du fortfährst!</strong>"
+
+#: includes/admin/settings.php:1051
+#@ bbpress
+msgid "is the previous forum software"
+msgstr "ist die vorherige Foren-Software"
+
+#: includes/admin/settings.php:1065
+#@ bbpress
+msgid "IP or hostname"
+msgstr "IP-Adresse oder Hostname"
+
+#: includes/admin/settings.php:1079
+#@ bbpress
+msgid "Use default 3306 if unsure"
+msgstr "Standard 3306 verwenden, falls Du unsicher bist"
+
+#: includes/admin/settings.php:1093
+#@ bbpress
+msgid "User for your database connection"
+msgstr "Datenbank-Benutzer für die Datenbank-Verbindung"
+
+#: includes/admin/settings.php:1107
+#@ bbpress
+msgid "Password to access the database"
+msgstr "Passwort für den Datenbank-Zugriff"
+
+#: includes/admin/settings.php:1121
+#@ bbpress
+msgid "Name of the database with your old forum data"
+msgstr "Name der bisherigen Datenbank, mit den alten Foren-Daten"
+
+#: includes/admin/settings.php:1148
+#@ bbpress
+msgid "(If converting from BuddyPress Forums, use \"wp_bb_\" or your custom prefix)"
+msgstr "(Falls Du von BuddyPress Foren konvertierst, verwende <code>wp_bb_</code> oder Deinen benutzerdefinierten Präfix)"
+
+#: includes/admin/settings.php:1162
+#@ bbpress
+msgid "rows to process at a time"
+msgstr "Spalten, die auf einmal verarbeitet werden sollen"
+
+#: includes/admin/settings.php:1163
+#@ bbpress
+msgid "Keep this low if you experience out-of-memory issues."
+msgstr "Halte diesen Wert niedrig, falls Du Probleme mit dem Speicherüberlauf bekommst."
+
+#: includes/admin/settings.php:1177
+#@ bbpress
+msgid "second(s) delay between each group of rows"
+msgstr "Sekunde(n) Verzögerung zwischen jeder Gruppe von Spalten"
+
+#: includes/admin/settings.php:1178
+#@ bbpress
+msgid "Keep this high to prevent too-many-connection issues."
+msgstr "Halte diesen Wert hoch, um Probleme mit zu vielen Verbindungen zu vermeiden."
+
+#: includes/admin/settings.php:1207
+#@ bbpress
+msgid "Purge all information from a previously attempted import"
+msgstr "Vollständiges Entfernen aller Informationen von einem vorherigen Importversuch"
+
+#: includes/admin/settings.php:1222
+#@ bbpress
+msgid "Attempt to import user accounts from previous forums"
+msgstr "Versuchen, Benutzerkonten vom vorherigen Forum zu importieren"
+
+#: includes/admin/settings.php:1223
+#@ bbpress
+msgid "Non-bbPress passwords cannot be automatically converted. They will be converted as each user logs in."
+msgstr "Nicht-bbPress-Passwörter können nicht automatisch konvertiert werden. Sie werden dann konvertiert, wenn sich jeder Benutzer entsprechend anmeldet (beim ersten Mal)."
+
+#: includes/admin/settings.php:1253
+#@ bbpress
+msgid "Start"
+msgstr "Beginnen"
+
+#: includes/admin/settings.php:1254
+#@ bbpress
+msgid "Stop"
+msgstr "Stopp - Abbrechen"
+
+#: includes/admin/settings.php:1286
+#@ bbpress
+msgid "Please see the additional help tabs for more information on each indiviual section."
+msgstr "Bitte schaue in den zusätzlichen Hilfe-Tabs oben rechts für weitere Informationen zur jeweiligen Ansicht."
+
+#: includes/admin/settings.php:1298
+#@ bbpress
+msgid "Favorites are a way for users to save and later return to topics they favor. This is enabled by default."
+msgstr "Favoriten sind eine Möglichkeit für Benutzer, um beliebte Themen zu speichern und diese später wiederzufinden. Diese Funktion ist standardmäßig aktiviert."
+
+#: includes/admin/settings.php:1299
+#@ bbpress
+msgid "Subscriptions allow users to subscribe for notifications to topics that interest them. This is enabled by default."
+msgstr "Abonnements erlauben es Benutzern, sich für Benachrichtigungen zu Themen anzumelden, die sie interessieren. Diese Einstellung ist standardmäßig aktiviert."
+
+#: includes/admin/settings.php:1301
+#@ bbpress
+msgid "\"Anonymous Posting\" allows guest users who do not have accounts on your site to both create topics as well as replies."
+msgstr "\"Anonymes Veröffentlichen\" erlaubt es Gastbenutzern, die kein Benutzerkonto haben, Themen und Antworten auf Deiner Webseite zu erstellen."
+
+#: includes/admin/settings.php:1302
+#@ bbpress
+msgid "The Fancy Editor brings the luxury of the Visual editor and HTML editor from the traditional WordPress dashboard into your theme."
+msgstr "Der Elegante Editor (= TinyMCE bzw. Rich Text Editor) bringt den Komfort des visuellen Editors und des HTML-Editors vom traditionellen WordPress Dashboard in Dein Forum."
+
+#: includes/admin/settings.php:1303
+#@ bbpress
+msgid "Auto-embed will embed the media content from a URL directly into the replies. For example: links to Flickr and YouTube."
+msgstr "Automatisches Einbetten (Auto-embed) wird den Medieninhalt von einer URL direkt in Deine Antworten einfügen. Zum Beispiel: Links zu Flickr oder YouTube."
+
+#: includes/admin/settings.php:1313
+#@ bbpress
+msgid "Per Page settings allow you to control the number of topics and replies appear on each page."
+msgstr "Einstellungen pro Seite erlaubt es Dir, die Zahl der Themen und Antworten zu kontrollieren, die auf jeder Seite angezeigt werden."
+
+#: includes/admin/settings.php:1314
+#@ bbpress
+msgid "This is comparable to the WordPress \"Reading Settings\" page, where you can set the number of posts that should show on blog pages and in feeds."
+msgstr "Dies ist vergleichbar mit den \"Lesen\" Einstellungen in WordPress, wo Du die Anzahl der Beiträge, die auf der Blog-Seite sowie in Feeds erscheinen, festlegen kannst."
+
+#: includes/admin/settings.php:1315
+#@ bbpress
+msgid "These are broken up into two separate groups: one for what appears in your theme, another for RSS feeds."
+msgstr "Diese werden heruntergebrochen in zwei separate Gruppen: eine für das, was im Theme angezeigt wird, die andere für RSS-Feeds."
+
+#: includes/admin/settings.php:1321
+#@ bbpress
+msgid "Slugs"
+msgstr "Permalinkteile (Slugs)"
+
+#: includes/admin/settings.php:1322
+#@ bbpress
+msgid "The Slugs section allows you to control the permalink structure for your forums."
+msgstr "Der Bereich für Permalinkteile (Slugs) erlaubt es Dir, die Permalinkstruktur für Deine Foren zu kontrollieren."
+
+#: includes/admin/settings.php:1323
+#@ bbpress
+msgid "\"Archive Slugs\" are used as the \"root\" for your forums and topics. If you combine these values with existing page slugs, bbPress will attempt to output the most correct title and content."
+msgstr "\"Archiv-Permalinks\" werden verwendet als die \"Basis\" (root) für Deine Foren und Themen. Wenn Du diese mit Werten von existierenden Seiten-Permalinks kombinierst, wird bbPress versuchen den hoffentlich korrektesten Titel und Inhalt auszugeben."
+
+#: includes/admin/settings.php:1324
+#@ bbpress
+msgid "\"Single Slugs\" are used as a prefix when viewing an individual forum, topic, reply, user, or view."
+msgstr "\"Einzel-Permalinks\" werden als eine Vorsilbe (Präfix) verwendet, wenn ein einzelnes Forum, Theme, eine einzelne Antwort bzw. Ansicht angezeigt wird."
+
+#: includes/admin/settings.php:1325
+#@ bbpress
+msgid "In the event of a slug collision with WordPress or BuddyPress, a warning will appear next to the problem slug(s)."
+msgstr "Falls es zu einer Permalink-Kollision mit WordPress oder BuddyPress kommen sollte, wird eine Warnung direkt neben dem Permalink-Problem eingeblendet."
+
+#: includes/admin/tools.php:36
+#@ bbpress
+msgid "bbPress keeps track of relationships between forums, topics, replies, and topic tags, and users. Occasionally these relationships become out of sync, most often after an import or migration. Use the tools below to manually recalculate these relationships."
+msgstr "bbPress behält bzw. verfolgt (trackt) die Verbindungen/ Beziehungen zwischen Foren, Themen, Antworten, Themen-Schlagwörtern und Benutzern. Für gewöhnlich geraten diese Beziehungsdaten aus der Synchronisation, meist nach einem Import bzw. einer Migration. Verwende die Werkzeuge unten, um manuell diese Beziehungsdaten neu berechnen zu lassen."
+
+#: includes/admin/tools.php:37
+#@ bbpress
+msgid "Some of these tools create substantial database overhead. Avoid running more than 1 repair job at a time."
+msgstr "Einige dieser Werkzeuge erzeugen einen substantiellen Datenbank-Überhang. Vermeide es daher, mehr als einen Reparatur-Auftrag zur selben Zeit am Laufen zu haben."
+
+#: includes/admin/tools.php:43
+#@ bbpress
+msgid "Relationships to Repair:"
+msgstr "Zu reparierende Beziehungsdaten:"
+
+#: includes/admin/tools.php:46
+#@ bbpress
+msgid "Repair"
+msgstr "Reparieren"
+
+#: includes/admin/tools.php:61
+#@ bbpress
+msgid "Repair Items"
+msgstr "Elemente reparieren"
+
+#: includes/admin/tools.php:160
+#@ bbpress
+msgid "Recalculate the parent topic for each post"
+msgstr "Das übergeordnete Thema für jede Antwort neu berechnen"
+
+#: includes/admin/tools.php:161
+#@ bbpress
+msgid "Recalculate the parent forum for each post"
+msgstr "Das übergeordnete Forum für jeden Beitrag/ jede Antwort neu berechnen"
+
+#: includes/admin/tools.php:170
+#@ bbpress
+msgid "Count topics for each user"
+msgstr "Themen für jeden Benutzer zählen"
+
+#: includes/admin/tools.php:476
+#, php-format
+#@ bbpress
+msgid "Counting the number of topics each user has created&hellip; %s"
+msgstr "Die Zahl der Themen zählen, die jeder Benutzer erstellt hat&hellip; %s"
+
+#: includes/admin/tools.php:900
+#, php-format
+#@ bbpress
+msgid "Recalculating the forum for each post &hellip; %s"
+msgstr "Das Forum für jeden Beitrag/ jede Antwort neu berechnen&hellip; %s"
+
+#: includes/admin/tools.php:954
+#, php-format
+#@ bbpress
+msgid "Recalculating the topic for each post &hellip; %s"
+msgstr "Das Thema für jede Antwort neu berechnen&hellip; %s"
+
+#: includes/admin/tools.php:1007
+#@ bbpress
+msgid "This will revert your forums back to a brand new installation. This process cannot be undone. <strong>Backup your database before proceeding</strong>."
+msgstr "Dies wird Deine Foren auf eine ganz neue Installation zurücksetzen. Dieser Prozess kann nicht rückgängig gemacht werden! <strong>Bitte sichere Deine Datenbank, bevor Du fortfährst!</strong>"
+
+#: includes/admin/tools.php:1013
+#@ bbpress
+msgid "The following data will be removed:"
+msgstr "Die folgenden Daten werden entfernt:"
+
+#: includes/admin/tools.php:1018
+#@ bbpress
+msgid "All Topic Tags"
+msgstr "Alle Themen-Schlagwörter"
+
+#: includes/admin/tools.php:1019
+#@ bbpress
+msgid "Related Meta Data"
+msgstr "Ähnliche Metadaten"
+
+#: includes/admin/tools.php:1020
+#@ bbpress
+msgid "Forum Settings"
+msgstr "Foreneinstellungen"
+
+#: includes/admin/tools.php:1021
+#@ bbpress
+msgid "Forum Activity"
+msgstr "Foren-Aktivität"
+
+#: includes/admin/tools.php:1022
+#@ bbpress
+msgid "Forum User Roles"
+msgstr "Foren-Benutzerrollen"
+
+#: includes/admin/tools.php:1023
+#@ bbpress
+msgid "Importer Helper Data"
+msgstr "Hilfs-Daten des Importers"
+
+#: includes/admin/tools.php:1027
+#@ bbpress
+msgid "Are you sure you want to do this?"
+msgstr "Bist Du sicher, dass Du das tun willst?"
+
+#: includes/admin/tools.php:1030
+#@ bbpress
+msgid "Say it ain't so!"
+msgstr "Sage, dass es ist nicht an dem ist!"
+
+#: includes/admin/tools.php:1031
+#@ bbpress
+msgid "This process cannot be undone."
+msgstr "Dieser Prozess kann nicht rückgängig gemacht werden."
+
+#: includes/admin/tools.php:1039
+#@ bbpress
+msgid "Reset bbPress"
+msgstr "bbPress zurücksetzen"
+
+#: includes/admin/tools.php:1064
+#@ bbpress
+msgid "Failed"
+msgstr "Fehlgeschlagen"
+
+#: includes/admin/tools.php:1065
+#@ bbpress
+msgid "Success!"
+msgstr "Erfolgreich!"
+
+#: includes/admin/tools.php:1072
+#, php-format
+#@ bbpress
+msgid "Deleting Posts&hellip; %s"
+msgstr "Beiträge werden gelöscht&hellip; %s"
+
+#: includes/admin/tools.php:1085
+#, php-format
+#@ bbpress
+msgid "Deleting Post Meta&hellip; %s"
+msgstr "Beitrags-Metadaten werden gelöscht&hellip; %s"
+
+#: includes/admin/tools.php:1098
+#, php-format
+#@ bbpress
+msgid "Deleting User Meta&hellip; %s"
+msgstr "Benutzer-Metadaten werden gelöscht&hellip; %s"
+
+#: includes/admin/tools.php:1105
+#, php-format
+#@ bbpress
+msgid "Deleting Conversion Table&hellip; %s"
+msgstr "Die Konversationstabelle wird gelöscht&hellip; %s"
+
+#: includes/admin/tools.php:1117
+#, php-format
+#@ bbpress
+msgid "Deleting Settings&hellip; %s"
+msgstr "Die Einstellungen werden gelöscht&hellip; %s"
+
+#: includes/admin/tools.php:1123
+#, php-format
+#@ bbpress
+msgid "Deleting Roles and Capabilities&hellip; %s"
+msgstr "Die Benutzerrollen und Berechtigungen werden gelöscht&hellip; %s"
+
+#: includes/admin/topics.php:159
+#@ bbpress
+msgid "<strong>Spam</strong> removes your topic from this list and places it in the spam queue, from which you can permanently delete it."
+msgstr "<strong>Spam</strong> entfernt ein Thema von der Liste und legt es in die Spam-Warteschlange. Von dort aus können Elemente dann dauerhaft gelöscht werden."
+
+#: includes/admin/topics.php:160
+#@ bbpress
+msgid "<strong>Preview</strong> will show you what your draft topic will look like if you publish it. View will take you to your live site to view the topic. Which link is available depends on your topic&#8217;s status."
+msgstr "<strong>Vorschau</strong> zeigt Dir Deinen Entwurf des Themas wie es aussehen würde beim Veröffentlichen. Die Ansicht bringt Dich zu Deiner Live-Webseite. Welcher Link verfügbar ist, hängt von Deinem gewählten Sichtbarkeitsstatus des Themas ab."
+
+#: includes/admin/topics.php:194
+#@ bbpress
+msgid "The title field and the big topic editing Area are fixed in place, but you can reposition all the other boxes using drag and drop, and can minimize or expand them by clicking the title bar of each box. Use the Screen Options tab to unhide more boxes (Excerpt, Send Trackbacks, Custom Fields, Discussion, Slug, Author) or to choose a 1- or 2-column layout for this screen."
+msgstr "Das Thementitelfeld und der große Themenbearbeitungsbereich haben festgelegte Positionen, aber Du kannst alle anderen Boxen durch Ziehen und Ablegen (Drag &amp; Drop) verschieben und sie minimieren oder maximieren, indem Du auf die Titelleiste der gewünschten Box klickst. Verwende die Ansichtseinstellungen über den \"Optionen einblenden\" Tab oben rechts, um weitere Boxen anzuzeigen (etwa Auszug, Trackbacks senden, Benutzerdefinierte Felder, Diskussion, URL-Titel/Slug, Autor) oder wähle ein 1- oder 2-spaltiges Layout für diese Ansicht."
+
+#: includes/admin/topics.php:204
+#@ bbpress
+msgid "Title and Topic Editor"
+msgstr "Titel- und Themen-Editor"
+
+#: includes/admin/topics.php:206
+#@ bbpress
+msgid "<strong>Title</strong> - Enter a title for your topic. After you enter a title, you&#8217;ll see the permalink below, which you can edit."
+msgstr "<strong>Titel</strong> - Gib Deinem Thema einen Titel. Nachdem Du einen Titel eingegeben hast, siehst Du direkt darunter den Permalink (URL-Teil/Slug), den Du auch durch direktes Reinklicken bearbeiten kannst."
+
+#: includes/admin/topics.php:207
+#@ bbpress
+msgid "<strong>Topic Editor</strong> - Enter the text for your topic. There are two modes of editing: Visual and HTML. Choose the mode by clicking on the appropriate tab. Visual mode gives you a WYSIWYG editor. Click the last icon in the row to get a second row of controls. The HTML mode allows you to enter raw HTML along with your topic text. You can insert media files by clicking the icons above the topic editor and following the directions. You can go to the distraction-free writing screen via the Fullscreen icon in Visual mode (second to last in the top row) or the Fullscreen button in HTML mode (last in the row). Once there, you can make buttons visible by hovering over the top area. Exit Fullscreen back to the regular topic editor."
+msgstr "<strong>Themen-Editor</strong> - Gib den Text Deines Themas ein. Es gibt zwei Modi zum Bearbeiten: Visuell und HTML. Wähle den gewünschten Modus, indem Du den entsprechenden Tab anklickst. Der visuelle Modus stellt Dir einen WYSIWYG-Editor zur Verfügung. Klicke auf das letzte Symbol der Zeile, um eine zweite Reihe mit Steuerelementen anzuzeigen. Das Vollbildsymbol davor ermöglicht es Dir, den Editor im Vollbildmodus anzuzeigen. Der HTML-Modus gibt Dir die Möglichkeit, reines HTML innerhalb Deines Forentextes zu verwenden. Du kannst Mediendateien einfügen, indem Du das entsprechende Symbol oberhalb des Editors anklickst und den Anweisungen folgst."
+
+#: includes/admin/topics.php:210
+#@ bbpress
+msgid "<strong>Publish</strong> - You can set the terms of publishing your topic in the Publish box. For Status, Visibility, and Publish (immediately), click on the Edit link to reveal more options. Visibility includes options for password-protecting a topic or making it stay at the top of your blog indefinitely (sticky). Publish (immediately) allows you to set a future or past date and time, so you can schedule a topic to be published in the future or backdate a topic."
+msgstr "<strong>Veröffentlichen</strong> - In der Veröffentlichungsbox kannst Du Einstellungen vornehmen: Für Status, Sichtbarkeit und Veröffentlichen (sofort) klicke auf den <em>Bearbeiten</em>-Link, um weitere Optionen einzublenden. Bei <em>Sichtbarkeit</em> sind Optionen für Passwortschutz, oder hervorheben (Sticky) vorhanden. <em>Veröffentlichen (sofort)</em> erlaubt Datumsänderungen sowie einen Beitrag zu planen (in der Zukunft zu veröffentlichen). Damit können Themen geplant oder zurückdatiert werden."
+
+#: includes/admin/topics.php:213
+#@ bbpress
+msgid "<strong>topic Format</strong> - This designates how your theme will display a specific topic. For example, you could have a <em>standard</em> blog topic with a title and paragraphs, or a short <em>aside</em> that omits the title and contains a short text blurb. Please refer to the Codex for <a href=\"http://codex.wordpress.org/Post_Formats#Supported_Formats\">descriptions of each topic format</a>. Your theme could enable all or some of 10 possible formats."
+msgstr "<strong>Themen-Format</strong> . Dies legt fest, wie Dein Theme ein spezifisches Forenthema anzeigt. Zum Beispiel könntest Du ein <em>Standard</em> Blog-Forum haben mit einem Titel und Absätzen, oder <em>Kurzbeiträge (Asides)</em> ohne Titel und nur mit kurzem Textinhalt. Bitte schaue im WordPress Codex (Engl.) für weitere <a href=\"http://codex.wordpress.org/Post_Formats#Supported_Formats\">Beschreibungen für jedes Forenthemen-Format</a> (entspricht Artikel-Formatvorlagen bei Blog-Beiträgen) nach. Dein Theme könnte einige oder alle der 10 möglichen Formate aktiviert haben bzw. aktivieren."
+
+#: includes/admin/topics.php:217
+#@ bbpress
+msgid "<strong>Featured Image</strong> - This allows you to associate an image with your topic without inserting it. This is usually useful only if your theme makes use of the featured image as a topic thumbnail on the home page, a custom header, etc."
+msgstr "<strong>Artikelbild (Featured-Bild)</strong> - Dies erlaubt es Dir, ein Bild mit Deinem Thema zu verbinden, ohne es einzufügen. Dies ist nützlich, wenn Dein Theme Featured-Bilder als ein Themen-Vorschaubild auf der Homepage in einer angepassten Kopfzeile oder wo auch immer verwendet."
+
+#: includes/admin/topics.php:224
+#@ bbpress
+msgid "Select the attributes that your topic should have:"
+msgstr "Wähle die Eigenschaften für Dein Thema aus:"
+
+#: includes/admin/topics.php:226
+#@ bbpress
+msgid "<strong>Forum</strong> dropdown determines the parent forum that the topic belongs to. Select the forum or category from the dropdown, or leave the default (No Forum) to post the topic without an assigned forum."
+msgstr "<strong>Forum-Auswahlfeld</strong> - Das entsprechende Aufklappmenü bestimmt das Eltern-Forum, wozu das Thema gehört. Wähle das entsprechende Forum oder die Foren-Kategorie oder lasse den Standard (kein Forum), um in diesem Falle das Thema ohne ein zugewiesenes Forum hinzuzufügen."
+
+#: includes/admin/topics.php:227
+#@ bbpress
+msgid "<strong>Topic Type</strong> dropdown indicates the sticky status of the topic. Selecting the super sticky option would stick the topic to the front of your forums, i.e. the topic index, sticky option would stick the topic to its respective forum. Selecting normal would not stick the topic anywhere."
+msgstr "<strong>Themen-Typ (fixieren - sticky)</strong> - Das Auswahlfeld legt den Status des Themas fest, ob es fixiert, d.h. oben gehalten werden soll (sticky). Wenn Du die Option \"super-fixiert\" verwendest, wird das Thema in allen Foren oben gehalten. Die normale Option \"fixiert\" hält das Thema dagegen nur im zugehörigen Forum oben. Die Option \"normal\" wird das Thema nirgendwo fixieren!"
+
+#: includes/admin/topics.php:242
+#@ bbpress
+msgid "<strong>Discussion</strong> - You can turn comments and pings on or off, and if there are comments on the topic, you can see them here and moderate them."
+msgstr "<strong>Diskussion</strong> - Du kannst Kommentare und Trackbacks/ Pingbacks an- oder abstellen. Und falls es Kommentare zum Thema gibt, kannst Du diese hier sehen und moderieren."
+
+#: includes/admin/topics.php:840
+#@ bbpress
+msgctxt "Close a Topic"
+msgid "Close"
+msgstr "Schließen"
+
+#: includes/admin/topics.php:842
+#@ bbpress
+msgctxt "Open a Topic"
+msgid "Open"
+msgstr "Öffnen"
+
+#: includes/admin/converters/bbPress1.php:540
+#@ bbpress
+msgid "Re: "
+msgstr "AW: "
+
+#: includes/common/functions.php:110
+#@ bbpress
+msgid "sometime"
+msgstr "irgendwann"
+
+#: includes/common/functions.php:111
+#@ bbpress
+msgid "right now"
+msgstr "jetzt"
+
+#: includes/common/functions.php:116
+#@ bbpress
+msgid "year"
+msgstr "Jahr"
+
+#: includes/common/functions.php:116
+#@ bbpress
+msgid "years"
+msgstr "Jahre"
+
+#: includes/common/functions.php:117
+#@ bbpress
+msgid "month"
+msgstr "Monat"
+
+#: includes/common/functions.php:117
+#@ bbpress
+msgid "months"
+msgstr "Monaten"
+
+#: includes/common/functions.php:118
+#@ bbpress
+msgid "week"
+msgstr "Woche"
+
+#: includes/common/functions.php:118
+#@ bbpress
+msgid "weeks"
+msgstr "Wochen"
+
+#: includes/common/functions.php:119
+#@ bbpress
+msgid "day"
+msgstr "Tag"
+
+#: includes/common/functions.php:119
+#@ bbpress
+msgid "days"
+msgstr "Tagen"
+
+#: includes/common/functions.php:120
+#@ bbpress
+msgid "hour"
+msgstr "Stunde"
+
+#: includes/common/functions.php:120
+#@ bbpress
+msgid "hours"
+msgstr "Stunden"
+
+#: includes/common/functions.php:121
+#@ bbpress
+msgid "minute"
+msgstr "Minute"
+
+#: includes/common/functions.php:122
+#@ bbpress
+msgid "second"
+msgstr "Sekunde"
+
+#: includes/common/functions.php:177
+#@ bbpress
+msgctxt "Separator in time since"
+msgid ","
+msgstr ","
+
+#: includes/core/update.php:164
+#@ bbpress
+msgid "General"
+msgstr "Allgemein"
+
+#: includes/core/update.php:165
+#@ bbpress
+msgid "General chit-chat"
+msgstr "Allgemeiner chit-chat"
+
+#: includes/core/update.php:166
+#@ bbpress
+msgid "Hello World!"
+msgstr "Hallo Welt!"
+
+#: includes/core/update.php:167
+#@ bbpress
+msgid "I am the first topic in your new forums."
+msgstr "Ich bin das erste Thema in Deinem neuen Forum."
+
+#: includes/core/update.php:168
+#@ bbpress
+msgid "Re: Hello World!"
+msgstr "AW: Hallo Welt!"
+
+#: includes/core/update.php:169
+#@ bbpress
+msgid "Oh, and this is what a reply looks like."
+msgstr "Und so sieht nun eine Antwort aus."
+
+#: includes/common/widgets.php:39
+#@ bbpress
+msgid "A simple login form with optional links to sign-up and lost password pages."
+msgstr "Ein einfaches Anmeldeforumlar mit optionalen Links zu Registrierungs- und Passwort-Vergessen-Seiten."
+
+#: includes/common/widgets.php:42
+#@ bbpress
+msgid "(bbPress) Login Widget"
+msgstr "bbPress: Anmelde-Widget"
+
+#: includes/common/widgets.php:224
+#@ bbpress
+msgid "A list of registered optional topic views."
+msgstr "Eine Liste von registrierten, optionalen Themen-Ansichten."
+
+#: includes/common/widgets.php:227
+#@ bbpress
+msgid "(bbPress) Topic Views List"
+msgstr "bbPress: Themenansichten Liste"
+
+#: includes/common/widgets.php:341
+#@ bbpress
+msgid "A list of forums with an option to set the parent."
+msgstr "Eine Liste von Foren, mit der Option, ein übergeordnetes Forum festlegen zu können."
+
+#: includes/common/widgets.php:344
+#@ bbpress
+msgid "(bbPress) Forums List"
+msgstr "bbPress: Forenliste"
+
+#: includes/common/widgets.php:496
+#@ bbpress
+msgid "(bbPress) Recent Topics"
+msgstr "bbPress: Kürzliche Themen"
+
+#: includes/common/widgets.php:710
+#@ bbpress
+msgid "A list of the most recent replies."
+msgstr "Eine Liste der neuesten Antworten auf Themen."
+
+#: includes/common/widgets.php:713
+#@ bbpress
+msgid "(bbPress) Recent Replies"
+msgstr "bbPress: Neueste Antworten"
+
+#: includes/common/widgets.php:797
+#, php-format
+#@ bbpress
+msgctxt "widgets"
+msgid "%1$s on %2$s"
+msgstr "%1$s zu %2$s"
+
+#: includes/admin/tools.php:375
+#@ bbpress
+msgid "Group Forums"
+msgstr "Gruppen-Foren"
+
+#: includes/extend/buddypress/group.php:243
+#: includes/extend/buddypress/group.php:354
+#@ bbpress
+msgid "Create a discussion forum to allow members of this group to communicate in a structured, bulletin-board style fashion."
+msgstr "Erstelle ein Diskussionsforum, um es Mitgliedern dieser Gruppe zu ermöglichen, in einer strukturierten Form zu kommunizieren, in einer Art Bulletin-Board-Stil."
+
+#: includes/extend/buddypress/group.php:246
+#: includes/extend/buddypress/group.php:357
+#@ bbpress
+msgid "Yes. I want this group to have a forum."
+msgstr "Ja. Ich möchte für diese Gruppe ein Forum."
+
+#: includes/extend/buddypress/group.php:624
+#: includes/extend/buddypress/group.php:633
+#@ bbpress
+msgid "This group does not currently have any forums."
+msgstr "Diese Gruppe hat derzeit keine Foren."
+
+#: includes/forums/functions.php:169
+#: includes/forums/functions.php:471
+#@ bbpress
+msgid "<strong>ERROR</strong>: Your forum description cannot be empty."
+msgstr "<strong>FEHLER</strong>: Deine Forenbeschreibung darf nicht leer bleiben."
+
+#: includes/forums/functions.php:182
+#@ bbpress
+msgid "<strong>ERROR</strong>: Your forum must have a parent."
+msgstr "<strong>FEHLER</strong>: Dein Forum muss ein übergeordnetes Forum haben."
+
+#: includes/forums/template-tags.php:1869
+#, php-format
+#@ bbpress
+msgid "This category contains %1$s and %2$s, and was last updated by %3$s %4$s."
+msgstr "Diese Kategorie enthält %1$s und %2$s und wurde zuletzt %4$s von %3$s aktualisiert."
+
+#: includes/forums/template-tags.php:1871
+#, php-format
+#@ bbpress
+msgid "This forum contains %1$s and %2$s, and was last updated by %3$s %4$s."
+msgstr "Dieses Forum enthält %1$s und %2$s und wurde zuletzt %4$s von %3$s aktualisiert."
+
+#: includes/forums/template-tags.php:1877
+#, php-format
+#@ bbpress
+msgid "This category contains %1$s, and was last updated by %2$s %3$s."
+msgstr "Diese Kategorie enthält %1$s und wurde zuletzt %3$s von %2$s  aktualisiert."
+
+#: includes/forums/template-tags.php:1879
+#, php-format
+#@ bbpress
+msgid "This forum contains %1$s, and was last updated by %2$s %3$s."
+msgstr "Dieses Forum enthält %1$s und wurde zuletzt %3$s von %2$s aktualisiert."
+
+#: includes/forums/template-tags.php:1899
+#, php-format
+#@ bbpress
+msgid "This category contains %1$s."
+msgstr "Diese Kategorie enthält %1$s."
+
+#: includes/forums/template-tags.php:1901
+#, php-format
+#@ bbpress
+msgid "This forum contains %1$s."
+msgstr "Dieses Forum enthält %1$s."
+
+#: includes/forums/template-tags.php:1905
+#@ bbpress
+msgid "This forum is empty."
+msgstr "Dieses Forum ist leer."
+
+#: includes/forums/template-tags.php:2173
+#@ bbpress
+msgctxt "Forum Status"
+msgid "Open"
+msgstr "Offen"
+
+#: includes/forums/template-tags.php:2174
+#@ bbpress
+msgctxt "Forum Status"
+msgid "Closed"
+msgstr "Geschlossen"
+
+#: includes/replies/template-tags.php:643
+#, php-format
+#@ bbpress
+msgid "This reply was modified %1$s by %2$s. Reason: %3$s"
+msgstr "Diese Antwort wurde vor %1$s von %2$s bearbeitet. Grund: %3$s"
+
+#: includes/replies/template-tags.php:645
+#, php-format
+#@ bbpress
+msgid "This reply was modified %1$s by %2$s."
+msgstr "Diese Antwort wurde vor %1$s von %2$s bearbeitet."
+
+#: includes/replies/template-tags.php:1891
+#, php-format
+#@ bbpress
+msgid "Viewing %1$s reply"
+msgid_plural "Viewing %1$s replies"
+msgstr[0] "%1$s Antwort anzeigen"
+msgstr[1] "%1$s Antworten anzeigen"
+
+#: includes/replies/template-tags.php:1895
+#, php-format
+#@ bbpress
+msgid "Viewing %2$s replies (of %4$s total)"
+msgid_plural "Viewing %1$s replies - %2$s through %3$s (of %4$s total)"
+msgstr[0] "%2$s Antwort anzeigen (von insgesamt %4$s)"
+msgstr[1] "%1$s Antworten anzeigen - %2$s bis %3$s (von insgesamt %4$s)"
+
+#: includes/replies/template-tags.php:1903
+#, php-format
+#@ bbpress
+msgid "Viewing %1$s post"
+msgid_plural "Viewing %1$s posts"
+msgstr[0] "%1$s Beitrag anzeigen"
+msgstr[1] "%1$s Beiträge anzeigen"
+
+#: includes/replies/template-tags.php:1907
+#, php-format
+#@ bbpress
+msgid "Viewing %2$s post (of %4$s total)"
+msgid_plural "Viewing %1$s posts - %2$s through %3$s (of %4$s total)"
+msgstr[0] "%2$s Beitrag anzeigen (von insgesamt %4$s)"
+msgstr[1] "%1$s Beiträge anzeigen - %2$s bis %3$s (von insgesamt %4$s)"
+
+#: includes/topics/template-tags.php:865
+#, php-format
+#@ bbpress
+msgid "This topic was modified %1$s by %2$s. Reason: %3$s"
+msgstr "Dieses Thema wurde vor %1$s von %2$s bearbeitet. Grund: %3$s"
+
+#: includes/topics/template-tags.php:867
+#, php-format
+#@ bbpress
+msgid "This topic was modified %1$s by %2$s."
+msgstr "Dieses Thema wurde vor %1$s von %2$s bearbeitet."
+
+#: includes/topics/template-tags.php:2456
+#@ bbpress
+msgctxt "Topic Status"
+msgid "Close"
+msgstr "Schließen"
+
+#: includes/topics/template-tags.php:2457
+#@ bbpress
+msgctxt "Topic Status"
+msgid "Open"
+msgstr "Öffnen"
+
+#: includes/topics/template-tags.php:2699
+#, php-format
+#@ bbpress
+msgid "Viewing %1$s topic"
+msgid_plural "Viewing %1$s topics"
+msgstr[0] "%1$s Thema anzeigen"
+msgstr[1] "%1$s Themen anzeigen"
+
+#: includes/topics/template-tags.php:2703
+#, php-format
+#@ bbpress
+msgid "Viewing topic %2$s (of %4$s total)"
+msgid_plural "Viewing %1$s topics - %2$s through %3$s (of %4$s total)"
+msgstr[0] "%2$s Thema anzeigen (von insgesamt %4$s)"
+msgstr[1] "%1$s Themen anzeigen - %2$s bis %3$s (von insgesamt %4$s)"
+
+#: includes/topics/template-tags.php:2935
+#, php-format
+#@ bbpress
+msgid "This topic contains %1$s, has %2$s, and was last updated by %3$s %4$s."
+msgstr "Dieses Thema enthält %1$s, hat %2$s, und wurde zuletzt %4$s von %3$s aktualisiert."
+
+#: includes/topics/template-tags.php:2943
+#@ bbpress
+msgid "This topic has no replies."
+msgstr "Dieses Thema hat noch keine Antworten."
+
+#: includes/users/template-tags.php:438
+#@ bbpress
+msgid "Key Master"
+msgstr "Administrator"
+
+#: includes/users/template-tags.php:446
+#@ bbpress
+msgid "Guest"
+msgstr "Gast"
+
+#: includes/users/template-tags.php:458
+#@ bbpress
+msgid "Member"
+msgstr "Mitglied"
+
+#: includes/core/capabilities.php:412
+#: includes/users/template-tags.php:450
+#@ bbpress
+msgid "Moderator"
+msgstr "Moderator"
+
+#: templates/default/bbpress/feedback-no-replies.php:13
+#@ bbpress
+msgid "Oh bother! No replies were found here!"
+msgstr "Es wurden bisher keine Antworten hier gefunden!"
+
+#: templates/default/bbpress/form-user-lost-pass.php:27
+#@ bbpress
+msgid "Reset My Password"
+msgstr "Mein Passwort zurücksetzen"
+
+#: bbpress.php:388
+#: templates/default/bbpress-functions.php:68
+#@ bbpress
+msgid "bbPress Default"
+msgstr "bbPress Standard"
+
+#: bbpress.php:130
+#: bbpress.php:137
+#@ bbpress
+msgid "Cheatin&#8217; huh?"
+msgstr "Mogeln, häh?"
+
+#: includes/forums/functions.php:121
+#: includes/forums/functions.php:400
+#: includes/replies/functions.php:117
+#: includes/replies/functions.php:408
+#: includes/topics/functions.php:129
+#: includes/topics/functions.php:482
+#: includes/topics/functions.php:1098
+#: includes/topics/functions.php:1400
+#: includes/topics/functions.php:1751
+#: includes/topics/functions.php:1790
+#: includes/topics/functions.php:1847
+#: includes/users/functions.php:467
+#: includes/users/functions.php:787
+#: includes/users/functions.php:914
+#: includes/users/functions.php:920
+#@ bbpress
+msgid "<strong>ERROR</strong>: Are you sure you wanted to do that?"
+msgstr "<strong>FEHLER</strong>: Bist Du sicher, dass Du das tun willst?"
+
+#: includes/admin/converter.php:80
+#@ bbpress
+msgid "Database Settings"
+msgstr "Datenbank-Einstellungen"
+
+#: includes/admin/converter.php:126
+#@ bbpress
+msgid "Start Over"
+msgstr "Von vorn beginnen"
+
+#: includes/admin/converter.php:130
+#@ bbpress
+msgid "Purge Previous Import"
+msgstr "Vorherigen Import vollständig entfernen"
+
+#: includes/admin/converter.php:219
+#@ bbpress
+msgid "Starting Conversion"
+msgstr "Konvertierung beginnen"
+
+#: includes/admin/settings.php:1134
+#@ bbpress
+msgid "Some optional parameters to help tune the conversion process."
+msgstr "Einige optionale Parameter, die helfen den Konvertierungsprozess zu verfeinern."
+
+#: includes/admin/settings.php:1192
+#@ bbpress
+msgid "Start a fresh conversion from the beginning"
+msgstr "Eine neue Konvertierung von Anfang an starten"
+
+#: includes/admin/settings.php:1193
+#@ bbpress
+msgid "You should clean old conversion information before starting over."
+msgstr "Du solltest Informationen von alten Konvertierungen am besten säubern/ löschen, bevor Du noch einmal von vorn beginnst."
+
+#: includes/admin/settings.php:1208
+#@ bbpress
+msgid "Use this if an import failed and you want to remove that incomplete data."
+msgstr "Verwende dies, wenn ein Import fehlschlug und Du diese unvollständigen Daten entfernen möchtest."
+
+#: includes/common/widgets.php:674
+#@ bbpress
+msgid "Order By:"
+msgstr "Sortieren nach:"
+
+#: includes/common/widgets.php:676
+#@ bbpress
+msgid "Newest Topics"
+msgstr "Neueste Themen"
+
+#: includes/common/widgets.php:678
+#@ bbpress
+msgid "Topics With Recent Replies"
+msgstr "Themen mit kürzlichen Antworten"
+
+#: includes/admin/tools.php:162
+#@ bbpress
+msgid "Recalculate private and hidden forums"
+msgstr "Private und verborgene Foren neu berechnen"
+
+#: includes/admin/tools.php:851
+#, php-format
+#@ bbpress
+msgid "Recalculating forum visibility &hellip; %s"
+msgstr "Forensichtbarkeit neu berechnen &hellip; %s"
+
+#: includes/common/functions.php:1024
+#, php-format
+#@ bbpress
+msgid ""
+"%1$s wrote:\n"
+"\n"
+"%2$s\n"
+"\t\t\t\n"
+"Post Link: %3$s\n"
+"\n"
+"-----------\n"
+"\n"
+"You are receiving this email because you subscribed to a forum topic.\n"
+"\n"
+"Login and visit the topic to unsubscribe from these emails."
+msgstr ""
+"%1$s schrieb:\n"
+"\n"
+"%2$s\n"
+"\\\t\\\t\\\t\n"
+"Beitrags-Link: %3$s\n"
+"\n"
+"-----------\n"
+"\n"
+"Du erhältst diese E-Mail, weil Du ein Foren-Thema abonniert hast.\n"
+"\n"
+"Melde Dich an, um das Thema zu besuchen oder Dich von diesen Benachrichtigungs-E-Mails abzumelden."
+
+#: includes/admin/forums.php:122
+#@ bbpress
+msgid "This screen displays the individual forums on your site. You can customize the display of this screen to suit your workflow."
+msgstr "Dieses Fenster zeigt die individuellen Foren Deiner Webseite an. Du kannst die Anzeige dieser Seite Deiner Arbeitsweise und Deinen Bedürfnissen anpassen."
+
+#: includes/admin/forums.php:132
+#@ bbpress
+msgid "You can hide/display columns based on your needs and decide how many forums to list per screen using the Screen Options tab."
+msgstr "Du kannst Spalten anzeigen/verbergen, basierend auf Deinen Bedürfnissen und entscheiden, wie viele Foren pro Seite aufgelistet werden sollen - verwende einfach den Tab 'Optionen einblenden' oben rechts."
+
+#: includes/admin/forums.php:133
+#@ bbpress
+msgid "You can filter the list of forums by forum status using the text links in the upper left to show All, Published, or Trashed forums. The default view is to show all forums."
+msgstr "Du kannst die Liste der Foren nach Forenstatus filtern lassen, indem Du die Textlinks oben links verwendest, um Alle, Veröffentlichte oder Gelöschte Foren aufzulisten. Als Standardansicht fungiert 'Alle' Foren."
+
+#: includes/admin/forums.php:134
+#@ bbpress
+msgid "You can refine the list to show only forums from a specific month by using the dropdown menus above the forums list. Click the Filter button after making your selection. You also can refine the list by clicking on the forum creator in the forums list."
+msgstr "Du kannst die Liste verfeinern, um nur Foren eines bestimmten Monats anzuzeigen, indem Du das Aufklappmenü oberhalb der Forenliste verwendest. Klicke auf den Button 'Auswahl einschränken', nachdem Du Deine Wahl getroffen hast. Du kannst die Liste ebenso verfeinern über Klick auf den Forenersteller in der entsprechenden Auflistung."
+
+#: includes/admin/forums.php:143
+#@ bbpress
+msgid "Hovering over a row in the forums list will display action links that allow you to manage your forum. You can perform the following actions:"
+msgstr "Das \"Überfahren\" einer Zeile in der Forenliste wird Aktionslinks anzeigen, die Dir die Verwaltung Deines Forums ermöglichen. Du kannst folgende Aktionen ausführen:"
+
+#: includes/admin/forums.php:147
+#@ bbpress
+msgid "<strong>View</strong> will show you what your draft forum will look like if you publish it. View will take you to your live site to view the forum. Which link is available depends on your forum&#8217;s status."
+msgstr "<strong>Vorschau</strong> zeigt Dein Forum in der Vorschau, wie es bei Veröffentlichung erscheinen würde. <em>Ansehen</em> bringt Dich zur Live-Ansicht Deiner Webseite mit dem Forum. Welcher Link verfügbar ist, hängt vom Status Deines Forums ab."
+
+#: includes/admin/forums.php:156
+#@ bbpress
+msgid "You can also edit or move multiple forums to the trash at once. Select the forums you want to act on using the checkboxes, then select the action you want to take from the Bulk Actions menu and click Apply."
+msgstr "Du kannst außerdem mehrere Foren auf einmal bearbeiten oder verschieben. Wähle über die Auswahlkästchen die Foren, die Du bearbeiten willst, wähle dann die gewünschte Aktion über \"Aktion wählen\" aus der Stapelverarbeitung und klicke auf \"Übernehmen\"."
+
+#: includes/admin/forums.php:157
+#@ bbpress
+msgid "When using Bulk Edit, you can change the metadata (categories, author, etc.) for all selected forums at once. To remove a forum from the grouping, just click the x next to its name in the Bulk Edit area that appears."
+msgstr "Wenn Du die Stapelverarbeitung verwendest, kannst Du die Metadaten (Kategorien, Autor, etc.) aller gewählten Foren auf einmal ändern. Um ein Forum aus der Gruppierung zu entfernen, klicke auf das \"x\" neben dem Namen in der Stapelverarbeitung."
+
+#: includes/admin/forums.php:163
+#: includes/admin/forums.php:234
+#: includes/admin/replies.php:178
+#: includes/admin/replies.php:246
+#: includes/admin/settings.php:1331
+#: includes/admin/topics.php:179
+#: includes/admin/topics.php:247
+#@ bbpress
+msgid "<a href=\"http://codex.bbpress.org\" target=\"_blank\">bbPress Documentation</a>"
+msgstr "<a href=\"http://codex.bbpress.org/\" target=\"_blank\">bbPress Dokumentation (Codex, Engl.)</a>"
+
+#: includes/admin/forums.php:211
+#@ bbpress
+msgid "<strong>Status</strong> allows you to close a forum to new topics and forums."
+msgstr "<strong>Status</strong> erlaubt es Dir, ein Forum für neue Themen und (Unter-) Foren zu schließen."
+
+#: includes/admin/topics.php:134
+#@ bbpress
+msgid "This screen displays the individual topics on your site. You can customize the display of this screen to suit your workflow."
+msgstr "Dieses Fenster zeigt die individuellen Themen Deiner Webseite an. Du kannst die Anzeige dieser Seite Deiner Arbeitsweise und Deinen Bedürfnissen anpassen."
+
+#: includes/admin/topics.php:144
+#@ bbpress
+msgid "You can hide/display columns based on your needs and decide how many topics to list per screen using the Screen Options tab."
+msgstr "Du kannst Spalten anzeigen/verbergen, basierend auf Deinen Bedürfnissen und entscheiden, wie viele Themen pro Seite aufgelistet werden sollen - verwende einfach den Tab 'Optionen einblenden' oben rechts."
+
+#: includes/admin/topics.php:155
+#@ bbpress
+msgid "Hovering over a row in the topics list will display action links that allow you to manage your topic. You can perform the following actions:"
+msgstr "Das \"Überfahren\" einer Zeile in der Themenliste wird Aktionslinks anzeigen, die Dir die Verwaltung Deines Themas ermöglichen. Du kannst folgende Aktionen ausführen:"
+
+#: includes/admin/topics.php:172
+#@ bbpress
+msgid "You can also edit or move multiple topics to the trash at once. Select the topics you want to act on using the checkboxes, then select the action you want to take from the Bulk Actions menu and click Apply."
+msgstr "Du kannst außerdem mehrere Themen auf einmal bearbeiten oder verschieben. Wähle über die Auswahlkästchen die Themen, die Du bearbeiten willst, wähle dann die gewünschte Aktion über \"Aktion wählen\" aus der Stapelverarbeitung und klicke auf \"Übernehmen\"."
+
+#: includes/admin/topics.php:173
+#@ bbpress
+msgid "When using Bulk Edit, you can change the metadata (categories, author, etc.) for all selected topics at once. To remove a topic from the grouping, just click the x next to its name in the Bulk Edit area that appears."
+msgstr "Wenn Du die Stapelverarbeitung verwendest, kannst Du die Metadaten (Kategorien, Autor, etc.) aller gewählten Themen auf einmal ändern. Um ein Thema aus der Gruppierung zu entfernen, klicke auf das \"x\" neben dem Namen in der Stapelverarbeitung."
+
+#: includes/admin/admin.php:232
+#: includes/admin/admin.php:233
+#: includes/admin/admin.php:241
+#: includes/admin/admin.php:242
+#@ bbpress
+msgid "Welcome to bbPress"
+msgstr "Willkommen zu bbPress"
+
+#: includes/admin/admin.php:469
+#@ bbpress
+msgid "About"
+msgstr "Über"
+
+#: includes/admin/admin.php:1245
+#@ bbpress
+msgctxt "admin color scheme"
+msgid "Green"
+msgstr "Grün (bbPress)"
+
+#: includes/admin/admin.php:1286
+#, php-format
+#@ bbpress
+msgid "%s - %s"
+msgstr "%s - %s"
+
+#: includes/admin/admin.php:1304
+#: includes/admin/admin.php:1410
+#, php-format
+#@ default
+msgid "Welcome to bbPress %s"
+msgstr "Willkommen zu bbPress %s"
+
+#: includes/admin/admin.php:1305
+#: includes/admin/admin.php:1411
+#, php-format
+#@ default
+msgid "Thank you for updating to the latest version! bbPress %s is ready to make your community a safer, faster, and better looking place to hang out!"
+msgstr "Danke für das Aktualisieren auf die neueste Version! bbPress %s ist bereit dafür, Deine Community zu einem sichereren, schnelleren und besser aussehenden Ort zu machen!"
+
+#: includes/admin/admin.php:1306
+#: includes/admin/admin.php:1412
+#, php-format
+#@ default
+msgid "Version %s"
+msgstr "Version %s"
+
+#: includes/admin/admin.php:1310
+#: includes/admin/admin.php:1416
+#@ default
+msgid "What&#8217;s New"
+msgstr "Was neu ist"
+
+#: includes/admin/admin.php:1312
+#: includes/admin/admin.php:1418
+#@ default
+msgid "Credits"
+msgstr "Danksagungen"
+
+#: includes/admin/admin.php:1317
+#@ bbpress
+msgid "In-depth User Profiles"
+msgstr "Ausführliche Benutzerprofile"
+
+#: includes/admin/admin.php:1320
+#@ bbpress
+msgid "User Details"
+msgstr "Benutzerdetails"
+
+#: includes/admin/admin.php:1321
+#@ bbpress
+msgid "Forum profiles include the details of your forum activity, including your topics and replies, subscriptions, and favorites."
+msgstr "Forenprofile enthalten die Details Deiner Forenaktivität, einschließlich Deiner Themen und Antworten, Abonnements sowie Favoriten."
+
+#: includes/admin/admin.php:1323
+#@ bbpress
+msgid "Easy Updating"
+msgstr "Einfache Aktualisierungen"
+
+#: includes/admin/admin.php:1324
+#@ bbpress
+msgid "You can easily update your profile without leaving bbPress."
+msgstr "Du kannst Dein Profil sehr leicht aktualisieren, ohne bbPress verlassen zu müssen."
+
+#: includes/admin/admin.php:1329
+#@ bbpress
+msgid "Theme Compatability"
+msgstr "Theme-Kompatibilität"
+
+#: includes/admin/admin.php:1332
+#@ bbpress
+msgid "Twenty Twelve"
+msgstr "Twenty Twelve"
+
+#: includes/admin/admin.php:1333
+#@ bbpress
+msgid "Updated default templates are now Twenty Twelve compatible, and we refreshed our CSS to better integrate with other popular themes, too."
+msgstr "Aktualisierte Standard-Templates sind jetzt mit 'Twenty Twelve' (dem 2012er WordPress Standard-Theme) kompatibel. Und wir haben das CSS Stylesheet etwas überarbeitet, damit es noch besser mit anderen beliebten Themes funktioniert."
+
+#: includes/admin/admin.php:1338
+#@ bbpress
+msgid "Improved User Management"
+msgstr "Verbesserte Benutzerverwaltung"
+
+#: includes/admin/admin.php:1341
+#@ bbpress
+msgid "Dynamic User Roles and Capabilities"
+msgstr "Dynamische Benutzerrollen und Berechtigungen"
+
+#: includes/admin/admin.php:1342
+#@ bbpress
+msgid "bbPress now includes some fancy user-roles with smart default capabilities to help you manage your forums. New roles include Key Master (for complete administrative access), Moderator, and Participant for regular forum users."
+msgstr "bbPress enthält einige elegante Benutzerrollen mit guten Standardeinstellungen für Berechtigungen, um Dir beim Verwalten Deiner Foren zu helfen. Neue Benutzerrollen sind 'Super-Administrator' (Key Master; für kompletten administrativen Zugriff), 'Moderator' und 'Teilnehmer' (Participant) für reguläre Foren-Benutzer."
+
+#: includes/admin/admin.php:1344
+#@ bbpress
+msgid "Manage Forum Users from WordPress"
+msgstr "Foren-Benutzer von WordPress aus verwalten"
+
+#: includes/admin/admin.php:1345
+#@ bbpress
+msgid "You can assign Forums roles to users individually, or bulk update them from the WordPress Users page. Users automatically start out as forum participants."
+msgstr "Du kannst Foren-Benutzerrollen Nutzern individuell zuweisen, oder sie via Stapelverarbeitung auf der WordPress Benutzerseite aktualisieren. Standardmäßig sind Benutzer im Forum als 'Teilnehmer' (Participants) unterwegs."
+
+#: includes/admin/admin.php:1350
+#@ bbpress
+msgid "Better BuddyPress Integration"
+msgstr "Bessere BuddyPress Integration"
+
+#: includes/admin/admin.php:1353
+#@ bbpress
+msgid "Use bbPress for Your BuddyPress Group Forums"
+msgstr "Verwende bbPress 2.x für Deine Gruppenforen in BuddyPress"
+
+#: includes/admin/admin.php:1354
+#@ bbpress
+msgid "You can now use bbPress to manage your BuddyPress Group Forums, allowing for seamless integration and improved plugin performance. Plugins developed for bbPress can now be extended to improve the BuddyPress Group Forums experience."
+msgstr "Du kannst jetzt bbPress 2.2+ verwenden, um Deine Gruppenforen in BuddyPress zu verwalten (statt der vorherigen, alten bbPress 1.x Standalone-Variante). Das führt zu nahtloser Integration und verbesserter Plugin-Performance für BuddyPress. Zusatz-Plugins, die für bbPress 2.x entwickelt wurden, können daher nun auch dafür verwendet werden, um die Gruppenforen für BuddyPress zu erweitern bzw. zu verbessern."
+
+#: includes/admin/admin.php:1356
+#@ bbpress
+msgid "Activity Stream Syncing"
+msgstr "Synchronisation der Aktivitätsverläufe"
+
+#: includes/admin/admin.php:1357
+#@ bbpress
+msgid "bbPress now keeps track of changes to topics and replies and keeps their corresponding BuddyPress Activity Stream updates synced."
+msgstr "bbPress verfolgt nun Änderungen bei Themen und Antworten und aktualisiert die entsprechenden Aktivitätsverläufe in BuddyPress synchron."
+
+#: includes/admin/admin.php:1362
+#@ bbpress
+msgid "Under the Hood"
+msgstr "Unter der Oberfläche"
+
+#: includes/admin/admin.php:1366
+#@ bbpress
+msgid "Template Logic"
+msgstr "Template-Logik"
+
+#: includes/admin/admin.php:1367
+#@ bbpress
+msgid "New functions and template stacks are in place to help plugin developers extend bbPress further."
+msgstr "Neue Funktionen und Template-Stacks sind an Ort und Stelle, um Plugin-Entwicklern besser dabei zu helfen, bbPress 2.x zukünftig zu erweitern."
+
+#: includes/admin/admin.php:1369
+#@ bbpress
+msgid "Plugin Directory Structure"
+msgstr "Plugin-Verzeichnisstruktur"
+
+#: includes/admin/admin.php:1370
+#@ bbpress
+msgid "We simplified the bbPress plugin directory structure, making it easier for plugin developers to find the relevant code."
+msgstr "Wir haben die bbPress Plugin-Verzeichnisstruktur vereinfacht. Dadurch wird es für Plugin-Entwickler einfacher, den relevanten Code zu finden."
+
+#: includes/admin/admin.php:1374
+#@ bbpress
+msgid "Autocomplete"
+msgstr "Autovervollständigung"
+
+#: includes/admin/admin.php:1375
+#@ bbpress
+msgid "In WordPress Admin, you now select a parent forum or topic via autocomplete rather than a dropdown."
+msgstr "Im WordPress Adminbereich kann jetzt ein Forum oder Thema via Autovervollständigung ausgewählt werden, statt über ein Aufklappmenü."
+
+#: includes/admin/admin.php:1377
+#@ bbpress
+msgid "Fancy Editor Support"
+msgstr "Unterstützung für den eleganten Editor"
+
+#: includes/admin/admin.php:1378
+#@ bbpress
+msgid "We improved our support of the Fancy Editor, giving forum users a better experience."
+msgstr "Wir haben die Unterstützung für den eleganten Editor (wahlweise Visuell/ HTML) verbessert, um die Benutzererfahrung weiter zu verbessern."
+
+#: includes/admin/admin.php:1382
+#@ bbpress
+msgid "WordPress 3.5-ready"
+msgstr "Bereit für WordPress 3.5"
+
+#: includes/admin/admin.php:1383
+#@ bbpress
+msgid "bbPress 2.2 has been thoroughly tested against the ongoing development of WordPress 3.5."
+msgstr "bbPress 2.2.x wurde großräumig gegen die fortgeschrittene Entwicklung der WordPress Version 3.5 getestet."
+
+#: includes/admin/admin.php:1389
+#: includes/admin/admin.php:1517
+#@ default
+msgid "Go to Forum Settings"
+msgstr "Zu den Foreneinstellungen gehen"
+
+#: includes/admin/admin.php:1422
+#@ bbpress
+msgid "bbPress is created by a worldwide swarm of busy, busy bees."
+msgstr "bbPress wurde erstellt von einem weltweiten Schwarm von fleißigen, fleißigen Bienen."
+
+#: includes/admin/admin.php:1424
+#@ bbpress
+msgid "Project Leaders"
+msgstr "Projektleiter"
+
+#: includes/admin/admin.php:1429
+#@ bbpress
+msgid "Founding Developer"
+msgstr "Gründer"
+
+#: includes/admin/admin.php:1434
+#@ bbpress
+msgid "Lead Developer"
+msgstr "Leitender Entwickler"
+
+#: includes/admin/admin.php:1438
+#@ bbpress
+msgid "Contributing Developers"
+msgstr "Beteiligte Entwickler (Contributors)"
+
+#: includes/admin/admin.php:1457
+#@ bbpress
+msgid "Codex Rockstars"
+msgstr "Helfer bei der Dokumentation"
+
+#: includes/admin/admin.php:1476
+#@ bbpress
+msgid "Core Contributors to bbPress 2.2"
+msgstr "Sonstige Beteiligte an der Core-Entwicklung von bbPress 2.2.x"
+
+#: includes/admin/metaboxes.php:315
+#: includes/admin/metaboxes.php:373
+#: includes/admin/metaboxes.php:426
+#@ bbpress
+msgid "&mdash; No parent &mdash;"
+msgstr "&mdash; Kein Übergeordnetes &mdash;"
+
+#: includes/admin/metaboxes.php:473
+#@ bbpress
+msgid "Email:"
+msgstr "E-Mail:"
+
+#: includes/admin/metaboxes.php:487
+#@ bbpress
+msgid "IP:"
+msgstr "IP:"
+
+#: includes/admin/settings.php:81
+#@ bbpress
+msgid "Disallow editing after"
+msgstr "Bearbeiten deaktivieren nach"
+
+#: includes/admin/settings.php:89
+#@ bbpress
+msgid "Throttle posting every"
+msgstr "Zeitintervall zwischen Veröffentlichungen"
+
+#: includes/admin/settings.php:121
+#@ bbpress
+msgid "Topic tags"
+msgstr "Themen-Schlagwörter"
+
+#: includes/admin/settings.php:129
+#@ bbpress
+msgid "Anonymous posting"
+msgstr "Anonyme Beiträge"
+
+#: includes/admin/settings.php:137
+#@ bbpress
+msgid "Default user role"
+msgstr "Standard-Benutzerrolle"
+
+#: includes/admin/settings.php:145
+#@ bbpress
+msgid "Auto role"
+msgstr "Automatische Benutzzerrolle"
+
+#: includes/admin/settings.php:153
+#@ bbpress
+msgid "Fancy editor"
+msgstr "Eleganter Editor"
+
+#: includes/admin/settings.php:161
+#@ bbpress
+msgid "Auto-embed links"
+msgstr "Links automatisch einbetten"
+
+#: includes/admin/settings.php:450
+#@ bbpress
+msgid "Allow topics to have tags"
+msgstr "Themen-Schlagwörter für Themen erlauben"
+
+#: includes/admin/settings.php:498
+#@ bbpress
+msgid "Automatically assign default role to new, registered users upon visiting the site."
+msgstr "Automatisch die Standard-Benutzerrolle neuen, registrierten Benutzern zuweisen, wenn sie die Webseite besuchen."
+
+#: includes/admin/settings.php:583
+#@ bbpress
+msgid "No template packages available."
+msgstr "Es sind keine Template-Pakete verfügbar."
+
+#: includes/admin/settings.php:599
+#@ bbpress
+msgid "Embed media (YouTube, Twitter, Flickr, etc...) directly into topics and replies"
+msgstr "Medien direkt in Themen und Antworten einbetten (YouTube, Twitter, Flickr, etc. ...)"
+
+#: includes/admin/settings.php:929
+#@ bbpress
+msgid "&mdash; Forum root &mdash;"
+msgstr "&mdash; Forenwurzel &mdash;"
+
+#: includes/admin/settings.php:993
+#@ bbpress
+msgid "Forums Settings"
+msgstr "Foreneinstellungen"
+
+#: includes/admin/settings.php:1285
+#@ bbpress
+msgid "This screen provides access to all of the Forums settings."
+msgstr "Dieser Bildschirm bietet Zugriff auf alle Foreneinstellungen."
+
+#: includes/admin/settings.php:1300
+#@ bbpress
+msgid "Topic-Tags allow users to filter topics between forums. This is enabled by default."
+msgstr "Themen-Schlagwörter erlauben es Benutzern, Themen zwischen Foren zu filtern. Dies ist standardmäßig aktiviert."
+
+#: includes/admin/tools.php:164
+#@ bbpress
+msgid "Repair BuddyPress Group Forum relationships"
+msgstr "BuddyPress Gruppenforen-Beziehungen reparieren"
+
+#: includes/admin/tools.php:174
+#@ bbpress
+msgid "Remap existing users to default forum roles"
+msgstr "Bestehende Benutzer erneut mit Standard-Benutzerrollen verbinden"
+
+#: includes/admin/tools.php:304
+#, php-format
+#@ bbpress
+msgid "Repairing BuddyPress group-forum relationships&hellip; %s"
+msgstr "BuddyPress Gruppenforen-Beziehungen werden repariert&hellip; %s"
+
+#: includes/admin/tools.php:391
+#, php-format
+#@ bbpress
+msgid "Complete! %s groups updated; %s forums updated."
+msgstr "Abgeschlossen! %s Gruppen aktualisiert; %s Foren aktualisiert."
+
+#: includes/admin/tools.php:690
+#, php-format
+#@ bbpress
+msgid "Remapping forum role for each user on this site&hellip; %s"
+msgstr "Foren-Benutzerrolle für jeden Benutzer dieser Webseite erneut zuweisen/ verbinden&hellip; %s"
+
+#: includes/admin/tools.php:728
+#, php-format
+#@ bbpress
+msgid "Complete! %s users updated."
+msgstr "Abgeschlossen! %s Benutzer aktualisiert."
+
+#: includes/admin/topics.php:145
+#@ bbpress
+msgid "You can filter the list of topics by topic status using the text links in the upper left to show All, Published, or Trashed topics. The default view is to show all topics."
+msgstr "Du kannst die Liste der Themen nach Themenstatus filtern lassen, indem Du die Textlinks oben links verwendest, um Alle, Veröffentlichte oder Gelöschte Themen (Papierkorb) aufzulisten. Als Standardansicht fungiert 'Alle' Themen."
+
+#: includes/admin/topics.php:146
+#@ bbpress
+msgid "You can refine the list to show only topics from a specific month by using the dropdown menus above the topics list. Click the Filter button after making your selection. You also can refine the list by clicking on the topic creator in the topics list."
+msgstr "Du kannst die Liste verfeinern, um nur Themen eines bestimmten Monats anzuzeigen, indem Du das Aufklappmenü oberhalb der Themenliste verwendest. Klicke auf den Button 'Auswahl einschränken', nachdem Du Deine Wahl getroffen hast. Du kannst die Liste ebenso verfeinern über Klick auf den Themenersteller in der entsprechenden Auflistung."
+
+#: includes/admin/topics.php:157
+#@ bbpress
+msgid "<strong>Edit</strong> takes you to the editing screen for that topic. You can also reach that screen by clicking on the topic title."
+msgstr "<strong>Bearbeiten</strong> führt Dich zur Bearbeitungsansicht des Themas. Du kannst diese Ansicht auch über einen Klick auf den Thementitel erreichen."
+
+#: includes/admin/topics.php:158
+#@ bbpress
+msgid "<strong>Trash</strong> removes your topic from this list and places it in the trash, from which you can permanently delete it."
+msgstr "<strong>Papierkorb</strong> entfernt ein Thema von der Liste und legt es in Papierkorb. Von dort aus können Elemente dann dauerhaft gelöscht werden."
+
+#: includes/admin/topics.php:161
+#@ bbpress
+msgid "<strong>Close</strong> will mark the selected topic as &#8217;closed&#8217; and disable the option to post new replies to the topic."
+msgstr "<strong>Schließen</strong> wird das ausgewählte Thema als &#8217;geschlossen&#8217; kennzeichnen und die Option zum Erstellen neuer Antworten deaktivieren."
+
+#: includes/admin/topics.php:162
+#@ bbpress
+msgid "<strong>Stick</strong> will keep the selected topic &#8217;pinned&#8217; to the top the parent forum topic list."
+msgstr "<strong>Fixieren</strong> wird das ausgewählte Thema &#8217;fixiert&#8217; an der Spitze der übergeordneten Foren-Themenliste halten (sticky/ oben halten)."
+
+#: includes/admin/topics.php:163
+#@ bbpress
+msgid "<strong>Stick <em>(to front)</em></strong> will keep the selected topic &#8217;pinned&#8217; to the top of ALL forums and be visable in any forums topics list."
+msgstr "<strong>Superfixiert</strong> wird das ausgewählte Thema &#8217;superfixiert&#8217; an der Spitze ALLER Foren halten und in der Themenliste jedes Forums sichtbar sein (sticky on front/ ganz oben halten)."
+
+#: includes/admin/users.php:87
+#: includes/admin/users.php:217
+#: templates/default/bbpress/form-user-roles.php:9
+#@ bbpress
+msgid "Forum Role"
+msgstr "Foren-Benutzerrolle"
+
+#: includes/admin/users.php:138
+#: includes/admin/users.php:140
+#@ bbpress
+msgid "Change forum role to&hellip;"
+msgstr "Foren-Benutzerrolle ändern in&hellip;"
+
+#: includes/admin/users.php:148
+#@ bbpress
+msgid "Change"
+msgstr "Ändern"
+
+#: includes/admin/users.php:216
+#@ bbpress
+msgid "Site Role"
+msgstr "Webseiten-Benutzerrolle"
+
+#: includes/common/widgets.php:609
+#, php-format
+#@ bbpress
+msgctxt "widgets"
+msgid "by %1$s"
+msgstr "von %1$s"
+
+#: includes/common/widgets.php:671
+#@ bbpress
+msgid "Show topic author:"
+msgstr "Autor des Themas anzeigen:"
+
+#: includes/common/widgets.php:785
+#, php-format
+#@ bbpress
+msgctxt "widgets"
+msgid "%1$s on %2$s %3$s"
+msgstr "%1$s am %2$s %3$s"
+
+#: includes/common/widgets.php:791
+#, php-format
+#@ bbpress
+msgctxt "widgets"
+msgid "%1$s %2$s"
+msgstr "%1$s %2$s"
+
+#: includes/common/widgets.php:803
+#, php-format
+#@ bbpress
+msgctxt "widgets"
+msgid "%1$s"
+msgstr "%1$s"
+
+#: includes/common/widgets.php:859
+#@ bbpress
+msgid "Show reply author:"
+msgstr "Autor der Antwort anzeigen:"
+
+#: includes/core/capabilities.php:406
+#@ bbpress
+msgid "Keymaster"
+msgstr "Administrator"
+
+#: includes/core/capabilities.php:418
+#: includes/users/template-tags.php:454
+#@ bbpress
+msgid "Participant"
+msgstr "Teilnehmer"
+
+#: includes/core/capabilities.php:424
+#@ bbpress
+msgid "Spectator"
+msgstr "Zuschauer"
+
+#: includes/core/capabilities.php:430
+#@ bbpress
+msgid "Blocked"
+msgstr "Gesperrt"
+
+#: includes/core/capabilities.php:534
+#: includes/core/capabilities.php:544
+#@ bbpress
+msgid "Editable forum roles no longer exist."
+msgstr "Bearbeitbare Foren-Benutzerrollen sind ab dieser Version nicht mehr vorhanden (es können dafür die entsprechenden WordPress-Benutzerrollen verwendet und angepasst werden!)."
+
+#: includes/extend/akismet.php:400
+#@ bbpress
+msgid "No response"
+msgstr "Keine Antwort"
+
+#: includes/extend/buddypress/group.php:241
+#@ bbpress
+msgid "Enable Group Forum"
+msgstr "Gruppenforum aktivieren"
+
+#: includes/extend/buddypress/group.php:249
+#@ bbpress
+msgid "Saying no will not delete existing forum content."
+msgstr "Hier 'Nein' zu antworten wird keinen existierenden Foreninhalt löschen!"
+
+#: includes/extend/buddypress/group.php:251
+#@ bbpress
+msgid "Save Settings"
+msgstr "Einstellungen speichern"
+
+#: includes/extend/buddypress/group.php:352
+#@ bbpress
+msgid "Group Forum"
+msgstr "Gruppenforum"
+
+#: includes/extend/buddypress/loader.php:202
+#: includes/extend/buddypress/loader.php:275
+#: templates/default/bbpress/user-details.php:41
+#@ bbpress
+msgid "Replies Created"
+msgstr "Erstellte Antworten"
+
+#: includes/replies/template-tags.php:545
+#: includes/topics/template-tags.php:688
+#, php-format
+#@ bbpress
+msgctxt "date at time"
+msgid "%1$s at %2$s"
+msgstr "%1$s um %2$s"
+
+#: includes/users/template-tags.php:442
+#@ bbpress
+msgid "Inactive"
+msgstr "Inaktiv"
+
+#: templates/default/bbpress/form-forum.php:180
+#@ bbpress
+msgid "You cannot create new forums."
+msgstr "Du kannst keine neue Foren erstellen."
+
+#: templates/default/bbpress/form-topic.php:229
+#@ bbpress
+msgid "You cannot create new topics."
+msgstr "Du kannst keinen neuen Themen erstellen."
+
+#: templates/default/bbpress/form-user-edit.php:39
+#@ bbpress
+msgid "Display Name"
+msgstr "Öffentlicher Name"
+
+#: templates/default/bbpress/form-user-edit.php:133
+#@ bbpress
+msgid "Your password should be at least ten characters long. Use upper and lower case letters, numbers, and symbols to make it even stronger."
+msgstr "Dein Passwort sollte aus mindestens zehn Zeichen bestehen! Verwende Groß- und kleinbuchstaben, Zahlen und Sonderzeichen, um es noch sicherer zu machen."
+
+#: templates/default/bbpress/form-user-edit.php:143
+#: templates/default/bbpress/form-user-edit.php:146
+#@ bbpress
+msgid "User Role"
+msgstr "Benutzerrolle"
+
+#: templates/default/bbpress/form-user-edit.php:153
+#@ bbpress
+msgid "Network Role"
+msgstr "Netzwerk-Benutzerrolle"
+
+#: templates/default/bbpress/form-user-roles.php:2
+#@ bbpress
+msgid "Blog Role"
+msgstr "Webseiten-Benutzerrolle"
+
+#: templates/default/bbpress/loop-single-reply.php:21
+#@ bbpress
+msgid "in reply to: "
+msgstr "als Antwort auf: "
+
+#: templates/default/bbpress/user-details.php:29
+#: templates/default/bbpress/user-profile.php:15
+#@ bbpress
+msgid "Profile"
+msgstr "Profil"
+
+#: templates/default/bbpress/user-details.php:35
+#, php-format
+#@ bbpress
+msgid "%s's Topics Started"
+msgstr "Gestartete Themen von %s"
+
+#: templates/default/bbpress/user-details.php:41
+#, php-format
+#@ bbpress
+msgid "%s's Replies Created"
+msgstr "Antworten von %s"
+
+#: templates/default/bbpress/user-details.php:48
+#, php-format
+#@ bbpress
+msgid "%s's Favorites"
+msgstr "Favoriten von %s"
+
+#: templates/default/bbpress/user-details.php:58
+#, php-format
+#@ bbpress
+msgid "%s's Subscriptions"
+msgstr "Abonnements von %s"
+
+#: templates/default/bbpress/user-profile.php:24
+#, php-format
+#@ bbpress
+msgid "Forum Role: %s"
+msgstr "Forum-Benutzerrolle: %s"
+
+#: templates/default/bbpress/user-profile.php:25
+#, php-format
+#@ bbpress
+msgid "Topics Started: %s"
+msgstr "Gestartete Themen: %s"
+
+#: templates/default/bbpress/user-profile.php:26
+#, php-format
+#@ bbpress
+msgid "Replies Created: %s"
+msgstr "Erstellte Antworten: %s"
+
+#: templates/default/bbpress/user-replies-created.php:15
+#@ bbpress
+msgid "Forum Replies Created"
+msgstr "Erstellte Forenantworten"
+
+#: templates/default/bbpress/user-replies-created.php:28
+#@ bbpress
+msgid "You have not replied to any topics."
+msgstr "Du hast bisher auf kein Thema geantwortet."
+
+#: templates/default/bbpress/user-replies-created.php:28
+#@ bbpress
+msgid "This user has not replied to any topics."
+msgstr "Dieser Benutzer hat bislang auf keine Themen geantwortet."
+
+#: templates/default/bbpress/user-topics-created.php:15
+#@ bbpress
+msgid "Forum Topics Started"
+msgstr "Gestartete Forenthemen"
+
+#: includes/admin/users.php:96
+#: includes/admin/users.php:100
+#: includes/users/template-tags.php:1017
+#@ bbpress
+msgid "&mdash; No role for these forums &mdash;"
+msgstr "&mdash; Keine Benutzerrolle für diese Foren &mdash;"
+
+#. translators: plugin header field 'Version'
+#: bbpress.php:0
+#@ bbpress
+msgid "2.2.4"
+msgstr "2.2.4"
+

@@ -1,0 +1,8 @@
+{% if not subscriptions|length > 0 %}
+  {{ __('no subscriptions', 'huskies') }}
+{% else %}
+  {% from 'macro.twig' import topic %}
+  {% for index, subscription in subscriptions %}
+    {{ topic(subscription) }}
+  {% endfor %}
+{% endif %}

@@ -1,0 +1,78 @@
+{% extends "layout/forum.twig" %}
+{% from 'macro.twig' import pagination, header_top_link, topic, modal %}
+
+{% block forum_title %}
+  {{ __('Topics', 'huskies') }}
+{% endblock %}
+
+{% if page.user.can.access_topic_form %}
+  {% block header_top_link %}
+    {{ header_top_link('plus', '#modal-topic-form') }}
+  {% endblock %}
+{% endif %}
+
+{% block forum_header %}
+  <section class="section section--inverse">
+    <header class="forum-header">
+      <div class="forum-header__breadcrumb">
+        {{ page.bbpress.breadcrumb }}
+      </div>
+      <div class="forum-header__infos">
+        <span class="pull-left">
+          <strong>{{ topic_count }}</strong>
+          {{ __('topics', 'huskies') }}
+        </span>
+        <span class="pull-right">{{ forum.subscribe_link }}</span>
+      </div>
+
+      {% if not sticky_topics|length > 0 %}
+        {{ pagination(pagination.pages) }}
+      {% endif %}
+    </header>
+  </section>
+
+  {% if super_sticky_topics|length > 0 or sticky_topics|length > 0 %}
+    <section class="section section--inverse">
+      {% for index, topic in super_sticky_topics %}
+        {{ topic(topic) }}
+      {% endfor %}
+
+      {% for index, topic in sticky_topics %}
+        {{ topic(topic) }}
+      {% endfor %}
+
+      {{ pagination(pagination.pages) }}
+    </section>
+  {% endif %}
+{% endblock %}
+
+{% block forum_content %}
+  {% for index, topic in topics %}
+    {{ topic(topic) }}
+  {% endfor %}
+{% endblock %}
+
+{% block forum_footer %}
+  <section class="section section--inverse">
+    <footer class="forum-footer">
+      {{ pagination(pagination.pages) }}
+
+      <div class="forum-header__breadcrumb">
+        {{ page.bbpress.breadcrumb }}
+      </div>
+      <div class="forum-header__infos">
+        <span class="pull-left">
+          <strong>{{ topic_count }}</strong>
+          {{ __('topics', 'huskies') }}
+        </span>
+        <span class="pull-right">{{ forum.subscribe_link }}</span>
+      </div>
+    </footer>
+  </section>
+{% endblock %}
+
+{% if page.user.can.access_topic_form %}
+  {% block modal %}
+    {{ modal('topic-form', __('Create new Topic in "%s"', 'huskies')|format(forum.title), include('forum/forms/topic.twig')) }}
+  {% endblock %}
+{% endif %}

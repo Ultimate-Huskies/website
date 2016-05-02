@@ -1,0 +1,35 @@
+{% extends "forum/forms/base.twig" %}
+
+{% block form_infos %}
+  {% if topic.is_closed %}
+    <p class="form__infos">
+      {{ __('This topic is marked as closed to new replies, however your posting capabilities still allow you to do so.', 'huskies') }}
+    </p>
+  {% endif %}
+{% endblock %}
+
+{% block form_action %}
+  {{ reply is defined ? reply.link : topic.link }}
+{% endblock %}
+
+{% block form_inputs %}
+  <fieldset class="form__section">
+    {% do action('bbpress_content', 'reply') %}
+  </fieldset>
+{% endblock %}
+
+{% block form_subscription_text %}
+  {% if reply is defined and reply.is_author_current_user %}
+    {{ __('Notify the author of follow-up replies via email', 'huskies')}}
+  {% else %}
+    {{ __('Notify me of follow-up replies via email', 'huskies') }}
+  {% endif %}
+{% endblock %}
+
+{% block form_submit_value %}
+  {{ reply is defined ? __('Edit Reply', 'huskies') : __('Create Reply', 'huskies') }}
+{% endblock %}
+
+{% block form_footer %}
+  {% do action('bbpress_additional_fields', 'reply') %}
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends "layout/forum.twig" %}
+
+{% block forum_title %}
+  {{ __('Now Editing "%s"', 'huskies')|format(topic.title) }}
+{% endblock %}
+
+{% block forum_content %}
+  {% include 'forum/forms/topic.twig' %}
+{% endblock %}

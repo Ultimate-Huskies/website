@@ -1,0 +1,46 @@
+{% extends "layout/base.twig" %}
+{% from _self import render %}
+
+{% macro render(user) %}
+  <li class="members-list__entry member">
+    <a href="{{ user.profile_link }}" class="member__link">
+      {{ user.avatar(100) }}
+      <h3>{{ user.name }}</h3>
+    </a>
+    <dl class="member__facts">
+      <dt>{{ __('E-mail Address', 'huskies') }}</dt>
+      <dd>{{ user.email }}</dd>
+      <dt>{{ __('Phonenumber', 'huskies') }}</dt>
+      <dd>{{ user.phone }}</dd>
+    <dl>
+  </li>
+{% endmacro %}
+
+
+{% block header %}
+<div class="slideshow slideshow--no-images">
+  <h1 class="slideshow__title">{{ __('Members', 'huskies') }}</h1>
+</div>
+{% endblock %}
+
+{% block content %}
+  <section class="section section--inverse">
+    <h1 class="section__title">{{ __('%s Administrators', 'huskies')|format(administrators|length) }}</h1>
+
+    <ul class="members-list">
+      {% for administrator in administrators %}
+        {{ render(administrator) }}
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section class="section">
+    <h1 class="section__title">{{ __('%s Users', 'huskies')|format(users|length) }}</h1>
+
+    <ul class="members-list">
+      {% for user in users %}
+        {{ render(user) }}
+      {% endfor %}
+    </ul>
+  </section>
+{% endblock %}

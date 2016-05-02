@@ -1,0 +1,180 @@
+.simcal-calendar-grid {
+  width: 100%;
+}
+
+.simcal-calendar-head {
+  > tr:first-child {
+    display: table;
+    width: 100%;
+
+    @media @from-tablet {
+      display: table-row;
+      width: auto;
+    }
+  }
+
+  > tr:last-child {
+    display: none;
+
+    @media @from-tablet {
+      display: table-row;
+    }
+  }
+}
+
+.simcal-week-day {
+  font-size: @fs-l;
+  border-bottom: 1px solid @c-blue;
+  padding: 15px 0;
+}
+
+.simcal-next-wrapper {
+  text-align: right;
+
+  @media @from-tablet {
+    text-align: center;
+  }
+}
+
+.simcal-prev-wrapper {
+  text-align: left;
+
+  @media @from-tablet {
+    text-align: center;
+  }
+}
+
+.simcal-nav-button {
+  .button;
+  padding: 0 15px 0 10px;
+}
+
+.simcal-icon-left::before {
+  content: '<';
+}
+
+.simcal-icon-right::before {
+  content: '>';
+}
+
+.simcal-day-label {
+  font-size: @fs-m;
+  display: block;
+  border: 1px solid transparent;
+  width: 100%;
+  padding: 10px 0;
+
+  @media @from-tablet {
+    width: 65px;
+    height: 65px;
+    padding: 25px;
+    margin: 15px auto;
+  }
+}
+
+.simcal-day {
+  text-align: center;
+  display: none;
+
+  @media @from-tablet {
+    display: table-cell;
+  }
+
+  > div {
+    border: none !important;
+    min-height: 0px !important;
+  }
+
+  &:hover .simcal-day-label {
+    border-color: @c-blue;
+  }
+}
+
+.simcal-day-has-events {
+  cursor: pointer;
+  display: block;
+  margin: 10px 0 25px;
+  position: relative;
+
+  @media @from-tablet {
+    display: table-cell;
+    margin: 0;
+  }
+
+  .simcal-day-label {
+    background-color: @c-black !important;
+    color: @c-white !important;
+  }
+}
+
+.simcal-present {
+  .simcal-day-label {
+    border: none !important;
+    color: @c-blue !important;
+    background-color: transparent !important;
+  }
+}
+
+.simcal-today-has-events {
+  .simcal-day-label {
+    background-color: @c-blue !important;
+    color: @c-white !important;
+  }
+}
+
+.simcal-events {
+  display: block !important;
+  list-style: none;
+  padding: 5px 10px 0;
+  position: relative;
+  cursor: auto;
+
+  @media @from-tablet {
+    display: none !important;
+    position: absolute;
+    background-color: @c-white;
+    padding: 25px 15px;
+    top: 100%;
+    left: -25%;
+    width: 200px;
+    z-index: @z-top-absolute;
+    border: 1px solid @c-black;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: calc(~"50% - 10px");
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 10px solid @c-black;
+    }
+
+    &.simcal-events--visible {
+      display: block !important;
+    }
+  }
+}
+
+.simcal-event {
+  margin: 10px 0;
+}
+
+.simcal-event-details {
+  display: block !important;
+
+  .simcal-event-title {
+    display: block !important;
+    font-size: @fs-l;
+  }
+}
+
+.simcal-event-address {
+  display: block;
+}
+
+.simcal-events-dots,
+.simcal-event-title,
+.simcal-align-right {
+  display: none !important;
+}

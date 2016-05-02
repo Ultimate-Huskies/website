@@ -1,0 +1,29 @@
+{% extends "layout/base.twig" %}
+{% from 'macro.twig' import post_short %}
+
+{% block header %}
+  {{ post.content }}
+{% endblock %}
+
+{% block content %}
+  <section class="section">
+    <div class="logo__wrapper">
+      <svg>
+        <use xlink:href="#logo-font" width="60%" height="60%" x="21.5%" y="41.5%"></use>
+        <use xlink:href="#logo-husky" width="90%" height="90%" x="-14%" y="0%"></use>
+      </svg>
+    </div>
+
+    <h1 class="section__title">{{ __('Posts', 'huskies') }}</h1>
+    {% for last_post in last_posts %}
+      {{ post_short(last_post) }}
+    {% endfor %}
+  </section>
+
+  <section class="section section--inverse">
+    <h1 class="section__title">{{ __('Appointments', 'huskies') }}</h1>
+    {% for appointment in appointments %}
+      {{ calendar.get_event_html(appointment[0]) }}
+    {% endfor %}
+  </section>
+{% endblock %}

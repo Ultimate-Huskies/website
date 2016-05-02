@@ -1,20 +1,43 @@
-# based on this template -> https://gist.github.com/444295
-# Ignore everything in the root except the "wp-content" directory.
-/*
-!.gitignore
-!wp-content/
- 
-# Ignore everything in the "wp-content" directory, except the "plugins"
-# and "themes" directories.
-wp-content/*
-!wp-content/plugins/
-!wp-content/themes/
- 
-# Ignore everything in the "plugins" directory, except our plugins
-wp-content/plugins/*
-# !wp-content/plugins/my-single-file-plugin.php
-# !wp-content/plugins/my-directory-plugin/
- 
-# Ignore everything in the "themes" directory, except our theme
-wp-content/themes/*
-!wp-content/themes/huskies-theme/
+# Application
+web/app/plugins/*
+!web/app/plugins/.gitkeep
+web/app/mu-plugins/*
+!web/app/mu-plugins/.gitkeep
+web/app/upgrade
+web/app/uploads/*
+!web/app/uploads/.gitkeep
+!web/app/mu-plugins/disallow-indexing.php
+!web/app/mu-plugins/bedrock-autoloader.php
+
+# WordPress
+web/wp
+web/.htaccess
+
+# WP-CLI
+db-sync
+sql-dump-*.sql
+
+# Dotenv
+.env
+.env.*
+!.env.example
+
+# Vendor (e.g. Composer)
+vendor/*
+!vendor/.gitkeep
+
+# Node Package Manager
+node_modules
+npm-debug.log
+
+# Bower
+bower_components
+web/app/themes/huskies-theme/vendor/
+
+# Vagrant
+bin
+.vagrant
+.DS_Store
+
+web/app/themes/huskies-theme/app.js
+web/app/themes/huskies-theme/styles/compiled.css

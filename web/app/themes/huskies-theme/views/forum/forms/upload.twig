@@ -1,0 +1,28 @@
+{% from 'macro.twig' import icon %}
+
+<p class="form__infos form__infos--hidden form__infos--hideable">
+  {{ __('You can upload up to <strong>%s</strong> files with a maximum amount of <strong>%s</strong> KiB for each file.', 'huskies')|format(forum is defined ? forum.max_to_upload : topic.max_to_upload, forum is defined ?  forum.max_file_size : topic.max_file_size) }}
+</p>
+
+<button type="button" class="form__upload--new-file">
+  {{ icon('plus-circle') }}
+  {{ __("File", "huskies") }}
+</button>
+
+<div class="form__upload--area">
+  <div class="form__upload">
+    <input type="file" name="d4p_attachment[]" style="display: none;"/>
+    <button type="button" class="button button--secondary form__upload--button">
+      {{ __('Choose File', 'huskies') }}
+    </button>
+  </div>
+</div>
+
+<div class="form__upload--template" style="display: none;">
+  <div class="form__upload">
+    <input type="file" name="d4p_attachment[]" style="display: none;"/>
+    <button type="button" class="button button--secondary form__upload--button">
+      {{ __('Choose File', 'huskies') }}
+    </button>
+  </div>
+</div>

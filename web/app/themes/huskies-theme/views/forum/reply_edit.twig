@@ -1,0 +1,9 @@
+{% extends "layout/forum.twig" %}
+
+{% block forum_title %}
+  {{ reply.title }}
+{% endblock %}
+
+{% block forum_content %}
+  {% include 'forum/forms/reply.twig' %}
+{% endblock %}

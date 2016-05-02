@@ -1,0 +1,148 @@
+.main_menu {
+  position: fixed;
+  left: -@width-sidebar;
+  background-color: @c-black;
+  color: @c-white;
+  min-height: 100vh;
+  height: 100%;
+  width: @width-sidebar;
+  z-index: @z-top-absolute + 1;
+  padding: 30px 0;
+  transition: @transition-menu;
+  top: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  box-shadow: 0 0px 10px 1px fade(@c-black, 50%);
+  display: flex;
+  flex-direction: column;
+}
+
+.main_menu__overlay {
+  position: fixed;
+  width: calc(~"100% + 200px");
+  left: -@width-sidebar;
+  top: 0;
+  height: 100%;
+  background-color: rgba(0,0,0,0.25);
+  z-index: @z-top-absolute;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.main_menu--is-open {
+  overflow: hidden;
+
+  .main_menu__overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .main_menu {
+    left: 0;
+  }
+}
+
+.main_menu__logo {
+  position: relative;
+  display: block;
+  margin-left: 30px;
+  width: 70%;
+  bottom: -20%;
+  color: @c-white;
+  height: 80px;
+
+  > svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.main_menu__items {
+  list-style: none;
+}
+
+.main_menu__item {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.main_menu__item--seperate {
+  margin-bottom: 35px;
+  text-align: center;
+
+  .main_menu__link {
+    display: inline-block;
+
+    &:hover {
+      color: @c-blue;
+      background-color: transparent;
+    }
+  }
+
+  .main_menu__link:first-of-type {
+    margin-right: 15px;
+    position: relative;
+
+    &:after {
+     content: '|';
+     font-size: @fs-xxxl;
+     position: absolute;
+     top: -20px;
+     right: -10px;
+     color: @c-white;
+    }
+  }
+}
+
+.main_menu__link {
+  font-size: @fs-xl;
+  font-family: @f-highlight;
+  color: @c-white;
+  text-decoration: none;
+  transition: color .3s ease, border .3s ease, background-color .3s ease;
+  display: block;
+  position: relative;
+  text-align: center;
+  line-height: 2.5;
+}
+
+.main_menu__badge {
+  position: absolute;
+  font-family: @f-normal;
+  font-size: @fs-m;
+  line-height: 1;
+  right: 5px;
+  top: 15px;
+  border-radius: 50%;
+  background-color: @c-blue;
+  padding: 5px;
+  color: @c-white;
+  transition: color .3s ease, background-color .3s ease;
+}
+
+.current-menu-item > .main_menu__link,
+.main_menu__link:hover {
+  background-color: @c-blue;
+  color: @c-white;
+
+  .main_menu__badge {
+    background-color: @c-white;
+    color: @c-blue;
+  }
+}
+
+.main_menu__user {
+  background-color: @c-white;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  display: block;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}

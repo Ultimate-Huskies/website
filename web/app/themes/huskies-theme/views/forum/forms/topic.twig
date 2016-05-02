@@ -1,0 +1,60 @@
+{% extends "forum/forms/base.twig" %}
+
+{% block form_infos %}
+  {% if forum.is_closed %}
+    <p class="form__infos">
+      {{ __('This forum is marked as closed to new topics, however your posting capabilities still allow you to do so.', 'huskies') }}
+    </p>
+  {% endif %}
+{% endblock %}
+
+{% block form_action %}
+  {{ topic is defined ? topic.link : forum.link }}
+{% endblock %}
+
+{% block form_inputs %}
+  <fieldset class="form__section form__section--text-input">
+    <input type="text" id="bbp_topic_title" name="bbp_topic_title" value="{{ topic is defined ? topic.title }}" tabindex="{{ page.bbpress.form.tabindex }}" maxlength="{{ page.bbpress.form.title_max_length }}" required>
+    <label for="bbp_topic_title">{{ __('Name of the topic (Max. length %s)', 'huskies')|format(page.bbpress.form.title_max_length) }}</label>
+  </fieldset>
+
+  <fieldset class="form__section">
+    {% do action('bbpress_content', 'topic') %}
+  </fieldset>
+{% endblock %}
+
+{% block form_inputs_additional %}
+  {% if page.user.can.moderate %}
+    <fieldset class="form__section form__section--select">
+      <label for="bbp_stick_topic_select">
+        <h3 class="form__section-headline">{{ __('Topic Type', 'huskies') }}</h3>
+      </label>
+      {{ page.bbpress.form.topic_types }}
+    </fieldset>
+  {% endif %}
+
+  {% if topic is defined %}
+    <fieldset class="form__section form__section--select">
+      <label for="bbp_forum_id">
+        <h3 class="form__section-headline">{{ __('Forum', 'huskies') }}</h3>
+      </label>
+      {% do action('forum_dropdown') %}
+    </fieldset>
+  {% endif %}
+{% endblock %}
+
+{% block form_subscription_text %}
+  {% if topic is defined and topic.is_author_current_user %}
+    {{ __('Notify the author of follow-up replies via email', 'huskies')}}
+  {% else %}
+    {{ __('Notify me of follow-up replies via email', 'huskies') }}
+  {% endif %}
+{% endblock %}
+
+{% block form_submit_value %}
+  {{ topic is defined ? __('Edit Topic', 'huskies') : __('Create Topic', 'huskies') }}
+{% endblock %}
+
+{% block form_footer %}
+  {% do action('bbpress_additional_fields', 'topic') %}
+{% endblock %}

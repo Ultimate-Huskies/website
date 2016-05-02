@@ -1,0 +1,17 @@
+{% extends "layout/base.twig" %}
+{% from 'macro.twig' import abort %}
+
+{% block header %}
+  {{ abort() }}
+{% endblock %}
+
+{% block content %}
+<section class="section">
+  <h2 class="center">{{ __("Unfortunately your requested page wasn't found.", 'huskies') }}</h2>
+  <p class="center">{{ __('If you think it is a mistake do not hesitate to contact us. Otherwise you can jump to the start page or choose one of the menu items.', 'huskies') }}</p>
+  <div class="form__section form__section--actions">
+    <a class="button" href="/kontakt"> {{ __('Contact', 'huskies') }} </a>
+    <a class="button button--primary" href="/"> {{ __('Start', 'huskies') }} </a>
+  </div>
+</section>
+{% endblock %}

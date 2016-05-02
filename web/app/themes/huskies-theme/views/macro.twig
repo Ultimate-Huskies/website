@@ -1,0 +1,118 @@
+{% macro icon(name) %}
+  <svg class="icon icon--{{ name }}"><use xlink:href="#icon-{{ name }}"></use></svg>
+{% endmacro %}
+
+{% macro header_top_link(icon, link) %}
+  {% from _self import icon %}
+
+  <a class="header-nav__addition-button modal__trigger" href="{{ link }}">{{ icon(icon) }}</a>
+{% endmacro %}
+
+{% macro post_short(post) %}
+  {% from _self import icon %}
+
+  <article class="post_short {{ post.class }}" id="post-{{ post.ID }}">
+    <h2 class="post_short__title clear">
+        {{ icon(function('get_post_format', post.ID)|humanize_type) }}
+        <a href="{{ post.permalink }}">
+          {{ post.title }}
+          <small>{{ post.display_date }}</small>
+        </a>
+    </h2>
+    <a class="post_short__button button button--primary" href="{{ post.permalink }}">{{ __('More', 'huskies') }}</a>
+  </article>
+{% endmacro %}
+
+{% macro pagination(pages) %}
+  {% if pages|length > 0 %}
+    <nav class="pagination">
+      {% for page in pages %}
+        {% if page.link is defined %}
+          <a class="pagination__link" href="{{ page.link }}">{{ page.title }}</a>
+        {% else %}
+          <span class="pagination__link  {{ 'current' in page.class ? 'pagination__link--current' }} {{ 'dots' in page.class ? 'pagination__link--placeholder' }}">{{ page.title }}</span>
+        {% endif %}
+      {% endfor %}
+    </nav>
+  {% endif %}
+{% endmacro %}
+
+{% macro forum_image_fake(name, text) %}
+  {% from _self import icon %}
+
+  <div class="forum-short__image forum-short__image--fake" data-title="{{ text }}">
+    {{ icon(name) }}
+  </div>
+{% endmacro %}
+
+{% macro topic(topic, show_forum = false) %}
+  {% from _self import pagination, icon, forum_image_fake %}
+
+  {% do action('bbp_template_before_topics_loop') %}
+  <article class="forum-short forum-short--{{ topic.post_status }} {{ topic.is_sticky ? 'forum-short--sticky' }} {{ topic.is_super_sticky ? 'forum-short--super-sticky'}}">
+    {% if topic.is_unread %}
+      {{ forum_image_fake('unread', __('unread', 'huskies')) }}
+    {% elseif topic.is_super_sticky %}
+      {{ forum_image_fake('super-sticky', __('super-sticky', 'huskies')) }}
+    {% elseif topic.is_sticky %}
+      {{ forum_image_fake('sticky', __('sticky', 'huskies')) }}
+    {% elseif topic.post_status == 'closed' %}
+      {{ forum_image_fake('closed', __('closed', 'huskies')) }}
+    {% else %}
+      <div class="forum-short__image" data-title="{{ topic.author }}">
+        {{ topic.author_avatar }}
+      </div>
+    {% endif %}
+    <h2 class="forum-short__title">
+      <a href="{{ topic.link }}">{{ topic.title }}</a>
+      <small>
+        {{ __('started by', 'huskies') }}
+        {{ topic.author }}
+        {% if show_forum or topic.is_super_sticky %}
+          {{ __('in', 'huskies') }}
+          {{ function('bbp_get_forum_title', topic.post_parent) }}
+        {% endif %}
+        {{ pagination(topic.pagination) }}
+      </small>
+    </h2>
+    <p class="forum-short__meta">
+      {{ icon('replies') }}
+      {{ topic.reply_count }}
+      |
+      {{ icon('update') }}
+      {{ topic.freshness_time }}
+      <span class="forum-short__admin-links">{{ topic.admin_links }}</span>
+    </p >
+  </article>
+  {% do action('bbp_template_after_topics_loop') %}
+{% endmacro %}
+
+{% macro modal(id, title, content, footer = '') %}
+  {% from _self import icon %}
+
+  <div class="modal__wrapper" id="modal-{{ id }}">
+    <div class="modal">
+      <header class="modal__header">
+        <h2 class="modal__title">{{ title }}</h2>
+        <button class="modal__close modal__close--button" type="button">{{ icon('plus') }}</button>
+      </header>
+
+      <main class="modal__content">
+        {{ content }}
+      </main>
+
+      <footer class="modal__footer">
+        {{ footer }}
+      </footer>
+    </div>
+  </div>
+{% endmacro %}
+
+{% macro abort(reasone) %}
+  <ul class="slideshow">
+    <li class="slideshow__item slideshow__item--visible" style="background-image: url('http://i.giphy.com/SrDqGrlWwvMbe.gif');">
+      <a href="http://giphy.com/gifs/cookie-monster-big-bird-please-do-not-try-this-at-home-SrDqGrlWwvMbe" class="slideshow__link">
+      </a>
+    </li>
+  </ul>
+{% endmacro %}

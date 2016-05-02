@@ -1,0 +1,64 @@
+<form id="profile" action="{{ function('bbp_user_profile_edit_url', user.id) }}" method="post" enctype="multipart/form-data">
+  <h1 class="section__title">{{ __('Personal Information', 'huskies') }}</h1>
+
+  <fieldset class="form__section form__section--text-input">
+    <input type="text" id="first_name" name="first_name" value="{{ user.first_name }}" tabindex="{{ page.bbpress.form.tabindex }}" required>
+    <label for="first_name">{{ __('First Name', 'huskies') }}</label>
+  </fieldset>
+
+  <fieldset class="form__section form__section--text-input">
+    <input type="text" id="last_name" name="last_name" value="{{ user.last_name }}" tabindex="{{ page.bbpress.form.tabindex }}" required>
+    <label for="last_name">{{ __('Last Name', 'huskies') }}</label>
+  </fieldset>
+
+  <fieldset class="form__section form__section--text-input">
+    <input type="text" id="nickname" name="nickname" value="{{ user.nickname }}" tabindex="{{ page.bbpress.form.tabindex }}" required>
+    <label for="nickname">{{ __('Nickname', 'huskies') }}</label>
+  </fieldset>
+
+  <fieldset class="form__section form__section--select">
+    <label for="display_name">{{ __('Display Name', 'huskies') }}</label>
+    {{ function('bbp_edit_user_display_name') }}
+  </fieldset>
+
+  <fieldset class="form__section form__section--text-input">
+    <input type="text" id="phone" name="phone" value="{{ user.phone }}" tabindex="{{ page.bbpress.form.tabindex }}" required>
+    <label for="phone">{{ __('Phone', 'huskies') }}</label>
+  </fieldset>
+
+  <h1 class="section__title">{{ __('Account Information', 'huskies') }}</h1>
+
+  <fieldset class="form__section form__section--text-input">
+    <input type="text" id="user_login" name="user_login" value="{{ user.login_name }}" tabindex="{{ page.bbpress.form.tabindex }}" required>
+    <label for="user_login">{{ __('Login Name', 'huskies') }}</label>
+  </fieldset>
+
+  <fieldset class="form__section form__section--text-input">
+    <input type="text" id="email" name="email" value="{{ user.email }}" tabindex="{{ page.bbpress.form.tabindex }}" required>
+    <label for="email">{{ __('E-Mail Address', 'huskies') }}</label>
+  </fieldset>
+
+  <fieldset class="form__section form__section--text-input">
+    <input type="password" id="pass1" name="pass1" autocomplete="off" tabindex="{{ page.bbpress.form.tabindex }}" >
+    <label for="pass1">{{ __('New Password', 'huskies') }}</label>
+  </fieldset>
+
+  <fieldset class="form__section form__section--text-input">
+    <input type="password" id="pass2" name="pass2" autocomplete="off" tabindex="{{ page.bbpress.form.tabindex }}" >
+    <label for="pass2">{{ __('Repeat New Password', 'huskies') }}</label>
+    <div id="pass-strength-result" class="label"></div>
+    <p class="form__section--helptext">
+      {{ __('Your password should be at least ten characters long. Use upper and lower case letters, numbers, and symbols to make it even stronger.', 'huskies') }}
+    </p>
+  </fieldset>
+
+  <fieldset class="form__section" id="user-edit-plugins">
+    {% do action('bbp_user_edit_after') %}
+  </fieldset>
+
+  <fieldset class="form__section form__section--actions">
+    {{ function('bbp_edit_user_form_fields') }}
+    <input type="submit" id="bbp_user_edit_submit" name="bbp_user_edit_submit" class="button button--primary" value="{{ __('Update Profile', 'huskies') }}" tabindex="{{ page.bbress.tabindex }}" />
+  </fieldset>
+
+</form>

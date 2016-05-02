@@ -1,0 +1,104 @@
+.header-main {
+  height: @height-header / 2.5;
+}
+
+.home .header-main,
+.error404 .header-main {
+  height: @height-header;
+}
+
+.header-nav {
+  position: fixed;
+  height: 50px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: @z-top;
+  transition: @transition-menu, background-color .3s ease, box-shadow .3s ease;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.header-nav__links {
+  .icon_link(@c-white);
+  margin: 0 5px;
+  text-decoration: none;
+  line-height: 44px;
+
+  &.header-nav__links--user {
+    width: 30px;
+    height: 30px;
+    filter: grayscale(100%);
+    margin-top: 10px;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      border-radius: 50%;
+    }
+  }
+}
+
+.header-nav__logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 50%;
+  height: 45px;
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility .3s ease, opacity .3s ease;
+  color: @c-black;
+
+  > svg {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.header-nav__addition-button {
+  position: absolute;
+  background-color: @c-blue;
+  top: calc(~"100% - 20px");
+  right: 50px;
+  color: @c-white;
+  border-radius: 50%;
+  padding: 5px;
+  box-shadow: 0 2px 5px fade(@c-black, 25%);
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility .3s ease, opacity .3s ease;
+
+  > .icon {
+    width: 30px;
+    height: 30px;
+    transition: transform .3s ease;
+  }
+
+  &:hover {
+    color: darken(@c-white, 10%);
+
+    > .icon {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.header-nav--inverse {
+  background-color: @c-white;
+  box-shadow:0 2px 5px fade(@c-black, 25%);
+
+  .header-nav__logo,
+  .header-nav__addition-button {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .header-nav__links {
+    .icon_link(@c-black);
+  }
+}

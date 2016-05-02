@@ -1,0 +1,43 @@
+{% from 'macro.twig' import icon %}
+
+<div class="footer__img" style="background-image: url('{{ site.theme.link }}/images/berlin.svg');"></div>
+
+<h1 class="footer__headline">{{ __('Visit us in web', 'huskies') }}</h1>
+<ul class="footer-menu">
+  <li class="footer-menu__item">
+    <a href="http://ultimatecentral.com/de_DE/t/huskies">
+      {{ icon('ultimate-central') }}
+    </a>
+  </li>
+  <li class="footer-menu__item">
+    <a href="https://de-de.facebook.com/Ultimate-Huskies-Berlin-119812154765363">
+      {{ icon('facebook') }}
+    </a>
+  </li>
+  <li class="footer-menu__item">
+    <a href="https://github.com/Ultimate-Huskies">
+      {{ icon('github') }}
+    </a>
+  </li>
+  <li class="footer-menu__item">
+    <a href="mailto:info@ultimate-huskies.de">
+      {{ icon('mail') }}
+    </a>
+  </li>
+</ul>
+
+<h1 class="footer__headline">{{ __('Or at sport', 'huskies') }}</h1>
+<img class="footer__map" src="http://maps.google.com/maps/api/staticmap?center=52.520438,13.455000&size=400x400&zoom=13&markers=color:red|Samariterstraße+19%2C+Berlin%2C+Deutschland|+Scheffelstraße+21%2C+Berlin%2C+Deutschland|+Rüdersdorferstraße+20-27%2C+Berlin%2C+Deutschland|label:m&maptype=roadmap&sensor=false"%20alt="Samariterstraße+19%2C+Berlin%2C+Deutschland%7C+Scheffelstraße+21%2C+Berlin%2C+Deutschland%7C+Rüdersdorferstraße+20-27%2C+Berlin%2C+Deutschland" alt="Map with sport places" />
+
+<ul class="footer-submenu">
+  <li class="footer-submenu__item">
+    <a href="{{ site.url }}/impressum">{{ __('Imprint', 'huskies') }}</a>
+  </li>
+  <li class="footer-submenu__item">
+    <a href="{{ site.url }}/kontakt">{{ __('Contact', 'huskies') }}</a>
+  </li>
+</ul>
+
+<span class="footer__copyright">
+  &copy; {{ now|date('Y') }} {{ bloginfo('name') }} {{__('build with %s and')|format('&hearts;') }} <a href="http://wordpress.org/">Wordpress</a>
+</span>
