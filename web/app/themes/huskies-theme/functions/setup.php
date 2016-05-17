@@ -68,3 +68,13 @@ function widgets_init() {
   );
 }
 add_action('widgets_init', 'widgets_init');
+
+function new_mail_from($email) {
+  return 'notifications@ultimate-huskies.de';
+}
+add_filter('wp_mail_from', 'new_mail_from');
+
+function new_mail_from_name($name) {
+  return 'Wordpress - Ultimate Huskies';
+}
+add_filter('wp_mail_from_name', 'new_mail_from_name');

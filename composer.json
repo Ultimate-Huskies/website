@@ -46,7 +46,8 @@
     "wpackagist-plugin/profile-builder": "^2.3",
     "wpackagist-plugin/mappress-google-maps-for-wordpress": "^2.43",
     "wpackagist-plugin/shariff": "^3.4",
-    "wpackagist-plugin/imsanity": "^2.3"
+    "wpackagist-plugin/imsanity": "^2.3",
+    "wpackagist-plugin/mailgun": "^1.4"
   },
   "extra": {
     "installer-paths": {
