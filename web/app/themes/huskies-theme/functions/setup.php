@@ -50,7 +50,21 @@ add_action('wp_enqueue_scripts', 'enqueue_scripts');
 # register custom menus (in admin interface available)
 function register_menus() {
   register_nav_menus(array(
-    'main_menu' => __('Main Menu - Only 3 entries on first level!', 'huskies-theme')
+    'main_menu' => __('Main Menu', 'huskies-theme')
   ));
 }
 add_action('init', 'register_menus');
+
+function widgets_init() {
+  register_sidebar(
+    array(
+      'name'          => 'Footer Map',
+      'id'            => 'footer_map',
+      'before_widget' => '',
+      'after_widget'  => '',
+      'before_title'  => '',
+      'after_title'   => '',
+    )
+  );
+}
+add_action('widgets_init', 'widgets_init');

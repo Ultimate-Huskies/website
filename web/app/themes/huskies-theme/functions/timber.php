@@ -2,6 +2,7 @@
 add_filter('timber_context', 'add_to_context');
 function add_to_context($data){
   $data['menu'] = new TimberMenu('main_menu');
+  $data['footer_map'] = Timber::get_widgets('footer_map');
 
   $data['page'] = array(
     'permalink' => get_permalink(),
