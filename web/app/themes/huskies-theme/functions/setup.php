@@ -78,3 +78,10 @@ function new_mail_from_name($name) {
   return 'Wordpress - Ultimate Huskies';
 }
 add_filter('wp_mail_from_name', 'new_mail_from_name');
+
+function fix_busted_mailgun_options_logic_in_wp_mail($options, $option_name) {
+  unset($options['campaign-id']);
+  unset($options['tag']);
+  return $options;
+}
+add_filter('option_mailgun', 'fix_busted_mailgun_options_logic_in_wp_mail', 10, 2);
