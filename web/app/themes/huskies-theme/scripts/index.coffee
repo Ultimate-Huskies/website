@@ -4,6 +4,7 @@ require './modal'
 require './form'
 require './input'
 require './calendar'
+require './account'
 
 $(document).ready ->
   $body = $('body')

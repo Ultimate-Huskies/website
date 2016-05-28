@@ -1,12 +1,24 @@
-{% from 'macro.twig' import icon, modal %}
-{% from _self import content, footer %}
-
-{{ modal('register-form', __('Register', 'huskies'), content(), footer()) }}
+{% from 'layout/forms/base.twig' import render %}
+{% from _self import content %}
 
 {% macro content() %}
-  {% filter shortcodes %} [wppb-register] {% endfilter %}
+  <fieldset class="form__section form__section--text-input">
+    <input type="text" id="register_user" name="register_user" required>
+    <label for="register_user">{{ __('user', 'huskies') }}</label>
+  </fieldset>
+  <fieldset class="form__section form__section--text-input">
+    <input type="email" id="register_email" name="register_email" required>
+    <label for="register_email">{{ __('email', 'huskies') }}</label>
+  </fieldset>
+  <fieldset class="form__section form__section--text-input">
+    <input type="password" id="register_password1" name="register_password1" required>
+    <label for="register_password1">{{ __('password', 'huskies') }}</label>
+  </fieldset>
+  <fieldset class="form__section form__section--text-input">
+    <input type="password" id="register_password2" name="register_password2" required>
+    <label for="register_password2">{{ __('repeat password', 'huskies') }}</label>
+  </fieldset>
+  <div id="pass-strength-result"></div>
 {% endmacro %}
 
-{% macro footer() %}
-  <a class="modal__trigger" href="#modal-login-form">{{ __('Already registered?', 'huskies') }}</a>
-{% endmacro %}
+{{ render(page, 'register', __('Register', 'huskies'), content()) }}

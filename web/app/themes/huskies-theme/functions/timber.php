@@ -5,6 +5,7 @@ function add_to_context($data){
   $data['footer_map'] = Timber::get_widgets('footer_map');
 
   $data['page'] = array(
+    'ajax_url' => admin_url('admin-ajax.php'),
     'permalink' => get_permalink(),
     'home_url' => home_url(),
     'login_url' => TimberHelper::function_wrapper('wp_login_url', array(get_permalink())),

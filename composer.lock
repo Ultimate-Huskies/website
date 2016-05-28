@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "173474317149d320363851de175e7a98",
-    "content-hash": "363fe78c2ef11d8214e6437015a1ad9d",
+    "hash": "108591b753993ba0048cff1467142edf",
+    "content-hash": "cb57624cd9048016cd4b7bdd2fbee075",
     "packages": [
         {
             "name": "altorouter/altorouter",
@@ -743,7 +743,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/mailgun.1.4.1.zip",
-                "reference": null,
+                "reference": "tags/1.4.1",
                 "shasum": null
             },
             "require": {
@@ -773,6 +773,26 @@
             "homepage": "https://wordpress.org/plugins/mappress-google-maps-for-wordpress/"
         },
         {
+            "name": "wpackagist-plugin/minimum-password-strength",
+            "version": "1.2.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/minimum-password-strength/",
+                "reference": "tags/1.2.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/minimum-password-strength.1.2.0.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/minimum-password-strength/"
+        },
+        {
             "name": "wpackagist-plugin/profile-builder",
             "version": "2.3.6",
             "source": {
@@ -783,7 +803,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/profile-builder.2.3.6.zip",
-                "reference": null,
+                "reference": "tags/2.3.6",
                 "shasum": null
             },
             "require": {

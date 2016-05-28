@@ -1,0 +1,70 @@
+// .account-form {
+//   position: relative;
+//   z-index: @z-top;
+// }
+
+.account-form__loader {
+  position: absolute;
+  z-index: @z-top + 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: fade(@c-white, 75%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility .3s ease, opacity .3s ease;
+
+  > .icon {
+    width: 100px;
+    height: 100px;
+    color: @c-black;
+    animation: rotate 1s linear infinite;
+    animation-play-state: paused;
+    background-color: @c-white;
+  }
+
+  &.account-form__loader--visible {
+    opacity: 1;
+    visibility: visible;
+
+    > .icon {
+      animation-play-state: running;
+    }
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.account-form--hidden {
+  display: none;
+}
+
+.account-form__error,
+.account-form__success {
+  margin: 10px 0 25px 0;
+  border: 1px solid @c-red;
+  color: @c-red;
+  padding: 15px;
+  display: none;
+}
+
+.account-form__error--visible,
+.account-form__success--visible {
+  display: block;
+}
+
+.account-form__success {
+  color: @c-green;
+  border-color: @c-green;
+}

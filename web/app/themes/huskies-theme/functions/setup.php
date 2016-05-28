@@ -2,8 +2,6 @@
 #show all logged in users the admin bar
 function admin_bar_visibility() {
   return false;
-  // if (is_user_logged_in()) return true;
-  // else return false;
 }
 add_filter('show_admin_bar', 'admin_bar_visibility');
 
