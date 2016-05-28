@@ -28,7 +28,7 @@
 
 <h1 class="footer__headline">{{ __('Or at sport', 'huskies') }}</h1>
 <div class="footer__map">
-  {{ footer_map }}
+  {% filter shortcodes %} {{ footer_map }} {% endfilter %}
 </div>
 <ul class="footer-submenu">
   <li class="footer-submenu__item">

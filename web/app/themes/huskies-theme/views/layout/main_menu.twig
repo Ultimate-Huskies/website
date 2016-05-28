@@ -6,8 +6,8 @@
         <div class="main_menu__user">
           <a href="{{ page.user.profile.url }}">{{ page.user.profile.image }}</a>
         </div>
-        <a class="main_menu__link" href="{{ page.user.profile.url }}"> {{ page.user.profile.name }} </a>
-        <a class="main_menu__link" href="{{ page.logout_url }}"> {{ __('Logout', 'huskies') }} </a>
+        <a class="main_menu__link main_menu__link--small" href="{{ page.user.profile.url }}"> {{ __('Account', 'huskies') }}</a>
+        <a class="main_menu__link main_menu__link--small" href="{{ page.logout_url }}"> {{ __('Logout', 'huskies') }} </a>
       </li>
       {% if function('is_super_admin') %}
         <li class="main_menu__item">

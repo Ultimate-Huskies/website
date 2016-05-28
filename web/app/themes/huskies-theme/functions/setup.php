@@ -14,7 +14,7 @@ add_filter('user_contactmethods', 'custom_user_contactmethods');
 
 # add theme supports
 function add_theme_supports() {
-  // load_theme_textdomain('huskies-theme', get_stylesheet_directory().'/languages');
+  load_theme_textdomain('huskies');
 
   add_theme_support('automatic-feed-links');
   add_theme_support('post-formats', array('gallery', 'image', 'status', 'video'));

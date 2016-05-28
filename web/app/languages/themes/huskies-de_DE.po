@@ -1,0 +1,1414 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Huskies-Theme v2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-05-28 17:40+0200\n"
+"PO-Revision-Date: 2016-05-28 17:40+0200\n"
+"Last-Translator: clemens-brummer <clemens.brummer@gmail.com>\n"
+"Language-Team: \n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-Basepath: ../../themes/huskies-theme\n"
+"X-Textdomain-Support: yes\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: functions/account/forgot_password.php:18
+msgid "Send a email with instructions to reset your password"
+msgstr ""
+"Es wurde eine Email mit Anweisungen zum Zurücksetzen das Passwortes "
+"verschickt."
+
+#: functions/account/login.php:15
+msgid ""
+"Your account has to be confirmed by an administrator before you can login"
+msgstr ""
+"Dein Konto muss von einem Administrator bestätigt werden bevor Du dich "
+"anmelden kannst."
+
+#: functions/account/login.php:15
+msgid "Wrong username or password."
+msgstr "Falscher Nutzer oder Passwort."
+
+#: functions/account/login.php:18
+msgid "Login successful, redirecting..."
+msgstr "Erfolgreich angemeldet, leite weiter…"
+
+#: functions/account/register.php:15
+msgid "Not a valid email address"
+msgstr "Keine valide Emailadresse"
+
+#: functions/account/register.php:22
+msgid "The passwords you entered do not match"
+msgstr "Die eingegebenen Passwörter stimmen nicht überein."
+
+#: functions/account/register.php:24
+msgid "You must choose a strong password"
+msgstr "Du musst ein sicheres Passwort wählen"
+
+#: functions/account/register.php:31
+msgid ""
+"Register successfully. You will receive a email when a admin verified your "
+"registration."
+msgstr ""
+"Erfolgreich angemeldet. Du bekommst eine Email wenn dein Account von einem "
+"Admin bestätigt wurde."
+
+#: functions/bbpress.php:56
+msgid "normal"
+msgstr "Normal"
+
+#: functions/bbpress.php:56 views/macro.twig:58
+msgid "sticky"
+msgstr "Angeheftet"
+
+#: functions/bbpress.php:56 views/macro.twig:56
+msgid "super-sticky"
+msgstr "Überall angeheftet"
+
+# @ huskies-theme
+#: functions/bbpress/base.php:11
+msgid "Subscribe"
+msgstr "Abonnieren"
+
+# @ huskies-theme
+#: functions/bbpress/base.php:12
+msgid "Unsubscribe"
+msgstr "Abbestellen"
+
+#: functions/bbpress/topic.php:94
+msgid "Favorite"
+msgstr "Favorit"
+
+#: functions/bbpress/topic.php:95
+msgid "Favorited"
+msgstr "Favorisiert"
+
+# @ huskies-theme
+#: functions/setup.php:10 views/forum/user/edit.twig:26
+msgid "Phone"
+msgstr "Telefon"
+
+#: functions/setup.php:51
+msgid "Main Menu"
+msgstr "Hauptmenu"
+
+#: functions/twig.php:13
+msgid "photos"
+msgstr "Fotos"
+
+#: functions/twig.php:16
+msgid "report"
+msgstr "Bericht"
+
+#: logged_in.php:4
+msgid "Not logged In"
+msgstr "Nicht angemeldet"
+
+#: page-forum.php:6
+msgid "No Forums"
+msgstr "Keine Foren"
+
+#: single-forum.php:6 single-reply-edit.php:6 single-topic-edit.php:6
+#: single-topic.php:6
+msgid "No Access"
+msgstr "Kein Zugang"
+
+#: single-forum.php:23
+msgid "No Topics"
+msgstr "Keine Beiträge"
+
+#: single-topic.php:10
+msgid "No Replies"
+msgstr "Keine Antworten"
+
+#: views/abort.twig:15
+msgid "So go ahead and login or go back to the start page."
+msgstr "Du kannst dich entweder anmelden und zurück zu Startseite gehen."
+
+#: views/abort.twig:17 views/page/404.twig:14
+msgid "Start"
+msgstr "Start"
+
+# @ huskies-theme
+#: views/abort.twig:18 views/layout/forms/login.twig:22
+#: views/layout/main_menu.twig:23
+msgid "Login"
+msgstr "Anmelden"
+
+#: views/blog/index.twig:18 views/post/index.twig:18
+msgid "Older posts"
+msgstr "Ältere Beiträge"
+
+#: views/blog/index.twig:21 views/post/index.twig:21
+msgid "Newer posts"
+msgstr "Neuere Beiträge"
+
+#: views/forum/breadcrumb.twig:4 views/forum/forums.twig:5
+msgid "Forums"
+msgstr "Foren"
+
+# @ huskies-theme
+#: views/forum/forms/base.twig:10
+msgid "Your account has the ability to post unrestricted HTML content."
+msgstr ""
+"Dein Benutzerkonto hat die Berechtigung unbeschränkten HTML Inhalt zu posten."
+
+#: views/forum/forms/base.twig:12
+msgid "You may use these HTML tags and attributes."
+msgstr "Du kannst folgenden HTML Tags und Attribute nutzen."
+
+#: views/forum/forms/base.twig:20
+msgid "Uploads"
+msgstr "Anhänge"
+
+#: views/forum/forms/base.twig:28
+msgid "Notifications"
+msgstr "Benachrichtigungen"
+
+# @ huskies-theme
+#: views/forum/forms/reply.twig:6
+msgid ""
+"This topic is marked as closed to new replies, however your posting "
+"capabilities still allow you to do so."
+msgstr ""
+"Dieses Thema ist eigentlich als geschlossen markiert. Deine Berechtigungen "
+"erlauben dir allerdings trotzdem zu antworten."
+
+# @ huskies-theme
+#: views/forum/forms/reply.twig:23 views/forum/forms/topic.twig:48
+msgid "Notify the author of follow-up replies via email"
+msgstr "Benachrichtige den Autor über kommende Antworten per Email."
+
+# @ huskies-theme
+#: views/forum/forms/reply.twig:25 views/forum/forms/topic.twig:50
+msgid "Notify me of follow-up replies via email"
+msgstr "Benachrichtige mich über kommende Antworten per Email"
+
+# @ huskies-theme
+#: views/forum/forms/reply.twig:30
+msgid "Edit Reply"
+msgstr "Bearbeite die Antwort"
+
+# @ huskies-theme
+#: views/forum/forms/reply.twig:30
+msgid "Create Reply"
+msgstr "Antworten"
+
+# @ huskies-theme
+#: views/forum/forms/topic.twig:6
+msgid ""
+"This forum is marked as closed to new topics, however your posting "
+"capabilities still allow you to do so."
+msgstr ""
+"Dieses Forum ist eigentlich als geschlossen markiert. Deine Berechtigungen "
+"erlauben dir allerdings trotzdem &Auml;nderungen vorzunehmen."
+
+#: views/forum/forms/topic.twig:18
+#, python-format
+msgid "Name of the topic (Max. length %s)"
+msgstr "Name es Themas (Max. länge %s)"
+
+#: views/forum/forms/topic.twig:30
+msgid "Topic Type"
+msgstr "Typ des Themas"
+
+#: views/forum/forms/topic.twig:39
+msgid "Forum"
+msgstr "Forum"
+
+# @ huskies-theme
+#: views/forum/forms/topic.twig:55
+msgid "Edit Topic"
+msgstr "Thema bearbeiten"
+
+# @ huskies-theme
+#: views/forum/forms/topic.twig:55
+msgid "Create Topic"
+msgstr "Thema erstellen"
+
+#: views/forum/forms/upload.twig:4
+#, python-format
+msgid ""
+"You can upload up to <strong>%s</strong> files with a maximum amount of "
+"<strong>%s</strong> KiB for each file."
+msgstr ""
+"Du kannst bis zu %s Dateien hochladen mit einer maximalen Dateigröße von "
+"<strong>%s</strong> KiB für jede Datei."
+
+#: views/forum/forms/upload.twig:9
+msgid "File"
+msgstr "Datei"
+
+#: views/forum/forms/upload.twig:16 views/forum/forms/upload.twig:25
+msgid "Choose File"
+msgstr "Datei wählen"
+
+#: views/forum/forums.twig:11
+#, python-format
+msgid "%s Unread Topics"
+msgstr "%s Ungelesene Themen"
+
+#: views/forum/forums.twig:24 views/macro.twig:54
+msgid "unread"
+msgstr "ungelesen"
+
+# @ huskies-theme
+#: views/forum/replies.twig:5
+msgid "Replies"
+msgstr "Antworten"
+
+#: views/forum/replies.twig:23 views/forum/replies.twig:80
+msgid "replies"
+msgstr "Antworten"
+
+# @ huskies-theme
+#: views/forum/replies.twig:94
+#, python-format
+msgid "Reply To: %s"
+msgstr "Antworte auf: %s"
+
+#: views/forum/topic_edit.twig:4
+#, python-format
+msgid "Now Editing \"%s\""
+msgstr "Gerade in Bearbeitung “%s“"
+
+# @ huskies-theme
+#: views/forum/topics.twig:5
+msgid "Topics"
+msgstr "Themen"
+
+#: views/forum/topics.twig:23 views/forum/topics.twig:66
+msgid "topics"
+msgstr "Themen"
+
+#: views/forum/topics.twig:76
+#, python-format
+msgid "Create new Topic in \"%s\""
+msgstr "Erstelle neues Thema in “%s“"
+
+# @ huskies-theme
+#: views/forum/user.twig:16
+msgid "Favorites"
+msgstr "Favoriten"
+
+# @ huskies-theme
+#: views/forum/user.twig:22
+msgid "Subscriptions"
+msgstr "Abonnements"
+
+# @ huskies-theme
+#: views/forum/user.twig:27
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: views/forum/user/edit.twig:2
+msgid "Personal Information"
+msgstr "Persönliche Informationen"
+
+# @ huskies-theme
+#: views/forum/user/edit.twig:6 views/forum/user/profile.twig:10
+msgid "First Name"
+msgstr "Vorname"
+
+# @ huskies-theme
+#: views/forum/user/edit.twig:11 views/forum/user/profile.twig:12
+msgid "Last Name"
+msgstr "Nachname"
+
+# @ huskies-theme
+#: views/forum/user/edit.twig:16 views/forum/user/profile.twig:14
+msgid "Nickname"
+msgstr "Spitzname"
+
+# @ huskies-theme
+#: views/forum/user/edit.twig:20 views/forum/user/profile.twig:8
+msgid "Display Name"
+msgstr "Angezeigter Name"
+
+#: views/forum/user/edit.twig:29
+msgid "Account Information"
+msgstr "Kontoinformationen"
+
+#: views/forum/user/edit.twig:33
+msgid "Login Name"
+msgstr "Anmeldenname"
+
+#: views/forum/user/edit.twig:38
+msgid "E-Mail Address"
+msgstr "Emailadresse"
+
+# @ huskies-theme
+#: views/forum/user/edit.twig:43
+msgid "New Password"
+msgstr "Neues Passwort"
+
+#: views/forum/user/edit.twig:48
+msgid "Repeat New Password"
+msgstr "Neues Passwort wiederholen"
+
+# @ huskies-theme
+#: views/forum/user/edit.twig:51
+msgid ""
+"Your password should be at least ten characters long. Use upper and lower "
+"case letters, numbers, and symbols to make it even stronger."
+msgstr ""
+"Dein Passwort sollte mindestens 10 Zeichen lang sein. Benutze Gro&szlig;- "
+"und Kleinbuchstaben, Nummern und Symbole um es noch sicherer zu machen."
+
+#: views/forum/user/favorites.twig:2
+msgid "no favorites"
+msgstr "Keine Favoriten"
+
+#: views/forum/user/profile.twig:6
+msgid "Details"
+msgstr "Details"
+
+#: views/forum/user/profile.twig:16 views/page/members.twig:11
+msgid "E-mail Address"
+msgstr "Emailaddresse"
+
+#: views/forum/user/profile.twig:18 views/page/members.twig:13
+msgid "Phonenumber"
+msgstr "Telefonnummer"
+
+# @ huskies-theme
+#: views/forum/user/profile.twig:22
+msgid "Activity"
+msgstr "Aktivität"
+
+#: views/forum/user/profile.twig:24
+msgid "Started Topics"
+msgstr "Angefangene Themen"
+
+#: views/forum/user/profile.twig:26
+msgid "Created Replies"
+msgstr "Erstellte Antworten"
+
+# @ huskies-theme
+#: views/forum/user/profile.twig:28
+msgid "Forum Role"
+msgstr "Forum Rolle"
+
+#: views/forum/user/subscriptions.twig:2
+msgid "no subscriptions"
+msgstr "Keine Abonnements"
+
+#: views/layout/footer.twig:5
+msgid "Visit us in web"
+msgstr "Besuche uns im Netz"
+
+#: views/layout/footer.twig:29
+msgid "Or at sport"
+msgstr "Oder beim Sport"
+
+#: views/layout/footer.twig:35
+msgid "Imprint"
+msgstr "Impressum"
+
+#: views/layout/footer.twig:38 views/page/404.twig:13
+msgid "Contact"
+msgstr "Kontakt"
+
+#: views/layout/footer.twig:43
+#, python-format
+msgid "build with %s and"
+msgstr "erstellt mit %s und"
+
+#: views/layout/forms/base.twig:30
+msgid "Already registered?"
+msgstr "Bereits angemeldet?"
+
+#: views/layout/forms/base.twig:32
+msgid "Not registered?"
+msgstr "Noch nicht registriert?"
+
+#: views/layout/forms/base.twig:33
+msgid "Forgot Password?"
+msgstr "Passwort vergessen?"
+
+#: views/layout/forms/login.twig:7 views/layout/forms/register.twig:7
+msgid "user"
+msgstr "Nutzer"
+
+# @ huskies-theme
+#: views/layout/forms/login.twig:11 views/layout/forms/register.twig:15
+msgid "password"
+msgstr "Passwort"
+
+#: views/layout/forms/login.twig:17
+msgid "Remember me?"
+msgstr "Angemeldet bleiben?"
+
+#: views/layout/forms/lost_password.twig:7
+msgid "user_login"
+msgstr "Emailadresse oder Anmeldename"
+
+#: views/layout/forms/lost_password.twig:11
+msgid "Forgot Password"
+msgstr "Passwort vergessen"
+
+# @ huskies-theme
+#: views/layout/forms/register.twig:11
+msgid "email"
+msgstr "Email"
+
+#: views/layout/forms/register.twig:19
+msgid "repeat password"
+msgstr "Passwort wiederholen"
+
+# @ huskies-theme
+#: views/layout/forms/register.twig:24 views/layout/main_menu.twig:24
+msgid "Register"
+msgstr "Registrieren"
+
+# @ huskies-theme
+#: views/layout/main_menu.twig:9
+msgid "Account"
+msgstr "Konto"
+
+# @ huskies-theme
+#: views/layout/main_menu.twig:10
+msgid "Logout"
+msgstr "Abmelden"
+
+#: views/layout/main_menu.twig:14
+msgid "Admin Area"
+msgstr "Adminbereich"
+
+#: views/layout/main_menu.twig:18 views/page/members.twig:22
+msgid "Members"
+msgstr "Mitglieder"
+
+#: views/macro.twig:22
+msgid "More"
+msgstr "Mehr"
+
+#: views/macro.twig:60
+msgid "closed"
+msgstr "geschlossen"
+
+#: views/macro.twig:69
+msgid "started by"
+msgstr "Angefangen von"
+
+#: views/macro.twig:72
+msgid "in"
+msgstr "in"
+
+#: views/page/404.twig:10
+msgid "Unfortunately your requested page wasn't found."
+msgstr "Leider wurde Dein angefragte Seite nicht gefunden"
+
+#: views/page/404.twig:11
+msgid ""
+"If you think it is a mistake do not hesitate to contact us. Otherwise you "
+"can jump to the start page or choose one of the menu items."
+msgstr ""
+"Wenn Du denkst das ist ein Fehler zögere nicht uns zu kontaktieren. "
+"Ansonsten kannst du zu Startseite springen oder eines der Menuelemente "
+"nutzen."
+
+# @ huskies-theme
+#: views/page/front.twig:17
+msgid "Posts"
+msgstr "Beiträge"
+
+#: views/page/front.twig:24
+msgid "Appointments"
+msgstr "Termine"
+
+#: views/page/members.twig:28
+#, python-format
+msgid "%s Administrators"
+msgstr "%s Adminstratoren"
+
+#: views/page/members.twig:38
+#, python-format
+msgid "%s Users"
+msgstr "%s Nutzer"
+
+# @ huskies-theme
+#: views/post/single.twig:8
+msgid "by"
+msgstr "von"
+
+# @ huskies-theme
+#~ msgid "Ooops ... 404"
+#~ msgstr "Ups ...  404"
+
+# @ huskies-theme
+#~ msgid "error happens"
+#~ msgstr "Die Seite kann nicht angezeigt werden."
+
+# @ huskies-theme
+#~ msgid "Private"
+#~ msgstr "Privat"
+
+# @ huskies-theme
+#~ msgid "You do not have permission to view this forum."
+#~ msgstr "Du hast keine Berechtigung das Forum anzuschauen."
+
+# @ huskies-theme
+#~ msgid "You need to"
+#~ msgstr "Du musst dich"
+
+# @ huskies-theme
+#~ msgid "login"
+#~ msgstr "anmelden"
+
+# @ huskies-theme
+#~ msgid "or"
+#~ msgstr "oder"
+
+# @ huskies-theme
+#~ msgid "register"
+#~ msgstr "registrieren"
+
+# @ huskies-theme
+#~ msgid "if you are new here"
+#~ msgstr ", um das Forum zu benutzen."
+
+# @ huskies-theme
+#~ msgid "No forums found!"
+#~ msgstr "Es konnten keine Foren gefunden werden!"
+
+# @ huskies-theme
+#~ msgid "Oh bother! No replies were found here!"
+#~ msgstr "Es konnten keine Antworten gefunden werden!"
+
+# @ huskies-theme
+#~ msgid "No topics found!"
+#~ msgstr "Es konnten keine Themen gefunden werden."
+
+# @ huskies-theme
+#~ msgid "Closed"
+#~ msgstr "Geschlossen"
+
+# @ huskies-theme
+#~ msgid "Reply content"
+#~ msgstr "Antwort"
+
+# @ huskies-theme
+#~ msgid "You may use these"
+#~ msgstr "Du kannst diese"
+
+# @ huskies-theme
+#~ msgid "tags and attributes"
+#~ msgstr "Tags und Attribute benutzen"
+
+# @ huskies-theme
+#~ msgid "Tags"
+#~ msgstr "Tags"
+
+# @ huskies-theme
+#~ msgid "Tags for this topic"
+#~ msgstr "Tags für dieses Thema"
+
+# @ huskies-theme
+#~ msgid "Revision"
+#~ msgstr "Revision"
+
+# @ huskies-theme
+#~ msgid "Keep a log of this edit"
+#~ msgstr "Protokolliere diese &Auml;nderung"
+
+# @ huskies-theme
+#~ msgid "Optional reason for editing:"
+#~ msgstr "Optionaler Grund für die &Auml;nderung"
+
+# @ huskies-theme
+#~ msgid "Clear"
+#~ msgstr "Löschen"
+
+# @ huskies-theme
+#~ msgid "The topic &#8216;%s&#8217; is closed to new replies."
+#~ msgstr "Das Thema &#8216;%s&#8217; ist geschlossen für neue Antworten."
+
+# @ huskies-theme
+#~ msgid "The forum &#8216;%s&#8217; is closed to new topics and replies."
+#~ msgstr ""
+#~ "Das Forum &#8216;%s&#8217; ist geschlossen für neue Themen und Antworten."
+
+# @ huskies-theme
+#~ msgid "You cannot reply to this topic."
+#~ msgstr "Du kannst auf dieses Thema nicht antworten."
+
+# @ huskies-theme
+#~ msgid "You must be logged in to reply to this topic."
+#~ msgstr "Du musst angemeldet sein, um auf dieses Thema zu antworten."
+
+# @ huskies-theme
+#~ msgid "Merge topic \"%s\""
+#~ msgstr "Thema \"%s\" zusammenf&uuml;hren"
+
+# @ huskies-theme
+#~ msgid "<strong>WARNING:</strong> This process cannot be undone."
+#~ msgstr ""
+#~ "<strong>WARNUNG:</strong> Dieser Vorgang kann nicht r&uuml;ckg&auml;ngig "
+#~ "gemacht werden."
+
+# @ huskies-theme
+#~ msgid "Merge Information"
+#~ msgstr "Info &uuml;ber Zusammenf&uuml;hrung"
+
+# @ huskies-theme
+#~ msgid ""
+#~ "Select the topic to merge this one into. The destination topic will "
+#~ "remain the lead topic, and this one will change into a reply."
+#~ msgstr ""
+#~ "W&auml;hle ein Thema, um es mit diesem zu zusammenzuf&uuml;hren. Das "
+#~ "gew&auml;hlte Thema bleibt das Hauptthema und dieses wird in eine Antwort "
+#~ "umgewandelt."
+
+# @ huskies-theme
+#~ msgid ""
+#~ "To keep this topic as the lead, go to the other topic and use the merge "
+#~ "tool from there instead."
+#~ msgstr ""
+#~ "Um dieses Thema als Hauptthema zu behalten, gehe in das andere Thema und "
+#~ "benutze die Zusammenf&uuml;hrungsfunktion von dort."
+
+# @ huskies-theme
+#~ msgid ""
+#~ "All replies within both topics will be merged chronologically. The order "
+#~ "of the merged replies is based on the time and date they were posted. If "
+#~ "the destination topic was created after this one, it's post date will be "
+#~ "updated to second earlier than this one."
+#~ msgstr ""
+#~ "Alle Antworten von beiden Themen werden chronologisch zusammengef&uuml;"
+#~ "hrt. Die Reihenfolge h&auml;ngt demzufolge von dem Zeitpunkt der "
+#~ "Antworten ab."
+
+# @ huskies-theme
+#~ msgid "Merge with this topic:"
+#~ msgstr "Zusammenf&uuml;ren mit diesem Thema:"
+
+# @ huskies-theme
+#~ msgid "No topics were found to which the topic could be merged to!"
+#~ msgstr ""
+#~ "Es wurde kein Thema gefunden, mit dem das aktuelle Thema zusammengef&uuml;"
+#~ "hrt werden k&ouml;nnte."
+
+# @ huskies-theme
+#~ msgid "There are no other topics in this forum to merge with."
+#~ msgstr ""
+#~ "Es gibt keine Themen in diesem Forum, mit dem das aktuelle Thema "
+#~ "zusammengef&uuml;hrt werden k&ouml;nnte."
+
+# @ huskies-theme
+#~ msgid "Topic Extras"
+#~ msgstr "Thema Extras"
+
+# @ huskies-theme
+#~ msgid "Merge topic favoriters"
+#~ msgstr "Favoriten zusammenf&uuml;hren"
+
+# @ huskies-theme
+#~ msgid "Merge topic subscribers"
+#~ msgstr "Abonnenten zusammenf&uuml;hren"
+
+# @ huskies-theme
+#~ msgid "Merge topic tags"
+#~ msgstr "Tags zusammenf&uuml;hren"
+
+# @ huskies-theme
+#~ msgid "Merge"
+#~ msgstr "Zusammenf&uuml;hren"
+
+# @ huskies-theme
+#~ msgid "You do not have the permissions to edit this topic!"
+#~ msgstr "Du besitzt nicht die Berechtigung, um dieses Thema zu editieren."
+
+# @ huskies-theme
+#~ msgid "You cannot edit this topic."
+#~ msgstr "Du kannst dieses Thema nicht editieren."
+
+# @ huskies-theme
+#~ msgid "Split topic \"%s\""
+#~ msgstr "Teile Thema \"%s\""
+
+# @ huskies-theme
+#~ msgid "Split Information"
+#~ msgstr "Info &uuml;ber Aufteilung"
+
+# @ huskies-theme
+#~ msgid ""
+#~ "When you split a topic, you are slicing it in half starting with the "
+#~ "reply you just selected. Choose to use that reply as a new topic with a "
+#~ "new title, or merge those replies into an existing topic."
+#~ msgstr ""
+#~ "Beim Aufteilen eines Themas wird das gew&auml;hlte Thema in zwei H&auml;"
+#~ "lften geteilt. Das neue Thema beginnt dann mit der Antwort, die du eben "
+#~ "gew&auml;hlt hast. Du kannst w&auml;hlen, ob die Antwort ein neues Thema "
+#~ "mit neuen Titel wird oder du kannst es direkt mit einem bestehenden Thema "
+#~ "zusammenf&uuml;hren."
+
+# @ huskies-theme
+#~ msgid ""
+#~ "If you use the existing topic option, replies within both topics will be "
+#~ "merged chronologically. The order of the merged replies is based on the "
+#~ "time and date they were posted."
+#~ msgstr ""
+#~ "Wenn du die existierende Thema-Option benutzt, werden die Antworten in "
+#~ "beiden Themen chronologisch zusammengef&uuml;hrt. Die Reihenfolge der "
+#~ "Antworten h&auml;ngt demzufolge von deren jeweiligen Zeitpunkten ab."
+
+# @ huskies-theme
+#~ msgid "New topic in <strong>%s</strong> titled:"
+#~ msgstr "Neues Thema in <strong>%s</strong> mit dem Titel:"
+
+# @ huskies-theme
+#~ msgid "Split: %s"
+#~ msgstr "Teile: %s"
+
+# @ huskies-theme
+#~ msgid "Use an existing topic in this forum:"
+#~ msgstr "Benutze ein bestehendes Thema von diesem Forum:"
+
+# @ huskies-theme
+#~ msgid "No other topics found!"
+#~ msgstr "Es wurden keine anderen Themen gefunden!"
+
+# @ huskies-theme
+#~ msgid "Copy favoriters to the new topic"
+#~ msgstr "Kopiere Favoriten in das neue Thema"
+
+# @ huskies-theme
+#~ msgid "Copy subscribers to the new topic"
+#~ msgstr "Kopiere Abonnenten in das neue Thema"
+
+# @ huskies-theme
+#~ msgid "Copy topic tags to the new topic"
+#~ msgstr "Kopiere Tags in das neue Thema"
+
+# @ huskies-theme
+#~ msgid "Split topic"
+#~ msgstr "Teile Thema"
+
+# @ huskies-theme
+#~ msgid "Now Editing &ldquo;%s&rdquo;"
+#~ msgstr "Editiere: &ldquo;%s&rdquo;"
+
+# @ huskies-theme
+#~ msgid "Create New Topic in &ldquo;%s&rdquo;"
+#~ msgstr "Erstelle ein neues Thema in &ldquo;%s&rdquo;"
+
+# @ huskies-theme
+#~ msgid "Create New Topic"
+#~ msgstr "Erstelle ein neues Thema"
+
+# @ huskies-theme
+#~ msgid "Name of the topic"
+#~ msgstr "Name des Themas"
+
+# @ huskies-theme
+#~ msgid "Topic Title (Maximum Length %d):"
+#~ msgstr "Titel des Themas (Maximale L&auml;nge: %d):"
+
+# @ huskies-theme
+#~ msgid "required field"
+#~ msgstr "Pflichtfeld"
+
+# @ huskies-theme
+#~ msgid "topic content"
+#~ msgstr "Inhalt des Themas"
+
+# @ huskies-theme
+#~ msgid "Topic Tags"
+#~ msgstr "Tags des Themas"
+
+# @ huskies-theme
+#~ msgid "Forum:"
+#~ msgstr "Forum:"
+
+# @ huskies-theme
+#~ msgid "Topic Type:"
+#~ msgstr "Typ des Themas"
+
+# @ huskies-theme
+#~ msgid "You cannot create new topics."
+#~ msgstr "Du kannst keine neuen Themen erstellen."
+
+# @ huskies-theme
+#~ msgid "You must be logged in to create new topics."
+#~ msgstr "Du musst angemeldet sein, um neue Themen zu erstellen."
+
+# @ huskies-theme
+#~ msgid "Edit your profile"
+#~ msgstr "Bearbeite dein Profil"
+
+# @ huskies-theme
+#~ msgid "Contact Info"
+#~ msgstr "Kontakt Informationen"
+
+# @ huskies-theme
+#~ msgid "Website"
+#~ msgstr "Webseite"
+
+# @ huskies-theme
+#~ msgid "About yourself"
+#~ msgstr "&Uuml;ber dich"
+
+# @ huskies-theme
+#~ msgid "About the user"
+#~ msgstr "&Uuml;ber den Benutzer"
+
+# @ huskies-theme
+#~ msgid "Biographical Info"
+#~ msgstr "Biographie"
+
+# @ huskies-theme
+#~ msgid "Hint:"
+#~ msgstr "Hinweis:"
+
+# @ huskies-theme
+#~ msgid "This description about yourself is available for every site visitor"
+#~ msgstr ""
+#~ "Die Beschreibung &uuml;ber dich selbst ist f&uuml;r alle Besucher sichtbar"
+
+# @ huskies-theme
+#~ msgid "Username"
+#~ msgstr "Benutzername"
+
+# @ huskies-theme
+#~ msgid "Email"
+#~ msgstr "Email"
+
+# @ huskies-theme
+#~ msgid ""
+#~ "There is a pending email address change to <code>%1$s</code>. <a href="
+#~ "\"%2$s\">Cancel</a>"
+#~ msgstr ""
+#~ "Die ausstehende Email-Adresse ist ge&auml;ndert zu <code>%1$s</code>. <a "
+#~ "href=\"%2$s\">Abbrechen</a>"
+
+# @ huskies-theme
+#~ msgid "If you would like to change the password type a new one"
+#~ msgstr "Gebe ein neues Passwort ein, wenn du es &auml;ndern m&ouml;chtest"
+
+# @ huskies-theme
+#~ msgid "Type your new password again"
+#~ msgstr "Gebe dein Passwort erneut ein"
+
+# @ huskies-theme
+#~ msgid "User Role"
+#~ msgstr "Benutzerrolle"
+
+# @ huskies-theme
+#~ msgid "Update Profile"
+#~ msgstr "Profil aktualisieren"
+
+# @ huskies-theme
+#~ msgid "Update User"
+#~ msgstr "Benutzer aktualisieren"
+
+# @ huskies-theme
+#~ msgid "Blog Role"
+#~ msgstr "Blog Rolle"
+
+# @ huskies-theme
+#~ msgid "Freshness"
+#~ msgstr "Aktualit&auml;t"
+
+# @ huskies-theme
+#~ msgid "Add to your favorites"
+#~ msgstr "Zu deinen Favoriten hinzuf&uuml;gen"
+
+# @ huskies-theme
+#~ msgid "Remove from your favorites"
+#~ msgstr "Von deinen Favoriten entfernen"
+
+# @ huskies-theme
+#~ msgid "Topics :"
+#~ msgstr "Themen:"
+
+# @ huskies-theme
+#~ msgid "Replies:"
+#~ msgstr "Antworten:"
+
+# @ huskies-theme
+#~ msgid "in reply to: "
+#~ msgstr "als Antwort auf:"
+
+# @ huskies-theme
+#~ msgid "Remove from your subscriptions"
+#~ msgstr "Von deinen Abonnements entfernen"
+
+# @ huskies-theme
+#~ msgid "Started by %1$s"
+#~ msgstr "Gestartet durch %1$s"
+
+# @ huskies-theme
+#~ msgid "in <a href=\"%1$s\">%2$s</a>"
+#~ msgstr "in <a href=\"%1$s\">%2$s</a>"
+
+# @ huskies-theme
+#~ msgid "Voices"
+#~ msgstr "Stimmen"
+
+# @ huskies-theme
+#~ msgid "Public Links"
+#~ msgstr "&Ouml;ffentliche Links"
+
+# @ huskies-theme
+#~ msgid "%s's Profile"
+#~ msgstr "%s's Profil"
+
+# @ huskies-theme
+#~ msgid "Profile"
+#~ msgstr "Profil"
+
+# @ huskies-theme
+#~ msgid "%s's Topics Started"
+#~ msgstr "Themen, die %s gestartet hat"
+
+# @ huskies-theme
+#~ msgid "Topics created"
+#~ msgstr "Themen"
+
+# @ huskies-theme
+#~ msgid "%s's Replies Created"
+#~ msgstr "Antworten, die %s geschrieben hat"
+
+# @ huskies-theme
+#~ msgid "Replies created"
+#~ msgstr "Antworten"
+
+# @ huskies-theme
+#~ msgid "%s's Favorites"
+#~ msgstr "%s's Favoriten"
+
+# @ huskies-theme
+#~ msgid "Private Links"
+#~ msgstr "Private Links"
+
+# @ huskies-theme
+#~ msgid "%s's Subscriptions"
+#~ msgstr "Themen, die %s abonniert hat"
+
+# @ huskies-theme
+#~ msgid "Edit Profile of User %s"
+#~ msgstr "Profil von %s bearbeiten"
+
+# @ huskies-theme
+#~ msgid "Favorite forum topics"
+#~ msgstr "Favorisierte Themen"
+
+# @ huskies-theme
+#~ msgid "You currently have no favorite topics."
+#~ msgstr "Du hast zur Zeit keine favorisierte Themen."
+
+# @ huskies-theme
+#~ msgid "This user has no favorite topics."
+#~ msgstr "Dieser Benutzer hat keine favorisierte Themen."
+
+# @ huskies-theme
+#~ msgid "Display name"
+#~ msgstr "Angezeigter Name"
+
+# @ huskies-theme
+#~ msgid "Name"
+#~ msgstr "Name"
+
+# @ huskies-theme
+#~ msgid "First name"
+#~ msgstr "Vorname"
+
+# @ huskies-theme
+#~ msgid "Last name"
+#~ msgstr "Nachname"
+
+# @ huskies-theme
+#~ msgid "Description"
+#~ msgstr "Beschreibung"
+
+# @ huskies-theme
+#~ msgid "Contact informations"
+#~ msgstr "Kontakt Informationen"
+
+# @ huskies-theme
+#~ msgid "Topics Started"
+#~ msgstr "Gestartete Themen"
+
+# @ huskies-theme
+#~ msgid "Replies Created"
+#~ msgstr "Erstellte Antworten"
+
+# @ huskies-theme
+#~ msgid "Forum replies created"
+#~ msgstr "Erstellte Antworten"
+
+# @ huskies-theme
+#~ msgid "You have not replied to any topics."
+#~ msgstr "Du hast noch auf keine Themen geantwortet."
+
+# @ huskies-theme
+#~ msgid "This user has not replied to any topics."
+#~ msgstr "Dieser Benutzer hat noch auf keine Themen geantwortet."
+
+# @ huskies-theme
+#~ msgid "Subscribed forum topics"
+#~ msgstr "Abonnierte Themen"
+
+# @ huskies-theme
+#~ msgid "You are not currently subscribed to any topics."
+#~ msgstr "Du hast zur Zeit keine Themen abonniert."
+
+# @ huskies-theme
+#~ msgid "This user is not currently subscribed to any topics."
+#~ msgstr "Dieser Benutzer hat zur Zeit keine Themen abonniert."
+
+# @ huskies-theme
+#~ msgid "Forum topics started"
+#~ msgstr "Gestartete Themen"
+
+# @ huskies-theme
+#~ msgid "You have not created any topics."
+#~ msgstr "Du hast noch keine Themen erstellt."
+
+# @ huskies-theme
+#~ msgid "This user has not created any topics."
+#~ msgstr "Dieser Benutzer hat noch keine Themen erstellt."
+
+# @ huskies-theme
+#~ msgid "&larr; Older Comments"
+#~ msgstr "&larr; &Auml;ltere Kommentare"
+
+# @ huskies-theme
+#~ msgid "Newer Comments &rarr;"
+#~ msgstr "Neuere Kommentare &rarr;"
+
+# @ huskies-theme
+#~ msgid "Comments"
+#~ msgstr "Kommentare"
+
+# @ huskies-theme
+#~ msgid "Ping- & Trackbacks"
+#~ msgstr "R&uuml;ckverfolgung"
+
+# @ huskies-theme
+#~ msgid "No comments so far"
+#~ msgstr "Bisher gibt es keine Kommentare"
+
+# @ huskies-theme
+#~ msgid "Comments are closed"
+#~ msgstr "Keine Kommentare mehr m&ouml;glich"
+
+# @ huskies-theme
+#~ msgid "Featured post"
+#~ msgstr "Hervorgehobener Beitrag"
+
+# @ huskies-theme
+#~ msgid "Edit this post"
+#~ msgstr "Bearbeite diesen Beitrag"
+
+# @ huskies-theme
+#~ msgid "gallery post"
+#~ msgstr "Photogalerie"
+
+# @ huskies-theme
+#~ msgid "single image post"
+#~ msgstr "Beitrag mit Bild"
+
+# @ huskies-theme
+#~ msgid "No posts were found!"
+#~ msgstr "Es wurden keine Beitr&auml;ge gefunden!"
+
+# @ huskies-theme
+#~ msgid ""
+#~ "Apologies, but no results were found. Perhaps searching will help find a "
+#~ "related post."
+#~ msgstr ""
+#~ "Es wurden leider keine Ergebnisse gefunden. Versuche es bitte mit einem "
+#~ "anderen Begriff erneut."
+
+# @ huskies-theme
+#~ msgid "The Admin"
+#~ msgstr "Der Administrator"
+
+# @ huskies-theme
+#~ msgid "status post"
+#~ msgstr "Statusbeitrag"
+
+# @ huskies-theme
+#~ msgid "Categories"
+#~ msgstr "Kategorien"
+
+# @ huskies-theme
+#~ msgid "<dt>Tags"
+#~ msgstr "<dt>Tags"
+
+# @ huskies-theme
+#~ msgid "video post"
+#~ msgstr "Videobeitrag"
+
+# @ huskies-theme
+#~ msgid "No comments"
+#~ msgstr "Keine Kommentare"
+
+# @ huskies-theme
+#~ msgid "1 comment"
+#~ msgstr "1 Kommentar"
+
+# @ huskies-theme
+#~ msgid "% comments"
+#~ msgstr "% Kommentare"
+
+# @ huskies-theme
+#~ msgid "Go to full post"
+#~ msgstr "Zum gesamten Beitrag"
+
+# @ huskies-theme
+#~ msgid "Read the rest of"
+#~ msgstr "Lese den Rest von"
+
+# @ huskies-theme
+#~ msgid "read the complete post"
+#~ msgstr "Lese den gesamten Beitrag"
+
+# @ huskies-theme
+#~ msgid "imprint"
+#~ msgstr "impressum"
+
+# @ huskies-theme
+#~ msgid "contact"
+#~ msgstr "kontakt"
+
+# @ huskies-theme
+#~ msgid "toggle footer"
+#~ msgstr "Fu&szlig;zeile umschalten"
+
+# @ huskies-theme
+#~ msgid "scroll to top"
+#~ msgstr "nach oben"
+
+# @ huskies-theme
+#~ msgid "Main Menu - Only 3 entries on first level!"
+#~ msgstr "Hauptmen&uuml; - Nur 3 Eintr&auml;ge werden angezeigt."
+
+# @ huskies-theme
+#~ msgid "Look at the complete gallery"
+#~ msgstr "Schau dir die gesamte Galerie an"
+
+# @ huskies-theme
+#~ msgid "This gallery contains %s photo"
+#~ msgid_plural "This gallery contains %s photos"
+#~ msgstr[0] "Diese Galerie enth&auml;lt %s Photo"
+#~ msgstr[1] "Diese Galerie enth&auml;lt %s Photos"
+
+# @ huskies-theme
+#~ msgid "This post is password protected. Please enter the correct password:"
+#~ msgstr ""
+#~ "Dieser Beitrag ist passwortgeschützt. Bitte gebe das korrekte Passwort "
+#~ "ein:"
+
+# @ huskies-theme
+#~ msgid "Enter password"
+#~ msgstr "Passwort eingeben"
+
+# @ huskies-theme
+#~ msgid "&larr; Older posts "
+#~ msgstr "&larr; &Auml;ltere Beitr&auml;ge"
+
+# @ huskies-theme
+#~ msgid "Newer posts &rarr;"
+#~ msgstr "Neuere Beitr&auml;ge &rarr;"
+
+# @ huskies-theme
+#~ msgid "Next page"
+#~ msgstr "N&auml;chste Seite"
+
+# @ huskies-theme
+#~ msgid "Previous page"
+#~ msgstr "Vorherige Seite"
+
+# @ huskies-theme
+#~ msgid "Edit comment"
+#~ msgstr "Kommentar bearbeiten"
+
+# @ huskies-theme
+#~ msgid "%1$s at %2$s"
+#~ msgstr "%1$s auf %2$s"
+
+# @ huskies-theme
+#~ msgid "Reply &darr;"
+#~ msgstr "Antwort &darr;"
+
+# @ huskies-theme
+#~ msgid "Your comment is awaiting moderation."
+#~ msgstr "Dein Kommentar muss noch best&auml;tigt werden."
+
+# @ huskies-theme
+#~ msgid "Leave a Reply"
+#~ msgstr "Kommentiere den Beitrag"
+
+# @ huskies-theme
+#~ msgid "Leave a Reply to %s"
+#~ msgstr "Kommentiere den Beitrag %s"
+
+# @ huskies-theme
+#~ msgid "Cancel reply"
+#~ msgstr "Kommentar abbrechen"
+
+# @ huskies-theme
+#~ msgid "You must be logged in to post a comment"
+#~ msgstr "Du musst angemeldet sein, um einen Beitrag zu kommentieren."
+
+# @ huskies-theme
+#~ msgid "Log in"
+#~ msgstr "Anmelden"
+
+# @ huskies-theme
+#~ msgid "Logged in as"
+#~ msgstr "Angemeldet als"
+
+# @ huskies-theme
+#~ msgid "Log out of this account"
+#~ msgstr "Aus dieses Konto abmelden"
+
+# @ huskies-theme
+#~ msgid "Log out?"
+#~ msgstr "Abmelden?"
+
+# @ huskies-theme
+#~ msgid "Your email address will not be published."
+#~ msgstr "Deine E-Mail-Adresse wird nicht ver&ouml;ffentlicht."
+
+# @ huskies-theme
+#~ msgid "Required fields are marked with"
+#~ msgstr "Pflichtfelder sind markiert mit "
+
+# @ huskies-theme
+#~ msgid "Your Name"
+#~ msgstr "Dein Name"
+
+# @ huskies-theme
+#~ msgid "name"
+#~ msgstr "Name"
+
+# @ huskies-theme
+#~ msgid "Your email address<br />(will not be published)"
+#~ msgstr "Deine E-Mail-Adresse"
+
+# @ huskies-theme
+#~ msgid "Your website"
+#~ msgstr "Deine Webseite"
+
+# @ huskies-theme
+#~ msgid "website"
+#~ msgstr "Webseite"
+
+# @ huskies-theme
+#~ msgid "your great comment"
+#~ msgstr "Dein gro&szlig;artiger Kommentar"
+
+# @ huskies-theme
+#~ msgid "Post"
+#~ msgstr "Beitrag"
+
+# @ huskies-theme
+#~ msgid "toggle menu"
+#~ msgstr "Men&uuml; umschalten"
+
+# @ huskies-theme
+#~ msgid "home"
+#~ msgstr "Startseite"
+
+# @ huskies-theme
+#~ msgid "disc"
+#~ msgstr "Scheibe"
+
+# @ huskies-theme
+#~ msgid "head"
+#~ msgstr "Kopf"
+
+# @ huskies-theme
+#~ msgid "body"
+#~ msgstr "K&ouml;rper"
+
+# @ huskies-theme
+#~ msgid "See your profile"
+#~ msgstr "Dein Profil"
+
+# @ huskies-theme
+#~ msgid "Newest posts"
+#~ msgstr "Aktuelles"
+
+# @ huskies-theme
+#~ msgid "standard post"
+#~ msgstr "Standardbeitrag"
+
+# @ huskies-theme
+#~ msgid "Go to "
+#~ msgstr "Gehe zu"
+
+# @ huskies-theme
+#~ msgid "Next events"
+#~ msgstr "Termine"
+
+# @ huskies-theme
+#~ msgid "search results"
+#~ msgstr "Suchergebnisse"
+
+# @ huskies-theme
+#~ msgid "start search"
+#~ msgstr "Suche starten"
+
+# @ huskies-theme
+#~ msgid "search"
+#~ msgstr "Suche"
+
+# @ huskies-theme
+#~ msgid "Follow us..."
+#~ msgstr "Finde uns bei..."
+
+# @ huskies-theme
+#~ msgid "Attachments"
+#~ msgstr "Anh&auml;nge"
+
+# @ huskies-theme
+#~ msgid "Maximum file size allowed is"
+#~ msgstr "Maximal erlaubte Dateigr&ouml;&szlig;e betr&auml;gt"
+
+# @ huskies-theme
+#~ msgid "Maximum amount of upload files is"
+#~ msgstr "Maximale Anzahl f&uuml;r hochzuladende Dateien betr&auml;gt"
+
+# @ huskies-theme
+#~ msgid "Allowed file types"
+#~ msgstr "Zul&auml;ssige Dateitypen"
+
+# @ huskies-theme
+#~ msgid "Choose"
+#~ msgstr "W&auml;hle"
+
+# @ huskies-theme
+#~ msgid "Add another file"
+#~ msgstr "F&uuml;ge eine neue Datei hinzu"
+
+# @ huskies-theme
+#~ msgid "forum signature"
+#~ msgstr "Forum Signatur"
+
+# @ huskies-theme
+#~ msgid "Signature"
+#~ msgstr "Signatur"
+
+# @ huskies-theme
+#~ msgid "Signature length is limited to %s characters."
+#~ msgstr "Die L&auml;nge der Signatur ist begrenzt auf %s Zeichen."
+
+# @ huskies-theme
+#~ msgid "Notification:"
+#~ msgstr "Benachrichtigung"
+
+# @ huskies-theme
+#~ msgid "View members"
+#~ msgstr "Mitglieder anzeigen"
