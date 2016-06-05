@@ -21,7 +21,7 @@ $(document).ready ->
     options = {
       thumbs: false
       zoomable: false
-      history: true
+      history: false
     }
 
     $gallery.photobox '.gallery__item a', options
