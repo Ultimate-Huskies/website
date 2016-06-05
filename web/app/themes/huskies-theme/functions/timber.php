@@ -5,6 +5,11 @@ function add_to_context($data){
   $data['footer_map'] = Timber::get_widgets('footer_map');
 
   $data['page'] = array(
+    'set_new_password' => array(
+      'show' => (!is_user_logged_in() && isset($_GET['action']) && $_GET['action'] === 'snp'),
+      'key' => isset($_GET['snpkey']) ? $_GET['snpkey'] : null,
+      'login' => isset($_GET['snplogin']) ? $_GET['snplogin'] : null
+    ),
     'ajax_url' => admin_url('admin-ajax.php'),
     'permalink' => get_permalink(),
     'home_url' => home_url(),

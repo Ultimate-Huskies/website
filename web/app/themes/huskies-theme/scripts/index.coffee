@@ -5,6 +5,7 @@ require './form'
 require './input'
 require './calendar'
 require './account'
+require './password'
 
 $(document).ready ->
   $body = $('body')

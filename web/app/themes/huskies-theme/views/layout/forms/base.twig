@@ -1,8 +1,8 @@
-{% macro render(page, name, header, content, redirectUrl = null) %}
+{% macro render(page, name, header, content, redirectUrl = null, class = '') %}
   {% from 'macro.twig' import modal %}
   {% from _self import content, footer %}
 
-  {{ modal(name ~ '-form', header, content(page, name, content, redirectUrl), footer(name)) }}
+  {{ modal(name ~ '-form', header, content(page, name, content, redirectUrl), footer(name), class) }}
 {% endmacro %}
 
 {% macro content(page, name, content, redirectUrl) %}

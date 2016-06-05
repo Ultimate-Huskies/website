@@ -2,6 +2,8 @@
 {% from _self import content %}
 
 {% macro content() %}
+  {% from 'macro.twig' import password_strength_meter %}
+
   <fieldset class="form__section form__section--text-input">
     <input type="text" id="register_user" name="register_user" required>
     <label for="register_user">{{ __('user', 'huskies') }}</label>
@@ -18,7 +20,7 @@
     <input type="password" id="register_password2" name="register_password2" required>
     <label for="register_password2">{{ __('repeat password', 'huskies') }}</label>
   </fieldset>
-  <div id="pass-strength-result"></div>
+  {{ password_strength_meter('register_password1', 'register_password2') }}
 {% endmacro %}
 
 {{ render(page, 'register', __('Register', 'huskies'), content()) }}

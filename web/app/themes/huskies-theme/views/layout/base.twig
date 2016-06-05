@@ -58,6 +58,10 @@
       {% include 'layout/forms/login.twig' %}
       {% include 'layout/forms/register.twig' %}
       {% include 'layout/forms/lost_password.twig' %}
+
+      {% if page.set_new_password.show %}
+        {% include 'layout/forms/set_new_password.twig' %}
+      {% endif %}
     {% endif %}
 
     {% block modal %}{% endblock %}

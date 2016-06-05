@@ -42,6 +42,9 @@ function enqueue_scripts() {
   wp_register_script('main_script', THEMEROOT.'/app.js', array('gallery'));
 
   wp_enqueue_script('main_script');
+  if (!is_user_logged_in()) {
+    wp_enqueue_script('password-strength-meter');
+  }
 }
 add_action('wp_enqueue_scripts', 'enqueue_scripts');
 
@@ -83,3 +86,14 @@ function fix_busted_mailgun_options_logic_in_wp_mail($options, $option_name) {
   return $options;
 }
 add_filter('option_mailgun', 'fix_busted_mailgun_options_logic_in_wp_mail', 10, 2);
+
+function new_retrieve_password_message($message, $key, $user_login, $user_data) {
+  return sprintf("%s\r\n%s\r\n\r\n%s\r\n%s\r\n\r\n%s",
+    __('Someone has requested a password reset for the following account:', 'huskies'),
+    $user_login,
+    __('To reset your password, visit the following address:', 'huskies'),
+    home_url("?action=snp&snpkey=$key&snplogin=".rawurlencode($user_login)),
+    __('If this was a mistake, just ignore this email and nothing will happen.', 'huskies')
+  );
+}
+add_filter('retrieve_password_message', 'new_retrieve_password_message', 10, 4);
