@@ -118,5 +118,5 @@
 {% endmacro %}
 
 {% macro password_strength_meter(pass1_id, pass2_id) %}
-  <div id="password-strength-meter" data-pass1="{{ pass1_id }}" data-pass2="{{ pass2_id }}" data-states={{ __('short,bad,good,strong,mismatch','huskies') }}></div>
+  <p id="password-strength-meter" data-pass1="{{ pass1_id }}" data-pass2="{{ pass2_id }}" data-states="{{ __('short,bad,good,strong,mismatch','huskies') }}"></p>
 {% endmacro %}
