@@ -35,7 +35,7 @@
     <div class="container">
       <header class="header-main">
         <nav class="header-nav clear">
-          <span class="header-nav__links pull-left main_menu__toggle">{{ icon('menu') }}</span>
+          <a class="header-nav__links pull-left modal__trigger" href="#modal-mainmenu">{{ icon('menu') }}</a>
           <a href="{{ site.url }}" class="header-nav__logo">
             <svg><use xlink:href="#logo-font" width="100%" height="100%"></use></svg>
           </a>
@@ -50,7 +50,6 @@
       </header>
 
       <main>
-        {% include 'layout/main_menu.twig' %}
         {% block content %}{% endblock %}
       </main>
 
@@ -59,6 +58,7 @@
       </footer>
     </div>
 
+    {% include 'layout/main_menu.twig' %}
     {% if not page.user.logged_in %}
       {% include 'layout/forms/login.twig' %}
       {% include 'layout/forms/register.twig' %}

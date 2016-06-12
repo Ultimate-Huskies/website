@@ -24,7 +24,8 @@ $(document).ready ->
 
   $(document).on 'click', (event) ->
     $target = $(event.target)
-    if $target.hasClass('modal__wrapper') or $target.hasClass('modal__close')
+    # if $target.hasClass('modal__wrapper') or $target.hasClass('modal__close')
+    if $target.hasClass('modal__close')
       close $body, $target
 
   if $(document).find('.modal--visible').length

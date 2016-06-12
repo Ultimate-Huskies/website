@@ -19,7 +19,6 @@
     {{ content }}
 
     <fieldset class="form__section form__section--actions">
-      <input type="reset" class="button modal__close" value="{{ __('Close', 'huskies') }}">
       <input type="submit" class="button button--primary" value="{{ __('Submit', 'huskies') }}"  />
     </fieldset>
   </form>
@@ -30,6 +29,7 @@
     <a class="modal__trigger" href="#modal-login-form">{{ __('Already registered?', 'huskies') }}</a>
   {% elseif name == 'login' %}
     <a class="modal__trigger" href="#modal-register-form">{{ __('Not registered?', 'huskies') }}</a>
+    |
     <a class="modal__trigger" href="#modal-forgot-form">{{ __('Forgot Password?', 'huskies') }}</a>
   {% endif %}
 {% endmacro %}

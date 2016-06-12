@@ -60,16 +60,26 @@
 
 .main_menu__items {
   list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .main_menu__item {
   margin-bottom: 15px;
   position: relative;
+  flex-basis: 100%;
+
+  @media @from-tablet {
+    flex-basis: 50%;
+  }
 }
 
 .main_menu__item--seperate {
   margin-bottom: 35px;
   text-align: center;
+  flex-basis: 100%;
 
   .main_menu__link {
     display: inline-block;

@@ -53,7 +53,6 @@
     margin: 30px -25px 0;
     width: calc(~"100% + 50px");
     padding-top: 20px;
-    border-top: 1px solid @c-blue;
     text-align: center;
 
     > input[type='submit'] {
@@ -81,18 +80,19 @@
     width: 100%;
     padding: 10px;
     font-size: @fs-l;
-    color: @c-grey-dark;
+    color: @c-grey;
     text-align: left;
 
     &:hover {
-      color: @c-black;
+      color: @c-blue;
     }
   }
 
   input, textarea {
     width: 100%;
     border: none;
-    border-bottom: 1px solid @c-black;
+    border-bottom: 1px solid @c-grey;
+    background-color: transparent;
     transition: border .3s ease, color 3.s ease;
     color: @c-grey-dark;
     padding: 10px;
@@ -103,13 +103,13 @@
     &:focus,
     &:valid {
      border-color: @c-blue;
-     color: @c-black;
+     color: @c-grey-dark;
     }
   }
 
   textarea {
     resize: vertical;
-    border: 1px solid @c-black;
+    border: 1px solid @c-grey;
     margin-top: 5px;
   }
 
@@ -119,16 +119,19 @@
     top: -20px;
     left: -10px;
     font-size: @fs-m;
-    color: @c-black;
+    color: @c-blue;
   }
 }
 
 .form__section--checkbox {
+  padding-top: 5px;
+
   > label {
     position: relative;
     padding-left: 30px;
     cursor: pointer;
     display: inline-block;
+    font-size: @fs-l;
 
     > input {
       background-color: @c-blue;
@@ -291,51 +294,6 @@
   .wp-editor-area {
     margin: 0;
     width: 100% !important;
-  }
-}
-
-#loginform,
-#wppb-register-user,
-#wppb-recover-password {
-
-  > ul {
-    list-style: none;
-  }
-
-  .login-username,
-  .login-password,
-  .wppb-default-e-mail,
-  .wppb-default-username,
-  .wppb-default-password,
-  .wppb-default-repeat-password,
-  .wppb-username-email {
-    .form__section;
-    .form__section--text-input;
-  }
-
-  #wppb-submit,
-  #register,
-  #wppb-recover-password-button {
-    .button;
-    .button--primary;
-
-    text-indent: 0;
-  }
-
-  .login-submit,
-  .form-submit {
-    .form__section;
-    .form__section--actions;
-
-    @media @from-tablet {
-      text-align: center;
-    }
-  }
-
-  .login-remember,
-  .wppb-send-credentials-checkbox {
-    .form__section;
-    .form__section--checkbox;
   }
 }
 
