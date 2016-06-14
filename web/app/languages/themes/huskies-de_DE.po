@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Huskies-Theme v2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-05 18:22+0200\n"
-"PO-Revision-Date: 2016-06-05 18:28+0200\n"
+"POT-Creation-Date: 2016-06-14 20:01+0200\n"
+"PO-Revision-Date: 2016-06-14 20:02+0200\n"
 "Last-Translator: clemens-brummer <clemens.brummer@gmail.com>\n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -156,7 +156,7 @@ msgstr "Start"
 
 # @ huskies-theme
 #: views/abort.twig:18 views/layout/forms/login.twig:22
-#: views/layout/main_menu.twig:23
+#: views/layout/main_menu.twig:27
 msgid "Login"
 msgstr "Anmelden"
 
@@ -189,6 +189,10 @@ msgstr "Anhänge"
 #: views/forum/forms/base.twig:28
 msgid "Notifications"
 msgstr "Benachrichtigungen"
+
+#: views/forum/forms/base.twig:40
+msgid "Close"
+msgstr "Schließen"
 
 # @ huskies-theme
 #: views/forum/forms/reply.twig:6
@@ -380,6 +384,11 @@ msgstr ""
 "Dein Passwort sollte mindestens 10 Zeichen lang sein. Benutze Gro&szlig;- "
 "und Kleinbuchstaben, Nummern und Symbole um es noch sicherer zu machen."
 
+# @ huskies-theme
+#: views/forum/user/edit.twig:61
+msgid "Update Profile"
+msgstr "Profil aktualisieren"
+
 #: views/forum/user/favorites.twig:2
 msgid "no favorites"
 msgstr "Keine Favoriten"
@@ -439,11 +448,15 @@ msgstr "Kontakt"
 msgid "build with %s and"
 msgstr "erstellt mit %s und"
 
-#: views/layout/forms/base.twig:30
+#: views/layout/forms/base.twig:22
+msgid "Submit"
+msgstr "Abschicken"
+
+#: views/layout/forms/base.twig:29
 msgid "Already registered?"
 msgstr "Bereits angemeldet?"
 
-#: views/layout/forms/base.twig:32
+#: views/layout/forms/base.twig:31
 msgid "Not registered?"
 msgstr "Noch nicht registriert?"
 
@@ -478,13 +491,13 @@ msgstr "Passwort vergessen"
 msgid "email"
 msgstr "Email"
 
-#: views/layout/forms/register.twig:21
-#: views/layout/forms/set_new_password.twig:15
+#: views/layout/forms/register.twig:22
+#: views/layout/forms/set_new_password.twig:16
 msgid "repeat password"
 msgstr "Passwort wiederholen"
 
 # @ huskies-theme
-#: views/layout/forms/register.twig:26 views/layout/main_menu.twig:24
+#: views/layout/forms/register.twig:26 views/layout/main_menu.twig:28
 msgid "Register"
 msgstr "Registrieren"
 
@@ -493,20 +506,20 @@ msgid "Set new password"
 msgstr "Neues Passwort erstellen"
 
 # @ huskies-theme
-#: views/layout/main_menu.twig:9
+#: views/layout/main_menu.twig:13
 msgid "Account"
 msgstr "Konto"
 
 # @ huskies-theme
-#: views/layout/main_menu.twig:10
+#: views/layout/main_menu.twig:14
 msgid "Logout"
 msgstr "Abmelden"
 
-#: views/layout/main_menu.twig:14
+#: views/layout/main_menu.twig:18
 msgid "Admin Area"
 msgstr "Adminbereich"
 
-#: views/layout/main_menu.twig:18 views/page/members.twig:22
+#: views/layout/main_menu.twig:22 views/page/members.twig:22
 msgid "Members"
 msgstr "Mitglieder"
 
@@ -525,10 +538,6 @@ msgstr "Angefangen von"
 #: views/macro.twig:72
 msgid "in"
 msgstr "in"
-
-#: views/macro.twig:121
-msgid "short,bad,good,strong,mismatch"
-msgstr "zu kurz,schlecht,gut,stark,stimmen nicht überein"
 
 #: views/page/404.twig:10
 msgid "Unfortunately your requested page wasn't found."
@@ -566,6 +575,9 @@ msgstr "%s Nutzer"
 #: views/post/single.twig:8
 msgid "by"
 msgstr "von"
+
+#~ msgid "short,bad,good,strong,mismatch"
+#~ msgstr "zu kurz,schlecht,gut,stark,stimmen nicht überein"
 
 # @ huskies-theme
 #~ msgid "Ooops ... 404"
@@ -928,10 +940,6 @@ msgstr "von"
 # @ huskies-theme
 #~ msgid "User Role"
 #~ msgstr "Benutzerrolle"
-
-# @ huskies-theme
-#~ msgid "Update Profile"
-#~ msgstr "Profil aktualisieren"
 
 # @ huskies-theme
 #~ msgid "Update User"

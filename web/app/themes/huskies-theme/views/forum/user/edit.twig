@@ -58,7 +58,8 @@
 
   <fieldset class="form__section form__section--actions">
     {{ function('bbp_edit_user_form_fields') }}
-    <input type="submit" id="bbp_user_edit_submit" name="bbp_user_edit_submit" class="button button--primary" value="{{ __('Update Profile', 'huskies') }}" tabindex="{{ page.bbress.tabindex }}" />
+    {% set val = __('Update Profile', 'huskies') %}
+    <input type="submit" id="bbp_user_edit_submit" name="bbp_user_edit_submit" class="button button--primary" value="{{ val }}" tabindex="{{ page.bbress.tabindex }}" />
   </fieldset>
 
 </form>

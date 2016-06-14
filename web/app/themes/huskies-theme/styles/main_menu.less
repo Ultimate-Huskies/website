@@ -70,6 +70,7 @@
   margin-bottom: 15px;
   position: relative;
   flex-basis: 100%;
+  text-align: center;
 
   @media @from-tablet {
     flex-basis: 50%;
@@ -91,6 +92,7 @@
   }
 
   .main_menu__link:first-of-type {
+    margin-left: 40px;
     margin-right: 15px;
     position: relative;
 
@@ -110,10 +112,10 @@
   font-family: @f-highlight;
   color: @c-white;
   text-decoration: none;
-  transition: color .3s ease, border .3s ease, background-color .3s ease;
-  display: block;
+  border-bottom: 3px solid transparent;
+  padding: 0 10px;
+  transition: border-color .3s ease;
   position: relative;
-  text-align: center;
   line-height: 2.5;
 
   &.main_menu__link--small {
@@ -127,24 +129,18 @@
   font-family: @f-normal;
   font-size: @fs-m;
   line-height: 1;
-  right: 5px;
-  top: 15px;
+  top: -15px;
+  margin-left: 5px;
   border-radius: 50%;
   background-color: @c-blue;
   padding: 5px;
   color: @c-white;
-  transition: color .3s ease, background-color .3s ease;
 }
 
 .current-menu-item > .main_menu__link,
 .main_menu__link:hover {
-  background-color: @c-blue;
   color: @c-white;
-
-  .main_menu__badge {
-    background-color: @c-white;
-    color: @c-blue;
-  }
+  border-color: @c-blue;
 }
 
 .main_menu__user {

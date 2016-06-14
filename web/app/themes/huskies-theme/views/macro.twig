@@ -93,7 +93,7 @@
   <div class="modal__wrapper {{ class }}" id="modal-{{ id }}">
     <div class="modal">
       <header class="modal__header">
-        <a href="{{ site.url }}" class="modal__logo">
+        <a href="{{ function('home_url') }}" class="modal__logo">
           <svg><use xlink:href="#logo-font" width="100%" height="100%"></use></svg>
         </a>
         <button class="modal__close modal__close--button" type="button">{{ icon('plus') }}</button>

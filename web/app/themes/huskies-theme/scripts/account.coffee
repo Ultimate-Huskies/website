@@ -11,7 +11,7 @@ start = ($form) ->
   $form.find('.account-form__loader').addClass 'account-form__loader--visible'
 
 finish = ($form) ->
-  $form.find('.account-form__loader').removeClass 'account-form__loader--visible' 
+  $form.find('.account-form__loader').removeClass 'account-form__loader--visible'
 
 success = ($form, res) ->
   $form.addClass('account-form--hidden')
@@ -55,8 +55,6 @@ $ ->
       url: $form.data('url'),
       data: formData($form)
     }
-
-    console.log 'request', request
 
     start($form)
     $.ajax(request)

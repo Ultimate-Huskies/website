@@ -29,7 +29,7 @@
   outline: none;
 
   &:hover {
-    color: @c-black;
+    color: @c-grey;
   }
 
   > .icon {
@@ -80,7 +80,7 @@
     width: 100%;
     padding: 10px;
     font-size: @fs-l;
-    color: @c-grey;
+    color: @c-grey-dark;
     text-align: left;
 
     &:hover {
@@ -132,6 +132,10 @@
     cursor: pointer;
     display: inline-block;
     font-size: @fs-l;
+
+    &[for="bbp_topic_subscription"] {
+      font-size: @fs-m;
+    }
 
     > input {
       background-color: @c-blue;
@@ -216,6 +220,7 @@
 .form__section-headline {
   margin: 0 0 15px 0;
   text-align: left;
+  font-size: @fs-l;
 }
 
 .form__upload {
@@ -231,8 +236,8 @@
   padding: 0;
   margin: 0;
   position: absolute;
-  top: 3px;
-  right: 25px;
+  top: 1px;
+  right: 15px;
   color: @c-blue;
 
   > .icon {
