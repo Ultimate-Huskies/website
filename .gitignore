@@ -1,4 +1,5 @@
 # Application
+web/app/debug.log
 web/app/plugins/*
 !web/app/plugins/.gitkeep
 web/app/mu-plugins/*

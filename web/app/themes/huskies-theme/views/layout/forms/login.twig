@@ -1,13 +1,22 @@
-{% from 'macro.twig' import icon, modal %}
-{% from _self import content, footer %}
-
-{{ modal('login-form', __('Login', 'huskies'), content(), footer()) }}
+{% from 'layout/forms/base.twig' import render %}
+{% from _self import content %}
 
 {% macro content() %}
-  {% filter shortcodes %} [wppb-login] {% endfilter %}
+  <fieldset class="form__section form__section--text-input">
+    <input type="text" id="login_user" name="login_user" required>
+    <label for="login_user">{{ __('user', 'huskies') }}</label>
+  </fieldset>
+  <fieldset class="form__section form__section--text-input">
+    <input type="password" id="login_password" name="login_password" required>
+    <label for="login_password">{{ __('password', 'huskies') }}</label>
+  </fieldset>
+
+  <fieldset class="form__section form__section--checkbox">
+    <label for="login_rememberme">
+      <input name="login_rememberme" id="login_rememberme" type="checkbox" />
+      {{ __('Remember me?', 'huskies') }}
+    </label>
+  </fieldset>
 {% endmacro %}
 
-{% macro footer() %}
-  <a class="modal__trigger" href="#modal-register-form">{{ __('Not registered?', 'huskies') }}</a>
-  <a class="modal__trigger" href="#modal-lost-password-form">{{ __('Forgot Password?', 'huskies') }}</a>
-{% endmacro %}
+{{ render(page, 'login', __('Login', 'huskies'), content(), page.home_url) }}

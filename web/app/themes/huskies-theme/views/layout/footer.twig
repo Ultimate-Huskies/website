@@ -27,8 +27,9 @@
 </ul>
 
 <h1 class="footer__headline">{{ __('Or at sport', 'huskies') }}</h1>
-<img class="footer__map" src="http://maps.google.com/maps/api/staticmap?center=52.520438,13.455000&size=400x400&zoom=13&markers=color:red|Samariterstraße+19%2C+Berlin%2C+Deutschland|+Scheffelstraße+21%2C+Berlin%2C+Deutschland|+Rüdersdorferstraße+20-27%2C+Berlin%2C+Deutschland|label:m&maptype=roadmap&sensor=false"%20alt="Samariterstraße+19%2C+Berlin%2C+Deutschland%7C+Scheffelstraße+21%2C+Berlin%2C+Deutschland%7C+Rüdersdorferstraße+20-27%2C+Berlin%2C+Deutschland" alt="Map with sport places" />
-
+<div class="footer__map">
+  {% filter shortcodes %} {{ footer_map }} {% endfilter %}
+</div>
 <ul class="footer-submenu">
   <li class="footer-submenu__item">
     <a href="{{ site.url }}/impressum">{{ __('Imprint', 'huskies') }}</a>

@@ -87,23 +87,24 @@
   {% do action('bbp_template_after_topics_loop') %}
 {% endmacro %}
 
-{% macro modal(id, title, content, footer = '') %}
+{% macro modal(id, title, content, footer = '', class = '') %}
   {% from _self import icon %}
 
-  <div class="modal__wrapper" id="modal-{{ id }}">
+  <div class="modal__wrapper {{ class }}" id="modal-{{ id }}">
     <div class="modal">
       <header class="modal__header">
-        <h2 class="modal__title">{{ title }}</h2>
+        <a href="{{ function('home_url') }}" class="modal__logo">
+          <svg><use xlink:href="#logo-font" width="100%" height="100%"></use></svg>
+        </a>
         <button class="modal__close modal__close--button" type="button">{{ icon('plus') }}</button>
       </header>
 
       <main class="modal__content">
+        <h1 class="section__title">{{ title }}</h1>
         {{ content }}
       </main>
 
-      <footer class="modal__footer">
-        {{ footer }}
-      </footer>
+      <footer class="modal__footer">{{ footer }}</footer>
     </div>
   </div>
 {% endmacro %}
@@ -115,4 +116,8 @@
       </a>
     </li>
   </ul>
+{% endmacro %}
+
+{% macro password_strength_meter(pass1_id, pass2_id) %}
+  <p id="password-strength-meter" data-pass1="{{ pass1_id }}" data-pass2="{{ pass2_id }}" data-states="{{ __('very bad, bad, good, strong, very strong, mismatch','huskies') }}"></p>
 {% endmacro %}

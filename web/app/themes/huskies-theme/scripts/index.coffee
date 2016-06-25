@@ -4,6 +4,8 @@ require './modal'
 require './form'
 require './input'
 require './calendar'
+require './account'
+require './password'
 
 $(document).ready ->
   $body = $('body')
@@ -19,7 +21,7 @@ $(document).ready ->
     options = {
       thumbs: false
       zoomable: false
-      history: true
+      history: false
     }
 
     $gallery.photobox '.gallery__item a', options

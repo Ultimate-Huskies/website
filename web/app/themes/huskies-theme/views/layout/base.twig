@@ -18,11 +18,16 @@
       {{ wp_title }}
     </title>
 
-    <link rel="profile" href="http://gmpg.org/xfn/11" />
-    <link rel="pingback" href="{{ site.pingback_url }}" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} feed" href="{{ site.rss2_url }}" />
-    <link rel="shortcut icon" href="{{ site.theme.link }}/images/favicon.ico" />
-    <link rel="apple-touch-icon" href="{{ site.theme.link }}/images/apple-touch-icon.png"/>
+
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ site.theme.link }}/images/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="{{ site.theme.link }}/images/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="{{ site.theme.link }}/images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="{{ site.theme.link }}/images/favicon-16x16.png" sizes="16x16" />
+
+    <meta name="application-name" content="Ultimate Huskies"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="{{ site.theme.link }}/images/mstile-144x144.png" />
 
     {{ function('wp_head') }}
   </head>
@@ -30,7 +35,7 @@
     <div class="container">
       <header class="header-main">
         <nav class="header-nav clear">
-          <span class="header-nav__links pull-left main_menu__toggle">{{ icon('menu') }}</span>
+          <a class="header-nav__links pull-left modal__trigger" href="#modal-mainmenu">{{ icon('menu') }}</a>
           <a href="{{ site.url }}" class="header-nav__logo">
             <svg><use xlink:href="#logo-font" width="100%" height="100%"></use></svg>
           </a>
@@ -45,7 +50,6 @@
       </header>
 
       <main>
-        {% include 'layout/main_menu.twig' %}
         {% block content %}{% endblock %}
       </main>
 
@@ -54,10 +58,15 @@
       </footer>
     </div>
 
+    {% include 'layout/main_menu.twig' %}
     {% if not page.user.logged_in %}
       {% include 'layout/forms/login.twig' %}
       {% include 'layout/forms/register.twig' %}
       {% include 'layout/forms/lost_password.twig' %}
+
+      {% if page.set_new_password.show %}
+        {% include 'layout/forms/set_new_password.twig' %}
+      {% endif %}
     {% endif %}
 
     {% block modal %}{% endblock %}

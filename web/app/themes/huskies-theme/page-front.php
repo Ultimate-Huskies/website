@@ -1,4 +1,15 @@
 <?php
+if (isset($_GET['action']) && $_GET['action'] === 'logout') {
+  wp_logout();
+
+  if (!empty( $_REQUEST['redirect_to'])) {
+    wp_redirect($_REQUEST['redirect_to']);
+  } else {
+    wp_redirect(home_url());
+  }
+  die();
+}
+
 $context = Timber::get_context();
 $context['post'] = new TimberPost();
 $context['last_posts'] = Timber::get_posts(new WP_Query("posts_per_page=5"));

@@ -1,0 +1,35 @@
+{% macro render(page, name, header, content, redirectUrl = null, class = '') %}
+  {% from 'macro.twig' import modal %}
+  {% from _self import content, footer %}
+
+  {{ modal(name ~ '-form', header, content(page, name, content, redirectUrl), footer(name), class) }}
+{% endmacro %}
+
+{% macro content(page, name, content, redirectUrl) %}
+  {% from 'macro.twig' import icon %}
+
+  <p class="account-form__success"></p>
+  <form class="account-form" action="{{ name }}" {% if redirectUrl != null %} data-redirect-uri='{{ page.home_url }}' {% endif %} data-url="{{ page.ajax_url }}">
+    {{ ajax_security(name, name ~ '_security') }}
+    <div class="account-form__loader">
+      {{ icon('ultimate-central') }}
+    </div>
+    <p class="account-form__error"></p>
+
+    {{ content }}
+
+    <fieldset class="form__section form__section--actions">
+      <input type="submit" class="button button--primary" value={{ __('Submit', 'huskies') }} />
+    </fieldset>
+  </form>
+{% endmacro %}
+
+{% macro footer(name) %}
+  {% if name == 'register' or name == 'forgot' %}
+    <a class="modal__trigger" href="#modal-login-form">{{ __('Already registered?', 'huskies') }}</a>
+  {% elseif name == 'login' %}
+    <a class="modal__trigger" href="#modal-register-form">{{ __('Not registered?', 'huskies') }}</a>
+    |
+    <a class="modal__trigger" href="#modal-forgot-form">{{ __('Forgot Password?', 'huskies') }}</a>
+  {% endif %}
+{% endmacro %}

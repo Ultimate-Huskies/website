@@ -1,42 +1,44 @@
-<div class="main_menu__overlay"></div>
-<nav class="main_menu">
-  <ul class="main_menu__items">
-    {% if page.user.logged_in %}
-      <li class="main_menu__item main_menu__item--seperate">
-        <div class="main_menu__user">
-          <a href="{{ page.user.profile.url }}">{{ page.user.profile.image }}</a>
-        </div>
-        <a class="main_menu__link" href="{{ page.user.profile.url }}"> {{ page.user.profile.name }} </a>
-        <a class="main_menu__link" href="{{ page.logout_url }}"> {{ __('Logout', 'huskies') }} </a>
-      </li>
-      {% if function('is_super_admin') %}
-        <li class="main_menu__item">
-          <a class="main_menu__link" href="/admin">{{ __('Admin Area', 'huskies') }}</a>
-        </li>
-      {% endif %}
+{% from 'macro.twig' import modal %}
+{% from _self import content, footer %}
+
+{{ modal('mainmenu', '', content(page, site, menu), '', 'modal__wrapper--left') }}
+
+{% macro content(page, site, menu) %}
+<ul class="main_menu__items">
+  {% if page.user.logged_in %}
+    <li class="main_menu__item main_menu__item--seperate">
+      <div class="main_menu__user">
+        <a href="{{ page.user.profile.url }}">{{ page.user.profile.image }}</a>
+      </div>
+      <a class="main_menu__link main_menu__link--small" href="{{ page.user.profile.url }}"> {{ __('Account', 'huskies') }}</a>
+      <a class="main_menu__link main_menu__link--small" href="{{ page.logout_url }}"> {{ __('Logout', 'huskies') }} </a>
+    </li>
+    {% if function('is_super_admin') %}
       <li class="main_menu__item">
-        <a class="main_menu__link" href="{{ function('get_permalink', 2220) }} ">{{ __('Members', 'huskies') }}</a>
-      </li>
-    {% else %}
-      <li class="main_menu__item main_menu__item--seperate">
-        <div class="main_menu__user"><img src="{{ site.theme.link }}/images/user.svg" alt="not logged in user" /></div>
-        <a class="main_menu__link modal__trigger" href="#modal-login-form"> {{ __('Login', 'huskies') }} </a>
-        <a class="main_menu__link modal__trigger" href="#modal-register-form"> {{ __('Register', 'huskies') }} </a>
+        <a class="main_menu__link" href="/admin">{{ __('Admin Area', 'huskies') }}</a>
       </li>
     {% endif %}
+    <li class="main_menu__item">
+      <a class="main_menu__link" href="{{ function('get_permalink', 2220) }} ">{{ __('Members', 'huskies') }}</a>
+    </li>
+  {% else %}
+    <li class="main_menu__item main_menu__item--seperate">
+      <div class="main_menu__user"><img src="{{ site.theme.link }}/images/user.svg" alt="not logged in user" /></div>
+      <a class="main_menu__link modal__trigger" href="#modal-login-form"> {{ __('Login', 'huskies') }} </a>
+      <a class="main_menu__link modal__trigger" href="#modal-register-form"> {{ __('Register', 'huskies') }} </a>
+    </li>
+  {% endif %}
 
-    {% for item in menu.get_items %}
-      <li class="main_menu__item {{ item.classes | join(' ') }}">
-        <a class="main_menu__link" href="{{ item.get_link }}">
-          {{ item.title }}
-          {% if page.user.logged_in and item.title == 'Forum' and page.user.profile.unread_topics > 0 %}
-            <span class="main_menu__badge">{{ page.user.profile.unread_topics }}</span>
-          {% endif %}
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
-  <a href="{{ site.url }}" class="main_menu__logo">
-    <svg><use xlink:href="#logo-font" width="100%" height="100%"></use></svg>
-  </a>
-</nav>
+  {% for item in menu.get_items %}
+    <li class="main_menu__item {{ item.classes | join(' ') }}">
+      <a class="main_menu__link" href="{{ item.get_link }}">
+        {{ item.title }}
+        {% if page.user.logged_in and item.title == 'Forum' and page.user.profile.unread_topics > 0 %}
+          <span class="main_menu__badge">{{ page.user.profile.unread_topics }}</span>
+        {% endif %}
+      </a>
+    </li>
+  {% endfor %}
+</ul>
+
+{% endmacro %}
