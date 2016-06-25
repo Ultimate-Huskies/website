@@ -65,11 +65,7 @@ function gallery($fist, $attr) {
     );
   }
 
-  $template = 'gallery/general.twig';
-  if (is_page_template("page-front.php")) {
-    $template = 'gallery/front.twig';
-  }
-
+  $template = 'gallery/'.(is_front_page() ? 'front'  : 'general').'.twig';
   return Timber::compile($template, array('items' => $items));
 }
 add_filter('post_gallery', 'gallery', 20, 2);
