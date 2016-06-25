@@ -2,7 +2,7 @@
 {% from 'macro.twig' import pagination, header_top_link, icon, modal %}
 
 {% block forum_title %}
-  {{ __('Replies', 'huskies') }}
+  {{ topic.title }}
 {% endblock %}
 
 {% if page.user.can.access_reply_form %}
