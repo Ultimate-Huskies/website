@@ -62,16 +62,15 @@
 
 .header-nav__addition-button {
   position: absolute;
-  background-color: @c-blue;
+  background-color: transparent;
+  border: 1px solid @c-white;
   top: calc(~"100% - 20px");
   right: 50px;
   color: @c-white;
   border-radius: 50%;
   padding: 5px;
-  box-shadow: 0 2px 5px fade(@c-black, 25%);
-  opacity: 0;
-  visibility: hidden;
-  transition: visibility .3s ease, opacity .3s ease;
+  box-shadow: none;
+  transition: background-color .3s ease, box-shadow .3s ease;
 
   > .icon {
     width: 30px;
@@ -94,8 +93,8 @@
 
   .header-nav__logo,
   .header-nav__addition-button {
-    opacity: 1;
-    visibility: visible;
+    box-shadow: 0 2px 5px fade(@c-black, 25%);
+    background-color: @c-blue;
   }
 
   .header-nav__links {
