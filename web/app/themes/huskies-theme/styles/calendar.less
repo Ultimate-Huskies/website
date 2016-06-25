@@ -85,8 +85,11 @@
     min-height: 0px !important;
   }
 
-  &:hover .simcal-day-label {
-    border-color: @c-blue;
+  &:hover {
+    background-color: transparent !important;
+    .simcal-day-label {
+      border-color: @c-blue;
+    }
   }
 }
 
@@ -177,4 +180,8 @@
 .simcal-event-title,
 .simcal-align-right {
   display: none !important;
+}
+
+.simcal-day-void, .simcal-day-void:hover {
+  background-color: transparent !important;
 }
