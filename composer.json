@@ -28,7 +28,7 @@
   "require": {
     "php": ">=5.4",
     "composer/installers": "~1.0.12",
-    "jarednova/timber": "^0.21.6",
+    "timber/timber": "^0.21.6",
     "vlucas/phpdotenv": "^2.0.1",
     "johnpbloch/wordpress": "^4.5",
     "wpackagist-plugin/bbPress": "^2.5",
@@ -51,7 +51,7 @@
   },
   "extra": {
     "installer-paths": {
-      "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin", "jarednova/timber"],
+      "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin", "timber/timber"],
       "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
       "web/app/themes/{$name}/": ["type:wordpress-theme"]
     },
