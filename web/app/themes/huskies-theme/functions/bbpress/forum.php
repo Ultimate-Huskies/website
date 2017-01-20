@@ -21,6 +21,8 @@ class Forum extends Base {
   }
 
   function is_unread() {
+    if (isset($this->unread)) return $this->unread;
+
     $query = array(
       'post_type' => bbp_get_topic_post_type(),
       'post_parent' => $this->id,
@@ -33,6 +35,8 @@ class Forum extends Base {
     );
 
     $topics = new WP_Query($query);
-    return count($topics->posts) > 0;
+    $this->unread = count($topics->posts) > 0;
+
+    return $this->unread;
   }
 }
