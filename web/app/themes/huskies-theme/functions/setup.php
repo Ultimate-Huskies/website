@@ -70,15 +70,15 @@ function widgets_init() {
 }
 add_action('widgets_init', 'widgets_init');
 
-function new_mail_from($email) {
-  return 'notifications@ultimate-huskies.de';
-}
-add_filter('wp_mail_from', 'new_mail_from');
-
-function new_mail_from_name($name) {
-  return 'Wordpress - Ultimate Huskies';
-}
-add_filter('wp_mail_from_name', 'new_mail_from_name');
+// function new_mail_from($email) {
+//   return 'notifications@ultimate-huskies.de';
+// }
+// add_filter('wp_mail_from', 'new_mail_from');
+//
+// function new_mail_from_name($name) {
+//   return 'Wordpress - Ultimate Huskies';
+// }
+// add_filter('wp_mail_from_name', 'new_mail_from_name');
 
 function fix_busted_mailgun_options_logic_in_wp_mail($options, $option_name) {
   unset($options['campaign-id']);
