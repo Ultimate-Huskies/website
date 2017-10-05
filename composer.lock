@@ -213,21 +213,62 @@
         },
         {
             "name": "johnpbloch/wordpress",
-            "version": "4.7.2",
+            "version": "4.8.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress.git",
-                "reference": "ac7b1792641d1fb61cb2901db292903b31694057"
+                "reference": "d500aae1793990e4874cf794b6cf88ce60a38918"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/ac7b1792641d1fb61cb2901db292903b31694057",
-                "reference": "ac7b1792641d1fb61cb2901db292903b31694057",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/d500aae1793990e4874cf794b6cf88ce60a38918",
+                "reference": "d500aae1793990e4874cf794b6cf88ce60a38918",
                 "shasum": ""
             },
             "require": {
-                "johnpbloch/wordpress-core-installer": "~0.2",
+                "johnpbloch/wordpress-core": "4.8.2",
+                "johnpbloch/wordpress-core-installer": "^1.0",
                 "php": ">=5.3.2"
+            },
+            "type": "package",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "WordPress Community",
+                    "homepage": "http://wordpress.org/about/"
+                }
+            ],
+            "description": "WordPress is web software you can use to create a beautiful website or blog.",
+            "homepage": "http://wordpress.org/",
+            "keywords": [
+                "blog",
+                "cms",
+                "wordpress"
+            ],
+            "time": "2017-09-19T22:27:16+00:00"
+        },
+        {
+            "name": "johnpbloch/wordpress-core",
+            "version": "4.8.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/johnpbloch/wordpress-core.git",
+                "reference": "706faa0d7b6b57a25d4acd18331dd71dfa6b01cf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress-core/zipball/706faa0d7b6b57a25d4acd18331dd71dfa6b01cf",
+                "reference": "706faa0d7b6b57a25d4acd18331dd71dfa6b01cf",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "provide": {
+                "wordpress/core-implementation": "4.8.2"
             },
             "type": "wordpress-core",
             "notification-url": "https://packagist.org/downloads/",
@@ -244,22 +285,23 @@
             "homepage": "http://wordpress.org/",
             "keywords": [
                 "blog",
-                "cms"
+                "cms",
+                "wordpress"
             ],
-            "time": "2017-01-26T18:32:19+00:00"
+            "time": "2017-09-19T22:27:11+00:00"
         },
         {
             "name": "johnpbloch/wordpress-core-installer",
-            "version": "0.2.1",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress-core-installer.git",
-                "reference": "a04c2c383ef13aae077f36799ed2eafdebd618d2"
+                "reference": "e9e767f2d9f994f358c34b41def2c410ad8717f2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress-core-installer/zipball/a04c2c383ef13aae077f36799ed2eafdebd618d2",
-                "reference": "a04c2c383ef13aae077f36799ed2eafdebd618d2",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress-core-installer/zipball/e9e767f2d9f994f358c34b41def2c410ad8717f2",
+                "reference": "e9e767f2d9f994f358c34b41def2c410ad8717f2",
                 "shasum": ""
             },
             "require": {
@@ -269,7 +311,8 @@
                 "composer/installers": "<1.0.6"
             },
             "require-dev": {
-                "composer/composer": "1.0.*@dev"
+                "composer/composer": "^1.0",
+                "phpunit/phpunit": ">=4.8.35"
             },
             "type": "composer-plugin",
             "extra": {
@@ -294,7 +337,7 @@
             "keywords": [
                 "wordpress"
             ],
-            "time": "2015-06-11T15:15:30+00:00"
+            "time": "2017-05-31T18:42:33+00:00"
         },
         {
             "name": "timber/timber",
@@ -354,34 +397,38 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.31.0",
+            "version": "v1.35.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "ddc9e3e20ee9c0b6908f401ac8353635b750eca7"
+                "reference": "daa657073e55b0a78cce8fdd22682fddecc6385f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/ddc9e3e20ee9c0b6908f401ac8353635b750eca7",
-                "reference": "ddc9e3e20ee9c0b6908f401ac8353635b750eca7",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/daa657073e55b0a78cce8fdd22682fddecc6385f",
+                "reference": "daa657073e55b0a78cce8fdd22682fddecc6385f",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.2.7"
+                "php": ">=5.3.3"
             },
             "require-dev": {
+                "psr/container": "^1.0",
                 "symfony/debug": "~2.7",
-                "symfony/phpunit-bridge": "~3.2"
+                "symfony/phpunit-bridge": "~3.3@dev"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.31-dev"
+                    "dev-master": "1.35-dev"
                 }
             },
             "autoload": {
                 "psr-0": {
                     "Twig_": "lib/"
+                },
+                "psr-4": {
+                    "Twig\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -411,7 +458,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2017-01-11T19:36:15+00:00"
+            "time": "2017-09-27T18:06:46+00:00"
         },
         {
             "name": "ultimate-huskies/bbpress-digest",
@@ -536,16 +583,16 @@
         },
         {
             "name": "wpackagist-plugin/backwpup",
-            "version": "3.3.4",
+            "version": "3.4.2",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/backwpup/",
-                "reference": "tags/3.3.4"
+                "reference": "tags/3.4.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/backwpup.3.3.4.zip",
-                "reference": "tags/3.3.4",
+                "url": "https://downloads.wordpress.org/plugin/backwpup.3.4.2.zip",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -556,16 +603,16 @@
         },
         {
             "name": "wpackagist-plugin/bbpress",
-            "version": "2.5.12",
+            "version": "2.5.14",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/bbpress/",
-                "reference": "tags/2.5.12"
+                "reference": "tags/2.5.14"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/bbpress.2.5.12.zip",
-                "reference": "tags/2.5.12",
+                "url": "https://downloads.wordpress.org/plugin/bbpress.2.5.14.zip",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -585,7 +632,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/bbpress-pencil-unread.1.0.0.zip",
-                "reference": "tags/1.0.0",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -596,16 +643,16 @@
         },
         {
             "name": "wpackagist-plugin/bbpress-post-toolbar",
-            "version": "0.7.5",
+            "version": "0.7.6",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/bbpress-post-toolbar/",
-                "reference": "tags/0.7.5"
+                "reference": "tags/0.7.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/bbpress-post-toolbar.0.7.5.zip",
-                "reference": "tags/0.7.5",
+                "url": "https://downloads.wordpress.org/plugin/bbpress-post-toolbar.0.7.6.zip",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -625,7 +672,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/confirm-user-registration.2.1.5.zip",
-                "reference": "tags/2.1.5",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -636,15 +683,15 @@
         },
         {
             "name": "wpackagist-plugin/contact-form-7",
-            "version": "4.6.1",
+            "version": "4.9",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/contact-form-7/",
-                "reference": "tags/4.6.1"
+                "reference": "tags/4.9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/contact-form-7.4.6.1.zip",
+                "url": "https://downloads.wordpress.org/plugin/contact-form-7.4.9.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -656,16 +703,16 @@
         },
         {
             "name": "wpackagist-plugin/gd-bbpress-attachments",
-            "version": "2.4",
+            "version": "2.5",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/gd-bbpress-attachments/",
-                "reference": "tags/2.4"
+                "reference": "tags/2.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/gd-bbpress-attachments.2.4.zip",
-                "reference": "tags/2.4",
+                "url": "https://downloads.wordpress.org/plugin/gd-bbpress-attachments.2.5.zip",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -676,16 +723,16 @@
         },
         {
             "name": "wpackagist-plugin/gd-bbpress-tools",
-            "version": "1.9",
+            "version": "1.9.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/gd-bbpress-tools/",
-                "reference": "tags/1.9"
+                "reference": "tags/1.9.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/gd-bbpress-tools.1.9.zip",
-                "reference": "tags/1.9",
+                "url": "https://downloads.wordpress.org/plugin/gd-bbpress-tools.1.9.1.zip",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -696,16 +743,16 @@
         },
         {
             "name": "wpackagist-plugin/google-calendar-events",
-            "version": "3.1.9",
+            "version": "3.1.10",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/google-calendar-events/",
-                "reference": "tags/3.1.9"
+                "reference": "tags/3.1.10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/google-calendar-events.3.1.9.zip",
-                "reference": "tags/3.1.9",
+                "url": "https://downloads.wordpress.org/plugin/google-calendar-events.3.1.10.zip",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -716,16 +763,16 @@
         },
         {
             "name": "wpackagist-plugin/imsanity",
-            "version": "2.3.8",
+            "version": "2.3.9",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/imsanity/",
-                "reference": "tags/2.3.8"
+                "reference": "tags/2.3.9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/imsanity.2.3.8.zip",
-                "reference": "tags/2.3.8",
+                "url": "https://downloads.wordpress.org/plugin/imsanity.2.3.9.zip",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -745,7 +792,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/limit-login-attempts.1.7.1.zip",
-                "reference": "tags/1.7.1",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -756,15 +803,15 @@
         },
         {
             "name": "wpackagist-plugin/mailgun",
-            "version": "1.5.8",
+            "version": "1.5.8.5",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/mailgun/",
-                "reference": "tags/1.5.8"
+                "reference": "tags/1.5.8.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/mailgun.1.5.8.zip",
+                "url": "https://downloads.wordpress.org/plugin/mailgun.1.5.8.5.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -776,16 +823,16 @@
         },
         {
             "name": "wpackagist-plugin/mappress-google-maps-for-wordpress",
-            "version": "2.43.10",
+            "version": "2.46.9",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/mappress-google-maps-for-wordpress/",
-                "reference": "tags/2.43.10"
+                "reference": "tags/2.46.9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/mappress-google-maps-for-wordpress.2.43.10.zip",
-                "reference": "tags/2.43.10",
+                "url": "https://downloads.wordpress.org/plugin/mappress-google-maps-for-wordpress.2.46.9.zip",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -805,7 +852,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/minimum-password-strength.1.2.0.zip",
-                "reference": "tags/1.2.0",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -825,7 +872,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/really-simple-captcha.1.9.zip",
-                "reference": "tags/1.9",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -845,7 +892,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/shariff.4.3.0.zip",
-                "reference": "tags/4.3.0",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -865,7 +912,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/simple-local-avatars.2.0.zip",
-                "reference": "tags/2.0",
+                "reference": null,
                 "shasum": null
             },
             "require": {
