@@ -17,7 +17,7 @@ function register() {
 
   check_passwords($info['user'], $info['password1'], $info['password2']);
 
-  $user = wp_create_user($info['user'], $info['password1'], $user['email']);
+  $user = wp_create_user($info['user'], $info['password1'], $info['email']);
   if (is_wp_error($user)) {
     finish(false, $user->get_error_message());
   } else {
