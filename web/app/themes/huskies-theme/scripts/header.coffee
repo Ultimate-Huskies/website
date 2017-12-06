@@ -10,7 +10,7 @@ run = ($main, $header, $body) ->
 
 $ ->
   $header = $('.header-nav')
-  $body = $('body')
+  $body = $(document)
   $main = $('main')
 
   $(window).on 'scroll', run.bind(@, $main, $header, $body)
