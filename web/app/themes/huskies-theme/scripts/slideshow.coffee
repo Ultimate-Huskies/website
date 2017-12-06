@@ -1,7 +1,7 @@
 run = ($slides) ->
   changeTime = 5000
   mainOffset = $('main').offset().top
-  $body = $('body')
+  $body = $(document)
   $slideshow = $('.slideshow')
   $pbOverlay = $('#pbOverlay')
 
