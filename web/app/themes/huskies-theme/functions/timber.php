@@ -40,22 +40,36 @@ function add_to_context($data){
   return $data;
 }
 
+function get_unread_topic_query_args($parent_id='any') {
+  if (!is_user_logged_in()) {
+    return 0 ;
+  }
+
+  $user = wp_get_current_user();
+  return array(
+    'post_type' => bbp_get_topic_post_type(),
+    'post_parent' => $parent_id,
+    'meta_query' => array(
+      'relation' => 'AND',
+      'unread_clause' => array(
+          'key' => 'bbppu_read_by',
+          'value' => 'i:'.$user->ID,
+          'compare' => 'NOT LIkE'
+      ),
+      'last_modified_clause' => array(
+          'key' => '_bbp_last_active_time',
+          'value' => $user->user_registered,
+          'compare' => '>'
+      ),
+    ),
+  );
+};
+
 function get_unread_counts() {
   if (!is_user_logged_in()) {
     return 0 ;
   }
 
-  $query = array(
-    'post_type' => bbp_get_topic_post_type(),
-    'post_parent' => 'any',
-    'meta_key' => 'bbppu_read_by',
-    'meta_value' => 'i:'.bbp_get_current_user_id(),
-    'meta_compare' => 'NOT LIKE',
-    'orderby' => 'title',
-    'order' => 'DESC',
-    'nopaging' => true
-  );
-
-  $topics = new WP_Query($query);
-  return count($topics->posts);
+  $topics = new WP_Query(get_unread_topic_query_args());
+  return $topics->found_posts;
 }
