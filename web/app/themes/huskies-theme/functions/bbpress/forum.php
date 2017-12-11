@@ -23,19 +23,8 @@ class Forum extends Base {
   function is_unread() {
     if (isset($this->unread)) return $this->unread;
 
-    $query = array(
-      'post_type' => bbp_get_topic_post_type(),
-      'post_parent' => $this->id,
-      'meta_key' => 'bbppu_read_by',
-      'meta_value' => 'i:'.bbp_get_current_user_id(),
-      'meta_compare' => 'NOT LIKE',
-      'orderby' => 'title',
-      'order' => 'DESC',
-      'nopaging' => true
-    );
-
-    $topics = new WP_Query($query);
-    $this->unread = count($topics->posts) > 0;
+    $topics = new WP_Query(get_unread_topic_query_args($this->id));
+    $this->unread = $topics->found_posts > 0;
 
     return $this->unread;
   }

@@ -8,7 +8,7 @@
 {% block forum_header %}
   {% if unread_topics|length > 0 %}
     <section class="section section--inverse">
-      <h1 class="section__title center">{{ __('%s Unread Topics', 'huskies')|format(unread_topics|length) }}</h1>
+      <h1 class="section__title center">{{ __('%s Unread Topics', 'huskies')|format(page.user.profile.unread_topics) }}</h1>
       {% for index, topic in unread_topics %}
         {{ topic(topic, true) }}
       {% endfor %}
