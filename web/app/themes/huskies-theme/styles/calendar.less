@@ -163,12 +163,14 @@
   margin: 10px 0;
 }
 
-.simcal-event-details {
-  display: block !important;
-
-  .simcal-event-title {
+.simcal-tooltip {
+  .simcal-event-details {
     display: block !important;
-    font-size: @fs-l;
+
+    .simcal-event-title {
+      display: block !important;
+      font-size: @fs-l;
+    }
   }
 }
 
@@ -176,10 +178,12 @@
   display: block;
 }
 
-.simcal-events-dots,
-.simcal-event-title,
-.simcal-align-right {
-  display: none !important;
+.simcal-tooltip {
+  .simcal-events-dots,
+  .simcal-event-title,
+  .simcal-align-right {
+    display: none !important;
+  }
 }
 
 .simcal-day-void, .simcal-day-void:hover {
