@@ -30,6 +30,13 @@
   overflow: hidden;
   position: relative;
   z-index: 1;
+  .mapp-layout {
+    margin: 0px;
+  }
+  // disable menu button inside the map
+  .mapp-menu-toggle {
+    visibility: hidden;
+  }
 }
 
 .footer-menu {
@@ -43,7 +50,8 @@
 }
 
 .footer-menu__item {
-  margin-right: 7%;
+  margin-left: 3.5%;
+  margin-right: 3.5%;
 
   > a {
     .icon_link(@c-white);
