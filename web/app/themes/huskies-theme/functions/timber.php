@@ -44,24 +44,40 @@ function get_unread_topic_query_args($parent_id='any') {
   if (!is_user_logged_in()) {
     return 0 ;
   }
-
   $user = wp_get_current_user();
+
+  // get all read topics and
+  // all topics that where created before the user has registered
+  $read_topic_args = array(
+    'post_type' => bbp_get_topic_post_type(),
+    'post_parent' => $parent_id,
+    'nopaging' => true,
+    'meta_query' => array(
+      'relation' => 'OR',
+      'read_clause' => array(
+          'key' => 'bbppu_read_by',
+          'value' => $user->ID,
+          'compare' => '='
+      ),
+      'older_than_registered_clause' => array(
+          'key' => '_bbp_last_active_time',
+          'value' => $user->user_registered,
+          'compare' => '<'
+      )
+    )
+  );
+  $read_topic_query = new WP_Query( $read_topic_args );
+  
+  // put all read topic ids in an array
+  $read_topic_ids = array_map( function( $v ) {
+		return $v->ID;
+  }, $read_topic_query->posts );
+
+  // create query for all forum topics except the read topics
   return array(
     'post_type' => bbp_get_topic_post_type(),
     'post_parent' => $parent_id,
-    'meta_query' => array(
-      'relation' => 'AND',
-      'unread_clause' => array(
-          'key' => 'bbppu_read_by',
-          'value' => 'i:'.$user->ID,
-          'compare' => 'NOT LIkE'
-      ),
-      'last_modified_clause' => array(
-          'key' => '_bbp_last_active_time',
-          'value' => $user->user_registered,
-          'compare' => '>'
-      ),
-    ),
+    'post__not_in' => $read_topic_ids
   );
 };
 
