@@ -53,16 +53,18 @@ function get_unread_topic_query_args($parent_id='any') {
     'post_parent' => $parent_id,
     'nopaging' => true,
     'meta_query' => array(
-      'relation' => 'OR',
-      'read_clause' => array(
-          'key' => 'bbppu_read_by',
-          'value' => $user->ID,
-          'compare' => '='
-      ),
-      'older_than_registered_clause' => array(
-          'key' => '_bbp_last_active_time',
-          'value' => $user->user_registered,
-          'compare' => '<'
+      array( # add inner array (bbpress adds additional meta query args that need to be combined with relation "AND")
+        'relation' => 'OR',
+        'read_clause' => array(
+            'key' => 'bbppu_read_by',
+            'value' => $user->ID,
+            'compare' => '='
+        ),
+        'older_than_registered_clause' => array(
+            'key' => '_bbp_last_active_time',
+            'value' => $user->user_registered,
+            'compare' => '<'
+        )
       )
     )
   );
