@@ -1,6 +1,6 @@
 {
-  "name": "UltimateHuskiesWebsite",
-  "type": "Website",
+  "name": "ultimate-huskies/website",
+  "type": "website",
   "license": "MIT",
   "description": "A modern WordPress site for the ultimate frisbee team Ultime Huskies",
   "homepage": "http://ultimate-huskies.de/",
@@ -31,7 +31,7 @@
     "timber/timber": "^0.21.6",
     "vlucas/phpdotenv": "^2.0.1",
     "johnpbloch/wordpress": "^5",
-    "wpackagist-plugin/bbPress": "^2.5",
+    "wpackagist-plugin/bbpress": "^2.5",
     "wpackagist-plugin/bbpress-post-toolbar": "^0.7.5",
     "wpackagist-plugin/gd-bbpress-attachments": "^3.1",
     "wpackagist-plugin/gd-bbpress-tools": "^2.1",
