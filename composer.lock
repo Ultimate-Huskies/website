@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e67f853b183e036ceb06c754a59ded9b",
+    "content-hash": "3ac0ac1da68b2161b8116bb6e7da23af",
     "packages": [
         {
             "name": "altorouter/altorouter",
@@ -738,24 +738,6 @@
                 }
             ],
             "time": "2020-07-14T17:54:18+00:00"
-        },
-        {
-            "name": "wpackagist-plugin/backwpup",
-            "version": "3.8.0",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/backwpup/",
-                "reference": "tags/3.8.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/backwpup.3.8.0.zip"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/backwpup/"
         },
         {
             "name": "wpackagist-plugin/bbpress",
