@@ -16,9 +16,6 @@ $context['last_posts'] = Timber::get_posts(new WP_Query("posts_per_page=5"));
 
 $calendar = new SimpleCalendar\Calendars\Default_Calendar(3940);
 
-$feed = simcal_get_feed($calendar);
-date_default_timezone_set(get_post_meta($feed->post_id, '_feed_timezone', true));
-
 $context['calendar'] = $calendar;
 $context['appointments'] = $calendar->get_events()->get_events(5);
 
