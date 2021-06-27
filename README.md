@@ -57,9 +57,19 @@ npm install <pkg> [--save|--save-dev]
 ./node_modules/.bin/bower install <pkg> [--save|--save-dev]
 ```
 
+## Contribution
+- Create new branch from `master` branch
+- Do your changes
+- Open PR against `master`
+- Squash merge with PR title following [conventional commits][conventional_commits]
+
+### Deployment
+- Log into server and checkout master branch
+
 [composer_link]: https://getcomposer.org/doc/00-intro.md#globally
 [node_link]: https://nodejs.org/
 [npm_link]: https://www.npmjs.com/
 [bedrock_link]: https://github.com/roots/bedrock
 [timber_link]: https://github.com/jarednova/timber
 [twig_link]: http://twig.sensiolabs.org/
+[conventional_commits]: https://www.conventionalcommits.org/en/v1.0.0/
